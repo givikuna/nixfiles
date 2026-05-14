@@ -1,0 +1,2 @@
+# nixfiles
+Personal nixfiles configuration.
