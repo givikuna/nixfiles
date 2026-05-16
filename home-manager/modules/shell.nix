@@ -1,0 +1,48 @@
+{ pkgs, ... }: {
+  programs.fish = {
+    enable = true;
+
+    shellAliases = {
+      update-system = "cd ~/nix-config && nix flake update && sudo nixos-rebuild switch --flake .#nixos";
+      ls = "eza --icons";
+    };
+
+    plugins = [
+      {
+        name = "z";
+        src = pkgs.fishPlugins.z.src;
+      }
+      {
+        name = "fzf-fish";
+        src = pkgs.fishPlugins.fzf-fish.src;
+      }
+    ];
+
+    interactiveShellInit = ''
+      starship init fish | source
+    '';
+  };
+
+  programs.starship.enable = true;
+
+  programs.tmux = {
+    enable = true;
+    clock24 = true;
+    terminal = "screen-256color";
+    shortcut = "a";
+  };
+
+  programs.yazi = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+
+  home.packages = with pkgs; [
+    superfile[cite: 9]
+    kitty[cite: 9]
+    fzf
+    fd
+  ];
+
+  xdg.configFile."kitty/kitty.conf".source = ../../dotfiles/kitty/kitty.conf;
+}
