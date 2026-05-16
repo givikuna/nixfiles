@@ -1,0 +1,4 @@
+*.conf linguist-language=INI
+
+*.toml linguist-detectable
+*.json linguist-detectable

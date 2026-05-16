@@ -1,13 +1,15 @@
 {
-    "cSpell.words": [
-        "givik",
-        "gvolpe",
-        "jethrokuan",
-        "Korolev",
-        "nixos",
-        "nixpkgs",
-        "Pkgs",
-        "superfile",
-        "yazi"
-    ]
+  "cSpell.words": [
+    "givik",
+    "gvolpe",
+    "jethrokuan",
+    "keymap",
+    "Korolev",
+    "nixos",
+    "nixpkgs",
+    "Pkgs",
+    "Roboto",
+    "superfile",
+    "yazi"
+  ]
 }

@@ -45,4 +45,10 @@
   ];
 
   xdg.configFile."kitty/kitty.conf".source = ../../dotfiles/kitty/kitty.conf;
+
+  xdg.configFile."starship.toml".source = ../../dotfiles/starship/starship.toml;
+
+  xdg.configFile."yazi/yazi.toml".source = ../../dotfiles/yazi/yazi.toml;
+  xdg.configFile."yazi/keymap.toml".source = ../../dotfiles/yazi/keymap.toml;
+  xdg.configFile."yazi/theme.toml".source = ../../dotfiles/yazi/theme.toml;
 }
