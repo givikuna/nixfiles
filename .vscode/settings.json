@@ -1,15 +1,24 @@
 {
-  "cSpell.words": [
-    "givik",
-    "gvolpe",
-    "jethrokuan",
-    "keymap",
-    "Korolev",
-    "nixos",
-    "nixpkgs",
-    "Pkgs",
-    "Roboto",
-    "superfile",
-    "yazi"
-  ]
+    "cSpell.words": [
+        "dunst",
+        "dunstrc",
+        "givik",
+        "gvolpe",
+        "hypr",
+        "hyprpaper",
+        "jethrokuan",
+        "keymap",
+        "Korolev",
+        "libnotify",
+        "nixos",
+        "nixpkgs",
+        "nvim",
+        "Pkgs",
+        "rasi",
+        "Roboto",
+        "rofi",
+        "superfile",
+        "waybar",
+        "yazi"
+    ]
 }
