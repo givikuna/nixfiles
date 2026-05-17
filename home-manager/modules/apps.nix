@@ -3,5 +3,5 @@
     firefox
     discord
     obsidian
-  ]
+  ];
 }

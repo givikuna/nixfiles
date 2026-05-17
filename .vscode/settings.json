@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
+        "alsa",
         "bandwhich",
         "broot",
         "dunst",
@@ -19,11 +20,13 @@
         "nixos",
         "nixpkgs",
         "nvim",
+        "pipewire",
         "Pkgs",
         "purescript",
         "rasi",
         "Roboto",
         "rofi",
+        "rtkit",
         "spago",
         "superfile",
         "tokei",
