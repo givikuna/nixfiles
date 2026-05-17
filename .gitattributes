@@ -3,3 +3,4 @@
 *.conf linguist-detectable
 *.toml linguist-detectable
 *.json linguist-detectable
+*.md linguist-detectable
