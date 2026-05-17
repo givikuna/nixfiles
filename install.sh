@@ -44,9 +44,6 @@ mount "${PART_PREFIX}2" /mnt
 mkdir -p /mnt/boot
 mount "${PART_PREFIX}1" /mnt/boot
 
-echo "Set a password for your user account (givik):"
-nixos-enter --root /mnt -c 'passwd givik'
-
 echo "Fetching dotfiles..."
 git clone https://github.com/givikuna/nixfiles.git /mnt/etc/nixos
 
@@ -61,6 +58,9 @@ git add hosts/nixos/hardware-configuration.nix
 
 echo "Building and installing your system configuration..."
 nixos-install --flake .#nixos
+
+echo "Set a password for your user account (givik):"
+nixos-enter --root /mnt -c 'passwd givik'
 
 nixos-enter --root /mnt -- chown -R givik:users /etc/nixos
 
