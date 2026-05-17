@@ -18,8 +18,8 @@ The TUI here will show you how to set up your stuff.
 
 Then run this script and response any prompts it gives you:
 
-```BASH
-nix-shell -p git parted --run "curl -sL https://raw.githubusercontent.com/givikuna/nixfiles/main/install.sh | bash"
+```BASHpath
+nix-shell -p git parted --run "bash <(curl -sL https://raw.githubusercontent.com/givikuna/nixfiles/main/install.sh)"
 ```
 
 You're forced to use **givik** as your username.
