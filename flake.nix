@@ -17,7 +17,7 @@
 
   outputs = { self, nixpkgs, home-manager, nix-flatpak, ...}@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_84-linux";
+      system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
         ./hosts/nixos/configuration.nix

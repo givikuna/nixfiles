@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import subprocess
 import os
 import sys
 
@@ -7,7 +6,7 @@ def rebuild():
     print("Executing NixOS Rebuild...")
 
     os.chdir("/etc/nixos")
-    ret = subprocess.system("sudo nixos-rebuild switch --flake .#nixos")
+    ret = os.system("sudo nixos-rebuild switch --flake .#nixos")
 
     if ret == 0:
         print("System rebuilt successfully!")
