@@ -1,0 +1,32 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "RobotoMono Nerd Font", monospace;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: rgba(44, 44, 44, 0.85);
+    color: #d4be98;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    border-bottom: 2px solid #32302f;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: #928374;
+}
+
+#workspaces button.active {
+    color: #ea6963;
+    font-weight: bold;
+}
+
+#clock,
+#battery,
+#network,
+#window {
+    padding: 0 10px;
+    color: #d4be98;
+}

@@ -8,11 +8,23 @@
 
     hyprpaper
     hyprpolkitagent
+    hypridle
+    hyprsunset
+    hyprpicker
+
+    wlogout
 
     libnotify
     brightnessctl
     grim
     slurp
+
+    cliphist
+    playerctl
+    swayosd
+
+    pavucontrol
+    networkmanagerapplet
   ];
 
   xdg.configFile."hypr/hyprland.conf".source = ../../dotfiles/hypr/hyprland.conf;

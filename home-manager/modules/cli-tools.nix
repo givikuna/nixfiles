@@ -5,6 +5,7 @@
     eza
     bat
     zoxide
+    curl
 
     dust
     broot
@@ -16,5 +17,10 @@
 
     delta
     tokei
+
+    comma
+
+    git
+    lazygit
   ];
 }

@@ -54,6 +54,8 @@ nixos-generate-config --root /mnt --dir /etc/nixos/hosts/nixos
 
 git add hosts/nixos/hardware-configuration.nix
 
+sudo chmod +x scripts/
+
 echo "⚙️ Building and installing your system configuration..."
 nixos-install --flake .#nixos
 

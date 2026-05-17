@@ -10,5 +10,14 @@
     haruna
     mpv
     imv
+
+    protonup-qt
+    mangohud
+    easyeffects
+
+    qbittorrent
+
+    ani-cli
+    mov-cli
   ];
 }
