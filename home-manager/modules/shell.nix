@@ -3,7 +3,7 @@
     enable = true;
 
     shellAliases = {
-      update-system = "python3 ~/scripts/rebuild.py";
+      update-system = "python3 ~/givik/scripts/rebuild.py";
       ls = "eza --icons";
     };
 
@@ -18,9 +18,9 @@
       }
     ];
 
-    interactiveShellInit = ''
-      starship init fish | source
-    '';
+    # interactiveShellInit = ''
+    #  starship init fish | source
+    # '';
   };
 
   programs.starship.enable = true;
@@ -38,10 +38,9 @@
   };
 
   home.packages = with pkgs; [
-    superfile[cite: 9]
-    kitty[cite: 9]
+    superfile
+    kitty
     fzf
-    fd
   ];
 
   xdg.configFile."kitty/kitty.conf".source = ../../dotfiles/kitty/kitty.conf;
