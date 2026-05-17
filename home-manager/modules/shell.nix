@@ -4,7 +4,7 @@
 
     shellAliases = {
       update-system = "python3 /etc/nixos/scripts/rebuild.py";
-      edit-system  = "python3 /etc/nixos/scripts/edit.py";
+      edit-system  = "python3 /etc/nixos/scripts/edit-system.py";
       l = "eza --icons";
     };
 

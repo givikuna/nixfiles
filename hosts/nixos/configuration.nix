@@ -30,7 +30,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd Hyprland";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd /run/current-system/sw/bin/Hyprland";
         user = "greeter";
       };
     };
@@ -97,6 +97,7 @@
   };
 
   # gaming optimization stuff:
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
