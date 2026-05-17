@@ -9,6 +9,8 @@
 
   programs.hyprland.enable = true;
 
+  programs.fish.enable = true;
+
   systemd.enableUnifiedCgroupHierarchy = true;
 
   fonts.packages = with pkgs; [
@@ -16,6 +18,8 @@
   ];
 
   services.flatpak.enable = true;
+
+  nixpkgs.config.allowUnfree = true;
 
   users.users.givik = {
     isNormalUser = true;

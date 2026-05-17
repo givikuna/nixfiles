@@ -9,7 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-flatpak.url = "github:gvolpe/nix-flatpak";
+    nix-flatpak = {
+      url = "github:gvolpe/nix-flatpak";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, nix-flatpak, ...}@inputs: {
@@ -18,7 +21,7 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./hosts/nixos/configuration.nix
-        nix-flatpak..nixosModules.nix-flatpak
+        nix-flatpak.nixosModules.nix-flatpak
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
