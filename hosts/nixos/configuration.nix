@@ -60,8 +60,6 @@
     noto-fonts-emoji
   ];
 
-  services.flatpak.enable = true;
-
   nixpkgs.config.allowUnfree = true;
 
   users.users.givik = {
@@ -87,10 +85,17 @@
   services.tlp.enable = true;
 
   # might move flatpak stuff to its own module
+  services.flatpak.enable = true;
+
   services.flatpak = {
     enable = true;
 
     uninstallUnmanaged = true;
+
+    remotes = lib.mkOptionDefault [{
+      name = "flathub";
+      location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
+    }];
 
     packages = [
       "com.heroicgameslauncher.hgl"
@@ -152,7 +157,7 @@
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    config.common.default = "*";
+    config.common.default = "hyprland";
   };
 
   # force chromium based apps to use wayland

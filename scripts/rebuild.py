@@ -7,7 +7,7 @@ def rebuild():
 
     os.chdir("/etc/nixos")
 
-    os.system("git add -N .")
+    os.system("git add .")
 
     ret = os.system("sudo nixos-rebuild switch --flake .#nixos")
 
