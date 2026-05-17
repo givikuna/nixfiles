@@ -8,6 +8,8 @@ Built on Hyprland.
 
 Flash a NixOS iso w/ Gnome or headless.
 
+You don't need to do any setup besides what's here.
+
 If on wi-fi run:
 
 ```BASH
