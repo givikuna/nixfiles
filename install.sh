@@ -49,14 +49,16 @@ git clone https://github.com/givikuna/nixfiles.git /mnt/etc/nixos
 
 cd /mnt/etc/nixos
 
-echo "🔍 Detecting laptop hardware..."
-nixos-generate-config --root /mnt --dir /etc/nixos/hosts/nixos
+echo "Detecting laptop hardware..."
+nixos-generate-config --root /mnt --dir /mnt/etc/nixos/hosts/nixos
 
 git add hosts/nixos/hardware-configuration.nix
 
 # sudo chmod +x scripts/*
 
-echo "⚙️ Building and installing your system configuration..."
+echo "Building and installing your system configuration..."
 nixos-install --flake .#nixos
 
-echo "🎉 All done! You can now run: sudo reboot"
+nixos-enter --root /mnt -- chown -R givik:users /etc/nixos
+
+echo "All done! You can now run: sudo reboot"
