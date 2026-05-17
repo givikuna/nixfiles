@@ -25,6 +25,9 @@
 
   security.pam.services.hyprlock = {};
 
+  # gives swayosd rights
+  services.swayosd.enable = true;
+
   # might have to move this up above hyprland and polkit, we'll see
   services.greetd = {
     enable = true;
@@ -182,8 +185,6 @@
 
   # printing
   services.printing.enable = true;
-
-
 
   #
 
