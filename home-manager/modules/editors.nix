@@ -16,5 +16,5 @@
     ];
   };
 
-  xg.configFile."nvim".source = ../../dotfiles/nvim;
+  xdg.configFile."nvim".source = ../../dotfiles/nvim;
 }

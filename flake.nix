@@ -23,9 +23,9 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.user = import ./home-manager/home.nix
+          home-manager.users.givik = import ./home-manager/home.nix
         }
       ];
     };
-  }
+  };
 }

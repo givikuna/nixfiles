@@ -1,8 +1,8 @@
 { pkgs, ... }: {
-  import = [ ./hardware-configuration.nix ]
+  imports = [ ./hardware-configuration.nix ];
 
   boot.loader.systemd-boot.enable = true;
-  boot.loaoder.efi.canTouchEfiVariables = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
@@ -12,7 +12,7 @@
   systemd.enableUnifiedCgroupHierarchy = true;
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "RobotoMono" ]; })
+    nerd-fonts.roboto-mono
   ];
 
   services.flatpak.enable = true;
@@ -21,7 +21,7 @@
     isNormalUser = true;
     shell = pkgs.fish;
     extraGroups = [ "networkmanager" "wheel" ];
-  }
+  };
 
   system.stateVersion = "23.11";
 }

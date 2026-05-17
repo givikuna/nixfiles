@@ -1,5 +1,10 @@
 { pkgs, config, ... }: {
   imports = [
+    ./modules/apps.nix
+    ./modules/cli-tools.nix
+    ./modules/desktop.nix
+    ./modules/dev-tools.nix
+    ./modules/editors.nix
     ./modules/shell.nix
   ];
 

@@ -3,7 +3,7 @@
     enable = true;
 
     shellAliases = {
-      update-system = "cd ~/nix-config && nix flake update && sudo nixos-rebuild switch --flake .#nixos";
+      update-system = "python3 ~/scripts/rebuild.py";
       ls = "eza --icons";
     };
 
