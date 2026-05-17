@@ -29,9 +29,6 @@ if [[ "$CONFIRM" != "y" && "$CONFIRM" != "Y" ]]; then
     exit 1
 fi
 
-echo "Set a password for your user account (givik):"
-nixos-enter --root /mnt -c 'passwd givik'
-
 echo "Partitioning $DISK..."
 parted "$DISK" -- mklabel gpt
 parted "$DISK" -- mkpart ESP fat32 1MiB 512MiB
@@ -46,6 +43,9 @@ echo "Mounting filesystems..."
 mount "${PART_PREFIX}2" /mnt
 mkdir -p /mnt/boot
 mount "${PART_PREFIX}1" /mnt/boot
+
+echo "Set a password for your user account (givik):"
+nixos-enter --root /mnt -c 'passwd givik'
 
 echo "Fetching dotfiles..."
 git clone https://github.com/givikuna/nixfiles.git /mnt/etc/nixos

@@ -56,6 +56,7 @@
         "nixfiles",
         "nixos",
         "nixpkgs",
+        "nmtui",
         "noto",
         "nvim",
         "nvme",
