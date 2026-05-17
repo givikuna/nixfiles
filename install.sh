@@ -29,10 +29,13 @@ if [[ "$CONFIRM" != "y" && "$CONFIRM" != "Y" ]]; then
     exit 1
 fi
 
+echo "Set a password for your user account (givik):"
+nixos-enter --root /mnt -c 'passwd givik'
+
 echo "Partitioning $DISK..."
 parted "$DISK" -- mklabel gpt
 parted "$DISK" -- mkpart ESP fat32 1MiB 512MiB
-parted "$DISK" -- set 1 boot on
+parted "$DISK" -- set 1 esp on # might have to change esp -> boot or vice versa
 parted "$DISK" -- mkpart primary ext4 512MiB 100%
 
 echo "Formatting partitions..."
