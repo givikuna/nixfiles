@@ -26,7 +26,7 @@
     functions = {
       switch-shell = {
         body = ''
-          set -l chosen (echo -e "nushell\nzsh\nbash\nfish" | fzf --height=6 --border --prompt="🚀 Switch environment to: ")
+          set -l chosen (echo -e "nushell\nzsh\nbash\nfish" | fzf --height=6 --border --prompt="Switch environment to: ")
           switch "$chosen"
               case nushell; nu
               case zsh; zsh
@@ -67,6 +67,8 @@
     fastfetch
     nushell
   ];
+
+  programs.nix-index.enable = true; # for comma
 
   xdg.configFile."kitty/kitty.conf".source = ../../dotfiles/kitty/kitty.conf;
 
