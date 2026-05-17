@@ -3,5 +3,12 @@
     firefox
     discord
     obsidian
+    spotify
+
+    gimp
+
+    haruna
+    mpv
+    imv
   ];
 }

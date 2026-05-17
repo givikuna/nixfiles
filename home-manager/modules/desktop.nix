@@ -1,10 +1,14 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
     waybar
-    rofi-wayland
-    dunst
-    hyprpaper
     wl-clipboard
+    rofi-wayland
+
+    dunst
+
+    hyprpaper
+    hyprpolkitagent
+
     libnotify
   ];
 

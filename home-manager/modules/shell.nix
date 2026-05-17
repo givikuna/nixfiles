@@ -4,7 +4,7 @@
 
     shellAliases = {
       update-system = "python3 ~/givik/scripts/rebuild.py";
-      ls = "eza --icons";
+      l = "eza --icons";
     };
 
     plugins = [
@@ -33,6 +33,11 @@
   };
 
   programs.yazi = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+
+  programs.thefuck = {
     enable = true;
     enableFishIntegration = true;
   };

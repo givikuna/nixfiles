@@ -9,6 +9,8 @@
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
+  security.polkit.enable = true;
+
   programs.hyprland.enable = true;
 
   programs.fish.enable = true;
@@ -30,6 +32,8 @@
   };
 
   security.rtkit.enable = true;
+
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
