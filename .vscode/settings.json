@@ -1,5 +1,7 @@
 {
     "cSpell.words": [
+        "bandwhich",
+        "broot",
         "dunst",
         "dunstrc",
         "givik",
@@ -7,18 +9,35 @@
         "hypr",
         "hyprpaper",
         "jethrokuan",
+        "katex",
         "keymap",
         "Korolev",
         "libnotify",
+        "livescript",
         "nixos",
         "nixpkgs",
         "nvim",
         "Pkgs",
+        "purescript",
         "rasi",
         "Roboto",
         "rofi",
+        "spago",
         "superfile",
+        "tokei",
         "waybar",
         "yazi"
-    ]
+    ],
+    "modalEditor.keybindings": {
+        "i": "modaledit.enterInsert",
+        "0-9": {
+            "command": "modaledit.acceptArgument",
+            "args": { "argument": "__key" }
+        },
+        "b": {
+            "command": "cursorMove",
+            "args": "{ to: 'left', by: 'word', select: true }",
+            "repeat": "__argument"
+        }
+    }
 }
