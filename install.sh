@@ -50,7 +50,7 @@ git clone https://github.com/givikuna/nixfiles.git /mnt/etc/nixos
 cd /mnt/etc/nixos
 
 echo "🔍 Detecting laptop hardware..."
-nixos-generate-config --root /mnt --dir ./hosts/nixos
+nixos-generate-config --root /mnt --dir /etc/nixos/hosts/nixos
 
 git add hosts/nixos/hardware-configuration.nix
 

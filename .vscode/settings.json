@@ -2,6 +2,9 @@
     "cSpell.words": [
         "alsa",
         "bandwhich",
+        "binde",
+        "blueman",
+        "brightnessctl",
         "broot",
         "drun",
         "dunst",
@@ -47,6 +50,7 @@
         "tokei",
         "vfat",
         "waybar",
+        "wpctl",
         "yazi"
     ],
     "modalEditor.keybindings": {

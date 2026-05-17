@@ -15,6 +15,10 @@
 
   programs.fish.enable = true;
 
+  # might have to move this up above hyprland and polkit, we'll see
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+
   systemd.enableUnifiedCgroupHierarchy = true;
 
   fonts.packages = with pkgs; [
@@ -41,6 +45,11 @@
     pulse.enable = true;
     jack.enable = true;
   };
+
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
+  services.tlp.enable = true;
 
   system.stateVersion = "23.11";
 }

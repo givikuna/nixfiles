@@ -10,6 +10,9 @@
     hyprpolkitagent
 
     libnotify
+    brightnessctl
+    grim
+    slurp
   ];
 
   xdg.configFile."hypr/hyprland.conf".source = ../../dotfiles/hypr/hyprland.conf;

@@ -3,7 +3,8 @@
     enable = true;
 
     shellAliases = {
-      update-system = "python3 ~/givik/scripts/rebuild.py";
+      update-system = "python3 /etc/nixos/scripts/rebuild.py";
+      edit-system  = "python3 /etc/nixos/scripts/edit.py";
       l = "eza --icons";
     };
 
