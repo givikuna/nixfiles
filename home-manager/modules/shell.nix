@@ -55,10 +55,11 @@
     enableFishIntegration = true;
   };
 
-  programs.thefuck = {
-    enable = true;
-    enableFishIntegration = true;
-  };
+  # apparently the fuck doesn't exist anymore
+  # programs.thefuck = {
+  #   enable = true;
+  #   enableFishIntegration = true;
+  # };
 
   home.packages = with pkgs; [
     superfile
