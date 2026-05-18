@@ -26,7 +26,7 @@
   security.pam.services.hyprlock = {};
 
   # gives swayosd rights
-  services.swayosd.enable = true;
+  services.udev.packages = [ pkgs.swayosd ];
 
   # might have to move this up above hyprland and polkit, we'll see
   services.greetd = {
@@ -65,7 +65,7 @@
   users.users.givik = {
     isNormalUser = true;
     # shell = pkgs.fish; # declared in shell.nix now
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "video" "input" ];
   };
 
   security.rtkit.enable = true;
