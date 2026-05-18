@@ -33,7 +33,7 @@
               case bash; bash
               case fish; fish
           end
-        ''
+        '';
       };
     };
   };
