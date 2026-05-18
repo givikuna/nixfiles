@@ -28,6 +28,7 @@
         "haruna",
         "heroicgameslauncher",
         "hypr",
+        "hyprctl",
         "hypridle",
         "hyprlock",
         "hyprpaper",
@@ -45,6 +46,7 @@
         "livescript",
         "Lutris",
         "mangohud",
+        "mgmt",
         "mklabel",
         "mkpart",
         "modesetting",
@@ -55,7 +57,9 @@
         "nerdfonts",
         "networkmanager",
         "networkmanagerapplet",
+        "nixd",
         "nixfiles",
+        "nixfmt",
         "nixos",
         "nixpkgs",
         "nmtui",
@@ -75,6 +79,7 @@
         "rofi",
         "rtkit",
         "spago",
+        "stylua",
         "superfile",
         "swayosd",
         "thefuck",
@@ -94,16 +99,18 @@
         "xpadneo",
         "yazi"
     ],
-    "modalEditor.keybindings": {
-        "i": "modaledit.enterInsert",
-        "0-9": {
-            "command": "modaledit.acceptArgument",
-            "args": { "argument": "__key" }
-        },
-        "b": {
-            "command": "cursorMove",
-            "args": "{ to: 'left', by: 'word', select: true }",
-            "repeat": "__argument"
-        }
+    "Lua.workspace.library": ["/nix/store/nyfjvjg4qpssa5513q41xjvrmlhz16gs-hyprland-0.55.1/share/hypr/stubs"],
+    "Lua.diagnostics.globals": ["hl"],
+    "[lua]": {
+        "editor.defaultFormatter": "JohnnyMorganz.stylua",
+        "editor.formatOnSave": true
+    },
+    "nix.enableLanguageServer": true,
+    "nix.serverPath": "nixd",
+    "nix.formatterPath": "nixfmt",
+    "[nix]": {
+        "editor.defaultFormatter": "jnoortheen.nix-ide",
+        "editor.formatOnSave": true,
+        "editor.suggest.insertMode": "replace"
     }
 }

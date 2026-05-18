@@ -1,7 +1,11 @@
-{ pkgs, lib, ... }: {
+{ pkgs, lib, ... }:
+{
   imports = [ ./hardware-configuration.nix ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -23,7 +27,7 @@
   ];
   users.users.givik.shell = pkgs.fish;
 
-  security.pam.services.hyprlock = {};
+  security.pam.services.hyprlock = { };
 
   # gives swayosd rights
   services.udev.packages = [ pkgs.swayosd ];
@@ -66,11 +70,15 @@
   users.users.givik = {
     isNormalUser = true;
     # shell = pkgs.fish; # declared in shell.nix now
-    extraGroups = [ "networkmanager" "wheel" "video" "input" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "video"
+      "input"
+    ];
   };
 
   security.rtkit.enable = true;
-
 
   services.pipewire = {
     enable = true;
@@ -143,8 +151,6 @@
   #  };
   #};
 
-
-
   # for screen-sharing (stops from getting a black screen)
   xdg.portal = {
     enable = true;
@@ -183,17 +189,20 @@
   # printing
   services.printing.enable = true;
 
+  # this should intercept generic calls to binaries and re-connect it to nix store
+  # should help give IDEs better integration
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      stdenv.cc.cc
+      zlib
+      glibc
+    ];
+  };
 
-
-
-
+  environment.pathsToLink = [ "/share/hypr" ];
 
   #
-
-
-
-
-
 
   time.timeZone = "America/New_York";
 

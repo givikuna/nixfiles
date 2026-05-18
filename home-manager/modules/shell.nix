@@ -1,11 +1,13 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.fish = {
     enable = true;
 
     shellAliases = {
-      rebuild-system  = "python3 /etc/nixos/scripts/rebuild.py";
-      edit-system  = "python3 /etc/nixos/scripts/edit-system.py";
-      update-system = "/etc/nixos/scripts/update.sh";
+      rebuild-system = "python3 /etc/nixos/scripts/rebuild-system.py";
+      edit-system = "python3 /etc/nixos/scripts/edit-system.py";
+      update-system = "/etc/nixos/scripts/update-system.sh";
+      push-system = "/etc/nixos/scripts/push-system.sh";
       l = "eza --icons";
     };
 

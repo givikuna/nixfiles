@@ -1,0 +1,207 @@
+-- [[ ~/.config/hypr/hyprland.lua ]]
+local mainMod = "SUPER"
+
+hl.env("XCURSOR_THEME", "Adwaita")
+hl.env("XCURSOR_SIZE", "24")
+
+hl.curve("clean_spring", { type = "spring", mass = 1.0, stiffness = 140, dampening = 24 })
+hl.curve("fade_curve", { type = "bezier", points = { { 0.25, 1.0 }, { 0.25, 1.0 } } })
+
+hl.animation { leaf = "windows", enabled = true, speed = 2, spring = "clean_spring" }
+hl.animation { leaf = "workspaces", enabled = true, speed = 2, spring = "clean_spring", style = "slide" }
+hl.animation { leaf = "fade", enabled = true, speed = 1, bezier = "fade_curve" }
+
+hl.config {
+    general = {
+        gaps_in = 2,
+        gaps_out = 2,
+        border_size = 2,
+        ["col.active_border"] = "rgba(eb9f46ff)",
+        ["col.inactive_border"] = "rgba(eb5346ff)",
+    },
+    decoration = {
+        rounding = 2,
+        active_opacity = 1.0,
+        inactive_opacity = 0.93,
+        blur = {
+            enabled = false,
+        },
+    },
+    misc = {
+        disable_hyprland_logo = true,
+    },
+    input = {
+        kb_layout = "us",
+        follow_mouse = 1,
+        touchpad = {
+            natural_scroll = true,
+            tap_to_click = true,
+        },
+    },
+    cursor = {
+        no_hardware_cursors = true,
+    },
+}
+
+hl.monitor {
+    output = "",
+    mode = "preferred",
+    position = "auto",
+    scale = 1,
+}
+
+--[[
+hl.window_rule({ match = { class = "^(steam)$", title = "^(Friends List)$" }, float = true })
+hl.window_rule({ match = { class = "^(steam)$", title = "^(Steam - News)$" }, float = true })
+hl.window_rule({ match = { class = "^(steam)$", title = ".*(Chat).*" }, float = true })
+hl.window_rule({ match = { class = "^(steam)$", title = "^(.?Settings.?)$" }, float = true })
+hl.window_rule({ match = { class = "^(steam)$", title = "^(Store - .*)$" }, float = true })
+hl.window_rule({ match = { class = "^(pavucontrol)$" }, float = true })
+hl.window_rule({ match = { class = "^(nm-connection-editor)$" }, float = true })
+hl.window_rule({ match = { title = "^(Open File)$" }, float = true })
+hl.window_rule({ match = { title = "^(Choose Folder)$" }, float = true })
+]]
+
+hl.on("hyprland.start", function()
+    hl.exec_cmd "hyprpaper"
+    hl.exec_cmd "waybar"
+    hl.exec_cmd "dunst"
+    hl.exec_cmd "hypridle"
+    hl.exec_cmd "nm-applet --indicator"
+    hl.exec_cmd "systemctl --user start hyprpolkitagent"
+    hl.exec_cmd "wl-paste --type text --watch cliphist store"
+    hl.exec_cmd "wl-paste --type image --watch cliphist store"
+    hl.exec_cmd "swayosd-server"
+end)
+
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd "rofi -show drun")
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd "loginctl lock-screenshot")
+hl.bind("CONTROL + " .. mainMod .. " + SPACE", hl.dsp.exec_cmd "rofi -show drun")
+
+hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd "kitty")
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd "firefox")
+
+hl.bind(mainMod .. " + C", hl.dsp.window.close())
+hl.bind(
+    mainMod .. " + F",
+    hl.dsp.window.float {
+        action = "toggle",
+    }
+)
+hl.bind(mainMod .. " + ALT + K", hl.dsp.exec_cmd "hyprctl dispatch pin")
+
+hl.bind(
+    mainMod .. " + SHIFT + LEFT",
+    hl.dsp.focus {
+        direction = "l",
+    }
+)
+hl.bind(
+    mainMod .. " + SHIFT + RIGHT",
+    hl.dsp.focus {
+        direction = "r",
+    }
+)
+hl.bind(
+    mainMod .. " + SHIFT + UP",
+    hl.dsp.focus {
+        direction = "u",
+    }
+)
+hl.bind(
+    mainMod .. " + SHIFT + DOWN",
+    hl.dsp.focus {
+        direction = "d",
+    }
+)
+
+hl.bind("ALT + TAB", hl.dsp.exec_cmd "rofi -show window")
+
+hl.bind(
+    "CONTROL + " .. mainMod .. " + LEFT",
+    hl.dsp.focus {
+        workspace = "r-1",
+    }
+)
+hl.bind(
+    "CONTROL + " .. mainMod .. " + RIGHT",
+    hl.dsp.focus {
+        workspace = "r+1",
+    }
+)
+
+hl.bind(
+    "CONTROL + " .. mainMod .. " + SHIFT + LEFT",
+    hl.dsp.window.move {
+        workspace = "r-1",
+    }
+)
+hl.bind(
+    "CONTROL + " .. mainMod .. " + SHIFT + RIGHT",
+    hl.dsp.window.move {
+        workspace = "r+1",
+    }
+)
+
+hl.bind(
+    mainMod .. " + LEFT",
+    hl.dsp.window.move {
+        direction = "l",
+    }
+)
+hl.bind(
+    mainMod .. " + RIGHT",
+    hl.dsp.window.move {
+        direction = "r",
+    }
+)
+hl.bind(
+    mainMod .. " + UP",
+    hl.dsp.window.move {
+        direction = "u",
+    }
+)
+hl.bind(
+    mainMod .. " + DOWN",
+    hl.dsp.window.move {
+        direction = "d",
+    }
+)
+
+for i = 1, 9 do
+    hl.bind(
+        mainMod .. " + " .. i,
+        hl.dsp.focus {
+            workspace = tostring(i),
+        }
+    )
+    hl.bind(
+        mainMod .. " + SHIFT + " .. i,
+        hl.dsp.window.move {
+            workspace = tostring(i),
+        }
+    )
+end
+
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd "playerctl play-pause")
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd "playerctl next")
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd "playerctl previous")
+
+hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd "wlogout")
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd "hyprpicker -a")
+
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd "swayosd-client --output-volume raise", {
+    repeating = true,
+})
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd "swayosd-client --output-volume lower", {
+    repeating = true,
+})
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd "swayosd-client --output-volume mute-toggle")
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd "swayosd-client --brightness raise", {
+    repeating = true,
+})
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd "swayosd-client --brightness lower", {
+    repeating = true,
+})
+
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd 'grim -g "$(slurp)" - | wl-copy')
