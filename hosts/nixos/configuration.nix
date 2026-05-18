@@ -164,7 +164,7 @@
   };
 
   # clean up system weekly
-  nix.optimize.automatic = true;
+  nix.optimise.automatic = true;
   nix.gc = {
     automatic = true;
     dates = "weekly";
