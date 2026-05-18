@@ -1,10 +1,10 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
     nodejs_20
-    nodePackages.typescript
-    nodePackages.ts-node
-    nodePackages.livescript
-    nodePackages.coffeescript
+    typescript
+    ts-node
+    livescript
+    coffeescript
     purescript
     spago
 
