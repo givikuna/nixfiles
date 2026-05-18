@@ -84,9 +84,7 @@
 
   services.tlp.enable = true;
 
-  # might move flatpak stuff to its own module
-  services.flatpak.enable = true;
-
+  # might move flatpak stuff to its own module=
   services.flatpak = {
     enable = true;
 
