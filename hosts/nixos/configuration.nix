@@ -53,7 +53,8 @@
   # might switch this away, mostly for video game purposes
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
-  systemd.enableUnifiedCgroupHierarchy = true;
+  # deprecated now
+  # systemd.enableUnifiedCgroupHierarchy = true;
 
   fonts.packages = with pkgs; [
     nerd-fonts.roboto-mono
