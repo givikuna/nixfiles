@@ -2,7 +2,7 @@
   home.packages = with pkgs; [
     waybar
     wl-clipboard
-    rofi-wayland
+    rofi
 
     dunst
 
