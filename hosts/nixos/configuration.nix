@@ -58,7 +58,7 @@
 
   fonts.packages = with pkgs; [
     nerd-fonts.roboto-mono
-    noto-fonts-emoji
+    noto-fonts-color-emoji
   ];
 
   nixpkgs.config.allowUnfree = true;
