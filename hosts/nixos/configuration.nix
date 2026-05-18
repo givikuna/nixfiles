@@ -33,7 +33,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd /run/current-system/sw/bin/Hyprland";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd /run/current-system/sw/bin/Hyprland";
         user = "greeter";
       };
     };
@@ -88,18 +88,11 @@
   # might move flatpak stuff to its own module=
   services.flatpak = {
     enable = true;
-
-    uninstallUnmanaged = true;
-
-    remotes = lib.mkOptionDefault [{
-      name = "flathub";
-      location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
-    }];
+    uninstallUnmanaged = false;
 
     packages = [
       "com.heroicgameslauncher.hgl"
       "net.lutris.Lutris"
-      "org.freedesktop.Platform.VulkanLayer.MangoHud" # to give mangohud access to lutris and heroic games
     ];
   };
 

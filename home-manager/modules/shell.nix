@@ -3,30 +3,23 @@
     enable = true;
 
     shellAliases = {
-      update-system = "python3 /etc/nixos/scripts/rebuild.py";
+      rebuild-system  = "python3 /etc/nixos/scripts/rebuild.py";
       edit-system  = "python3 /etc/nixos/scripts/edit-system.py";
+      update-sys = "/etc/nixos/scripts/update.sh";
       l = "eza --icons";
     };
 
     plugins = [
-      # {
-      #   name = "z";
-      #   src = pkgs.fishPlugins.z.src;
-      # }
       {
         name = "fzf-fish";
         src = pkgs.fishPlugins.fzf-fish.src;
       }
     ];
 
-    # interactiveShellInit = ''
-    #  starship init fish | source
-    # '';
-
     functions = {
       switch-shell = {
         body = ''
-          set -l chosen (echo -e "nushell\nzsh\nbash\nfish" | fzf --height=6 --border --prompt="Switch environment to: ")
+          set -l chosen (echo -e "nushell\nzsh\nbash\nfish" | fzf --height=10 --border --prompt="Switch environment to: ")
           switch "$chosen"
               case nushell; nu
               case zsh; zsh
@@ -53,13 +46,8 @@
   programs.yazi = {
     enable = true;
     enableFishIntegration = true;
+    shellWrapperName = "y";
   };
-
-  # apparently the fuck doesn't exist anymore
-  # programs.thefuck = {
-  #   enable = true;
-  #   enableFishIntegration = true;
-  # };
 
   home.packages = with pkgs; [
     superfile

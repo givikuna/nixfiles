@@ -9,7 +9,7 @@ def rebuild():
 
     os.system("git add .")
 
-    ret = os.system("sudo nixos-rebuild switch --flake .#nixos")
+    ret = os.system("sudo nixos-rebuild switch --flake /etc/nixos#nixos")
 
     if ret == 0:
         print("System rebuilt successfully!")
