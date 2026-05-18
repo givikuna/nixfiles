@@ -64,7 +64,7 @@
 
   users.users.givik = {
     isNormalUser = true;
-    shell = pkgs.fish;
+    # shell = pkgs.fish; # declared in shell.nix now
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
@@ -191,7 +191,13 @@
   # printing
   services.printing.enable = true;
 
+
+
+
+
+
   #
+
 
 
 
