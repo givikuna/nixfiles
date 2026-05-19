@@ -1,4 +1,5 @@
-{ pkgs, config, ... }: {
+{ ... }:
+{
   imports = [
     ./modules/apps.nix
     ./modules/cli-tools.nix
@@ -6,6 +7,7 @@
     ./modules/dev-tools.nix
     ./modules/editors.nix
     ./modules/shell.nix
+    ./modules/media-streamers.nix
   ];
 
   home.username = "givik";

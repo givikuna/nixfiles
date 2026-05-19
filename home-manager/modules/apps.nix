@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
     firefox
     discord
@@ -16,8 +17,5 @@
     easyeffects
 
     qbittorrent
-
-    ani-cli
-    mov-cli
   ];
 }

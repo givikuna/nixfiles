@@ -13,22 +13,36 @@
       url = "github:gmodena/nix-flatpak";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  };
 
-  outputs = { self, nixpkgs, home-manager, nix-flatpak, ...}@inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./hosts/nixos/configuration.nix
-        nix-flatpak.nixosModules.nix-flatpak
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.givik = import ./home-manager/home.nix;
-        }
-      ];
+    gonwatch = {
+      url = "github:kbwhodat/gonwatch/main";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      nix-flatpak,
+      ...
+    }@inputs:
+    {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/nixos/configuration.nix
+          nix-flatpak.nixosModules.nix-flatpak
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.users.givik = import ./home-manager/home.nix;
+          }
+        ];
+      };
+    };
 }

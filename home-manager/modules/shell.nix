@@ -8,6 +8,8 @@
       edit-system = "python3 /etc/nixos/scripts/edit-system.py";
       update-system = "/etc/nixos/scripts/update-system.sh";
       push-system = "/etc/nixos/scripts/push-system.sh";
+      pull-system = "/etc/nixos/scripts/pull-system.sh";
+
       l = "eza --icons";
     };
 

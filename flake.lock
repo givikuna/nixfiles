@@ -1,5 +1,26 @@
 {
   "nodes": {
+    "gonwatch": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1774763510,
+        "narHash": "sha256-vcpimKgwf92vyIlcYPTTghBY5TESM4cFhwzw79y651w=",
+        "owner": "kbwhodat",
+        "repo": "gonwatch",
+        "rev": "2a338952e3765cbb67f9c2321f2024e52f4fccb4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kbwhodat",
+        "ref": "main",
+        "repo": "gonwatch",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -7,11 +28,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1779125151,
-        "narHash": "sha256-bPHT0oJAHe5a43lkkSGAiCEg/RBqpwv5xsFrcj+Bog8=",
+        "lastModified": 1779202205,
+        "narHash": "sha256-UFt7q51IIhBzo1L+4MqNNljIrMOtrrjiT4vrOmz+wDA=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "fab3fd7327a0ac7a1fae5095bf140377704fac7f",
+        "rev": "16663cb13826d6aa519fb8c622460e3ce2a04dc1",
         "type": "github"
       },
       "original": {
@@ -53,6 +74,7 @@
     },
     "root": {
       "inputs": {
+        "gonwatch": "gonwatch",
         "home-manager": "home-manager",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs"

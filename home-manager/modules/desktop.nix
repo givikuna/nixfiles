@@ -26,6 +26,8 @@
 
     pavucontrol
     networkmanagerapplet
+
+    haruna
   ];
 
   services.swayosd.enable = true;

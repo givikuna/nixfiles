@@ -12,6 +12,7 @@
 
     nixd
     nixfmt
-  ];
 
+    jq
+  ];
 }

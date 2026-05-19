@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
     ripgrep
     fd
@@ -22,5 +23,7 @@
 
     git
     lazygit
+
+    yt-dlp
   ];
 }

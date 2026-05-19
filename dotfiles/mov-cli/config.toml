@@ -1,0 +1,2 @@
+[mov-cli.plugins]
+films = "mov-cli-films"
