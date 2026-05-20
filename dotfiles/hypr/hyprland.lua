@@ -13,11 +13,14 @@ hl.animation { leaf = "fade", enabled = true, speed = 1, bezier = "fade_curve" }
 
 hl.config {
     general = {
-        gaps_in = 2,
+        gaps_in = 1,
         gaps_out = 2,
         border_size = 2,
         ["col.active_border"] = "rgba(eb9f46ff)",
         ["col.inactive_border"] = "rgba(eb5346ff)",
+
+        resize_on_border = true,
+        extend_border_grab_area = 15,
     },
     decoration = {
         rounding = 2,

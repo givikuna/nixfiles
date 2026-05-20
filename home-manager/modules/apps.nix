@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     firefox
+    google-chrome
     discord
     obsidian
     spotify
@@ -17,5 +18,7 @@
     easyeffects
 
     qbittorrent
+
+    imagemagick
   ];
 }

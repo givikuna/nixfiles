@@ -1,0 +1,76 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "kitty",
+        "source": "/etc/nixos/dotfiles/fastfetch/rocket-racoon.png",
+        "width": 30,
+        "height": 15,
+        "padding": {
+            "top": 1,
+            "right": 4
+        }
+    },
+    "display": { "separator": " " },
+    "modules": [
+        {
+            "type": "custom",
+            "format": "┌──────────────────────────────────────────────┐"
+        },
+        {
+            "type": "title",
+            "key": "│  User",
+            "keyColor": "magenta",
+            "format": "{user-name}@{host-name}"
+        },
+        {
+            "type": "custom",
+            "format": "├──────────────────────────────────────────────┤"
+        },
+        // System Info Blocks
+        {
+            "type": "os",
+            "key": "│ 󱄅 OS  ",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "kernel",
+            "key": "│ 󰌽 KRN ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "uptime",
+            "key": "│ 󰅐 UPT ",
+            "keyColor": "green"
+        },
+        {
+            "type": "shell",
+            "key": "│ 󰞷 SH  ",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "terminal",
+            "key": "│ 󰞷 TRM ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "cpu",
+            "key": "│ 󰻠 CPU ",
+            "keyColor": "red"
+        },
+        {
+            "type": "gpu",
+            "key": "│ 󰢮 GPU ",
+            "keyColor": "red"
+        },
+        {
+            "type": "memory",
+            "key": "│ 󰍛 MEM ",
+            "keyColor": "green"
+        },
+        {
+            "type": "custom",
+            "format": "└──────────────────────────────────────────────┘"
+        },
+        "break"
+    ]
+}

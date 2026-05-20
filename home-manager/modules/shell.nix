@@ -3,6 +3,8 @@
   programs.fish = {
     enable = true;
 
+    interactiveShellInit = "set -g fish_greeting";
+
     shellAliases = {
       rebuild-system = "python3 /etc/nixos/scripts/rebuild-system.py";
       edit-system = "python3 /etc/nixos/scripts/edit-system.py";
