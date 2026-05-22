@@ -2,6 +2,7 @@
 {
   imports = [
     ./applications/dolphin.nix
+    ./applications/firefox.nix
   ];
 
   home.packages = with pkgs; [
