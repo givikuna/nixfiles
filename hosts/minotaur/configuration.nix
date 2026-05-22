@@ -7,6 +7,12 @@
 
   networking.hostName = "minotaur";
 
+  fileSystems."/home/givik/Storage" = {
+    device = "/dev/disk/by-uuid/d3ac3f2e-209b-4269-9d07-7b544c2acb1f";
+    fsType = "btrfs";
+    options = [ "nofail" "x-systemd.device-timeout=5s" ];
+  };
+
   environment.systemPackages = with pkgs; [
     davinci-resolve
   ];
