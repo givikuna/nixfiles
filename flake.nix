@@ -18,6 +18,11 @@
       url = "github:kbwhodat/gonwatch/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    rip = {
+      url = "github:cesarferreira/rip";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

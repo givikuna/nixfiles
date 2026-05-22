@@ -1,23 +1,29 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   home.packages = with pkgs; [
-    ripgrep
-    fd
-    eza
-    bat
-    zoxide
     curl
 
-    dust
-    broot
+    ripgrep # grep
+    fd # find
+    eza # ls
+    bat # cat
+    zoxide # cd
+    inputs.rip.packages.${pkgs.system}.default # rm
+    sd # sed
+    xh # curl/httpie
+
+    dust # du
+    broot # tree
     ouch
 
-    bottom
+    bottom # top
     zenith
     bandwhich
+    procs # ps
 
-    delta
+    delta # diff
     tokei
+    hyperfine # time
 
     comma
 
