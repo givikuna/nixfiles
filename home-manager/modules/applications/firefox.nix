@@ -30,9 +30,7 @@ let
       ""
     else
       ''
-        @-moz-document domain("${domain-name}") {
-          ${builtins.readFile file-path}
-        }
+        ${builtins.readFile file-path}
       ''
   ) userContent-files;
 

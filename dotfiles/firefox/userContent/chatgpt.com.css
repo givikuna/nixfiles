@@ -1,0 +1,149 @@
+/* ==UserStyle==
+@name           ChatGPT - Gruvbox Dark hard
+@namespace      gruvbox.ndu
+@version        1.0.0
+@description    An implementation of the gruvbox theme for ChatGPT
+@author         Ndu
+==/UserStyle== */
+
+@-moz-document url-prefix("https://chatgpt.com/")
+{
+    /* base colors */
+    :root {
+        --gray-50: #fbf1c7 !important;
+        --gray-100: #ebdbb2 !important;
+        --gray-200: #d5c4a1 !important;
+        --gray-300: #bdae93 !important;
+        --gray-400: #a89984 !important;
+        --gray-500: #7c6f64 !important;
+        --gray-600: #504945 !important;
+        --gray-700: #3c3836 !important;
+        --gray-750: #3c3836 !important;
+        --gray-800: #32302f !important;
+        --gray-900: #282828 !important;
+        --gray-950: #1d2021 !important;
+
+        --red-500: #fb4934 !important;
+        --red-700: #9d0006 !important;
+
+        --brand-purple: #b16286 !important;
+
+        --yellow-900: #b57614 !important;
+
+        --black: #1d2021 !important;
+        --white: #fbf1c7 !important;
+    }
+
+    /* color scheme */
+    .dark {
+        --bg-primary: var(--gray-950);
+        --bg-secondary: var(--gray-900);
+        --bg-tertiary: var(--gray-800);
+        --bg-scrim: #7c6f6480;
+
+        --bg-elevated-primary: var(--bg-primary);
+        --bg-elevated-secondary: var(--bg-secondary);
+
+        --bg-status-warning: var(--red-700);
+        --bg-status-error: var(--red-700);
+
+        --border-default: #fbf1c726;
+        --border-heavy: #fbf1c733;
+        --border-light: #fbf1c72d;
+
+        --border-status-warning: var(--red-700);
+        --border-status-error: var(--red-700);
+
+        --text-primary: var(--gray-50);
+        --text-secondary: var(--gray-200);
+        --text-tertiary: var(--gray-300);
+        --text-inverted: var(--gray-950);
+        --text-inverted-static: var(--gray-50);
+        --text-accent: #fe8019;
+
+        --text-status-warning: #fabd2f;
+        --text-status-error: var(--red-500);
+
+        --icon-primary: var(--text-primary);
+        --icon-secondary: var(--text-secondary);
+        --icon-tertiary: var(--text-tertiary);
+        --icon-inverted: var(--text-inverted);
+        --icon-inverted-static: var(--text-inverted-static);
+        --icon-accent: var(--text-accent);
+
+        --icon-status-warning: var(--text-status-warning);
+        --icon-status-error: var(--text-status-error);
+
+        --link: var(--text-accent);
+        --link-hover: var(--text-accent);
+
+        --theme-mini-msg-bg: var(--gray-800);
+    }
+
+    /* Toggles / Switches */
+    button[role="switch"] {
+        background-color: var(--gray-300);
+    }
+    button[role="switch"] > span {
+        background-color: var(--white);
+    }
+
+    /* Code inside Codeblocks */
+    .hljs-string {
+        color: #8ec07c !important;
+    }
+    .hljs-keyword {
+        color: #83a598 !important;
+    }
+    .hljs-title {
+        color: #fb4934 !important;
+    }
+    .hljs-built_in {
+        color: #fe8019 !important;
+    }
+    .hljs-literal {
+        color: #b8bb26 !important;
+    }
+    .hljs-comment {
+        color: #a89984 !important;
+    }
+    .hljs-number {
+        color: #d3869b !important;
+    }
+    .hljs-type {
+        color: #d3869b !important;
+    }
+    .hljs-meta {
+        color: #fabd2f !important;
+    }
+
+    /* Default Codeblock text color */
+    [class*="language-"] {
+        color: var(--gray-50) !important;
+    }
+
+    /* Avoid a horizontal-scrollable sidebar because of the 'View plans'-Description */
+    .not-group-data-disabled\:text-token-text-tertiary {
+        overflow: hidden;
+    }
+
+    /* Apply the sepia filter to the profile picture (fits better with the theme imo) */
+    .group-hover\:bg-token-interactive-bg-secondary-selected {
+        filter: sepia();
+    }
+
+    /* Hide PLUS-Label below the profile picture */
+    .group-hover\:bg-token-interactive-bg-secondary-selected > .relative > span {
+        display: none;
+    }
+
+    /* Hide the 'ChatGPT can make mistakes' text below the prompt input */
+    #thread-bottom + div.relative {
+        display: none;
+    }
+
+    /* Move the prompt input a little up */
+    #thread-bottom {
+        margin-bottom: 5px;
+    }
+}

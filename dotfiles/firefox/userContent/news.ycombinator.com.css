@@ -1,0 +1,41 @@
+/* ==UserStyle==
+@name         Hacker News gruvbox theme
+@version      20221222.13.59
+@namespace    userstyles.world/user/jordanrobinson
+@description  Gruvbox but for hacker news.
+@author       jordanrobinson
+@license      MIT
+==/UserStyle== */
+
+@-moz-document domain("news.ycombinator.com") {
+    * {
+        color: #928374 !important;
+        background-color: #282828 !important;
+    }
+    body > center > table > tbody > tr:first-child * {
+        background-color: #504945 !important;
+    }
+    body > center > table > tbody > tr:first-child * a:hover {
+        background: #3c3836 !important;
+    }
+    code,
+    pre,
+    input,
+    textarea {
+        background: #3c3836 !important;
+    }
+    a {
+        color: #458588 !important;
+    }
+    .subtext a {
+        color: #a89984 !important;
+    }
+    a:visited,
+    a:visited span {
+        color: #d5c4a1 !important;
+    }
+    a:hover,
+    a:hover span {
+        background: #3c3836 !important;
+    }
+}
