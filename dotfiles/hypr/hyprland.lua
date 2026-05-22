@@ -25,7 +25,7 @@ hl.config {
     decoration = {
         rounding = 2,
         active_opacity = 1.0,
-        inactive_opacity = 0.98,
+        inactive_opacity = 1.0,
         blur = {
             enabled = false,
         },
@@ -53,6 +53,19 @@ hl.monitor {
     scale = 1,
 }
 
+hl.window_rule {
+    name = "flameshot-overlay",
+
+    match = {
+        class = "^(flameshot)$",
+    },
+
+    float = true,
+    move = "0 0",
+    pin = true,
+    fullscreen_state = "0 2",
+}
+
 --[[
 hl.window_rule({ match = { class = "^(steam)$", title = "^(Friends List)$" }, float = true })
 hl.window_rule({ match = { class = "^(steam)$", title = "^(Steam - News)$" }, float = true })
@@ -75,11 +88,14 @@ hl.on("hyprland.start", function()
     hl.exec_cmd "wl-paste --type text --watch cliphist store"
     hl.exec_cmd "wl-paste --type image --watch cliphist store"
     hl.exec_cmd "swayosd-server"
+    hl.exec_cmd "elephant"
+    hl.exec_cmd "walker --gapplication-service"
+    hl.exec_cmd "kitty"
 end)
 
-hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd "rofi -show drun")
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd "walker")
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd "loginctl lock-screenshot")
-hl.bind("CONTROL + " .. mainMod .. " + SPACE", hl.dsp.exec_cmd "rofi -show drun")
+hl.bind("CONTROL + " .. mainMod .. " + SPACE", hl.dsp.exec_cmd "walker")
 
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd "kitty")
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd "firefox")
@@ -118,7 +134,7 @@ hl.bind(
     }
 )
 
-hl.bind("ALT + TAB", hl.dsp.exec_cmd "rofi -show window")
+hl.bind("ALT + TAB", hl.dsp.exec_cmd "walker --modules windows")
 
 hl.bind(
     "CONTROL + " .. mainMod .. " + LEFT",
@@ -207,4 +223,5 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd "swayosd-client --brightness lo
     repeating = true,
 })
 
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd 'grim -g "$(slurp)" - | wl-copy')
+-- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd 'grim -g "$(slurp)" - | wl-copy')
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd "XDG_CURRENT_DESKTOP=sway flameshot gui")

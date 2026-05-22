@@ -40,6 +40,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.sharedModules = [ nix-flatpak.homeManagerModules.nix-flatpak ];
             home-manager.users.givik = import ./home-manager/home.nix;
           }
         ];

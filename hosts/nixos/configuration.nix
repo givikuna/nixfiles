@@ -1,6 +1,9 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    ./boxes.nix
+  ];
 
   nix.settings.experimental-features = [
     "nix-command"
@@ -16,7 +19,6 @@
   security.polkit.enable = true;
 
   programs.hyprland.enable = true;
-
   programs.fish.enable = true;
   programs.zsh.enable = true;
   environment.shells = with pkgs; [
@@ -25,8 +27,8 @@
     bash
     nushell
   ];
-  users.users.givik.shell = pkgs.fish;
 
+  users.users.givik.shell = pkgs.fish;
   security.pam.services.hyprlock = { };
 
   # gives swayosd rights
@@ -154,7 +156,10 @@
   # for screen-sharing (stops from getting a black screen)
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-hyprland
+    ];
     config.common.default = "hyprland";
   };
 

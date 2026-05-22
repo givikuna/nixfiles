@@ -1,9 +1,15 @@
 { pkgs, ... }:
 {
+  imports = [
+    ./applications/flameshot.nix
+  ];
+
   home.packages = with pkgs; [
     waybar
     wl-clipboard
-    rofi
+    # rofi
+    walker
+    elephant
 
     dunst
 
@@ -19,6 +25,7 @@
     brightnessctl
     grim
     slurp
+    flameshot
 
     cliphist
     playerctl
@@ -40,7 +47,8 @@
   xdg.configFile."waybar/config".source = ../../dotfiles/waybar/config.json;
   xdg.configFile."waybar/style.css".source = ../../dotfiles/waybar/style.css;
 
-  xdg.configFile."rofi/config.rasi".source = ../../dotfiles/rofi/config.rasi;
+  #xdg.configFile."rofi/config.rasi".source = ../../dotfiles/rofi/config.rasi;
+  xdg.configFile."walker/config.toml".source = ../../dotfiles/walker/config.toml;
 
   xdg.configFile."dunst/dunstrc".source = ../../dotfiles/dunst/dunstrc;
 }

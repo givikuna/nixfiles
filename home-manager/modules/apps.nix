@@ -1,13 +1,19 @@
 { pkgs, ... }:
 {
+  imports = [
+    ./applications/dolphin.nix
+  ];
+
   home.packages = with pkgs; [
-    firefox
-    google-chrome
     discord
-    obsidian
     spotify
 
+    obsidian
+    planify
+
     gimp
+    imagemagick
+    switcheroo
 
     haruna
     mpv
@@ -19,6 +25,14 @@
 
     qbittorrent
 
-    imagemagick
+    pdfarranger
+    evince
+
+    gnome-disk-utility
+    mission-center
+
+    thunar
+
+    obs-studio
   ];
 }

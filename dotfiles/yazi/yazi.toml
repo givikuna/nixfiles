@@ -4,3 +4,29 @@ show_symlink = true
 sort_by = "natural"
 sort_sensitive = false
 sort_dir_first = true
+
+[opener]
+edit = [
+    { run = 'code "$@"', block = true, desc = "code" }
+]
+play = [
+    { run = 'mpv "$@"', orphan = true, desc = "MPV" }
+]
+view = [
+    { run = 'imv "$@"', orphan = true, desc = "IMV" }
+]
+reveal = [
+    { run = 'xdg-open "$@"', desc = "System Default" }
+]
+
+[open]
+rules = [
+    { mime = "text/*", use = [ "edit", "reveal" ] },
+    { mime = "application/json", use = [ "edit", "reveal" ] },
+
+    { mime = "image/*", use = [ "view", "reveal" ] },
+    { mime = "video/*", use = [ "play", "reveal" ] },
+    { mime = "audio/*", use = [ "play", "reveal" ] },
+
+    { name = "*", use = [ "reveal", "edit" ] }
+]
