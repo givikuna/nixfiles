@@ -1,4 +1,74 @@
 :root {
-    --toolbar-bgcolor: #1e1e2e !important;
-    --tabs-border-color: #313244 !important;
+    --gb-bg0: #2c2c2c;
+    --gb-bg1: #2c2c2c;
+    --gb-bg2: #35312f;
+    --gb-fg: #ebdbb2;
+    --gb-fg-dim: #a89984;
+    --gb-orange: #fe8019;
+    --gb-yellow: #fabd2f;
+
+    --toolbar-bgcolor: var(--gb-bg0) !important;
+    --toolbar-color: var(--gb-fg) !important;
+    --toolbarbutton-icon-fill: var(--gb-fg) !important;
+
+    --toolbar-field-background-color: var(--gb-bg1) !important;
+    --toolbar-field-color: var(--gb-fg) !important;
+    --toolbar-field-focus-background-color: var(--gb-bg1) !important;
+    --toolbar-field-focus-border-color: var(--gb-orange) !important;
+
+    --lwt-tab-text: var(--gb-fg-dim) !important;
+    --lwt-selected-tab-background-color: var(--gb-bg1) !important;
+}
+
+#navigator-toolbox {
+    background-color: var(--gb-bg0) !important;
+    border: none !important;
+}
+
+.tab-background[selected="true"] {
+    background-color: var(--gb-bg0) !important;
+    border: 1px solid var(--gb-orange) !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+}
+
+.tab-line {
+    display: none !important;
+}
+
+.tab-background:not([selected="true"]) {
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+}
+
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]) {
+    background-color: var(--gb-bg1) !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-text {
+    color: var(--gb-orange) !important;
+    font-weight: bold !important;
+}
+
+#urlbar-background {
+    background-color: var(--gb-bg1) !important;
+    border: none !important;
+    border-radius: 6px !important;
+}
+
+#urlbar:is([focused="true"], [open]) > #urlbar-background {
+    border: 1px solid var(--gb-bg2) !important;
+    box-shadow: none !important;
+}
+
+/*  circles */
+#back-button > .toolbarbutton-icon,
+#forward-button > .toolbarbutton-icon {
+    list-style-image: none !important;
+    border: 2px solid var(--gb-fg-dim) !important;
+    border-radius: 50% !important;
+    width: 14px !important;
+    height: 14px !important;
+    padding: 0 !important;
+    margin: 6px !important;
 }
