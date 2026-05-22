@@ -5,6 +5,7 @@
     --gb-fg: #ebdbb2;
     --gb-fg-dim: #a89984;
     --gb-orange: #fe8019;
+    --gb-orange-light: #ffc493;
     --gb-yellow: #fabd2f;
 
     --toolbar-bgcolor: var(--gb-bg0) !important;
@@ -14,7 +15,8 @@
     --toolbar-field-background-color: var(--gb-bg1) !important;
     --toolbar-field-color: var(--gb-fg) !important;
     --toolbar-field-focus-background-color: var(--gb-bg1) !important;
-    --toolbar-field-focus-border-color: var(--gb-orange) !important;
+    --toolbar-field-focus-color: var(--gb-fg) !important;
+    --urlbar-text-color: var(--gb-fg) !important;
 
     --lwt-tab-text: var(--gb-fg-dim) !important;
     --lwt-selected-tab-background-color: var(--gb-bg1) !important;
@@ -25,9 +27,13 @@
     border: none !important;
 }
 
-.tab-background[selected="true"] {
-    background-color: var(--gb-bg0) !important;
-    border: 1px solid var(--gb-orange) !important;
+.tabbrowser-tab {
+    padding-inline: 2px !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-background {
+    background-color: var(--gb-bg2) !important;
+    border: 2px solid var(--gb-orange) !important;
     border-radius: 4px !important;
     box-shadow: none !important;
 }
@@ -36,32 +42,68 @@
     display: none !important;
 }
 
-.tab-background:not([selected="true"]) {
-    background-color: transparent !important;
+.tabbrowser-tab:not([selected="true"]) .tab-background {
+    background-color: rgba(255, 255, 255, 0.03) !important;
     border: 1px solid transparent !important;
 }
 
-.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]) {
-    background-color: var(--gb-bg1) !important;
+.tabbrowser-tab:not([selected="true"]) {
+    color: var(--gb-fg-dim) !important;
+}
+
+.tabbrowser-tab:not([selected="true"]):hover .tab-background {
+    background-color: var(--gb-bg2) !important;
 }
 
 .tabbrowser-tab[selected="true"] .tab-text {
-    color: var(--gb-orange) !important;
+    color: var(--gb-orange-light) !important;
     font-weight: bold !important;
 }
 
 #urlbar-background {
     background-color: var(--gb-bg1) !important;
-    border: none !important;
+    border: 1px solid var(--gb-bg2) !important;
     border-radius: 6px !important;
 }
 
 #urlbar:is([focused="true"], [open]) > #urlbar-background {
-    border: 1px solid var(--gb-bg2) !important;
+    border: 1px solid var(--gb-orange) !important;
     box-shadow: none !important;
 }
 
-/*  circles */
+#urlbar-input {
+    color: var(--gb-fg) !important;
+}
+
+.urlbarView {
+    background-color: var(--gb-bg0) !important;
+    color: var(--gb-fg) !important;
+    border: 1px solid var(--gb-bg2) !important;
+}
+
+.urlbarView-row {
+    color: var(--gb-fg) !important;
+}
+
+.urlbarView-secondary,
+.urlbarView-url {
+    color: var(--gb-fg-dim) !important;
+}
+
+.urlbarView-match {
+    color: var(--gb-yellow) !important;
+}
+
+.urlbarView-row:hover {
+    background-color: var(--gb-bg2) !important;
+}
+
+.urlbarView-row[selected] {
+    background-color: var(--gb-bg2) !important;
+    outline: 1px solid var(--gb-orange) !important;
+}
+
+/* --- circles  */
 #back-button > .toolbarbutton-icon,
 #forward-button > .toolbarbutton-icon {
     list-style-image: none !important;
