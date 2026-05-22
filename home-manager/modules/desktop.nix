@@ -49,6 +49,7 @@
 
   #xdg.configFile."rofi/config.rasi".source = ../../dotfiles/rofi/config.rasi;
   xdg.configFile."walker/config.toml".source = ../../dotfiles/walker/config.toml;
+  xdg.configFile."walker/themes/modern/style.css".source = ../../dotfiles/walker/themes/gruvbox/style.css;
 
   xdg.configFile."dunst/dunstrc".source = ../../dotfiles/dunst/dunstrc;
 }
