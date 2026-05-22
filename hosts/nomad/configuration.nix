@@ -2,7 +2,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./boxes.nix
+    ../modules/boxes.nix
   ];
 
   nix.settings.experimental-features = [
@@ -13,7 +13,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos";
+  networking.hostName = "nomad";
   networking.networkmanager.enable = true;
 
   security.polkit.enable = true;

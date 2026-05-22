@@ -49,8 +49,24 @@ git clone https://github.com/givikuna/nixfiles.git /mnt/etc/nixos
 
 cd /mnt/etc/nixos
 
+echo ""
+echo "Who are you?"
+echo "1) minotaur"
+echo "2) nomad"
+read -p "Enter the number: " HOST_CHOICE
+
+if [ "$HOST_CHOICE" == "1" ]; then
+    HOSTNAME="minotaur"
+elif [ "$HOST_CHOICE" == "2"]; then
+    HOSTNAME = "nomad"
+else
+    echo "invalid choice. cancelling installation.."
+    exit 1
+fi
+
+
 echo "detecting laptop hardware..."
-nixos-generate-config --root /mnt --dir /mnt/etc/nixos/hosts/nixos
+nixos-generate-config --root /mnt --dir /mnt/etc/nixos/hosts/$HOSTNAME
 
 git add .
 git add hosts/nixos/hardware-configuration.nix
@@ -58,8 +74,9 @@ git add hosts/nixos/hardware-configuration.nix
 # sudo chmod +x scripts/*
 
 echo "building and installing your system configuration..."
-nixos-install --flake .#nixos
+nixos-install --flake .#$HOSTNAME
 
+echo ""
 echo "set a password for your user account (givik):"
 nixos-enter --root /mnt -c 'passwd givik'
 
