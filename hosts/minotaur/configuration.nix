@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -129,7 +129,7 @@
   # if copying my system I would change the stuff here
   # this will not work on everyone's computers
   # I'll keep these commented out for now until later
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = true;
@@ -151,7 +151,6 @@
       nvidiaBusId = "PCI:1:0:0";
     };
   };
-
 
   # for screen-sharing (stops from getting a black screen)
   xdg.portal = {
