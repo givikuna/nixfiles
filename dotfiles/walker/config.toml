@@ -1,4 +1,4 @@
-theme = "modern"
+theme = "gruvbox"
 close_when_open = true
 click_to_close = true
 
