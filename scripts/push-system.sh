@@ -4,9 +4,8 @@ cd /etc/nixos
 
 git add .
 
-var=$(cat version.txt)
-echo "$var"
+read -p "choose version name: " VERSION_NAME
 
-git commit -m "version $var"
+git commit -m "$VERSION_NAME"
 
 git push

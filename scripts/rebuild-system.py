@@ -11,7 +11,7 @@ def rebuild():
 
     os.system("git add .")
 
-    ret = os.system(f"sudo nixos-rebuild switch --flake /etc/nixos#{socket.getHostName()}")
+    ret = os.system(f"sudo nixos-rebuild switch --flake /etc/nixos#{socket.gethostname()}")
 
     if ret == 0:
         print("system rebuilt successfully!")
