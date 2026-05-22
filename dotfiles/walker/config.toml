@@ -2,7 +2,5 @@ theme = "modern"
 close_when_open = true
 click_to_close = true
 
-
-
 [placeholders]
 "default" = { input = "search",  list = "no results found" }
