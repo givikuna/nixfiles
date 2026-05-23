@@ -69,7 +69,6 @@ echo "detecting laptop hardware..."
 nixos-generate-config --root /mnt --dir /mnt/etc/nixos/hosts/$HOSTNAME
 
 git add .
-git add hosts/nixos/hardware-configuration.nix
 
 # sudo chmod +x scripts/*
 
