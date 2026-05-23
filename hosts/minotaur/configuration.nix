@@ -33,7 +33,7 @@
   services.ananicy = {
     enable = true;
     package = pkgs.ananicy-cpp;
-    rulesProvider = pkgs.ananicy-rules-mod;
+    # rulesProvider = pkgs.ananicy-rules-mod;
   };
 
   # nvidia driver stuff
