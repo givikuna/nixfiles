@@ -241,6 +241,6 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd "swayosd-client --brightness lo
     repeating = true,
 })
 
--- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd 'grim -g "$(slurp)" - | wl-copy')
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd 'grim -g "$(slurp)" - | wl-copy')
 -- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd "XDG_CURRENT_DESKTOP=sway flameshot gui")
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd "QT_SCALE_FACTOR=1 GDK_SCALE=1 XDG_CURRENT_DESKTOP=sway flameshot gui")
+-- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd "QT_SCALE_FACTOR=1 GDK_SCALE=1 XDG_CURRENT_DESKTOP=sway flameshot gui")
