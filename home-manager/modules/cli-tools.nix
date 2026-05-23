@@ -14,9 +14,7 @@
 
     tokei
 
-    comma
-
-    lazygit
+    fzf
 
     yt-dlp
   ];

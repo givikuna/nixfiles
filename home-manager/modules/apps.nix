@@ -4,11 +4,12 @@
     ./applications/dolphin.nix
     ./applications/firefox.nix
     ./applications/mission-center.nix
+    ./applications/kitty.nix
+    ./applications/spotify.nix
   ];
 
   home.packages = with pkgs; [
     discord
-    spotify
 
     obsidian
     planify
