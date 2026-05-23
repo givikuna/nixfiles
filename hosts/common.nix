@@ -101,11 +101,6 @@
   services.flatpak = {
     enable = true;
     uninstallUnmanaged = false;
-
-    packages = [
-      "com.heroicgameslauncher.hgl"
-      "net.lutris.Lutris"
-    ];
   };
 
   # gaming optimization stuff:

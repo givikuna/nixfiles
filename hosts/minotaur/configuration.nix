@@ -21,6 +21,21 @@
     davinci-resolve
   ];
 
+  environment.sessionVariables = {
+    __GL_SHADER_DISK_CACHE_SKIP_CLEANUP = "1";
+    __GL_SHADER_DISK_CACHE_SIZE = "100000000000";
+  };
+
+  boot.kernel.sysctl = {
+    "vm.max_map_count" = 2147483642;
+    "vm.swappiness" = 10;
+  };
+
+  services.scx = {
+    enable = true;
+    scheduler = "scx_lavd";
+  };
+
   # forces high-performance energy state
   powerManagement.cpuFreqGovernor = "performance";
 
@@ -33,7 +48,7 @@
   services.ananicy = {
     enable = true;
     package = pkgs.ananicy-cpp;
-    # rulesProvider = pkgs.ananicy-rules-mod;
+    rulesProvider = pkgs.ananicy-rules-cachyos;
   };
 
   # nvidia driver stuff

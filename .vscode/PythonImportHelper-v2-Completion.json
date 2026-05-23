@@ -1,0 +1,82 @@
+[
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "socket",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "socket",
+        "description": "socket",
+        "detail": "socket",
+        "documentation": {}
+    },
+    {
+        "label": "open_environment",
+        "kind": 2,
+        "importPath": "scripts.edit-system",
+        "description": "scripts.edit-system",
+        "peekOfCode": "def open_environment():\n    if not CONFIG_DIR.exists():\n        print(f\"error: Configuration directory '{CONFIG_DIR}' not found.\")\n        sys.exit(1)\n    if not shutil.which(\"code\"):\n        print(\"error: 'code' command not found.\")\n        print(\"make sure vscode or codium or code oss is installed and 'code' is enabled in your environment.\")\n        sys.exit(1)\n    print(f\"opening {CONFIG_DIR} in VS Code...\")\n    try:",
+        "detail": "scripts.edit-system",
+        "documentation": {}
+    },
+    {
+        "label": "CONFIG_DIR",
+        "kind": 5,
+        "importPath": "scripts.edit-system",
+        "description": "scripts.edit-system",
+        "peekOfCode": "CONFIG_DIR = Path(\"/etc/nixos\")\ndef open_environment():\n    if not CONFIG_DIR.exists():\n        print(f\"error: Configuration directory '{CONFIG_DIR}' not found.\")\n        sys.exit(1)\n    if not shutil.which(\"code\"):\n        print(\"error: 'code' command not found.\")\n        print(\"make sure vscode or codium or code oss is installed and 'code' is enabled in your environment.\")\n        sys.exit(1)\n    print(f\"opening {CONFIG_DIR} in VS Code...\")",
+        "detail": "scripts.edit-system",
+        "documentation": {}
+    },
+    {
+        "label": "rebuild",
+        "kind": 2,
+        "importPath": "scripts.rebuild-system",
+        "description": "scripts.rebuild-system",
+        "peekOfCode": "def rebuild():\n    print(\"executing NixOS Rebuild...\")\n    os.chdir(\"/etc/nixos\")\n    os.system(\"git add .\")\n    ret = os.system(f\"sudo nixos-rebuild switch --flake /etc/nixos#{socket.gethostname()}\")\n    if ret == 0:\n        print(\"system rebuilt successfully!\")\n    else:\n        print(\"rebuild failed.\")\n        sys.exit(1)",
+        "detail": "scripts.rebuild-system",
+        "documentation": {}
+    }
+]
