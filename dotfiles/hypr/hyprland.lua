@@ -119,10 +119,10 @@ end)
 
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd "loginctl lock-screenshot")
 
--- hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd "walker")
-hl.bind("CONTROL + " .. mainMod .. " + SPACE", hl.dsp.exec_cmd "walker")
-hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd "rofi -show drun")
--- hl.bind("CONTROL + " .. mainMod .. " + SPACE", hl.dsp.exec_cmd "rofi -show drun")
+--hl.bind("CONTROL + " .. mainMod .. " + SPACE", hl.dsp.exec_cmd "walker")
+--hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd "rofi -show drun")
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd "walker")
+hl.bind("CONTROL + " .. mainMod .. " + SPACE", hl.dsp.exec_cmd "rofi -show drun")
 
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd "kitty")
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd "firefox")
