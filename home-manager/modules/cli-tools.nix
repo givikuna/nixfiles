@@ -27,7 +27,6 @@
 
     comma
 
-    git
     lazygit
 
     yt-dlp

@@ -1,6 +1,26 @@
 { pkgs, ... }:
 {
+  programs.git = {
+    enable = true;
+    package = pkgs.gitFull;
+  };
+
   home.packages = with pkgs; [
+    gcc
+    gnumake
+    cmake
+    ninja
+
+    gdb
+    valgrind
+    clang-tools
+    cppcheck
+
+    qtcreator
+    qt6.qttools
+    qt6.qtbase
+    qt6.qtdeclarative
+
     nodejs_22
     typescript
 
