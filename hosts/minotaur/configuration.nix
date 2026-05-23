@@ -34,7 +34,7 @@
     enable = true;
     package = pkgs.ananicy-cpp;
     rulesProvider = pkgs.ananicy-rules-mod;
-  }
+  };
 
   # nvidia driver stuff
   # if copying my system I would change the stuff here
