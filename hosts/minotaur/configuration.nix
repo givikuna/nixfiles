@@ -21,6 +21,21 @@
     davinci-resolve
   ];
 
+  # forces high-performance energy state
+  powerManagement.cpuFreqGovernor = "performance";
+
+  # helps in avoiding stuttering
+  boot.kernelParams = [
+    "split_lock_detect=off"
+  ];
+
+  # automatic process nice-ing
+  services.ananicy = {
+    enable = true;
+    package = pkgs.ananicy-cpp;
+    rulesProvider = pkgs.ananicy-rules-mod;
+  }
+
   # nvidia driver stuff
   # if copying my system I would change the stuff here
   # this will not work on everyone's computers
@@ -46,4 +61,9 @@
       nvidiaBusId = "PCI:01:00:0";
     };
   };
+
+  # gamemoderun mangohud %command%
+  # in steam
+  # put this in steam game properties for launch options
+  # also launch applications like davinci with nvidia-offload
 }
