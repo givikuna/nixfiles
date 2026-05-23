@@ -3,6 +3,7 @@
   imports = [
     ./applications/dolphin.nix
     ./applications/firefox.nix
+    ./applications/mission-center.nix
   ];
 
   home.packages = with pkgs; [
@@ -30,7 +31,6 @@
     evince
 
     gnome-disk-utility
-    mission-center
 
     thunar
 

@@ -1,9 +1,8 @@
 { pkgs, ... }:
 {
-  programs.git = {
-    enable = true;
-    package = pkgs.gitFull;
-  };
+  imports = [
+    ./applications/git.nix
+  ];
 
   home.packages = with pkgs; [
     gcc

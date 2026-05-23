@@ -1,0 +1,91 @@
+configuration {
+    font: "monospace 18";
+    show-icons: true;
+    display-drun: "";
+    drun-display-format: "{icon} {name}";
+
+    hover-select: false;
+    click-to-exit: true;
+}
+
+* {
+    bg:          rgba(40, 40, 40, 0.98);
+    fg:          #ebdbb2;
+    border-col:  #d79921;
+    input-col:   #b8bb26;
+    sel-bg:      #504945;
+    sel-fg:      #fbf1c7;
+    sel-border:  #fe8019;
+
+    background-color: transparent;
+    text-color:       @fg;
+    margin:           0px;
+    padding:          0px;
+}
+
+window {
+    background-color: @bg;
+    border:           3px;
+    border-color:     @border-col;
+    border-radius:    6px;
+    padding:          10px;
+    width:            600px;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    padding:          10px;
+    children:         [ entry ];
+}
+
+entry {
+    text-color:       @input-col;
+    placeholder:      "search";
+    placeholder-color: #a89984;
+    vertical-align:   0.5;
+}
+
+listview {
+    scrollbar:        false;
+    lines:            8;
+    spacing:          2px;
+    border:           0px;
+}
+
+element {
+    padding:          14px 10px;
+    border-radius:    4px;
+}
+
+element selected {
+    background-color: @sel-bg;
+    text-color:       @sel-fg;
+    border:           0px 0px 0px 4px;
+    border-color:     @sel-border;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+element normal.urgent,
+element alternate.urgent,
+element normal.active,
+element alternate.active {
+    background-color: transparent;
+}
+
+element-text {
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+
+element-icon {
+    size:             32px;
+    margin:           0px 14px 0px 0px;
+}
