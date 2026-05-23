@@ -46,11 +46,27 @@ hl.config {
     },
 }
 
+local hostname = "nixos"
+
+local handle = io.popen "hostname"
+if handle then
+    local res = handle:read "*a"
+    if res then
+        hostname = res:gsub("%s+", "")
+    end
+    handle:close()
+end
+
+local ui_scale = 1
+if hostname == "minotaur" then
+    ui_scale = 1.3
+end
+
 hl.monitor {
     output = "",
     mode = "preferred",
     position = "auto",
-    scale = 1,
+    scale = ui_scale,
 }
 
 hl.window_rule {
