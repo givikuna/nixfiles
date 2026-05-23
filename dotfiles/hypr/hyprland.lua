@@ -1,11 +1,5 @@
 local mainMod = "SUPER"
 
-hl.env("XCURSOR_THEME", "breeze_cursor")
-hl.env("XCURSOR_SIZE", "24")
-
-hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
-hl.env("GTK_THEME", "Gruvbox-Dark-B")
-
 hl.curve("clean_spring", { type = "spring", mass = 1.0, stiffness = 140, dampening = 24 })
 hl.curve("fade_curve", { type = "bezier", points = { { 0.25, 1.0 }, { 0.25, 1.0 } } })
 
@@ -46,6 +40,7 @@ hl.config {
     },
     cursor = {
         no_hardware_cursors = true,
+        inactive_timeout = 0,
     },
     xwayland = {
         force_zero_scaling = true,
@@ -86,6 +81,7 @@ hl.window_rule {
     move = "0 0",
     pin = true,
     fullscreen_state = "0 2",
+    size = "100% 100%",
 }
 
 --[[
@@ -246,4 +242,5 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd "swayosd-client --brightness lo
 })
 
 -- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd 'grim -g "$(slurp)" - | wl-copy')
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd "XDG_CURRENT_DESKTOP=sway flameshot gui")
+-- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd "XDG_CURRENT_DESKTOP=sway flameshot gui")
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd "QT_SCALE_FACTOR=1 GDK_SCALE=1 XDG_CURRENT_DESKTOP=sway flameshot gui")

@@ -9,6 +9,10 @@
     "flakes"
   ];
 
+  environment.systemPackages = with pkgs; [
+    glib
+  ];
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -136,6 +140,10 @@
   # force chromium based apps to use wayland
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
+    XDG_DATA_DIRS = [
+      "/run/current-system/sw/share"
+      "/home/givik/.nix-profile/share"
+    ];
   };
 
   # clean up system weekly
@@ -176,6 +184,8 @@
   };
 
   environment.pathsToLink = [ "/share/hypr" ];
+
+  programs.dconf.enable = true;
 
   #
 

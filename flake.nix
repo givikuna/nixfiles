@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    stylix.url = "github:danth/stylix";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,6 +33,7 @@
       nixpkgs,
       home-manager,
       nix-flatpak,
+      stylix,
       ...
     }@inputs:
     {
@@ -40,6 +43,7 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/minotaur/configuration.nix
+            stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
             home-manager.nixosModules.home-manager
             {
@@ -56,6 +60,7 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/nomad/configuration.nix
+            stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
             home-manager.nixosModules.home-manager
             {

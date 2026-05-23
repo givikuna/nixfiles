@@ -14,5 +14,11 @@
     nixfmt
 
     jq
+
+    # ui tools
+
+    grpcui
+    insomnia
+    postman
   ];
 }

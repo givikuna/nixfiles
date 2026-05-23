@@ -10,7 +10,7 @@
     ./modules/media-streamers.nix
     ./modules/office.nix
     ./modules/games.nix
-
+    ./modules/theme.nix
   ];
 
   home.username = "givik";
