@@ -1,6 +1,7 @@
 # i will customize the themes later I just want the little guy to get working in then first place
 
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   home.pointerCursor = {
     gtk.enable = true;
     package = pkgs.bibata-cursors;

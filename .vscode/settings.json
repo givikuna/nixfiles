@@ -22,6 +22,7 @@
         "davinci",
         "diffstat",
         "Disallocate",
+        "dmask",
         "drun",
         "dunst",
         "dunstrc",
@@ -32,6 +33,7 @@
         "fastfetch",
         "finegrained",
         "flameshot",
+        "fmask",
         "gamemode",
         "gamemoderun",
         "gamescope",
@@ -162,6 +164,7 @@
         "wpctl",
         "XCURSOR",
         "xfpmyvw",
+        "xhci",
         "xpadneo",
         "yazi",
         "zombieland"

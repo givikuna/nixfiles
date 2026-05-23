@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 let
   dotfiles-dir = ../../../dotfiles/firefox;
 in
