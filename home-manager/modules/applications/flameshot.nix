@@ -5,7 +5,7 @@
 
     settings = {
       General = {
-        savePath = "/home/user/Screenshots";
+        savePath = "/home/givik/Screenshots";
         disabledTrayIcon = true;
         showStartupLaunchMessage = true;
 

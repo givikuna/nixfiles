@@ -52,11 +52,12 @@
 }
 
 .tabbrowser-tab:not([selected="true"]):hover .tab-background {
+    color: var(--gb-fg) !important;
     background-color: var(--gb-bg2) !important;
 }
 
 .tabbrowser-tab[selected="true"] .tab-text {
-    color: var(--gb-orange-light) !important;
+    color: var(--gb-fg) !important;
     font-weight: bold !important;
 }
 

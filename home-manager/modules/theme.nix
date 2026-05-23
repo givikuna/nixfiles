@@ -1,11 +1,15 @@
-# i will customize the themes later I just want the little guy to get working in then first place
-
 { pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    kdePackages.qtstyleplugin-kvantum
+    libsForQt5.qtstyleplugin-kvantum
+  ];
+
   home.pointerCursor = {
     gtk.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Classic";
+    x11.enable = true;
+    package = pkgs.kdePackages.breeze;
+    name = "breeze_cursors";
     size = 24;
   };
 
@@ -21,9 +25,17 @@
     };
   };
 
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
+
   qt = {
     enable = true;
     platformTheme.name = "gtk";
-    style.name = "adwaita-dark";
+    style.name = "kvantum";
   };
+
+  xdg.configFile."Kvantum/kvantum.kvconfig".source = ../../dotfiles/Kvantum/kvantum.kvconfig;
 }

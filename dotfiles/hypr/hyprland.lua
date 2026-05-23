@@ -1,8 +1,10 @@
--- [[ ~/.config/hypr/hyprland.lua ]]
 local mainMod = "SUPER"
 
-hl.env("XCURSOR_THEME", "Adwaita")
+hl.env("XCURSOR_THEME", "breeze_cursor")
 hl.env("XCURSOR_SIZE", "24")
+
+hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
+hl.env("GTK_THEME", "Gruvbox-Dark-B")
 
 hl.curve("clean_spring", { type = "spring", mass = 1.0, stiffness = 140, dampening = 24 })
 hl.curve("fade_curve", { type = "bezier", points = { { 0.25, 1.0 }, { 0.25, 1.0 } } })
@@ -32,6 +34,7 @@ hl.config {
     },
     misc = {
         disable_hyprland_logo = true,
+        disable_watchdog_warning = true,
     },
     input = {
         kb_layout = "us",
@@ -43,6 +46,9 @@ hl.config {
     },
     cursor = {
         no_hardware_cursors = true,
+    },
+    xwayland = {
+        force_zero_scaling = true,
     },
 }
 

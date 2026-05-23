@@ -37,7 +37,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd /run/current-system/sw/bin/Hyprland";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd start-hyprland";
         user = "greeter";
       };
     };
