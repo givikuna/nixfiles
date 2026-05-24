@@ -25,6 +25,12 @@
       url = "github:cesarferreira/rip";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixcraft = {
+      url = "github:loystonpais/nixcraft";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =

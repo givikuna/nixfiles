@@ -1,5 +1,9 @@
 { pkgs, ... }:
 {
+  imports = [
+    ./applications/minecraft.nix
+  ];
+
   home.packages = with pkgs; [
     protonup-qt
     mangohud

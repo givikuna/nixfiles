@@ -9,6 +9,8 @@
   ];
 
   home.packages = with pkgs; [
+    google-chrome
+
     discord
 
     obsidian
@@ -36,5 +38,6 @@
     thunar
 
     obs-studio
+    ffmpeg
   ];
 }
