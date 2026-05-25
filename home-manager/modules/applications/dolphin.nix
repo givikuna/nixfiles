@@ -3,6 +3,11 @@
   home.packages = with pkgs; [
     kdePackages.dolphin
 
+    # theme:
+    kdePackages.breeze-gtk
+    kdePackages.breeze-icons
+    gruvbox-plus-icons
+
     # dependencies for dolphin
 
     # icon support
@@ -15,17 +20,26 @@
     kdePackages.kio-extras
   ];
 
-  #xdg.desktopEntries."org.kde.dolphin" = {
-  #  name = "Dolphin";
-  #  genericName = "File Manager";
-  #  exec = "env QT_STYLE_OVERRIDE=Breeze-Dark dolphin %u";
-  #  icon = "system-file-manager";
-  #  terminal = false;
-  #  categories = [
-  #    "System"
-  #    "FileTools"
-  #    "FileManager"
-  #  ];
-  #  mimeType = [ "inode/directory" ];
-  #};
+  home.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "kvantum";
+    QT_STYLE_OVERRIDE = "kvantum";
+  };
+
+  xdg.configFile."dolphinrc" = {
+    source = ../../../dotfiles/dolphin/dolphinrc;
+    force = true;
+  };
+
+  xdg.desktopEntries.dolphin = {
+    name = "Dolphin";
+    exec = "env QT_STYLE_OVERRIDE=kvantum QT_QPA_PLATFORMTHEME=kvantum dolphin %u";
+    icon = "system-file-manager";
+    terminal = false;
+    categories = [
+      "System"
+      "FileTools"
+      "FileManager"
+    ];
+    mimeType = [ "inode/directory" ];
+  };
 }

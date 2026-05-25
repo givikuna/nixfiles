@@ -3,6 +3,8 @@
   home.packages = with pkgs; [
     kdePackages.qtstyleplugin-kvantum
     libsForQt5.qtstyleplugin-kvantum
+
+    gruvbox-kvantum
   ];
 
   home.sessionVariables = {
@@ -48,4 +50,11 @@
   };
 
   xdg.configFile."Kvantum/kvantum.kvconfig".source = ../../dotfiles/Kvantum/kvantum.kvconfig;
+
+  xdg.configFile."Kvantum/Gruvbox-Dark-Brown/Gruvbox-Dark-Brown.kvconfig" = {
+    source = "${pkgs.gruvbox-kvantum}/share/Kvantum/Gruvbox-Dark-Brown/Gruvbox-Dark-Brown.kvconfig";
+  };
+  xdg.configFile."Kvantum/Gruvbox-Dark-Brown/Gruvbox-Dark-Brown.svg" = {
+    source = "${pkgs.gruvbox-kvantum}/share/Kvantum/Gruvbox-Dark-Brown/Gruvbox-Dark-Brown.svg";
+  };
 }

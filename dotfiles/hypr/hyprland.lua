@@ -115,6 +115,9 @@ hl.on("hyprland.start", function()
     hl.exec_cmd "kitty"
     hl.exec_cmd "dbus-update-activation-environment --systemd --all"
     hl.exec_cmd "systemctl --user import-environment QT_STYLE_OVERRIDE GTK_THEME XDG_CURRENT_DESKTOP"
+    hl.exec_cmd "dbus-update-activation-environment --systemd --all"
+    hl.exec_cmd "systemctl --user import-environment QT_STYLE_OVERRIDE GTK_THEME XDG_CURRENT_DESKTOP DISPLAY WAYLAND_DISPLAY"
+    hl.exec_cmd "gnome-keyring-daemon --start --components=secrets"
 end)
 
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd "loginctl lock-screenshot")
@@ -250,6 +253,6 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd "swayosd-client --brightness lo
     repeating = true,
 })
 
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd 'grim -g "$(slurp)" - | wl-copy')
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd 'grim -g "$(slurp)" - | wl-copy')
 -- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd "XDG_CURRENT_DESKTOP=sway flameshot gui")
 -- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd "QT_SCALE_FACTOR=1 GDK_SCALE=1 XDG_CURRENT_DESKTOP=sway flameshot gui")

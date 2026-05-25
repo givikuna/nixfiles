@@ -12,6 +12,8 @@
     superfile
     nushell
     comma
+
+    libsecret
   ];
 
   programs.fish.enable = true;

@@ -1,4 +1,6 @@
 *.conf linguist-language=INI
+*.kvconfig linguist-language=INI
+dolphinrc linguist-language=INI
 
 *.conf linguist-detectable
 *.toml linguist-detectable

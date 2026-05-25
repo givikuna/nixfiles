@@ -2,6 +2,8 @@
 {
   imports = [
     ./modules/boxes.nix
+    ./modules/keyring.nix
+    ./modules/distrobox.nix
   ];
 
   nix.settings.experimental-features = [
@@ -11,6 +13,7 @@
 
   environment.systemPackages = with pkgs; [
     glib
+    gruvbox-kvantum
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -31,7 +34,6 @@
   ];
 
   users.users.givik.shell = pkgs.fish;
-  security.pam.services.hyprlock = { };
 
   # gives swayosd rights
   services.udev.packages = [ pkgs.swayosd ];
@@ -130,6 +132,7 @@
       pkgs.xdg-desktop-portal-hyprland
     ];
     config.common.default = "hyprland";
+    xdgOpenUsePortal = true;
   };
 
   # force chromium based apps to use wayland
@@ -139,6 +142,7 @@
       "/run/current-system/sw/share"
       "/home/givik/.nix-profile/share"
     ];
+    GTK_THEME = "Gruvbox-Dark-B:dark";
   };
 
   # clean up system weekly
@@ -158,9 +162,6 @@
   # for proper usb reading
   services.udisks2.enable = true;
   services.gvfs.enable = true;
-
-  # keyring to avoid re-logins
-  services.gnome.gnome-keyring.enable = true;
 
   hardware.xpadneo.enable = true;
 

@@ -1,0 +1,10 @@
+[General]
+ColorScheme=Gruvbox-Dark-Brown
+UseCustomColorScheme=true
+
+[KDE]
+ColorScheme=Gruvbox-Dark-Brown
+widgetStyle=kvantum
+
+[UiSettings]
+ColorScheme=Gruvbox-Dark-Brown
