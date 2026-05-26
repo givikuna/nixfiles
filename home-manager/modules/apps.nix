@@ -6,6 +6,7 @@
     ./applications/mission-center.nix
     ./applications/kitty.nix
     ./applications/spotify.nix
+    ./applications/discord.nix
   ];
 
   home.packages = with pkgs; [

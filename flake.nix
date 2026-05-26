@@ -13,7 +13,7 @@
 
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
 
     gonwatch = {
@@ -31,6 +31,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    flake-utils = {
+      url = "github:numtide/flake-utils";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    lazyspotify = {
+      url = "github:dubeyKartikay/lazyspotify/main";
+      flake = false;
+    };
   };
 
   outputs =
