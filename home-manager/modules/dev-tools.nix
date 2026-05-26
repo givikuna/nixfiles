@@ -27,6 +27,7 @@
     python3Packages.pip
 
     lua
+    lua-language-server
     stylua
 
     nixd

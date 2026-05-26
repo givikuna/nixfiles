@@ -1,11 +1,10 @@
 {
   pkgs,
   inputs,
-  config,
   ...
 }:
 let
-  lazyspotify = pkgs.callPackage ./derived/lazyspotify/default.nix {
+  lazyspotify = pkgs.callPackage ./derivations/lazyspotify/default.nix {
     src = inputs.lazyspotify;
   };
 in

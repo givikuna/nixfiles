@@ -12,4 +12,6 @@
     vesktop
     legcord
   ];
+
+  xdg.configFile."legcord/gruvbox.css".source = ../../../dotfiles/legcord/gruvbox.css;
 }

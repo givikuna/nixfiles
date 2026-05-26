@@ -1,11 +1,12 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    vscode
-    neovim
-    micro
-    helix
+  imports = [
+    ./applications/neovim.nix
+    ./applications/helix.nix
+    ./applications/micro.nix
   ];
 
-  xdg.configFile."nvim".source = ../../dotfiles/nvim;
+  home.packages = with pkgs; [
+    vscode
+  ];
 }

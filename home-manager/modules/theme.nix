@@ -31,6 +31,11 @@
     };
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = 1;
+
+      # cursor:
+      gtk-cursor-aspect-ratio = "1.0";
+      gtk-cursor-color = "#fabd2f";
+      gtk-cursor-blink = false;
     };
   };
 

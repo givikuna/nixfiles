@@ -12,6 +12,7 @@ in
       settings = {
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         "layers.acceleration.force-enabled" = true;
+        "ui.caretWidth" = 4;
       };
 
       userChrome = builtins.readFile "${dotfiles-dir}/userChrome/userChrome.css";

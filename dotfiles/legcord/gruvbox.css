@@ -1,0 +1,53 @@
+:root {
+    --gb-bg0: #2c2c2c;
+    --gb-bg1: #2c2c2c;
+    --gb-bg2: #35312f;
+    --gb-fg: #ebdbb2;
+    --gb-fg-dim: #a89984;
+    --gb-orange: #fe8019;
+    --gb-yellow: #fabd2f;
+    --gb-green: #b8bb26;
+    --gb-red: #fb4934;
+}
+
+body,
+.app-3xd6d0,
+.bg-1QIAus,
+.chat-2ZfjoI,
+.sidebar-1tnWFu {
+    background-color: var(--gb-bg0) !important;
+}
+
+.messageContent-2t3eCI,
+.channelName-3KPsGw,
+.username-h_Y3Us,
+.item-3XjbnG {
+    color: var(--gb-fg) !important;
+}
+
+.wrapper-1_HaEi:hover .link-1uR9Mg,
+.containerDefault-3TQ5Yn:hover .iconContainer-2-5jjV {
+    background-color: var(--gb-bg2) !important;
+}
+
+.mention {
+    background-color: var(--gb-yellow) !important;
+    color: var(--gb-bg0) !important;
+}
+
+.markup-eYLPri code,
+.codeBlockSyntax-2i-tmQ,
+.codeLine-14BKbG {
+    background-color: var(--gb-bg1) !important;
+    color: var(--gb-fg) !important;
+}
+
+.button-1EGGcP,
+.lookFilled-yCfaCM.colorBrand-3p6r5v {
+    background-color: var(--gb-orange) !important;
+    color: var(--gb-bg0) !important;
+}
+
+.scroller-1bVxF5::-webkit-scrollbar-thumb {
+    background-color: var(--gb-bg2) !important;
+}

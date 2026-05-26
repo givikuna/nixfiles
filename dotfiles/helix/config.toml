@@ -1,0 +1,3 @@
+[editor]
+cursorline = true
+cursor-shape = { normal = "block", insert = "block", select = "block" }
