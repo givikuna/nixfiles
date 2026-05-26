@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }:
 let
@@ -14,4 +15,9 @@ in
     spotify-player
     lazyspotify
   ];
+
+  # home.file.".config/lazyspotify/config.yml".text = ''
+  #   auth:
+  #     client_id: "${builtins.readFile config.sops.secrets."lazyspotify/client_id".path}"
+  # '';
 }

@@ -4,6 +4,7 @@
     ./modules/boxes.nix
     ./modules/keyring.nix
     ./modules/distrobox.nix
+    ./modules/sops.nix
   ];
 
   nix.settings.experimental-features = [

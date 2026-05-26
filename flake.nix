@@ -26,11 +26,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixcraft = {
-      url = "github:loystonpais/nixcraft";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     flake-utils = {
       url = "github:numtide/flake-utils";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -39,6 +34,11 @@
     lazyspotify = {
       url = "github:dubeyKartikay/lazyspotify/main";
       flake = false;
+    };
+
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -49,6 +49,7 @@
       home-manager,
       nix-flatpak,
       stylix,
+      sops-nix,
       ...
     }@inputs:
     {
@@ -60,12 +61,16 @@
             ./hosts/minotaur/configuration.nix
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
+            sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.sharedModules = [ nix-flatpak.homeManagerModules.nix-flatpak ];
+              home-manager.sharedModules = [
+                nix-flatpak.homeManagerModules.nix-flatpak
+                sops-nix.homeManagerModules.sops
+              ];
               home-manager.users.givik = import ./home-manager/home.nix;
             }
           ];
@@ -77,12 +82,16 @@
             ./hosts/nomad/configuration.nix
             stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
+            sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.sharedModules = [ nix-flatpak.homeManagerModules.nix-flatpak ];
+              home-manager.sharedModules = [
+                nix-flatpak.homeManagerModules.nix-flatpak
+                sops-nix.homeManagerModules.sops
+              ];
               home-manager.users.givik = import ./home-manager/home.nix;
             }
           ];
