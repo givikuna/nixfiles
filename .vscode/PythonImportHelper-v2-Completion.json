@@ -1,20 +1,29 @@
 [
     {
-        "label": "subprocess",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "subprocess",
-        "description": "subprocess",
-        "detail": "subprocess",
-        "documentation": {}
-    },
-    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "sys",
         "description": "sys",
         "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
         "documentation": {}
     },
     {
@@ -35,21 +44,48 @@
         "documentation": {}
     },
     {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
         "label": "socket",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "socket",
         "description": "socket",
         "detail": "socket",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "scripts.collect-distrobox-garbage",
+        "description": "scripts.collect-distrobox-garbage",
+        "peekOfCode": "def main():\n    result = subprocess.run([distrobox_cmd, \"list\", \"--no-color\"], capture_output=True, text=True)\n    lines = result.stdout.strip().split('\\n')\n    if len(lines) <= 1:\n        return\n    current_boxes = []\n    for line in lines[1:]:\n        parts = line.split('|')\n        if len(parts) > 1:\n            current_boxes.append(parts[1].strip())",
+        "detail": "scripts.collect-distrobox-garbage",
+        "documentation": {}
+    },
+    {
+        "label": "distrobox_cmd",
+        "kind": 5,
+        "importPath": "scripts.collect-distrobox-garbage",
+        "description": "scripts.collect-distrobox-garbage",
+        "peekOfCode": "distrobox_cmd = sys.argv[1]\nbin_dir = sys.argv[2]\ndeclared_boxes = set(sys.argv[3:])\ndef main():\n    result = subprocess.run([distrobox_cmd, \"list\", \"--no-color\"], capture_output=True, text=True)\n    lines = result.stdout.strip().split('\\n')\n    if len(lines) <= 1:\n        return\n    current_boxes = []\n    for line in lines[1:]:",
+        "detail": "scripts.collect-distrobox-garbage",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "scripts.collect-distrobox-garbage",
+        "description": "scripts.collect-distrobox-garbage",
+        "peekOfCode": "bin_dir = sys.argv[2]\ndeclared_boxes = set(sys.argv[3:])\ndef main():\n    result = subprocess.run([distrobox_cmd, \"list\", \"--no-color\"], capture_output=True, text=True)\n    lines = result.stdout.strip().split('\\n')\n    if len(lines) <= 1:\n        return\n    current_boxes = []\n    for line in lines[1:]:\n        parts = line.split('|')",
+        "detail": "scripts.collect-distrobox-garbage",
+        "documentation": {}
+    },
+    {
+        "label": "declared_boxes",
+        "kind": 5,
+        "importPath": "scripts.collect-distrobox-garbage",
+        "description": "scripts.collect-distrobox-garbage",
+        "peekOfCode": "declared_boxes = set(sys.argv[3:])\ndef main():\n    result = subprocess.run([distrobox_cmd, \"list\", \"--no-color\"], capture_output=True, text=True)\n    lines = result.stdout.strip().split('\\n')\n    if len(lines) <= 1:\n        return\n    current_boxes = []\n    for line in lines[1:]:\n        parts = line.split('|')\n        if len(parts) > 1:",
+        "detail": "scripts.collect-distrobox-garbage",
         "documentation": {}
     },
     {

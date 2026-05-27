@@ -11,6 +11,7 @@
     ./modules/office.nix
     ./modules/games.nix
     ./modules/theme.nix
+    ./modules/distrobox.nix
   ];
 
   home.username = "givik";
