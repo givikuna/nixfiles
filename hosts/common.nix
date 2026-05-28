@@ -184,6 +184,8 @@
 
   programs.dconf.enable = true;
 
+  programs.direnv.enable = true;
+
   #
 
   time.timeZone = "America/New_York";

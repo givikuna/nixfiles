@@ -1,4 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
+let
+  livescript = import ./derivations/livescript/package.nix { inherit pkgs lib; };
+in
 {
   imports = [
     ./applications/git.nix
@@ -22,6 +25,7 @@
 
     nodejs_22
     typescript
+    livescript
 
     python3
     python3Packages.pip
