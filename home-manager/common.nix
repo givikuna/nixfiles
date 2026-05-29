@@ -5,11 +5,7 @@
     ./modules/cli-tools.nix
     ./modules/desktop.nix
     ./modules/dev-tools.nix
-    ./modules/editors.nix
     ./modules/shell.nix
-    ./modules/media-streamers.nix
-    ./modules/office.nix
-    ./modules/games.nix
     ./modules/theme.nix
     ./modules/distrobox.nix
   ];

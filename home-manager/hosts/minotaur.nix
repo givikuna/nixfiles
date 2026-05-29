@@ -46,5 +46,12 @@
     sokogrump = true;
     aqueducts = true;
     osu = true;
+    "minecraft-mojang" = true;
+
+    "ani-cli" = true;
+
+    "libreoffice-fresh" = true;
+
+    gonwatch = true;
   };
 }

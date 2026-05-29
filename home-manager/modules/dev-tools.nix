@@ -1,9 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 let
-  #livescript = import ./derivations/livescript/package.nix { inherit pkgs lib; };
+  livescript = import ../packages/tools/livescript/package.nix { inherit pkgs lib; };
 in
 {
   home.packages = with pkgs; [
+    vscode # always needed :()
+
     gcc
     gnumake
     cmake
@@ -21,7 +23,7 @@ in
 
     nodejs_22
     typescript
-    # livescript
+    livescript
 
     python3
     python3Packages.pip

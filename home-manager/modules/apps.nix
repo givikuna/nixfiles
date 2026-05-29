@@ -19,6 +19,7 @@ let
     "Minecraft"
     "neovim"
     "prismlauncher"
+    "gonwatch"
   ];
 
   non-module-requiring-apps = with pkgs; {
@@ -46,6 +47,8 @@ let
     spotify-player = spotify-player;
     vesktop = vesktop;
     "davinci-resolve" = davinci-resolve;
+    "ani-cli" = ani-cli;
+    "libreoffice-fresh" = libreoffice-fresh;
   };
 
   flatpak-apps = {
@@ -54,6 +57,7 @@ let
     sokogrump = "ro.go.hmlendea.SokoGrump";
     aqueducts = "com.endlessnetwork.aqueducts";
     osu = "sh.ppy.osu";
+    "minecraft-mojang" = "com.mojang.Minecraft";
   };
 
   all-apps =
@@ -85,6 +89,7 @@ in
     ../packages/applications/prismlauncher/package.nix
     ../packages/applications/lazyspotify/package.nix
     ../packages/applications/kitty/package.nix
+    ../packages/applications/gonwatch/package.nix
   ];
 
   config = {
