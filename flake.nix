@@ -71,7 +71,7 @@
                 nix-flatpak.homeManagerModules.nix-flatpak
                 sops-nix.homeManagerModules.sops
               ];
-              home-manager.users.givik = import ./home-manager/home.nix;
+              home-manager.users.givik = import ./home-manager/hosts/minotaur.nix;
             }
           ];
         };
@@ -93,7 +93,7 @@
                 nix-flatpak.homeManagerModules.nix-flatpak
                 sops-nix.homeManagerModules.sops
               ];
-              home-manager.users.givik = import ./home-manager/home.nix;
+              home-manager.users.givik = import ./home-manager/hosts/nomad.nix;
             }
           ];
         };

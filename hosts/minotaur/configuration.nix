@@ -17,10 +17,6 @@
     ];
   };
 
-  environment.systemPackages = with pkgs; [
-    davinci-resolve
-  ];
-
   environment.sessionVariables = {
     __GL_SHADER_DISK_CACHE_SKIP_CLEANUP = "1";
     __GL_SHADER_DISK_CACHE_SIZE = "100000000000";

@@ -1,12 +1,8 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 let
-  livescript = import ./derivations/livescript/package.nix { inherit pkgs lib; };
+  #livescript = import ./derivations/livescript/package.nix { inherit pkgs lib; };
 in
 {
-  imports = [
-    ./applications/git.nix
-  ];
-
   home.packages = with pkgs; [
     gcc
     gnumake
@@ -25,7 +21,7 @@ in
 
     nodejs_22
     typescript
-    livescript
+    # livescript
 
     python3
     python3Packages.pip

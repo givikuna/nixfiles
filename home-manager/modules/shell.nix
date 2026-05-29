@@ -1,11 +1,13 @@
 { pkgs, ... }:
 {
   imports = [
-    ./shell/fish.nix
-    ./shell/starship.nix
-    ./shell/fastfetch.nix
-    ./shell/tmux.nix
-    ./shell/yazi.nix
+    ../packages/shell/fish/package.nix
+    ../packages/shell/starship/package.nix
+    ../packages/shell/fastfetch/package.nix
+    ../packages/shell/tmux/package.nix
+    ../packages/shell/yazi/package.nix
+
+    ../packages/tools/git/package.nix
   ];
 
   home.packages = with pkgs; [

@@ -1,42 +1,101 @@
-{ pkgs, ... }:
+# home-manager/modules/apps.nix
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}:
+
+let
+  module-requiring-apps = [
+    "discord"
+    "dolphin"
+    "firefox"
+    "helix"
+    "kitty"
+    "lazyspotify"
+    "legcord"
+    "micro"
+    "Minecraft"
+    "neovim"
+    "prismlauncher"
+  ];
+
+  non-module-requiring-apps = with pkgs; {
+    "google-chrome" = google-chrome;
+    obsidian = obsidian;
+    planify = planify;
+    gimp = gimp;
+    imagemagick = imagemagick;
+    switcheroo = switcheroo;
+    haruna = haruna;
+    mpv = mpv;
+    imv = imv;
+    "protonup-qt" = protonup-qt;
+    mangohud = mangohud;
+    easyeffects = easyeffects;
+    qbittorrent = qbittorrent;
+    pdfarranger = pdfarranger;
+    evince = evince;
+    "gnome-disk-utility" = gnome-disk-utility;
+    thunar = thunar;
+    "obs-studio" = obs-studio;
+    ffmpeg = ffmpeg;
+    "mission-center" = mission-center;
+    spotify = spotify;
+    spotify-player = spotify-player;
+    vesktop = vesktop;
+    "davinci-resolve" = davinci-resolve;
+  };
+
+  flatpak-apps = {
+    heroic = "com.heroicgameslauncher.hgl";
+    lutris = "net.lutris.Lutris";
+    sokogrump = "ro.go.hmlendea.SokoGrump";
+    aqueducts = "com.endlessnetwork.aqueducts";
+    osu = "sh.ppy.osu";
+  };
+
+  all-apps =
+    module-requiring-apps
+    ++ builtins.attrNames non-module-requiring-apps
+    ++ builtins.attrNames flatpak-apps;
+
+  app-options = builtins.listToAttrs (
+    map (name: {
+      inherit name;
+      value = lib.mkEnableOption "Enable ${name}";
+    }) all-apps
+  );
+in
+{
+  options.my.apps = lib.mkOption {
+    type = lib.types.submodule { options = app-options; };
+    default = { };
+  };
+
   imports = [
-    ./applications/dolphin.nix
-    ./applications/firefox.nix
-    ./applications/mission-center.nix
-    ./applications/kitty.nix
-    ./applications/spotify.nix
-    ./applications/discord.nix
+    ../packages/applications/dolphin/package.nix
+    ../packages/applications/discord/package.nix
+    ../packages/applications/firefox/package.nix
+    ../packages/applications/helix/package.nix
+    ../packages/applications/legcord/package.nix
+    ../packages/applications/micro/package.nix
+    ../packages/applications/neovim/package.nix
+    ../packages/applications/prismlauncher/package.nix
+    ../packages/applications/lazyspotify/package.nix
+    ../packages/applications/kitty/package.nix
   ];
 
-  home.packages = with pkgs; [
-    google-chrome
+  config = {
+    home.packages = builtins.concatLists (
+      builtins.attrValues (
+        builtins.mapAttrs (name: pkg: lib.optional config.my.apps."${name}" pkg) non-module-requiring-apps
+      )
+    );
 
-    obsidian
-    planify
-
-    gimp
-    imagemagick
-    switcheroo
-
-    haruna
-    mpv
-    imv
-
-    protonup-qt
-    mangohud
-    easyeffects
-
-    qbittorrent
-
-    pdfarranger
-    evince
-
-    gnome-disk-utility
-
-    thunar
-
-    obs-studio
-    ffmpeg
-  ];
+    services.flatpak.packages = builtins.attrValues (
+      lib.filterAttrs (name: id: config.my.apps."${name}") flatpak-apps
+    );
+  };
 }
