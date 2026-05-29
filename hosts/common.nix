@@ -98,8 +98,6 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
-  services.tlp.enable = true;
-
   # might move flatpak stuff to its own module=
   services.flatpak = {
     enable = true;

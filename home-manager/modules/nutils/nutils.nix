@@ -1,11 +1,14 @@
 { pkgs, inputs, ... }:
 {
+  imports = [
+    ../../packages/tools/zoxide/package.nix # cd
+    ../../packages/tools/bat/package.nix # cat
+  ];
+
   home.packages = with pkgs; [
     ripgrep # grep
     fd # find
     eza # ls
-    bat # cat
-    zoxide # cd
     inputs.rip.packages.${pkgs.system}.default # rm
     sd # sed
     xh # curl/httpie

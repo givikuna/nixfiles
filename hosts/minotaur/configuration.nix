@@ -28,7 +28,7 @@
 
   services.scx = {
     enable = true;
-    scheduler = "scx_lavd";
+    scheduler = "scx_bpfland"; # better than scx_lavd for gaming afaik
   };
 
   # forces high-performance energy state
@@ -52,18 +52,22 @@
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     modesetting.enable = true;
-    powerManagement.enable = true;
-    powerManagement.finegrained = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
 
-    open = true;
+    open = false;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
 
     prime = {
-      offload = {
-        enable = true;
-        enableOffloadCmd = true;
-      };
+      /*
+        offload = {
+          enable = true;
+          enableOffloadCmd = true;
+        };
+      */
+
+      sync.enable = true;
 
       # run `lspci | grep -E "VGA|3D"`
       # this is to verify the addresses
@@ -71,6 +75,11 @@
       nvidiaBusId = "PCI:01:00:0";
     };
   };
+
+  services.tlp.enable = false; # bad for battery life
+  # avoids insufficient power being given
+
+  services.power-profiles-daemon.enable = true;
 
   # gamemoderun mangohud %command%
   # in steam
