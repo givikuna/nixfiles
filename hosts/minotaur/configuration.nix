@@ -2,7 +2,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../modules/boxes.nix
     ../common.nix
   ];
 

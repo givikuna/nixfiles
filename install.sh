@@ -53,12 +53,15 @@ echo ""
 echo "Who are you?"
 echo "1) minotaur"
 echo "2) nomad"
+echo "2) pilgrim"
 read -p "Enter the number: " HOST_CHOICE
 
 if [ "$HOST_CHOICE" == "1" ]; then
-    HOSTNAME="minotaur"
-elif [ "$HOST_CHOICE" == "2"]; then
+    HOSTNAME = "minotaur"
+elif [ "$HOST_CHOICE" == "2" ]; then
     HOSTNAME = "nomad"
+elif [ "$HOST_CHOICE" == "3" ]; then
+    HOSTNAME = "pilgrim"
 else
     echo "invalid choice. cancelling installation.."
     exit 1
