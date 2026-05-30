@@ -3,6 +3,7 @@
   imports = [
     ../../packages/tools/zoxide/package.nix # cd
     ../../packages/tools/bat/package.nix # cat
+    ../../packages/tools/broot/package.nix # tree
   ];
 
   home.packages = with pkgs; [
@@ -13,7 +14,6 @@
     sd # sed
     xh # curl/httpie
     dust # du
-    broot # tree
     bottom # top
     delta # diff
     procs # ps

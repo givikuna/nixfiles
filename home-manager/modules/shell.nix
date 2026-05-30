@@ -5,6 +5,7 @@
     ../packages/shell/starship/package.nix
     ../packages/shell/fastfetch/package.nix
     ../packages/shell/tmux/package.nix
+    ../packages/shell/wezterm/package.nix
     ../packages/shell/yazi/package.nix
 
     ../packages/tools/git/package.nix

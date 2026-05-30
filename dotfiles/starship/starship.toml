@@ -1,0 +1,43 @@
+format = """
+[╭─](bold #a89984)[$username](bold #d3869b)[@](bold #ebdbb2)[$hostname](bold #d8a657)[ ├─> ](bold #a89984)$directory$git_branch$git_status$git_metrics
+[╰─$character](bold #a89984)"""
+
+right_format = """$cmd_duration$memory_usage$time"""
+
+[directory]
+style = "bold #8ec07c"
+read_only = " 󰌾"
+truncation_length = 4
+truncate_to_repo = false
+
+[git_branch]
+symbol = " "
+style = "bold #fabd2f"
+format = "[├─> ](bold #a89984)[$symbol$branch ]($style)"
+
+[git_status]
+style = "bold #fb4934"
+
+[git_metrics]
+disabled = false
+added_style = "bold #b8bb26"
+deleted_style = "bold #fb4934"
+
+[cmd_duration]
+min_time = 500
+format = "[ 󰔛 $duration ](fg:#a89984)"
+
+[memory_usage]
+disabled = false
+threshold = 60 # Only show when using > 60% RAM
+format = "[ $symbol$ram ](fg:#fe8019)"
+symbol = "󰍛 "
+
+[time]
+disabled = false
+time_format = "%H:%M"
+format = "[ 󱑎 $time ](fg:#928374)"
+
+[character]
+success_symbol = "[❯](bold #b8bb26)"
+error_symbol = "[❯](bold #fb4934)"

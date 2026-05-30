@@ -28,6 +28,7 @@
         "cesarferrei",
         "cesarferreira",
         "cliphist",
+        "conflictstyle",
         "consumet",
         "cppcheck",
         "cursorline",
@@ -235,6 +236,7 @@
         "waybar",
         "waywall",
         "webrtc",
+        "wezterm",
         "wikitable",
         "windowrulev",
         "wlogout",
@@ -249,6 +251,7 @@
         "xsel",
         "xwayland",
         "yazi",
+        "zdiff",
         "Zfjo",
         "zombieland"
     ],
