@@ -42,7 +42,7 @@ hl.config {
         },
     },
     cursor = {
-        no_hardware_cursors = false,
+        no_hardware_cursors = true,
         inactive_timeout = 0,
     },
     xwayland = {
@@ -131,12 +131,7 @@ hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd "kitty")
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd "firefox")
 
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
-hl.bind(
-    mainMod .. " + F",
-    hl.dsp.window.float {
-        action = "toggle",
-    }
-)
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen("maximized", "toggle"))
 hl.bind(mainMod .. " + ALT + K", hl.dsp.exec_cmd "hyprctl dispatch pin")
 
 hl.bind(

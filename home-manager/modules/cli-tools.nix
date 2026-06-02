@@ -2,6 +2,7 @@
 {
   imports = [
     ./nutils/nutils.nix
+    ../packages/tools/emacs/package.nix
   ];
 
   home.packages = with pkgs; [
