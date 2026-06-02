@@ -1,4 +1,3 @@
-;; Bootstrap straight.el
 (defvar bootstrap-version)
 (let ((bootstrap-file
        (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
@@ -12,6 +11,5 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
-;; Use use-package for all configuration, with straight as backend
 (straight-use-package 'use-package)
-(setq straight-use-package-by-default t) ; automatically use straight for all packages
+(setq straight-use-package-by-default t)
