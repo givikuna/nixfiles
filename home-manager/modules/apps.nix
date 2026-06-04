@@ -20,6 +20,7 @@ let
     "neovim"
     "prismlauncher"
     "gonwatch"
+    "tuxedo"
   ];
 
   non-module-requiring-apps = with pkgs; {
@@ -90,6 +91,7 @@ in
     ../packages/applications/lazyspotify/package.nix
     ../packages/applications/kitty/package.nix
     ../packages/applications/gonwatch/package.nix
+    ../packages/applications/tuxedo/package.nix
   ];
 
   config = {

@@ -53,5 +53,7 @@
     "libreoffice-fresh" = true;
 
     gonwatch = true;
+
+    tuxedo = true;
   };
 }
