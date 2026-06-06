@@ -2,6 +2,7 @@
   lib,
   config,
   pkgs,
+  host-name,
   ...
 }:
 lib.mkIf config.my.apps.kitty {
@@ -9,5 +10,5 @@ lib.mkIf config.my.apps.kitty {
     kitty
   ];
 
-  xdg.configFile."kitty/kitty.conf".source = ../../../../dotfiles/kitty/kitty.conf;
+  xdg.configFile."kitty/kitty.conf".source = ../../../../dotfiles/kitty/${host-name}/kitty.conf;
 }

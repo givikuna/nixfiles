@@ -21,6 +21,7 @@ let
     "prismlauncher"
     "gonwatch"
     "tuxedo"
+    "thunderbird"
   ];
 
   non-module-requiring-apps = with pkgs; {
@@ -92,6 +93,7 @@ in
     ../packages/applications/kitty/package.nix
     ../packages/applications/gonwatch/package.nix
     ../packages/applications/tuxedo/package.nix
+    ../packages/applications/thunderbird/package.nix
   ];
 
   config = {

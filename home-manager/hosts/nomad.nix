@@ -40,5 +40,13 @@
     spotify-player = true;
     vesktop = true;
     # "davinci-resolve" = true;
+
+    "ani-cli" = true;
+
+    "libreoffice-fresh" = true;
+
+    gonwatch = true;
+
+    tuxedo = true;
   };
 }

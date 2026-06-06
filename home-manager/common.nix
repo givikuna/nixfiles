@@ -3,7 +3,6 @@
   imports = [
     ./modules/apps.nix
     ./modules/cli-tools.nix
-    ./modules/desktop.nix
     ./modules/dev-tools.nix
     ./modules/shell.nix
     ./modules/theme.nix

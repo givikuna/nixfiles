@@ -6,9 +6,8 @@ hl.curve("fade_curve", { type = "bezier", points = { { 0.25, 1.0 }, { 0.25, 1.0 
 hl.env("GTK_THEME", "Gruvbox-Dark-B")
 hl.env("QT_STYLE_OVERRIDE", "kvantum")
 
-hl.env("GBM_BACKEND", "nvidia-drm")
-hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
-hl.env("LIBVA_DRIVER_NAME", "nvidia")
+-- hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
+-- hl.env("LIBVA_DRIVER_NAME", "nvidia")
 
 hl.animation { leaf = "windows", enabled = true, speed = 2, spring = "clean_spring" }
 hl.animation { leaf = "workspaces", enabled = true, speed = 2, spring = "clean_spring", style = "slide" }
@@ -119,8 +118,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd "kitty"
     hl.exec_cmd "systemctl --user import-environment QT_STYLE_OVERRIDE GTK_THEME XDG_CURRENT_DESKTOP DISPLAY WAYLAND_DISPLAY HYPRLAND_INSTANCE_SIGNATURE"
     hl.exec_cmd "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP HYPRLAND_INSTANCE_SIGNATURE"
-    hl.exec_cmd "dbus-update-activation-environment --systemd --all"
-    hl.exec_cmd "systemctl --user import-environment QT_STYLE_OVERRIDE GTK_THEME XDG_CURRENT_DESKTOP DISPLAY WAYLAND_DISPLAY"
     hl.exec_cmd "gnome-keyring-daemon --start --components=secrets"
 end)
 

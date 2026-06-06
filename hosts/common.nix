@@ -25,6 +25,7 @@
   security.polkit.enable = true;
 
   programs.hyprland.enable = true;
+  programs.hyprland.portalPackage = pkgs.xdg-desktop-portal-hyprland;
   programs.fish.enable = true;
   programs.zsh.enable = true;
   environment.shells = with pkgs; [
@@ -129,9 +130,8 @@
     enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-hyprland
     ];
-    config.common.default = "hyprland";
+    config.common.default = "wlr";
     xdgOpenUsePortal = true;
   };
 

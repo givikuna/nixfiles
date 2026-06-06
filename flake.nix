@@ -63,16 +63,22 @@
             nix-flatpak.nixosModules.nix-flatpak
             sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.sharedModules = [
-                nix-flatpak.homeManagerModules.nix-flatpak
-                sops-nix.homeManagerModules.sops
-              ];
-              home-manager.users.givik = import ./home-manager/hosts/minotaur.nix;
-            }
+            (
+              { config, ... }:
+              {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.extraSpecialArgs = {
+                  inherit inputs;
+                  host-name = config.networking.hostName;
+                };
+                home-manager.sharedModules = [
+                  nix-flatpak.homeManagerModules.nix-flatpak
+                  sops-nix.homeManagerModules.sops
+                ];
+                home-manager.users.givik = import ./home-manager/hosts/minotaur.nix;
+              }
+            )
           ];
         };
 
@@ -85,16 +91,22 @@
             nix-flatpak.nixosModules.nix-flatpak
             sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.sharedModules = [
-                nix-flatpak.homeManagerModules.nix-flatpak
-                sops-nix.homeManagerModules.sops
-              ];
-              home-manager.users.givik = import ./home-manager/hosts/nomad.nix;
-            }
+            (
+              { config, ... }:
+              {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.extraSpecialArgs = {
+                  inherit inputs;
+                  host-name = config.networking.hostName;
+                };
+                home-manager.sharedModules = [
+                  nix-flatpak.homeManagerModules.nix-flatpak
+                  sops-nix.homeManagerModules.sops
+                ];
+                home-manager.users.givik = import ./home-manager/hosts/nomad.nix;
+              }
+            )
           ];
         };
       };

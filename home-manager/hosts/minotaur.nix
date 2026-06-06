@@ -2,6 +2,7 @@
 {
   imports = [
     ../common.nix
+    ../modules/desktop/desktop-minotaur.nix
   ];
 
   my.apps = {
@@ -55,5 +56,7 @@
     gonwatch = true;
 
     tuxedo = true;
+
+    thunderbird = true;
   };
 }
