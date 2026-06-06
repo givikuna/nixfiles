@@ -22,6 +22,7 @@ let
     "gonwatch"
     "tuxedo"
     "thunderbird"
+    "chronicler"
   ];
 
   non-module-requiring-apps = with pkgs; {
@@ -94,6 +95,7 @@ in
     ../packages/applications/gonwatch/package.nix
     ../packages/applications/tuxedo/package.nix
     ../packages/applications/thunderbird/package.nix
+    ../packages/applications/chronicler/package.nix
   ];
 
   config = {

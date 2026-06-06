@@ -58,5 +58,7 @@
     tuxedo = true;
 
     thunderbird = true;
+
+    chronicler = true;
   };
 }
