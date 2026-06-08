@@ -10,7 +10,7 @@
     ripgrep # grep
     fd # find
     eza # ls
-    inputs.rip.packages.${pkgs.system}.default # rm
+    inputs.rip.packages.${pkgs.stdenv.hostPlatform.system}.default # rm
     sd # sed
     xh # curl/httpie
     dust # du
