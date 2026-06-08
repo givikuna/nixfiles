@@ -4,10 +4,12 @@
     ./hardware-configuration.nix
     ../common.nix
 
-    ../_modules/tuigreet.nix
-    ../_modules/hyprland.nix
-    ../_modules/steam-config.nix
-    ../_modules/boxes.nix
+    ../_modules/desktops/hyprland.nix
+
+    ../_modules/system/gaming-optimizations.nix
+
+    ../_modules/misc/boxes.nix
+    ../_modules/misc/steam-config.nix
   ];
 
   networking.hostName = "minotaur";
@@ -21,9 +23,14 @@
     ];
   };
 
+  environment.systemPackages = with pkgs; [
+    gruvbox-kvantum
+  ];
+
   environment.sessionVariables = {
     __GL_SHADER_DISK_CACHE_SKIP_CLEANUP = "1";
     __GL_SHADER_DISK_CACHE_SIZE = "100000000000";
+    GTK_THEME = "Gruvbox-Dark-B:dark";
   };
 
   boot.kernel.sysctl = {

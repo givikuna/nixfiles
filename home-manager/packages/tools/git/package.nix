@@ -3,7 +3,7 @@
   programs.git = {
     enable = true;
     package = pkgs.gitFull;
-    extraConfig = {
+    settings = {
       core.pager = "delta";
       interactive.diffFilter = "delta --color-only";
       delta.navigate = true;
