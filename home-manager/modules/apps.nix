@@ -8,7 +8,6 @@
 
 let
   module-requiring-apps = [
-    "discord"
     "dolphin"
     "firefox"
     "helix"
@@ -61,6 +60,7 @@ let
     aqueducts = "com.endlessnetwork.aqueducts";
     osu = "sh.ppy.osu";
     "minecraft-mojang" = "com.mojang.Minecraft";
+    discord = "com.discordapp.Discord";
   };
 
   all-apps =
@@ -83,7 +83,6 @@ in
 
   imports = [
     ../packages/applications/dolphin/package.nix
-    ../packages/applications/discord/package.nix
     ../packages/applications/firefox/package.nix
     ../packages/applications/helix/package.nix
     ../packages/applications/legcord/package.nix

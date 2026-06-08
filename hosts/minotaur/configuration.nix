@@ -3,6 +3,11 @@
   imports = [
     ./hardware-configuration.nix
     ../common.nix
+
+    ../_modules/tuigreet.nix
+    ../_modules/hyprland.nix
+    ../_modules/steam-config.nix
+    ../_modules/boxes.nix
   ];
 
   networking.hostName = "minotaur";

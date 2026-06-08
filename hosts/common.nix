@@ -1,10 +1,13 @@
 { pkgs, ... }:
 {
   imports = [
-    ./modules/boxes.nix
-    ./modules/keyring.nix
-    ./modules/distrobox.nix
-    ./modules/sops.nix
+    ./_modules/keyring.nix
+    ./_modules/distrobox.nix
+    ./_modules/sops.nix
+    ./_modules/shell-dec.nix
+    ./_modules/pipewire.nix
+    ./_modules/sys-cleanup.nix
+    ./_modules/flatpak.nix
   ];
 
   nix.settings.experimental-features = [
@@ -24,43 +27,8 @@
 
   security.polkit.enable = true;
 
-  programs.hyprland.enable = true;
-  programs.hyprland.portalPackage = pkgs.xdg-desktop-portal-hyprland;
-  programs.fish.enable = true;
-  programs.zsh.enable = true;
-  environment.shells = with pkgs; [
-    fish
-    zsh
-    bash
-    nushell
-  ];
-
-  users.users.givik.shell = pkgs.fish;
-
   # gives swayosd rights
   services.udev.packages = [ pkgs.swayosd ];
-
-  # might have to move this up above hyprland and polkit, we'll see
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd start-hyprland";
-        user = "greeter";
-      };
-    };
-  };
-
-  systemd.services.greetd.serviceConfig = {
-    Type = "idle";
-    StandardInput = "tty";
-    StandardOutput = "tty";
-    StandardError = "journal";
-    TTYReset = true;
-    TTYVHangup = true;
-    TTYVTDisallocate = true;
-  };
-  # end of file block for the greeter
 
   # might switch this away, mostly for video game purposes
   boot.kernelPackages = pkgs.linuxPackages_zen;
@@ -77,7 +45,6 @@
 
   users.users.givik = {
     isNormalUser = true;
-    # shell = pkgs.fish; # declared in shell.nix now
     extraGroups = [
       "networkmanager"
       "wheel"
@@ -88,23 +55,8 @@
 
   security.rtkit.enable = true;
 
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-    wireplumber.enable = true;
-  };
-
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
-
-  # might move flatpak stuff to its own module=
-  services.flatpak = {
-    enable = true;
-    uninstallUnmanaged = false;
-  };
 
   # gaming optimization stuff:
 
@@ -115,15 +67,6 @@
 
   programs.gamemode.enable = true;
   programs.gamescope.enable = true;
-
-  # steam is being added via configuration.nix now instead of apps.nix
-  # this might not be the best idea, might switch if disliked
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    localNetworkGameTransfers.openFirewall = true;
-  };
-  # might wanna add `nvidia-offload gamemoderun mangohud %command%` as the game's launch options on steam
 
   # for screen-sharing (stops from getting a black screen)
   xdg.portal = {
@@ -145,14 +88,6 @@
     GTK_THEME = "Gruvbox-Dark-B:dark";
   };
 
-  # clean up system weekly
-  nix.optimise.automatic = true;
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 7d";
-  };
-
   # to clean out solid-state blocks
   services.fstrim.enable = true;
 
@@ -165,7 +100,6 @@
 
   hardware.xpadneo.enable = true;
 
-  # printing
   services.printing.enable = true;
 
   # this should intercept generic calls to binaries and re-connect it to nix store
@@ -178,8 +112,6 @@
       glibc
     ];
   };
-
-  environment.pathsToLink = [ "/share/hypr" ];
 
   programs.dconf.enable = true;
 
