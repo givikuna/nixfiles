@@ -8,11 +8,15 @@ lib.mkIf config.my.apps.firefox {
     profiles.default = {
       name = "default";
       isDefault = true;
+      path = "default";
 
       settings = {
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         "layers.acceleration.force-enabled" = true;
         "ui.caretWidth" = 4;
+
+        "devtools.chrome.enabled" = true;
+        "devtools.debugger.remote-enabled" = true;
       };
 
       userChrome = builtins.readFile "${dotfiles-dir}/userChrome/userChrome.css";

@@ -28,5 +28,5 @@ rules = [
     { mime = "video/*", use = [ "play", "reveal" ] },
     { mime = "audio/*", use = [ "play", "reveal" ] },
 
-    { name = "*", use = [ "reveal", "edit" ] }
+    { url = "*", use = [ "reveal", "edit" ] }
 ]

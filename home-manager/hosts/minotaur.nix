@@ -60,5 +60,7 @@
     thunderbird = true;
 
     chronicler = true;
+
+    nixcord = true;
   };
 }

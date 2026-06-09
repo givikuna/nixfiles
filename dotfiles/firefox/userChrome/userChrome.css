@@ -20,6 +20,12 @@
 
     --lwt-tab-text: var(--gb-fg-dim) !important;
     --lwt-selected-tab-background-color: var(--gb-bg1) !important;
+
+    /* sidebar vars */
+    --lwt-sidebar-background-color: var(--gb-bg0) !important;
+    --lwt-sidebar-text-color: var(--gb-fg-dim) !important;
+    --sidebar-background-color: var(--gb-bg0) !important;
+    --sidebar-text-color: var(--gb-fg-dim) !important;
 }
 
 #navigator-toolbox {
@@ -104,7 +110,6 @@
     outline: 1px solid var(--gb-orange) !important;
 }
 
-/* --- circles  */
 #back-button > .toolbarbutton-icon,
 #forward-button > .toolbarbutton-icon {
     list-style-image: none !important;
@@ -114,4 +119,47 @@
     height: 14px !important;
     padding: 0 !important;
     margin: 6px !important;
+}
+
+#sidebar-box,
+#sidebar,
+#sidebar-header {
+    background-color: var(--gb-bg0) !important;
+    color: var(--gb-fg) !important;
+}
+
+#sidebar-header {
+    border-bottom: 1px solid var(--gb-bg2) !important;
+}
+
+#sidebar-splitter {
+    border-color: var(--gb-bg2) !important;
+    background-color: var(--gb-bg0) !important;
+}
+
+/* Bookmarks and History Trees */
+.sidebar-placesTree {
+    -moz-appearance: none !important;
+    background-color: var(--gb-bg0) !important;
+    color: var(--gb-fg-dim) !important;
+}
+
+/* Tree Rows */
+.sidebar-placesTree treechildren::-moz-tree-row {
+    background-color: transparent !important;
+}
+
+.sidebar-placesTree treechildren::-moz-tree-row(hover) {
+    background-color: var(--gb-bg2) !important;
+}
+
+.sidebar-placesTree treechildren::-moz-tree-row(selected) {
+    background-color: var(--gb-bg2) !important;
+    border: 1px solid var(--gb-orange) !important;
+    border-radius: 4px !important;
+}
+
+.sidebar-placesTree treechildren::-moz-tree-cell-text(selected) {
+    color: var(--gb-fg) !important;
+    font-weight: bold !important;
 }

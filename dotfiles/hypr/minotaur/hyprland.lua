@@ -114,11 +114,10 @@ hl.on("hyprland.start", function()
     hl.exec_cmd "swayosd-server"
     hl.exec_cmd "elephant"
     hl.exec_cmd "walker --gapplication-service"
-    hl.exec_cmd "rofi"
-    hl.exec_cmd "kitty"
     hl.exec_cmd "systemctl --user import-environment QT_STYLE_OVERRIDE GTK_THEME XDG_CURRENT_DESKTOP DISPLAY WAYLAND_DISPLAY HYPRLAND_INSTANCE_SIGNATURE"
     hl.exec_cmd "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP HYPRLAND_INSTANCE_SIGNATURE"
     hl.exec_cmd "gnome-keyring-daemon --start --components=secrets"
+    hl.exec_cmd "kitty"
 end)
 
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd "loginctl lock-screenshot")

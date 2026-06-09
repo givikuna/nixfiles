@@ -10,7 +10,24 @@
       push-system = "/etc/nixos/scripts/push-system.sh";
       pull-system = "/etc/nixos/scripts/pull-system.sh";
 
-      l = "eza --icons";
+      # system shorthands
+      rnnr = "rebuild-system && reboot";
+      r = "rebuild-system";
+      u = "rebuild-system && update-system && rebuild-system";
+      syu = "u";
+      edits = "edit-system";
+
+      # eza shorthands
+      e = "eza --hyperlink --icons";
+      e1 = "e -1";
+      etree = "eza --tree --icons";
+      ebs = "eza --icons --absolute --hyperlink";
+      ebs1 = "ebs -1";
+      ezasnew = "eza -snew";
+      ezasnew1 = "ezasnew 1";
+
+      # l
+      l = "e";
     };
 
     plugins = [

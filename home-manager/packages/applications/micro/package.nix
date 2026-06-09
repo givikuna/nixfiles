@@ -6,7 +6,7 @@
 }:
 lib.mkIf config.my.apps.micro {
   home.packages = with pkgs; [
-    micro
+    micro-full
   ];
 
   xdg.configFile."micro/settings.json" = {

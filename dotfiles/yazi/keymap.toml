@@ -1,4 +1,4 @@
 [manager]
 prepend_keymap = [
-    { on = [ "t" ], run = "shell '$SHELL' --block", desc = "Open shell in current directory" }
+    { on = [ "t" ], run = "shell '$SHELL' --block", desc = "open shell in current directory" }
 ]

@@ -22,6 +22,7 @@ let
     "tuxedo"
     "thunderbird"
     "chronicler"
+    "nixcord"
   ];
 
   non-module-requiring-apps = with pkgs; {
@@ -95,6 +96,7 @@ in
     ../packages/applications/tuxedo/package.nix
     ../packages/applications/thunderbird/package.nix
     ../packages/applications/chronicler/package.nix
+    ../packages/applications/nixcord/package.nix
   ];
 
   config = {

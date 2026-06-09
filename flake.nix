@@ -1,10 +1,10 @@
 {
-  description = "Config for Little Korolev";
+  description = "all hail richard stallman";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
-    stylix.url = "github:danth/stylix";
+    nixpkgs = {
+      url = "github:nixos/nixpkgs/nixos-unstable";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -40,6 +40,10 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixcord = {
+      url = "github:FlameFlag/nixcord";
+    };
   };
 
   outputs =
@@ -48,7 +52,6 @@
       nixpkgs,
       home-manager,
       nix-flatpak,
-      stylix,
       sops-nix,
       ...
     }@inputs:
@@ -59,7 +62,6 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/minotaur/configuration.nix
-            stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
             sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager
@@ -68,6 +70,7 @@
               {
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
+                home-manager.backupFileExtension = "backup";
                 home-manager.extraSpecialArgs = {
                   inherit inputs;
                   host-name = config.networking.hostName;
@@ -87,7 +90,6 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/nomad/configuration.nix
-            stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
             sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager
@@ -96,6 +98,7 @@
               {
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
+                home-manager.backupFileExtension = "backup";
                 home-manager.extraSpecialArgs = {
                   inherit inputs;
                   host-name = config.networking.hostName;
