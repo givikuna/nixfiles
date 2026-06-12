@@ -5,5 +5,5 @@
     ./hardware-configuration.nix
   ];
 
-  networking.hostName = "nomad";
+  networking.hostName = "pilgrim";
 }

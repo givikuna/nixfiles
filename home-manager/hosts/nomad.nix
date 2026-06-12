@@ -48,5 +48,11 @@
     gonwatch = true;
 
     tuxedo = true;
+
+    thunderbird = true;
+
+    chronicler = true;
+
+    nixcord = true;
   };
 }
