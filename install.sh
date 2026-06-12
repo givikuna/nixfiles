@@ -50,18 +50,18 @@ git clone https://github.com/givikuna/nixfiles.git /mnt/etc/nixos
 cd /mnt/etc/nixos
 
 echo ""
-echo "Who are you?"
+echo "Who are you? (you must select one)"
 echo "1) minotaur"
 echo "2) nomad"
-echo "2) pilgrim"
+echo "3) pilgrim"
 read -p "Enter the number: " HOST_CHOICE
 
 if [ "$HOST_CHOICE" == "1" ]; then
-    HOSTNAME = "minotaur"
+    HOSTNAME="minotaur"
 elif [ "$HOST_CHOICE" == "2" ]; then
-    HOSTNAME = "nomad"
+    HOSTNAME="nomad"
 elif [ "$HOST_CHOICE" == "3" ]; then
-    HOSTNAME = "pilgrim"
+    HOSTNAME="pilgrim"
 else
     echo "invalid choice. cancelling installation.."
     exit 1
