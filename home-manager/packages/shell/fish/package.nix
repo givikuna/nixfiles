@@ -1,7 +1,13 @@
 { pkgs, ... }:
 {
   programs.fish = {
-    interactiveShellInit = "set -g fish_greeting";
+    interactiveShellInit = ''
+      set -g fish_greeting
+
+      #if not set -q TMUX
+      #  tmux attach-session -t default 2>/dev/null; or tmux new-session -s default
+      #end
+    '';
 
     shellAliases = {
       rebuild-system = "python3 /etc/nixos/scripts/rebuild-system.py";
@@ -12,8 +18,10 @@
 
       # system shorthands
       rnnr = "rebuild-system && reboot";
+      rnnp = "rebuild-system && poweroff";
       r = "rebuild-system";
       u = "rebuild-system && update-system && rebuild-system";
+      unnr = "u && reboot";
       syu = "u";
       edits = "edit-system";
 
@@ -28,6 +36,9 @@
 
       # l
       l = "e";
+
+      # aliases
+      gitingest = "repomix";
     };
 
     plugins = [

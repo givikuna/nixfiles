@@ -12,7 +12,6 @@
     helix = true;
     kitty = true;
     lazyspotify = true;
-    legcord = true;
     micro = true;
     neovim = true;
     prismlauncher = true;
@@ -39,7 +38,6 @@
     "mission-center" = true;
     spotify = true;
     spotify-player = true;
-    vesktop = true;
     "davinci-resolve" = true;
 
     heroic = true;

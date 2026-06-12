@@ -13,7 +13,6 @@ let
     "helix"
     "kitty"
     "lazyspotify"
-    "legcord"
     "micro"
     "Minecraft"
     "neovim"
@@ -48,7 +47,6 @@ let
     "mission-center" = mission-center;
     spotify = spotify;
     spotify-player = spotify-player;
-    vesktop = vesktop;
     "davinci-resolve" = davinci-resolve;
     "ani-cli" = ani-cli;
     "libreoffice-fresh" = libreoffice-fresh;
@@ -86,7 +84,6 @@ in
     ../packages/applications/dolphin/package.nix
     ../packages/applications/firefox/package.nix
     ../packages/applications/helix/package.nix
-    ../packages/applications/legcord/package.nix
     ../packages/applications/micro/package.nix
     ../packages/applications/neovim/package.nix
     ../packages/applications/prismlauncher/package.nix

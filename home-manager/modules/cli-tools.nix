@@ -18,6 +18,8 @@
     fzf
 
     yt-dlp
+
+    repomix
   ];
 }
 
