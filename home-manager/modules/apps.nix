@@ -88,12 +88,12 @@ in
     ../packages/applications/neovim/package.nix
     ../packages/applications/prismlauncher/package.nix
     ../packages/applications/lazyspotify/package.nix
-    ../packages/applications/kitty/package.nix
     ../packages/applications/gonwatch/package.nix
     ../packages/applications/tuxedo/package.nix
     ../packages/applications/thunderbird/package.nix
     ../packages/applications/chronicler/package.nix
     ../packages/applications/nixcord/package.nix
+    ../packages/applications/kitty/package.nix
   ];
 
   config = {

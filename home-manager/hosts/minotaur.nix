@@ -11,7 +11,6 @@
     dolphin = true;
     firefox = true;
     helix = true;
-    kitty = true;
     lazyspotify = true;
     micro = true;
     neovim = true;
@@ -61,5 +60,7 @@
     chronicler = true;
 
     nixcord = true;
+
+    kitty = true;
   };
 }

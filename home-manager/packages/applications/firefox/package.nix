@@ -1,10 +1,18 @@
 { lib, config, ... }:
-let
-  dotfiles-dir = ../../../../dotfiles/firefox;
-in
 lib.mkIf config.my.apps.firefox {
   programs.firefox = {
     enable = true;
+
+    policies = {
+      AppAutoUpdate = false;
+      BackgroundAppUpdate = false;
+
+      DisableFirefoxStudies = true;
+      DisableTelemetry = true;
+
+      DontCheckDefaultBrowser = true;
+    };
+
     profiles.default = {
       name = "default";
       isDefault = true;
@@ -18,8 +26,6 @@ lib.mkIf config.my.apps.firefox {
         "devtools.chrome.enabled" = true;
         "devtools.debugger.remote-enabled" = true;
       };
-
-      userChrome = builtins.readFile "${dotfiles-dir}/userChrome/userChrome.css";
 
       userContent = "";
     };

@@ -1,12 +1,8 @@
 { pkgs, ... }:
 {
   imports = [
-    ./packages/dunst/package.nix
-    ./packages/flameshot/package.nix
-    ./packages/hypr/package.nix
-    ./packages/rofi/package.nix
-    ./packages/walker/package.nix
-    ./packages/waybar/package.nix
+    ./packages/packages.nix
+    ./configs/configs.nix
   ];
 
   home.packages = with pkgs; [

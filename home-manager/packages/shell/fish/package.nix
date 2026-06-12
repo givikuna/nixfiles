@@ -39,6 +39,7 @@
 
       # aliases
       gitingest = "repomix";
+      dall = "direnv allow";
     };
 
     plugins = [
