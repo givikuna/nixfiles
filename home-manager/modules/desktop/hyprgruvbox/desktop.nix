@@ -1,12 +1,12 @@
 { pkgs, ... }:
 {
   imports = [
-    ../../packages/desktop/dunst/package.nix
-    ../../packages/desktop/flameshot/package.nix
-    ../../packages/desktop/hypr/package.nix
-    ../../packages/desktop/rofi/package.nix
-    ../../packages/desktop/walker/package.nix
-    ../../packages/desktop/waybar/package.nix
+    ./packages/dunst/package.nix
+    ./packages/flameshot/package.nix
+    ./packages/hypr/package.nix
+    ./packages/rofi/package.nix
+    ./packages/walker/package.nix
+    ./packages/waybar/package.nix
   ];
 
   home.packages = with pkgs; [

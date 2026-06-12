@@ -2,7 +2,8 @@
 {
   imports = [
     ../common.nix
-    ../modules/desktop/desktop-minotaur.nix
+
+    ../modules/desktop/hyprgruvbox/desktop.nix
   ];
 
   my.apps = {
