@@ -1,8 +1,10 @@
 { ... }:
 {
   imports = [
-    ../common.nix
     ./hardware-configuration.nix
+    ../common.nix
+
+    ../_modules/desktops/hyprland.nix
   ];
 
   services.tlp.enable = true;
