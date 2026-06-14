@@ -44,6 +44,11 @@
     nixcord = {
       url = "github:FlameFlag/nixcord";
     };
+
+    gitboy = {
+      url = "github:givikuna/gitboy";
+      # inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

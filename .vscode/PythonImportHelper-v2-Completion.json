@@ -111,7 +111,7 @@
         "kind": 2,
         "importPath": "scripts.rebuild-system",
         "description": "scripts.rebuild-system",
-        "peekOfCode": "def rebuild():\n    print(\"executing NixOS Rebuild...\")\n    os.chdir(\"/etc/nixos\")\n    os.system(\"git add .\")\n    ret = os.system(f\"sudo nixos-rebuild switch --flake /etc/nixos#{socket.gethostname()}\")\n    if ret == 0:\n        print(\"system rebuilt successfully!\")\n    else:\n        print(\"rebuild failed.\")\n        sys.exit(1)",
+        "peekOfCode": "def rebuild():\n    print(\"executing NixOS Rebuild...\")\n    os.chdir(\"/etc/nixos\")\n    os.system(\"git add .\")\n    ret = os.system(f\"sudo nixos-rebuild switch --flake /etc/nixos#{socket.gethostname()}\")\n    if ret == 0:\n        os.system(\"gitboy\")\n        print(\"system rebuilt successfully!\")\n    else:\n        print(\"rebuild failed.\")",
         "detail": "scripts.rebuild-system",
         "documentation": {}
     }

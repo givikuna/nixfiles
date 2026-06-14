@@ -1,0 +1,16 @@
+[folders."~/Projects"]
+repos = [
+    "https://github.com/givikuna/WarframeCardGame.git",
+    "https://github.com/rg134/rgtube.git",
+    "https://codeberg.org/giviko/struktured.git",
+    "https://github.com/givikuna/gitboy.git",
+    "https://github.com/givikuna/codensity-transformations-with-yoneda-lemma",
+    "https://github.com/givikuna/leetcode-solutions",
+    "https://github.com/givikuna/keto-portfolio.git",
+]
+
+[folders."~/Testing/"]
+repos = [
+    "https://github.com/givikuna/TEST-auth0_with_expressjs",
+    "https://github.com/givikuna/qtuatho0test",
+]

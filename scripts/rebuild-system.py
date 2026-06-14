@@ -14,6 +14,7 @@ def rebuild():
     ret = os.system(f"sudo nixos-rebuild switch --flake /etc/nixos#{socket.gethostname()}")
 
     if ret == 0:
+        os.system("gitboy")
         print("system rebuilt successfully!")
     else:
         print("rebuild failed.")

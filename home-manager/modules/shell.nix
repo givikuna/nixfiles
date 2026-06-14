@@ -7,6 +7,7 @@
     ../packages/shell/tmux/package.nix
     ../packages/shell/wezterm/package.nix
     ../packages/shell/yazi/package.nix
+    ../packages/shell/gitboy/package.nix
 
     ../packages/tools/git/package.nix
   ];

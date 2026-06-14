@@ -22,9 +22,9 @@
     --lwt-selected-tab-background-color: var(--gb-bg1) !important;
 
     /* sidebar vars */
-    --lwt-sidebar-background-color: var(--gb-bg0) !important;
+    --lwt-sidebar-background-color: var(--gb-bg2) !important;
     --lwt-sidebar-text-color: var(--gb-fg-dim) !important;
-    --sidebar-background-color: var(--gb-bg0) !important;
+    --sidebar-background-color: var(--gb-bg2) !important;
     --sidebar-text-color: var(--gb-fg-dim) !important;
 }
 
@@ -112,7 +112,6 @@
 
 #back-button > .toolbarbutton-icon,
 #forward-button > .toolbarbutton-icon {
-    list-style-image: none !important;
     border: 2px solid var(--gb-fg-dim) !important;
     border-radius: 50% !important;
     width: 14px !important;
@@ -128,10 +127,6 @@
     color: var(--gb-fg) !important;
 }
 
-#sidebar-header {
-    border-bottom: 1px solid var(--gb-bg2) !important;
-}
-
 #sidebar-splitter {
     border-color: var(--gb-bg2) !important;
     background-color: var(--gb-bg0) !important;
@@ -139,12 +134,13 @@
 
 /* Bookmarks and History Trees */
 .sidebar-placesTree {
+    appearance: none !important;
     -moz-appearance: none !important;
     background-color: var(--gb-bg0) !important;
     color: var(--gb-fg-dim) !important;
 }
 
-/* Tree Rows */
+/* tree rows */
 .sidebar-placesTree treechildren::-moz-tree-row {
     background-color: transparent !important;
 }
@@ -162,4 +158,37 @@
 .sidebar-placesTree treechildren::-moz-tree-cell-text(selected) {
     color: var(--gb-fg) !important;
     font-weight: bold !important;
+}
+
+#navigator-toolbox::after,
+#tabbrowser-tabs::before,
+#tabbrowser-tabs::after,
+.tabbrowser-tab::before,
+.tabbrowser-tab::after,
+#nav-bar::after {
+    display: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+#sidebar-box,
+#sidebar-header,
+#sidebar,
+#sidebar-main {
+    background-color: #282828 !important;
+}
+
+#sidebar-splitter,
+.sidebar-panel,
+#sidebar-switcher-target,
+.sidebar-panel > * {
+    background-color: #282828 !important;
+}
+
+@-moz-document url("chrome://browser/content/places/bookmarksSidebar.xhtml"),
+               url("chrome://browser/content/browser.xhtml")
+{
+    #sidebar-box {
+        background-color: #282828 !important;
+    }
 }
