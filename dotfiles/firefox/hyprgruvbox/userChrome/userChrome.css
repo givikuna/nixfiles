@@ -1,10 +1,10 @@
 :root {
     --gb-bg0: #2c2c2c;
     --gb-bg1: #2c2c2c;
-    --gb-bg2: #35312f;
+    --gb-bg2: #282828;
     --gb-fg: #ebdbb2;
     --gb-fg-dim: #a89984;
-    --gb-orange: #fe8019;
+    --gb-orange: #ea9e48;
     --gb-orange-light: #ffc493;
     --gb-yellow: #fabd2f;
 
@@ -26,6 +26,10 @@
     --lwt-sidebar-text-color: var(--gb-fg-dim) !important;
     --sidebar-background-color: var(--gb-bg2) !important;
     --sidebar-text-color: var(--gb-fg-dim) !important;
+}
+
+* {
+    font-family: "Roboto Mono", monospace !important;
 }
 
 #navigator-toolbox {

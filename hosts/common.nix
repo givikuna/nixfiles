@@ -8,6 +8,8 @@
     ./_modules/system/sys-cleanup.nix
     ./_modules/system/shell-dec.nix
 
+    ./_modules/overlays/overlays.nix
+
     ./_modules/packaging/distrobox.nix
     ./_modules/packaging/flatpak.nix
 
