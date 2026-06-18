@@ -14,7 +14,7 @@
     "modules": [
         {
             "type": "custom",
-            "format": "┌──────────────────────────────────────────────┐"
+            "format": "┌────────────────────────────────────────────────────────────────┐"
         },
         {
             "type": "title",
@@ -24,9 +24,8 @@
         },
         {
             "type": "custom",
-            "format": "├──────────────────────────────────────────────┤"
+            "format": "├────────────────────────────────────────────────────────────────┤"
         },
-        // System Info Blocks
         {
             "type": "os",
             "key": "│ 󱄅 OS  ",
@@ -36,6 +35,16 @@
             "type": "kernel",
             "key": "│ 󰌽 KRN ",
             "keyColor": "blue"
+        },
+        {
+            "type": "packages",
+            "key": "│ 󰏗 PKG ",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "wm",
+            "key": "│ 󰧨 WM  ",
+            "keyColor": "cyan"
         },
         {
             "type": "uptime",
@@ -51,6 +60,26 @@
             "type": "terminal",
             "key": "│ 󰞷 TRM ",
             "keyColor": "magenta"
+        },
+        {
+            "type": "disk",
+            "key": "│ 󰋊 DSK ",
+            "keyColor": "green"
+        },
+        {
+            "type": "localip",
+            "key": "│ 󰩟 IP  ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "battery",
+            "key": "│ 󰁹 BAT ",
+            "keyColor": "red"
+        },
+        {
+            "type": "display",
+            "key": "│ 󰍹 DIS ",
+            "keyColor": "blue"
         },
         {
             "type": "cpu",
@@ -69,7 +98,7 @@
         },
         {
             "type": "custom",
-            "format": "└──────────────────────────────────────────────┘"
+            "format": "└────────────────────────────────────────────────────────────────┘"
         },
         "break"
     ]

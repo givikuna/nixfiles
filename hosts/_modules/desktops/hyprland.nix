@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
     ./modules/swayosd.nix
@@ -7,8 +7,14 @@
     ../wayland/wayland.nix
   ];
 
-  programs.hyprland.enable = true;
-  programs.hyprland.portalPackage = pkgs.xdg-desktop-portal-hyprland;
+  programs.hyprland = {
+    enable = true;
+    portalPackage = pkgs.xdg-desktop-portal-hyprland;
+  };
+
+  environment.systemPackages = [
+    inputs.hyprland-virtual-desktops.packages.${pkgs.stdenv.hostPlatform.system}.virtual-desktops
+  ];
 
   environment.pathsToLink = [ "/share/hypr" ];
 }

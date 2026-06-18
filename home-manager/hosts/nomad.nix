@@ -11,7 +11,6 @@
     dolphin = true;
     firefox = true;
     helix = true;
-    lazyspotify = true;
     micro = true;
     neovim = true;
     prismlauncher = true;

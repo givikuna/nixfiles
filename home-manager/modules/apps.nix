@@ -12,7 +12,6 @@ let
     "firefox"
     "helix"
     "kitty"
-    "lazyspotify"
     "micro"
     "Minecraft"
     "neovim"
@@ -87,7 +86,6 @@ in
     ../packages/applications/micro/package.nix
     ../packages/applications/neovim/package.nix
     ../packages/applications/prismlauncher/package.nix
-    ../packages/applications/lazyspotify/package.nix
     ../packages/applications/gonwatch/package.nix
     ../packages/applications/tuxedo/package.nix
     ../packages/applications/thunderbird/package.nix

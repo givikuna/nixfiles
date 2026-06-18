@@ -2,8 +2,11 @@
 {
   home.packages = with pkgs; [
     waybar
+    socat
   ];
 
-  xdg.configFile."waybar/config".source = ../../../../../../dotfiles/waybar/config.json;
-  xdg.configFile."waybar/style.css".source = ../../../../../../dotfiles/waybar/style.css;
+  xdg.configFile = {
+    "waybar/config".source = ../../../../../../dotfiles/waybar/config.json;
+    "waybar/style.css".source = ../../../../../../dotfiles/waybar/style.css;
+  };
 }

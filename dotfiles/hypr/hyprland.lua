@@ -53,7 +53,7 @@ hl.config {
     },
 }
 
-local hostname = "nixos"
+local hostname = ""
 
 local handle = io.popen "hostname"
 if handle then
@@ -251,3 +251,10 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd "swayosd-client --brightness lo
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd 'grim -g "$(slurp)" - | wl-copy')
 -- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd "XDG_CURRENT_DESKTOP=sway flameshot gui")
 -- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd "QT_SCALE_FACTOR=1 GDK_SCALE=1 XDG_CURRENT_DESKTOP=sway flameshot gui")
+
+-- virtual desktop binds
+---hl.bind("CONTROL + " .. mainMod .. " + UP", hl.dsp.exec_cmd "cyclevdesks")
+---hl.bind("CONTROL + " .. mainMod .. " + DOWN", hl.dsp.exec_cmd "backcyclevdesks")
+---
+---hl.bind("CONTROL + " .. mainMod .. " + SHIFT + UP", hl.dsp.exec_cmd "movetonextdesk 1")
+---hl.bind("CONTROL + " .. mainMod .. " + SHIFT + DOWN", hl.dsp.exec_cmd "movetoprevdesk 1")

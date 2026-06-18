@@ -3,7 +3,7 @@
     "position": "top",
     "height": 32,
     "spacing": 4,
-    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-left": ["custom/vdesk", "hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
     "modules-right": ["network", "battery"],
 

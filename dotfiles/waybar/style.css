@@ -83,3 +83,11 @@ window#waybar {
     background-color: #fb4934;
     color: #fbf1c7;
 }
+
+#custom-vdesk {
+    margin: 4px 3px;
+    padding: 0 12px;
+    background-color: #3c3836;
+    border-radius: 6px;
+    color: #fabd2f;
+}

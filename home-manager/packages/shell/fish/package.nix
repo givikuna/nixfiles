@@ -24,6 +24,9 @@
       unnr = "u && reboot";
       syu = "u";
       edits = "edit-system";
+      p = "push-system";
+      rebp = "r && p";
+      updp = "u && p";
 
       # eza shorthands
       e = "eza --hyperlink --icons";

@@ -171,16 +171,36 @@
         ]
       },
       "locked": {
-        "lastModified": 1781533608,
-        "narHash": "sha256-Mgsu/x5cs8EqlhIQ7bMBo14LpkAYtgzDbG/S/eattJA=",
+        "lastModified": 1781788787,
+        "narHash": "sha256-YqlTCRRhGvNjcJejPeMuHrYQ/TVhOO2MV/nEGMWb8nk=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "8aec76cc1e045f37b55d82ca3cee4910ae04d3db",
+        "rev": "d456f483f157d4b706416005da226234b9c116ff",
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
         "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "hyprland-virtual-desktops": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1778848145,
+        "narHash": "sha256-xRwTxdZuOYHNw3jfMIPp/293rPXHKPnWgHHbJZYtqLw=",
+        "owner": "levnikmyskin",
+        "repo": "hyprland-virtual-desktops",
+        "rev": "cec3d43cef31fcaecfe08f22e341e9aa6c586922",
+        "type": "github"
+      },
+      "original": {
+        "owner": "levnikmyskin",
+        "repo": "hyprland-virtual-desktops",
         "type": "github"
       }
     },
@@ -224,11 +244,11 @@
         "nixpkgs-nixcord": "nixpkgs-nixcord"
       },
       "locked": {
-        "lastModified": 1781546430,
-        "narHash": "sha256-m75Su3C7fLuzWNTA2MuQHGdOYFVhgCp56ByuIASf9cg=",
+        "lastModified": 1781775854,
+        "narHash": "sha256-0eb1+zKSTwgD3qsBm7UiuRabahHQNkTP94Z/s3nMK60=",
         "owner": "FlameFlag",
         "repo": "nixcord",
-        "rev": "5b4fa362399982161fc354cd3276ef84289e7618",
+        "rev": "b92ceb7923c87dfcfcf84415407b0ca63e17548b",
         "type": "github"
       },
       "original": {
@@ -302,11 +322,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1781074563,
-        "narHash": "sha256-md8WlXOlfnIeHeOScMTTHFyf2d6iaTwPl2apR5EQ3P4=",
+        "lastModified": 1781577229,
+        "narHash": "sha256-lrp67w8AulE9Ks53n27I45ADSzbOCn4H+CNW1Ck8B+8=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "9ae611a455b90cf061d8f332b977e387bda8e1ca",
+        "rev": "567a49d1913ce81ac6e9582e3553dd90a955875f",
         "type": "github"
       },
       "original": {
@@ -324,11 +344,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1781555884,
-        "narHash": "sha256-H4fUDrATqMK4bbSEVwkxibJHrtiFDsIoiSe9civcP58=",
+        "lastModified": 1781800183,
+        "narHash": "sha256-NcRZr/JQiAvqC2qCyMxcfx/98Hf1epwdtjcbwKHeMf8=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "560ac94365ce166b8d4ab0f131564ffe13437bb0",
+        "rev": "0559d992b12ee209570bb325d79e90007b13da52",
         "type": "github"
       },
       "original": {
@@ -364,6 +384,7 @@
         "gitboy": "gitboy",
         "gonwatch": "gonwatch",
         "home-manager": "home-manager",
+        "hyprland-virtual-desktops": "hyprland-virtual-desktops",
         "lazyspotify": "lazyspotify",
         "nix-flatpak": "nix-flatpak",
         "nixcord": "nixcord",
