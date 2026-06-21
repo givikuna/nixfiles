@@ -10,6 +10,7 @@
 
     ../_modules/misc/boxes.nix
     ../_modules/misc/steam-config.nix
+    ../_modules/misc/retroarch.nix
   ];
 
   networking.hostName = "minotaur";

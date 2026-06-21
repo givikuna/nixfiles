@@ -49,6 +49,9 @@ let
     "davinci-resolve" = davinci-resolve;
     "ani-cli" = ani-cli;
     "libreoffice-fresh" = libreoffice-fresh;
+    bottles = bottles;
+    itch = itch;
+    skrooge = skrooge;
   };
 
   flatpak-apps = {
@@ -59,6 +62,8 @@ let
     osu = "sh.ppy.osu";
     "minecraft-mojang" = "com.mojang.Minecraft";
     discord = "com.discordapp.Discord";
+    sober = "org.vinegarhq.Sober";
+    Flatseal = "com.github.tchx84.Flatseal";
   };
 
   all-apps =

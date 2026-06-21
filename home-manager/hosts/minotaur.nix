@@ -61,5 +61,13 @@
     nixcord = true;
 
     kitty = true;
+
+    sober = true;
+    bottles = true;
+    itch = true;
+
+    Flatseal = true;
+
+    skrooge = true;
   };
 }
