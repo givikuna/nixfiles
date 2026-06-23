@@ -1,9 +1,9 @@
 { pkgs, inputs, ... }:
 {
   imports = [
-    ../../packages/tools/zoxide/package.nix # cd
-    ../../packages/tools/bat/package.nix # cat
-    ../../packages/tools/broot/package.nix # tree
+    ../../packages/configurations/tools/zoxide/package.nix # cd
+    ../../packages/configurations/tools/bat/package.nix # cat
+    ../../packages/configurations/tools/broot/package.nix # tree
   ];
 
   home.packages = with pkgs; [

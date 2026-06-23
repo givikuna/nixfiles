@@ -1,6 +1,6 @@
 { pkgs, lib, ... }:
 let
-  livescript = import ../packages/tools/livescript/package.nix { inherit pkgs lib; };
+  livescript = import ../packages/derivations/tools/livescript/derivation.nix { inherit pkgs lib; };
 in
 {
   home.packages = with pkgs; [

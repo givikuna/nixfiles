@@ -1,15 +1,15 @@
 { pkgs, ... }:
 {
   imports = [
-    ../packages/shell/fish/package.nix
-    ../packages/shell/starship/package.nix
-    ../packages/shell/fastfetch/package.nix
-    ../packages/shell/tmux/package.nix
-    ../packages/shell/wezterm/package.nix
-    ../packages/shell/yazi/package.nix
-    ../packages/shell/gitboy/package.nix
+    ../packages/configurations/shell/fish/package.nix
+    ../packages/configurations/shell/starship/package.nix
+    ../packages/configurations/shell/fastfetch/package.nix
+    ../packages/configurations/shell/tmux/package.nix
+    ../packages/configurations/shell/wezterm/package.nix
+    ../packages/configurations/shell/yazi/package.nix
+    ../packages/configurations/shell/gitboy/package.nix
 
-    ../packages/tools/git/package.nix
+    ../packages/configurations/tools/git/package.nix
   ];
 
   home.packages = with pkgs; [

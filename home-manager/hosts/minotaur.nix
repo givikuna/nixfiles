@@ -5,19 +5,7 @@
 
     ../modules/desktop/hyprgruvbox/desktop.nix
 
-    # apps:
-    ../packages/applications/dolphin/package.nix
-    ../packages/applications/firefox/package.nix
-    ../packages/applications/helix/package.nix
-    ../packages/applications/micro/package.nix
-    ../packages/applications/neovim/package.nix
-    ../packages/applications/prismlauncher/package.nix
-    ../packages/applications/gonwatch/package.nix
-    ../packages/applications/tuxedo/package.nix
-    ../packages/applications/thunderbird/package.nix
-    ../packages/applications/chronicler/package.nix
-    ../packages/applications/nixcord/package.nix
-    ../packages/applications/kitty/package.nix
+    ../modules/apps.nix
   ];
 
   home.packages = with pkgs; [
