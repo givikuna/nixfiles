@@ -1,11 +1,8 @@
 {
   pkgs,
-  lib,
-  config,
   ...
 }:
-
-lib.mkIf config.my.apps.dolphin {
+{
   home.packages = with pkgs; [
     kdePackages.dolphin
 

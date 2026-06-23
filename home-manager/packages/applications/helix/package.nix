@@ -1,10 +1,8 @@
 {
   pkgs,
-  lib,
-  config,
   ...
 }:
-lib.mkIf config.my.apps.helix {
+{
   home.packages = with pkgs; [
     helix
   ];

@@ -1,13 +1,11 @@
 {
-  lib,
-  config,
   inputs,
   ...
 }:
 {
   imports = [ inputs.nixcord.homeModules.nixcord ];
 
-  config = lib.mkIf config.my.apps.nixcord {
+  config = {
 
     programs.nixcord = {
       enable = true;

@@ -12,8 +12,4 @@
       location = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
     }
   ];
-
-  my.apps = {
-    #
-  };
 }

@@ -68,6 +68,7 @@
       home-manager,
       nix-flatpak,
       sops-nix,
+      hyprland-virtual-desktops,
       ...
     }@inputs:
     {
@@ -80,6 +81,14 @@
             nix-flatpak.nixosModules.nix-flatpak
             sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager
+            # {
+            #   wayland.windowManager.hyprland = {
+            #     enable = true;
+            #     plugins = [
+            #       hyprland-virtual-desktops.packages.${nixpkgs.legacyPackages.${"x86_64-linux"}.system}
+            #     ];
+            #   };
+            # }
             (
               { config, ... }:
               {

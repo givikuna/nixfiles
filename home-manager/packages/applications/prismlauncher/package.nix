@@ -1,10 +1,8 @@
 {
   pkgs,
-  lib,
-  config,
   ...
 }:
-lib.mkIf config.my.apps.prismlauncher {
+{
   home.packages = with pkgs; [
     (prismlauncher.override {
       jdks = [

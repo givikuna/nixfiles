@@ -1,10 +1,8 @@
 {
   pkgs,
-  lib,
-  config,
   ...
 }:
-lib.mkIf config.my.apps.neovim {
+{
   home.packages = with pkgs; [
     neovim
 

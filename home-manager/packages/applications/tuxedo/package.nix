@@ -1,10 +1,9 @@
 {
   pkgs,
   lib,
-  config,
   ...
 }:
-lib.mkIf config.my.apps.tuxedo {
+{
   home.packages = [
     (pkgs.rustPlatform.buildRustPackage {
       pname = "tuxedo";

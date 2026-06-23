@@ -1,6 +1,4 @@
 {
-  lib,
-  config,
   pkgs,
   inputs,
   ...
@@ -13,7 +11,7 @@ let
         doCheck = false;
       });
 in
-lib.mkIf config.my.apps.gonwatch {
+{
   home.packages = [
     gonwatch-patched
   ];

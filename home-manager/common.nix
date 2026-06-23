@@ -1,7 +1,6 @@
 { ... }:
 {
   imports = [
-    ./modules/apps.nix
     ./modules/cli-tools.nix
     ./modules/dev-tools.nix
     ./modules/shell.nix

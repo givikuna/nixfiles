@@ -1,6 +1,5 @@
-{ lib, config, ... }:
-
-lib.mkIf config.my.apps.chronicler {
+{ ... }:
+{
   services.flatpak.packages = [
     {
       flatpakref = "https://flatpak.chronicler.pro/chronicler.flatpakref";

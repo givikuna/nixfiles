@@ -1,10 +1,8 @@
 {
   pkgs,
-  lib,
-  config,
   ...
 }:
-lib.mkIf config.my.apps.micro {
+{
   home.packages = with pkgs; [
     micro-full
   ];

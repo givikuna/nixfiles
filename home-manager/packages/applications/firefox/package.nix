@@ -1,9 +1,7 @@
 {
-  lib,
-  config,
   ...
 }:
-lib.mkIf config.my.apps.firefox {
+{
   programs.firefox = {
     enable = true;
 
