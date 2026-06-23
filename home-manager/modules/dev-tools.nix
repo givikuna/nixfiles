@@ -4,8 +4,6 @@ let
 in
 {
   home.packages = with pkgs; [
-    vscode # always needed :()
-
     gcc
     gnumake
     cmake
@@ -16,7 +14,6 @@ in
     clang-tools
     cppcheck
 
-    qtcreator
     qt6.qttools
     qt6.qtbase
     qt6.qtdeclarative
@@ -35,9 +32,5 @@ in
     nixfmt
 
     jq
-
-    grpcui
-    insomnia
-    postman
   ];
 }

@@ -5,10 +5,22 @@
 
     ../modules/desktop/hyprgruvbox/desktop.nix
 
-    ../modules/apps.nix
+    ../packages/configurations/applications/chronicler/package.nix
+    ../packages/configurations/applications/dolphin/package.nix
+    ../packages/configurations/applications/firefox/package.nix
+    ../packages/configurations/applications/gonwatch/package.nix
+    ../packages/configurations/applications/helix/package.nix
+    ../packages/configurations/applications/kitty/package.nix
+    ../packages/configurations/applications/micro/package.nix
+    ../packages/configurations/applications/neovim/package.nix
+    ../packages/configurations/applications/nixcord/package.nix
+    ../packages/configurations/applications/prismlauncher/package.nix
+    ../packages/configurations/applications/thunderbird/package.nix
   ];
 
   home.packages = with pkgs; [
+    vscode
+    qtcreator
     google-chrome
     obsidian
     planify
