@@ -2,7 +2,7 @@
 *.kvconfig linguist-language=INI
 dolphinrc linguist-language=INI
 
-*.conf linguist-detectable
-*.toml linguist-detectable
-*.json linguist-detectable
-*.md linguist-detectable
+*.toml linguist-detectable=true
+*.json linguist-detectable=false
+*.md linguist-detectable=true
+*.xml linguist-detectable=true

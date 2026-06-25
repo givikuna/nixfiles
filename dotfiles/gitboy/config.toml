@@ -8,6 +8,8 @@ repos = [
     "https://github.com/givikuna/leetcode-solutions",
     "https://github.com/givikuna/keto-portfolio.git",
     "https://github.com/givikuna/nixboxd.git",
+    "https://github.com/givikuna/slay-the-grineer.git",
+    "https://github.com/givikuna/raknoid.git",
 ]
 
 [folders."~/Testing/"]
