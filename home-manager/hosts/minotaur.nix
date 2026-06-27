@@ -44,6 +44,7 @@
     obsidian
     planify
     skrooge
+    kmymoney
 
     # browsers
     google-chrome
@@ -115,5 +116,8 @@
 
     # torrents
     "de.haeckerfelix.Fragments"
+
+    # money mgmt
+    "com.actualbudget.actual"
   ];
 }

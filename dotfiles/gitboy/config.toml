@@ -17,3 +17,8 @@ repos = [
     "https://github.com/givikuna/TEST-auth0_with_expressjs",
     "https://github.com/givikuna/qtuatho0test",
 ]
+
+[folders."~/Documents/Books/"]
+repos = [
+    "https://github.com/GSimas/Asimov.git"
+]

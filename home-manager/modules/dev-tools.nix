@@ -1,7 +1,7 @@
 { pkgs, lib, ... }:
-let
-  livescript = import ../packages/derivations/tools/livescript/derivation.nix { inherit pkgs lib; };
-in
+#let
+  # livescript = import ../packages/derivations/tools/livescript/derivation.nix { inherit pkgs lib; };
+#in
 {
   home.packages = with pkgs; [
     gcc
@@ -20,7 +20,7 @@ in
 
     nodejs_22
     typescript
-    livescript
+    # livescript
 
     python3
     python3Packages.pip
