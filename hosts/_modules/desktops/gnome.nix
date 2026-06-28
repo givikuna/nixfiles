@@ -36,10 +36,4 @@
   services.dbus.packages = with pkgs; [
     gnome2.GConf
   ];
-
-  qt = {
-    enable = true;
-    platformTheme = "gnome";
-    style = "adwaita-light";
-  };
 }

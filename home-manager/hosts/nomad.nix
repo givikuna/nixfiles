@@ -69,9 +69,6 @@
 
     # privacy
 
-    # editing
-    davinci-resolve
-
     # tools
     pdfarranger
     evince
