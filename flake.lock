@@ -186,43 +186,6 @@
         "type": "github"
       }
     },
-    "hyprland-virtual-desktops": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1778848145,
-        "narHash": "sha256-xRwTxdZuOYHNw3jfMIPp/293rPXHKPnWgHHbJZYtqLw=",
-        "owner": "levnikmyskin",
-        "repo": "hyprland-virtual-desktops",
-        "rev": "cec3d43cef31fcaecfe08f22e341e9aa6c586922",
-        "type": "github"
-      },
-      "original": {
-        "owner": "levnikmyskin",
-        "repo": "hyprland-virtual-desktops",
-        "type": "github"
-      }
-    },
-    "lazyspotify": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1782153537,
-        "narHash": "sha256-0wIt25RG7qT0P3vpVBtYo6tYT94Rp5E3Z9jXgcuQX/E=",
-        "owner": "dubeyKartikay",
-        "repo": "lazyspotify",
-        "rev": "a6d29891e11e3d6fdc6ac9b640137625c76d6595",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dubeyKartikay",
-        "ref": "main",
-        "repo": "lazyspotify",
-        "type": "github"
-      }
-    },
     "nix-flatpak": {
       "locked": {
         "lastModified": 1780908363,
@@ -370,8 +333,6 @@
         "gitboy": "gitboy",
         "gonwatch": "gonwatch",
         "home-manager": "home-manager",
-        "hyprland-virtual-desktops": "hyprland-virtual-desktops",
-        "lazyspotify": "lazyspotify",
         "nix-flatpak": "nix-flatpak",
         "nixcord": "nixcord",
         "nixpkgs": "nixpkgs_2",

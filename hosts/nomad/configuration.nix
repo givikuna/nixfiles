@@ -1,14 +1,15 @@
 { ... }:
 {
   imports = [
-    ./hardware-configuration.nix
     ../common.nix
+    ./hardware-configuration.nix
 
-    # ../_modules/desktops/hyprland.nix
     ../_modules/desktops/gnome.nix
-  ];
 
-  services.tlp.enable = true;
+    ../_modules/misc/boxes.nix
+    ../_modules/misc/protonvpn.nix
+    ../_modules/misc/steam-config.nix
+  ];
 
   networking.hostName = "nomad";
 }

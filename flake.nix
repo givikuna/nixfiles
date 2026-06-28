@@ -58,7 +58,7 @@
       home-manager,
       nix-flatpak,
       sops-nix,
-      hyprland-virtual-desktops,
+      # hyprland-virtual-desktops,
       ...
     }@inputs:
     {

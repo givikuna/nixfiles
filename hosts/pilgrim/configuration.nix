@@ -12,5 +12,4 @@
   ];
 
   networking.hostName = "pilgrim";
-
 }
