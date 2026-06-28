@@ -18,8 +18,8 @@
     # pkgs
     gnome-screenshot
     gnome-terminal
-    # gnome.nautilus
-    # gnome.gnome-tweaks
+    nautilus
+    gnome-tweaks
 
     # extensions
     gnomeExtensions.dash-to-dock
