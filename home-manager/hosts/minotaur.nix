@@ -45,6 +45,8 @@
     planify
     skrooge
     kmymoney
+    calibre
+    zotero
 
     # browsers
     google-chrome
@@ -118,6 +120,12 @@
     "de.haeckerfelix.Fragments"
 
     # money mgmt
-    "com.actualbudget.actual"
+    # "com.actualbudget.actual"
+
+    # personal
+    "tech.dongdongbh.mindwtr"
+
+    # reader
+    "com.github.johnfactotum.Foliate"
   ];
 }

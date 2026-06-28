@@ -35,7 +35,7 @@
       ebs = "eza --icons --absolute --hyperlink";
       ebs1 = "ebs -1";
       ezasnew = "eza -snew";
-      ezasnew1 = "ezasnew 1";
+      ezasnew1 = "ezasnew -1";
 
       # l
       l = "e";
@@ -43,6 +43,12 @@
       # aliases
       gitingest = "repomix";
       dall = "direnv allow";
+
+      # power profiles
+      set-balanced = "powerprofilesctl set balanced";
+      set-performance = "powerprofilesctl set performance";
+      set-power-saver = "powerprofilesctl set power-saver";
+      get-power-profile = "powerprofilesctl get";
     };
 
     plugins = [

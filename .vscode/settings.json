@@ -66,6 +66,7 @@
         "dmask",
         "dojocad",
         "dolphinrc",
+        "dongdongbh",
         "dont",
         "dpms",
         "drun",
@@ -145,6 +146,7 @@
         "jdks",
         "jethrokuan",
         "jetpack",
+        "johnfactotum",
         "jwiwq",
         "Kartikay",
         "katex",
@@ -187,6 +189,7 @@
         "mcsr",
         "menupanel",
         "mgmt",
+        "mindwtr",
         "missioncenter",
         "mklabel",
         "mkpart",
@@ -374,7 +377,8 @@
         "yazi",
         "zdiff",
         "Zfjo",
-        "zombieland"
+        "zombieland",
+        "zotero"
     ],
     "Lua.workspace.library": [
         "/nix/store/nyfjvjg4qpssa5513q41xjvrmlhz16gs-hyprland-0.55.1/share/hypr/stubs"

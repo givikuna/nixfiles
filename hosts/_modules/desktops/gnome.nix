@@ -3,6 +3,8 @@
     ../wayland/wayland.nix
   ];
 
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
   services.xserver = {
     enable = true;
     desktopManager.gnome.enable = true;
@@ -13,11 +15,13 @@
   # services.gnome.gnome-keyring.enable = true;
 
   environment.systemPackages = with pkgs; [
+    # pkgs
     gnome.gnome-screenshot
     gnome.gnome-terminal
     gnome.nautilus
     gnome.gnome-tweaks
 
+    # extensions
     gnomeExtensions.dash-to-dock
     gnomeExtensions.user-themes
     gnomeExtensions.blur-my-shell
@@ -29,13 +33,13 @@
   services.gnome.core-developer-tools.enable = true;
   services.gnome.games.enable = true;
 
-  qt = {
-    enable = true;
-    platformTheme = "gnome";
-    style = "adwaita-dark";
-  };
-
   services.dbus.packages = with pkgs; [
     gnome2.GConf
   ];
+
+  qt = {
+    enable = true;
+    platformTheme = "gnome";
+    style = "adwaita-light";
+  };
 }
