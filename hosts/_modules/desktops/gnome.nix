@@ -16,7 +16,7 @@
 
   environment.systemPackages = with pkgs; [
     # pkgs
-    gnome.gnome-screenshot
+    gnome-screenshot
     gnome-terminal
     # gnome.nautilus
     # gnome.gnome-tweaks
