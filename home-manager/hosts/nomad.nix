@@ -33,12 +33,12 @@
     ../packages/configurations/applications/prismlauncher/package.nix
   ];
 
-  services.flatpak.remotes = [
-    {
-      name = "flathub-beta";
-      location = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
-    }
-  ];
+  # services.flatpak.remotes = [
+  #   {
+  #     name = "flathub-beta";
+  #     location = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
+  #   }
+  # ];
 
   home.packages = with pkgs; [
     # programming
