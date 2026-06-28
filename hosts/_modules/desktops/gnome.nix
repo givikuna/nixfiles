@@ -17,9 +17,9 @@
   environment.systemPackages = with pkgs; [
     # pkgs
     gnome.gnome-screenshot
-    gnome.gnome-terminal
-    gnome.nautilus
-    gnome.gnome-tweaks
+    gnome-terminal
+    # gnome.nautilus
+    # gnome.gnome-tweaks
 
     # extensions
     gnomeExtensions.dash-to-dock
