@@ -1,8 +1,7 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    gnome.gnome-terminal
-    gnome.nautilus
-    gnome.gnome-tweaks
+    # gnome.nautilus
+    # gnome.gnome-tweaks
 
     # catppuccin-gtk
     # papirus-icon-theme
