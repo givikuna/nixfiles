@@ -13,5 +13,4 @@
 
   networking.hostName = "pilgrim";
 
-  
 }

@@ -11,6 +11,7 @@
     ../_modules/misc/boxes.nix
     ../_modules/misc/steam-config.nix
     ../_modules/misc/retroarch.nix
+    ../_modules/misc/protonvpn.nix
   ];
 
   networking.hostName = "minotaur";

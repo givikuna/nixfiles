@@ -15,7 +15,6 @@
 
     ./_modules/misc/fonts.nix
     ./_modules/misc/sops.nix
-    ./_modules/misc/protonvpn.nix
   ];
 
   # nix allowances
