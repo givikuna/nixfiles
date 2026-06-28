@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./modules/swayosd.nix
@@ -13,7 +13,7 @@
   };
 
   environment.systemPackages = [
-    inputs.hyprland-virtual-desktops.packages.${pkgs.stdenv.hostPlatform.system}.virtual-desktops
+    # inputs.hyprland-virtual-desktops.packages.${pkgs.stdenv.hostPlatform.system}.virtual-desktops
   ];
 
   environment.pathsToLink = [ "/share/hypr" ];
