@@ -74,6 +74,7 @@
     evince
     gnome-disk-utility
     mission-center
+    caligula
 
     # piracy
     ani-cli
@@ -85,6 +86,8 @@
     protonup-qt
     mangohud
     itch
+    lutris
+    heroic
 
     # basics
     haruna
@@ -102,8 +105,6 @@
 
   services.flatpak.packages = [
     # gaming
-    "com.heroicgameslauncher.hgl"
-    "net.lutris.Lutris"
     "ro.go.hmlendea.SokoGrump"
     "com.endlessnetwork.aqueducts"
     "sh.ppy.osu"

@@ -99,33 +99,4 @@
     # virtualization
     bottles
   ];
-
-  services.flatpak.packages = [
-    # gaming
-    "com.heroicgameslauncher.hgl"
-    "net.lutris.Lutris"
-    "ro.go.hmlendea.SokoGrump"
-    "com.endlessnetwork.aqueducts"
-    "sh.ppy.osu"
-    "com.mojang.Minecraft"
-    "org.vinegarhq.Sober"
-
-    # communications
-    "com.discordapp.Discord"
-
-    # system
-    "com.github.tchx84.Flatseal"
-
-    # torrents
-    "de.haeckerfelix.Fragments"
-
-    # money mgmt
-    # "com.actualbudget.actual"
-
-    # personal
-    "tech.dongdongbh.mindwtr"
-
-    # reader
-    "com.github.johnfactotum.Foliate"
-  ];
 }

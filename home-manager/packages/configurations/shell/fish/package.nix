@@ -43,6 +43,7 @@
       # aliases
       gitingest = "repomix";
       dall = "direnv allow";
+      burner = "caligula";
 
       # power profiles
       set-balanced = "powerprofilesctl set balanced";

@@ -16,6 +16,7 @@ repos = [
 repos = [
     "https://github.com/givikuna/TEST-auth0_with_expressjs",
     "https://github.com/givikuna/qtuatho0test",
+    "https://github.com/givikuna/lean4-playground.git",
 ]
 
 [folders."~/Documents/Books/"]
