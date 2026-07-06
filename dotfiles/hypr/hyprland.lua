@@ -1,3 +1,5 @@
+require "monitors"
+
 local mainMod = "SUPER"
 
 hl.curve("clean_spring", { type = "spring", mass = 1.0, stiffness = 140, dampening = 24 })
@@ -76,19 +78,28 @@ hl.monitor {
     scale = ui_scale,
 }
 
-hl.window_rule {
-    name = "flameshot-overlay",
+hl.workspace_rule { workspace = "1-9", monitor = "HDMI-A-1" }
+hl.workspace_rule { workspace = "10-15", monitor = "eDP-1" }
 
-    match = {
-        class = "^(flameshot)$",
-    },
+-- Move active window to workspace 15 (eDP-1) with SUPER+CTRL+ALT+RIGHT
+hl.bind(mainMod .. " + CONTROL + ALT + RIGHT", hl.dsp.exec_cmd "hyprctl dispatch movetoworkspace 15")
 
-    float = true,
-    move = "0 0",
-    pin = true,
-    fullscreen_state = "0 2",
-    size = "100% 100%",
-}
+-- Move active window to workspace 9 (HDMI-A-1) with SUPER+CTRL+ALT+LEFT
+hl.bind(mainMod .. " + CONTROL + ALT + LEFT", hl.dsp.exec_cmd "hyprctl dispatch movetoworkspace 9")
+
+-- hl.window_rule {
+--     name = "flameshot-overlay",
+--
+--     match = {
+--         class = "^(flameshot)$",
+--     },
+--
+--     float = true,
+--     move = "0 0",
+--     pin = true,
+--     fullscreen_state = "0 2",
+--     size = "100% 100%",
+-- }
 
 --[[
 hl.window_rule({ match = { class = "^(steam)$", title = "^(Friends List)$" }, float = true })

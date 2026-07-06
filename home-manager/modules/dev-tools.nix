@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 #let
 # livescript = import ../packages/derivations/tools/livescript/derivation.nix { inherit pkgs lib; };
 #in
@@ -20,6 +20,7 @@
 
     nodejs_22
     typescript
+    bun
     # livescript
 
     python3
@@ -33,6 +34,6 @@
 
     jq
 
-    bun
+    racket
   ];
 }

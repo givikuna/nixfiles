@@ -10,6 +10,7 @@ repos = [
     "https://github.com/givikuna/nixboxd.git",
     "https://github.com/givikuna/slay-the-grineer.git",
     "https://github.com/givikuna/raknoid.git",
+    "https://github.com/givikuna/TsvariScript.git",
 ]
 
 [folders."~/Testing/"]

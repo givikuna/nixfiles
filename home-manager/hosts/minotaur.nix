@@ -98,6 +98,7 @@
 
     # system
     easyeffects
+    nwg-displays
 
     # virtualization
     bottles

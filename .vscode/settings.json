@@ -33,10 +33,12 @@
         "cachyos",
         "Cantarell",
         "catppuccin",
+        "cconvert",
         "certifi",
         "cesarferrei",
         "cesarferreira",
         "cliphist",
+        "cmdline",
         "Codeberg",
         "colorama",
         "conflictstyle",
@@ -62,6 +64,7 @@
         "direnv",
         "Disallocate",
         "discordapp",
+        "displayln",
         "distrobox",
         "distrowatch",
         "dmask",
@@ -380,6 +383,7 @@
         "zdiff",
         "Zfjo",
         "zombieland",
+        "Zorin",
         "zotero"
     ],
     "Lua.workspace.library": [
@@ -397,5 +401,10 @@
         "editor.defaultFormatter": "jnoortheen.nix-ide",
         "editor.formatOnSave": true,
         "editor.suggest.insertMode": "replace"
+    },
+    "magicRacket.languageServer.enabled": true,
+    "[racket]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "evzen-wybitul.magic-racket"
     }
 }

@@ -1,14 +1,10 @@
 { ... }:
 {
   imports = [
-    ../common.nix
+    # ../common.nix (runs on ZorinOS so doesn't use common.nix anymore)
     ./hardware-configuration.nix
-
-    ../_modules/desktops/gnome.nix
-
-    ../_modules/misc/boxes.nix
-    ../_modules/misc/protonvpn.nix
-    ../_modules/misc/steam-config.nix
+    ../_modules/system/sys-cleanup.nix
+    ../_modules/system/shell-dec.nix
   ];
 
   networking.hostName = "pilgrim";

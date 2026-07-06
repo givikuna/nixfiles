@@ -13,7 +13,6 @@
 
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     gonwatch = {
@@ -28,7 +27,6 @@
 
     flake-utils = {
       url = "github:numtide/flake-utils";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     sops-nix = {
@@ -122,6 +120,28 @@
                   sops-nix.homeManagerModules.sops
                 ];
                 home-manager.users.givik = import ./home-manager/hosts/nomad.nix;
+              }
+            )
+          ];
+        };
+
+        pilgrim = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/pilgrim/configuration.nix
+            (
+              { config, ... }:
+              {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.backupFileExtension = "backup";
+                home-manager.extraSpecialArgs = {
+                  inherit inputs;
+                  host-name = config.networking.hostName;
+                };
+                home-manager.sharedModules = [ ];
+                home-manager.users.givik = import ./home-manager/hosts/pilgrim.nix;
               }
             )
           ];
