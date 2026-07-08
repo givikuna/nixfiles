@@ -20,6 +20,7 @@
     yt-dlp
 
     repomix
+    cava
 
     (writeScriptBin "cconvert" (builtins.readFile ../../scripts/cconvert.rkt))
   ];
