@@ -50,6 +50,7 @@
 
     # browsers
     google-chrome
+    chromium
 
     # capturing
     gimp
@@ -95,13 +96,13 @@
     imv
     ffmpeg
     libreoffice-fresh
+    sioyek
 
     # system
     easyeffects
     nwg-displays
-
-    # virtualization
-    bottles
+    pwvucontrol
+    pavucontrol
   ];
 
   services.flatpak.packages = [

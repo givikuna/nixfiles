@@ -145,6 +145,9 @@ hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen("maximized", "toggle"))
 hl.bind(mainMod .. " + ALT + K", hl.dsp.exec_cmd "hyprctl dispatch pin")
 
+hl.bind(mainMod .. " + CONTROL + ALT + LEFT", hl.dsp.exec_cmd "hyprctl dispatch movewindow mon:HDMI-A-1")
+hl.bind(mainMod .. " + CONTROL + ALT + LEFT", hl.dsp.exec_cmd "hyprctl dispatch movewindow mon:DP-1")
+
 hl.bind(
     mainMod .. " + SHIFT + LEFT",
     hl.dsp.focus {
