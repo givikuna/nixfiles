@@ -78,15 +78,6 @@ hl.monitor {
     scale = ui_scale,
 }
 
-hl.workspace_rule { workspace = "1-9", monitor = "HDMI-A-1" }
-hl.workspace_rule { workspace = "10-15", monitor = "eDP-1" }
-
--- Move active window to workspace 15 (eDP-1) with SUPER+CTRL+ALT+RIGHT
-hl.bind(mainMod .. " + CONTROL + ALT + RIGHT", hl.dsp.exec_cmd "hyprctl dispatch movetoworkspace 15")
-
--- Move active window to workspace 9 (HDMI-A-1) with SUPER+CTRL+ALT+LEFT
-hl.bind(mainMod .. " + CONTROL + ALT + LEFT", hl.dsp.exec_cmd "hyprctl dispatch movetoworkspace 9")
-
 -- hl.window_rule {
 --     name = "flameshot-overlay",
 --
@@ -145,8 +136,18 @@ hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen("maximized", "toggle"))
 hl.bind(mainMod .. " + ALT + K", hl.dsp.exec_cmd "hyprctl dispatch pin")
 
-hl.bind(mainMod .. " + CONTROL + ALT + LEFT", hl.dsp.exec_cmd "hyprctl dispatch movewindow mon:HDMI-A-1")
-hl.bind(mainMod .. " + CONTROL + ALT + LEFT", hl.dsp.exec_cmd "hyprctl dispatch movewindow mon:DP-1")
+hl.bind(
+    mainMod .. " + CONTROL + ALT + LEFT",
+    hl.dsp.window.move {
+        monitor = "HDMI-A-1",
+    }
+)
+hl.bind(
+    mainMod .. " + CONTROL + ALT + RIGHT",
+    hl.dsp.window.move {
+        monitor = "eDP-1",
+    }
+)
 
 hl.bind(
     mainMod .. " + SHIFT + LEFT",
