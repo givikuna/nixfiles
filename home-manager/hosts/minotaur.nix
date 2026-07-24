@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
     ../common.nix
@@ -41,7 +41,6 @@
     qtcreator
 
     # personal
-    obsidian
     planify
     skrooge
     kmymoney
@@ -51,6 +50,9 @@
     # browsers
     google-chrome
     chromium
+    brave
+    librewolf
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # capturing
     gimp
@@ -127,6 +129,7 @@
 
     # personal
     "tech.dongdongbh.mindwtr"
+    "md.obsidian.Obsidian"
 
     # reader
     "com.github.johnfactotum.Foliate"

@@ -21,6 +21,7 @@
       rnnp = "rebuild-system && poweroff";
       r = "rebuild-system";
       u = "rebuild-system && update-system && rebuild-system";
+      rur = "r && u && r";
       unnr = "u && reboot";
       syu = "u";
       edits = "edit-system";

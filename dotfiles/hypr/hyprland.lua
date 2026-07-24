@@ -2,18 +2,19 @@ require "monitors"
 
 local mainMod = "SUPER"
 
-hl.curve("clean_spring", { type = "spring", mass = 1.0, stiffness = 140, dampening = 24 })
+hl.curve("clean_spring", { type = "spring", mass = 1.0, stiffness = 350, dampening = 55 })
 hl.curve("fade_curve", { type = "bezier", points = { { 0.25, 1.0 }, { 0.25, 1.0 } } })
+hl.curve("fast_snap", { type = "bezier", points = { { 0.05, 0.9 }, { 0.1, 1.0 } } })
+
+hl.animation { leaf = "windows", enabled = true, speed = 1, bezier = "fast_snap" }
+hl.animation { leaf = "workspaces", enabled = true, speed = 1, bezier = "fast_snap", style = "slide" }
+hl.animation { leaf = "fade", enabled = true, speed = 0.7, bezier = "fast_snap" }
 
 hl.env("GTK_THEME", "Gruvbox-Dark-B")
 hl.env("QT_STYLE_OVERRIDE", "kvantum")
 
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
-
-hl.animation { leaf = "windows", enabled = true, speed = 2, spring = "clean_spring" }
-hl.animation { leaf = "workspaces", enabled = true, speed = 2, spring = "clean_spring", style = "slide" }
-hl.animation { leaf = "fade", enabled = true, speed = 1, bezier = "fade_curve" }
 
 hl.config {
     general = {

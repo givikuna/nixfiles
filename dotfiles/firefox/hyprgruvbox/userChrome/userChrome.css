@@ -21,7 +21,6 @@
     --lwt-tab-text: var(--gb-fg-dim) !important;
     --lwt-selected-tab-background-color: var(--gb-bg1) !important;
 
-    /* sidebar vars */
     --lwt-sidebar-background-color: var(--gb-bg2) !important;
     --lwt-sidebar-text-color: var(--gb-fg-dim) !important;
     --sidebar-background-color: var(--gb-bg2) !important;
@@ -136,7 +135,6 @@
     background-color: var(--gb-bg0) !important;
 }
 
-/* Bookmarks and History Trees */
 .sidebar-placesTree {
     appearance: none !important;
     -moz-appearance: none !important;
@@ -144,7 +142,6 @@
     color: var(--gb-fg-dim) !important;
 }
 
-/* tree rows */
 .sidebar-placesTree treechildren::-moz-tree-row {
     background-color: transparent !important;
 }
@@ -175,11 +172,31 @@
     box-shadow: none !important;
 }
 
-#sidebar-box,
-#sidebar-header,
-#sidebar,
-#sidebar-main {
-    background-color: #282828 !important;
+sidebar-main,
+#sidebar-main,
+#sidebar-main > .wrapper,
+#sidebar-main .tools-and-extensions,
+#vertical-tabs {
+    background: var(--gb-bg2) !important;
+    background-image: none !important;
+    color: var(--gb-fg-dim) !important;
+    border: none !important;
+}
+
+#sidebar-main .tools-and-extensions toolbarbutton {
+    fill: var(--gb-fg-dim) !important;
+    color: var(--gb-fg-dim) !important;
+}
+
+#sidebar-main .tools-and-extensions toolbarbutton:hover {
+    fill: var(--gb-fg) !important;
+    background-color: var(--gb-bg1) !important;
+}
+
+#sidebar-main ~ #sidebar-splitter,
+#sidebar-splitter {
+    background-color: var(--gb-bg0) !important;
+    border-color: var(--gb-bg2) !important;
 }
 
 #sidebar-splitter,
