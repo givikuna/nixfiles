@@ -8,6 +8,9 @@
 
     ../_modules/system/gaming-optimizations.nix
 
+    ../_modules/sec/tor.nix
+    ../_modules/sec/firejail.nix
+
     ../_modules/misc/boxes.nix
     ../_modules/misc/steam-config.nix
     ../_modules/misc/retroarch.nix

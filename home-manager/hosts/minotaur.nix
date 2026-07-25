@@ -68,6 +68,7 @@
     thunar
 
     # privacy
+    tor-browser
 
     # editing
     davinci-resolve
