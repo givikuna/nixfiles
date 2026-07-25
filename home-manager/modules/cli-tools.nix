@@ -21,5 +21,9 @@
 
     repomix
     cava
+
+    sioyek
+
+    caligula
   ];
 }
