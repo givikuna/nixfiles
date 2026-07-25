@@ -15,6 +15,7 @@
       update-system = "/etc/nixos/scripts/update-system.sh";
       push-system = "/etc/nixos/scripts/push-system.sh";
       pull-system = "/etc/nixos/scripts/pull-system.sh";
+      post-install = "/etc/nixos/scripts/post-install.sh";
 
       # system shorthands
       rnnr = "rebuild-system && reboot";
