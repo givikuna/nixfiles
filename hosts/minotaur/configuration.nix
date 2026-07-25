@@ -11,6 +11,8 @@
     ../_modules/sec/tor.nix
     ../_modules/sec/firejail.nix
 
+    ../_modules/licenses/android_sdk.nix
+
     ../_modules/misc/boxes.nix
     ../_modules/misc/steam-config.nix
     ../_modules/misc/retroarch.nix

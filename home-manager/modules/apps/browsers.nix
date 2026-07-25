@@ -9,5 +9,6 @@
     brave
     librewolf
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    lynx
   ];
 }

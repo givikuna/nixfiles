@@ -25,5 +25,7 @@
     sioyek
 
     caligula
+
+    speedtest-cli
   ];
 }

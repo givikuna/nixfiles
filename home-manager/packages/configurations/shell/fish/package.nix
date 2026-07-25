@@ -10,6 +10,7 @@
     '';
 
     shellAliases = {
+      # scripts
       rebuild-system = "python3 /etc/nixos/scripts/rebuild-system.py";
       edit-system = "python3 /etc/nixos/scripts/edit-system.py";
       update-system = "/etc/nixos/scripts/update-system.sh";
@@ -46,6 +47,9 @@
       gitingest = "repomix";
       dall = "direnv allow";
       burner = "caligula";
+
+      # one-liner scripts
+      ingcpy = "repomix --output /tmp/repomix.xml && cat /tmp/repomix.xml | wl-copy && rm /tmp/repomix.xml";
 
       # power profiles
       set-balanced = "powerprofilesctl set balanced";

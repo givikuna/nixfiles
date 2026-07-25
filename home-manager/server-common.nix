@@ -1,8 +1,9 @@
 { ... }:
 {
   imports = [
-    ./modules/cli-tools.nix
     ./modules/shell.nix
+    ./modules/cli-tools.nix
+    ./modules/scripts.nix
   ];
 
   home.username = "givik";

@@ -3,12 +3,33 @@
   home.packages = with pkgs; [
     # net
     nmap
+    aircrack-ng
+    metasploit
+    # mitmproxy
+
+    # web
+    burpsuite
+    gobuster
+    nikto
+    ffuf
+    arjun
+    kiterunner
+    caido-desktop
+    caido-cli
+    nuclei
+    nuclei-templates
 
     # password profilers
-    (pkgs.callPackage ../packages/derivations/security/cupp/derivation.nix { })
+    # tba
 
     # password crackers
-    john # john the ripper
+    john
     hashcat
+
+    # osint
+    bloodhound
+
+    # sql
+    sqlmap
   ];
 }
