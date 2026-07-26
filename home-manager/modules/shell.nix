@@ -2,6 +2,7 @@
 {
   imports = [
     ../packages/configurations/shell/fish/package.nix
+
     ../packages/configurations/shell/starship/package.nix
     ../packages/configurations/shell/fastfetch/package.nix
     ../packages/configurations/shell/tmux/package.nix

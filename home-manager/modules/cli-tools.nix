@@ -2,6 +2,7 @@
 {
   imports = [
     ./nutils/nutils.nix
+
     ../packages/configurations/tools/emacs/package.nix
   ];
 
