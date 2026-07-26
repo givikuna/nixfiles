@@ -3,100 +3,49 @@
   imports = [
     ../common.nix
 
-    ../modules/desktop/gnomeadwaita/desktop.nix
+    ../modules/desktop/hyprgruvbox/desktop.nix
 
-    # programming
-    ../packages/configurations/applications/helix/package.nix
-    ../packages/configurations/applications/micro/package.nix
-    ../packages/configurations/applications/neovim/package.nix
+    ########## packages
 
-    # personal
+    ../modules/apps/basics.nix
+    ../modules/apps/browsers.nix
+    # ../modules/apps/davinci.nix
+    ../modules/apps/discord.nix
+    ../modules/apps/file-mgmt.nix
+    ../modules/apps/gaming.nix
+    ../modules/apps/mov.nix
+    ../modules/apps/spotify.nix
+    ../modules/apps/sys.nix
+    ../modules/apps/term.nix
+    ../modules/apps/tor-browser.nix
+    ../modules/apps/torrent.nix
+    ../modules/apps/txt-edit.nix
+
     ../packages/configurations/applications/chronicler/package.nix
-
-    # browsers
-    ../packages/configurations/applications/firefox/package.nix
-
-    # file managers
-    ../packages/configurations/applications/dolphin/package.nix
-
-    # piracy
-    ../packages/configurations/applications/gonwatch/package.nix
-
-    # terminal emulators
-    ../packages/configurations/applications/kitty/package.nix
-
-    # communications
-    ../packages/configurations/applications/nixcord/package.nix
     ../packages/configurations/applications/thunderbird/package.nix
-
-    # gaming
-    ../packages/configurations/applications/prismlauncher/package.nix
   ];
 
-  # services.flatpak.remotes = [
-  #   {
-  #     name = "flathub-beta";
-  #     location = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
-  #   }
-  # ];
-
   home.packages = with pkgs; [
-    # programming
-    vscode
-    qtcreator
-
     # personal
-    obsidian
     planify
+    skrooge
+    kmymoney
     calibre
     zotero
-
-    # browsers
-    google-chrome
 
     # capturing
     gimp
     imagemagick
     switcheroo
     obs-studio
+  ];
 
-    # streaming services
-    spotify
-    spotify-player
+  services.flatpak.packages = [
+    # personal
+    "tech.dongdongbh.mindwtr"
+    "md.obsidian.Obsidian"
 
-    # file managers
-    thunar
-
-    # privacy
-
-    # tools
-    pdfarranger
-    evince
-    gnome-disk-utility
-    mission-center
-
-    # piracy
-    ani-cli
-
-    # torrents
-    qbittorrent
-
-    # gaming
-    protonup-qt
-    mangohud
-    itch
-
-    # basics
-    haruna
-    mpv
-    imv
-    ffmpeg
-    libreoffice-fresh
-
-    # system
-    easyeffects
-
-    # virtualization
-    bottles
+    # reader
+    "com.github.johnfactotum.Foliate"
   ];
 }

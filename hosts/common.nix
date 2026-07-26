@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   imports = [
     ./_modules/system/bluetooth.nix
@@ -7,6 +7,7 @@
     ./_modules/system/printing.nix
     ./_modules/system/sys-cleanup.nix
     ./_modules/system/shell-dec.nix
+    ./_modules/system/boot.nix
 
     ./_modules/overlays/overlays.nix
 
@@ -15,6 +16,8 @@
 
     ./_modules/misc/fonts.nix
     ./_modules/misc/sops.nix
+    ./_modules/misc/unfree.nix
+    ./_modules/misc/direnv.nix
   ];
 
   # nix allowances
@@ -22,13 +25,6 @@
     "nix-command"
     "flakes"
   ];
-
-  nixpkgs.config.allowUnfree = true;
-
-  # boot
-
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   # networking
   networking.networkmanager.enable = true;
@@ -61,8 +57,6 @@
   services.gvfs.enable = true;
 
   programs.dconf.enable = true;
-
-  programs.direnv.enable = true;
 
   #
 
