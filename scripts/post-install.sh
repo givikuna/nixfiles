@@ -7,4 +7,7 @@
 # and do not feel like setting up everything declaratively sometimes
 # and im not doing all that distrobox bullshit again
 
+raco pkg install racket-langserver
 raco pkg install --user rhombus-main
+
+raco pkg install threading
