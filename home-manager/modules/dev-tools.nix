@@ -9,6 +9,7 @@
     ./devtools/spell-checker.nix
     ./devtools/qt.nix
     ./devtools/maker.nix
+    ./devtools/devenv.nix
   ];
 
   home.packages = with pkgs; [
