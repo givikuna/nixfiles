@@ -12,6 +12,7 @@ repos = [
     "https://github.com/givikuna/raknoid.git",
     "https://github.com/givikuna/TsvariScript.git",
     "https://github.com/givikuna/physics-hw.git",
+    "https://github.com/givikuna/ngupp.git",
 ]
 
 [folders."~/Testing/"]

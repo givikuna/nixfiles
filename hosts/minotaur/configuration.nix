@@ -1,22 +1,22 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 {
   imports = [
-    ./hardware-configuration.nix
     ../common.nix
+    ./hardware-configuration.nix
+
+    ./modules/desktop.nix
+    ./modules/misc.nix
+    ./modules/system.nix
 
     ../_modules/desktops/hyprland.nix
 
-    ../_modules/system/gaming-optimizations.nix
-
     ../_modules/sec/tor.nix
     ../_modules/sec/firejail.nix
+    ../_modules/sec/protonvpn.nix
 
     ../_modules/licenses/android_sdk.nix
 
     ../_modules/misc/boxes.nix
-    ../_modules/misc/steam-config.nix
-    ../_modules/misc/retroarch.nix
-    ../_modules/misc/protonvpn.nix
   ];
 
   networking.hostName = "minotaur";
@@ -30,40 +30,8 @@
     ];
   };
 
-  environment.systemPackages = with pkgs; [
-    gruvbox-kvantum
-  ];
-
-  environment.sessionVariables = {
-    __GL_SHADER_DISK_CACHE_SKIP_CLEANUP = "1";
-    __GL_SHADER_DISK_CACHE_SIZE = "100000000000";
-    GTK_THEME = "Gruvbox-Dark-B:dark";
-  };
-
-  boot.kernel.sysctl = {
-    "vm.max_map_count" = 2147483642;
-    "vm.swappiness" = 10;
-  };
-
-  services.scx = {
-    enable = true;
-    scheduler = "scx_bpfland"; # better than scx_lavd for gaming afaik
-  };
-
   # forces high-performance energy state
   powerManagement.cpuFreqGovernor = "performance";
-
-  # helps in avoiding stuttering
-  boot.kernelParams = [
-    "split_lock_detect=off"
-  ];
-
-  # automatic process nice-ing
-  services.ananicy = {
-    enable = true;
-    package = pkgs.ananicy-cpp;
-    rulesProvider = pkgs.ananicy-rules-cachyos;
-  };
 
   # nvidia driver stuff
   # if copying my system I would change the stuff here

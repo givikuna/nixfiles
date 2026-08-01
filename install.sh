@@ -54,6 +54,7 @@ echo "Who are you? (you must select one)"
 echo "1) minotaur"
 echo "2) nomad"
 echo "3) pilgrim"
+echo "4) colossus"
 read -p "Enter the number: " HOST_CHOICE
 
 if [ "$HOST_CHOICE" == "1" ]; then

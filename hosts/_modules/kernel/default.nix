@@ -1,5 +1,5 @@
 { ... }: {
   imports = [
-    ./modules/nur.nix
+    ./options/default.nix
   ];
 }

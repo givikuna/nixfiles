@@ -1,0 +1,5 @@
+{ ... }: {
+  imports = [
+    ./vm/default.nix
+  ];
+}

@@ -9,15 +9,13 @@
     ./_modules/system/shell-dec.nix
     ./_modules/system/boot.nix
 
-    ./_modules/overlays/overlays.nix
-
     ./_modules/packaging/distrobox.nix
     ./_modules/packaging/flatpak.nix
+    ./_modules/packaging/unfree.nix
+
+    ./_modules/overlays/nur.nix
 
     ./_modules/misc/fonts.nix
-    ./_modules/misc/sops.nix
-    ./_modules/misc/unfree.nix
-    ./_modules/misc/direnv.nix
   ];
 
   # nix allowances

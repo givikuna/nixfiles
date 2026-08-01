@@ -4,7 +4,7 @@
     ./modules/swayosd.nix
     ./modules/tuigreet.nix
 
-    ../wayland/wayland.nix
+    ./modules/wayland/wayland.nix
   ];
 
   programs.hyprland = {

@@ -47,6 +47,7 @@
       gitingest = "repomix";
       dall = "direnv allow";
       burner = "caligula";
+      speedtest = "speedtest-cli";
 
       # one-liner scripts
       ingcpy = "repomix --output /tmp/repomix.xml && cat /tmp/repomix.xml | wl-copy && rm /tmp/repomix.xml";

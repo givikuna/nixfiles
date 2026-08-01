@@ -4,38 +4,29 @@
 #in
 {
   imports = [
-    ./devtools/fmt.nix
-    ./devtools/lsp.nix
+    # ./devtools/android-dev.nix
+
+    ./devtools/c.nix
+    ./devtools/javascript.nix
+    ./devtools/lua.nix
+    ./devtools/make.nix
+    ./devtools/python.nix
+    ./devtools/racket.nix
+    ./devtools/jdk.nix
+
     ./devtools/spell-checker.nix
+
     ./devtools/qt.nix
-    ./devtools/maker.nix
+
+    ./devtools/debug.nix
     ./devtools/devenv.nix
+    ./devtools/direnv.nix
+    ./devtools/nix.nix
+    ./devtools/shell.nix
   ];
 
   home.packages = with pkgs; [
-    gcc
-    ninja
-
-    gdb
-    valgrind
-    clang-tools
-    cppcheck
-
-    nodejs_22
-    typescript
-    bun
     # livescript
-
-    python3
-    python3Packages.pip
-
-    jdk
-
-    lua
-
-    jq
-
-    racket
 
     eask-cli
   ];

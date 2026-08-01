@@ -1,0 +1,5 @@
+{ ... }: {
+  imports = [
+    ./scx/default.nix
+  ];
+}
