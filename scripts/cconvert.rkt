@@ -11,7 +11,10 @@
 
 (define (hex->rgb hex-str)
   (define s (string-trim hex-str))
-  (define clean (if (string-prefix? s "#") (substring s 1) s))
+  (define clean
+    (if (string-prefix? s "#")
+        (substring s 1)
+        s))
   (unless (= (string-length clean) 6)
     (error "hex string must be 7 hex digits"))
   (values (string->number (substring clean 0 2) 16)
@@ -24,8 +27,8 @@
 (command-line
   #:program "color-convert"
   #:once-each
-  ["--hex" "convert rgb -> hex" (mode 'hex)]
-  ["--rgb" "convert hex -> rgb" (mode 'rgb)]
+  ["--hex <R> <G> <B>" "convert rgb -> hex" (mode 'hex)]
+  ["--rgb <hex>" "convert hex -> rgb" (mode 'rgb)]
   #:args input_args
   (args input_args))
 
@@ -46,4 +49,5 @@
       (let-values ([(r g b) (hex->rgb hex-str)])
         (printf "~a ~a ~a\n" r g b))]
      [_ (error "usage: color-convert -rgb <hex>")])]
-  [else (error "please specify either -hex or -rgb")])
+  [else
+   (error "please specify either -hex or -rgb")])

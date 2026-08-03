@@ -122,6 +122,7 @@
         "gapplication",
         "gcampax",
         "gethostname",
+        "Getopt",
         "ghelp",
         "gitboy",
         "gitingest",
@@ -307,6 +308,7 @@
         "protonup",
         "protonvpn",
         "purescript",
+        "pushs",
         "pwvucontrol",
         "Pypi",
         "pyproject",
@@ -455,5 +457,9 @@
     "[racket]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "evzen-wybitul.magic-racket"
-    }
+    },
+    "perl.perlCmd": "perl",
+    "perl.perlInc": [],
+    "perl.languageServer.executable": "/run/current-system/sw/bin/perl/perl-language-server",
+    "perl.languageServer.args": ["--port=13603", "--stdio"]
 }

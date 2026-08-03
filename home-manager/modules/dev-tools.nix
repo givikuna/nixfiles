@@ -13,6 +13,7 @@
     ./devtools/python.nix
     ./devtools/racket.nix
     ./devtools/jdk.nix
+    ./devtools/perl.nix
 
     ./devtools/spell-checker.nix
 

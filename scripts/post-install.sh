@@ -1,4 +1,4 @@
-#!/usr/bin/env/bash
+#!/usr/bin/env bash
 
 # because some aspects of the system were configured imperatively it is needed to use a post-install script to replicate those aspects of the system
 

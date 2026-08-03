@@ -10,14 +10,6 @@
     '';
 
     shellAliases = {
-      # scripts
-      rebuild-system = "python3 /etc/nixos/scripts/rebuild-system.py";
-      edit-system = "python3 /etc/nixos/scripts/edit-system.py";
-      update-system = "/etc/nixos/scripts/update-system.sh";
-      push-system = "/etc/nixos/scripts/push-system.sh";
-      pull-system = "/etc/nixos/scripts/pull-system.sh";
-      post-install = "/etc/nixos/scripts/post-install.sh";
-
       # system shorthands
       rnnr = "rebuild-system && reboot";
       rnnp = "rebuild-system && poweroff";
@@ -27,9 +19,9 @@
       unnr = "u && reboot";
       syu = "u";
       edits = "edit-system";
-      p = "push-system";
-      rebp = "r && p";
-      updp = "u && p";
+      pushs = "push-system";
+      rebp = "r && pushs";
+      updp = "u && pushs";
 
       # eza shorthands
       e = "eza --hyperlink --icons";
@@ -45,12 +37,7 @@
 
       # aliases
       gitingest = "repomix";
-      dall = "direnv allow";
-      burner = "caligula";
       speedtest = "speedtest-cli";
-
-      # one-liner scripts
-      ingcpy = "repomix --output /tmp/repomix.xml && cat /tmp/repomix.xml | wl-copy && rm /tmp/repomix.xml";
 
       # power profiles
       set-balanced = "powerprofilesctl set balanced";
