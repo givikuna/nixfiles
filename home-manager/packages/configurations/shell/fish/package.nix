@@ -22,6 +22,7 @@
       pushs = "push-system";
       rebp = "r && pushs";
       updp = "u && pushs";
+      mvpls = "move-please";
 
       # eza shorthands
       e = "eza --hyperlink --icons";
