@@ -25,6 +25,7 @@
     drivers = {
       # system
       nvidia_cachyos.enable = true;
+      nvidia_stable.enable = false; # cause fuck stability
 
       # peripherals
       xpadneo.enable = true;
@@ -32,8 +33,8 @@
 
     services.scx = {
       enable = true;
-      scheduler.bpfland = {
-        enable = true;
+      scheduler = {
+        bpfland.enable = true;
       };
     };
   };

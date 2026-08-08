@@ -1,4 +1,4 @@
-{ username, config, ... }:
+{ username, ... }:
 {
   imports = [
     ../common.nix
