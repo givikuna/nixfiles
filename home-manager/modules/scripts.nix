@@ -5,6 +5,7 @@ let
     "dd-k.pl"
     "push-system.sh"
     "move-please.sh"
+    "ntest.rkt"
     "post-install.sh"
     "pull-system.sh"
     "update-system.sh"

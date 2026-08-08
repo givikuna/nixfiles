@@ -13,6 +13,9 @@
     ./_modules/packaging/flatpak.nix
     ./_modules/packaging/unfree.nix
 
+    ./_modules/sec/audit.nix
+    ./_modules/sec/firewall.nix
+
     ./_modules/overlays/nur.nix
 
     ./_modules/misc/fonts.nix

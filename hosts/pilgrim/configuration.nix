@@ -1,11 +1,25 @@
 { ... }:
 {
   imports = [
-    # ../common.nix (runs on ZorinOS so doesn't use common.nix anymore)
-    ./hardware-configuration.nix
-    ../_modules/system/sys-cleanup.nix
-    ../_modules/system/shell-dec.nix
+    ../common.nix
+
+    ../_modules/desktops/gnome.nix
+
+    ../_modules/misc/boxes.nix
   ];
+
+  # users.users.${username} = {
+  #   isNormalUser = true;
+  #   extraGroups = [
+  #     "networkmanager"
+  #     "wheel"
+  #   ];
+  # };
+
+  fileSystems."/" = {
+    device = "/dev/sda1";
+    fsType = "ext4";
+  };
 
   networking.hostName = "pilgrim";
 }

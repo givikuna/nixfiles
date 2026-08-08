@@ -9,7 +9,7 @@ inputs.nixpkgs.lib.nixosSystem {
   system = system;
 
   modules = [
-    ../hosts/${hostname}/configuration.nix
+    ../../hosts/${hostname}/configuration.nix
     inputs.nix-flatpak.nixosModules.nix-flatpak
     inputs.sops-nix.nixosModules.sops
     inputs.chaotic.nixosModules.default
@@ -30,7 +30,7 @@ inputs.nixpkgs.lib.nixosSystem {
           inputs.sops-nix.homeManagerModules.sops
         ];
 
-        users.${username} = import ../home-manager/hosts/${hostname}.nix;
+        users.${username} = import ../../home-manager/hosts/${hostname}.nix;
       };
     }
   ];

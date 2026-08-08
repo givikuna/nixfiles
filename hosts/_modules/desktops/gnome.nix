@@ -1,15 +1,20 @@
 { pkgs, ... }: {
   imports = [
-    ../wayland/wayland.nix
+    ./modules/wayland/wayland.nix
   ];
 
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+  services.displayManager = {
+    gdm.enable = true;
+
+    defaultSession = "gnome";
+  };
+
+  services.desktopManager.gnome = {
+    enable = true;
+  };
+
   services.xserver = {
     enable = true;
-    desktopManager.gnome.enable = true;
-    displayManager.gdm.enable = true;
-    displayManager.defaultSession = "gnome";
   };
 
   # services.gnome.gnome-keyring.enable = true;
