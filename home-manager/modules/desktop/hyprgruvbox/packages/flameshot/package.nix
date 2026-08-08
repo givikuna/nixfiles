@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ username, pkgs, ... }:
 {
   home.packages = with pkgs; [
     flameshot
@@ -8,7 +8,7 @@
 
     settings = {
       General = {
-        savePath = "/home/givik/Screenshots";
+        savePath = "/home/${username}/Screenshots";
         disabledTrayIcon = true;
         showStartupLaunchMessage = true;
 

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ username, pkgs, ... }:
 {
   programs.fish.enable = true;
   programs.zsh.enable = true;
@@ -9,5 +9,5 @@
     nushell
   ];
 
-  users.users.givik.shell = pkgs.fish;
+  users.users."${username}".shell = pkgs.fish;
 }

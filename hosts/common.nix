@@ -1,4 +1,4 @@
-{ ... }:
+{ username, ... }:
 {
   imports = [
     ./_modules/system/bluetooth.nix
@@ -30,7 +30,7 @@
   # users & groups
   security.polkit.enable = true;
 
-  users.users.givik = {
+  users.users."${username}" = {
     isNormalUser = true;
     extraGroups = [
       "networkmanager"

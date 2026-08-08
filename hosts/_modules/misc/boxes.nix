@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ username, pkgs, ... }:
 {
   virtualisation.libvirtd.enable = true;
 
-  users.users.givik.extraGroups = [ "libvirtd" ];
+  users.users."${username}".extraGroups = [ "libvirtd" ];
 
   environment.systemPackages = with pkgs; [
     gnome-boxes

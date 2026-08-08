@@ -1,4 +1,4 @@
-{ config, ... }:
+{ username, config, ... }:
 {
   imports = [
     ../common.nix
@@ -21,7 +21,7 @@
 
   networking.hostName = "minotaur";
 
-  fileSystems."/home/givik/Storage" = {
+  fileSystems."/home/${username}/Storage" = {
     device = "/dev/disk/by-uuid/d3ac3f2e-209b-4269-9d07-7b544c2acb1f";
     fsType = "btrfs";
     options = [
