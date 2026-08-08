@@ -52,6 +52,10 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    chaotic = {
+      url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    };
   };
 
   outputs = inputs: import ./flake-modules/outputs.nix { inherit inputs; };

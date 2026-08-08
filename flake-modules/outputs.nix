@@ -14,6 +14,7 @@ let
         ../hosts/${hostname}/configuration.nix
         inputs.nix-flatpak.nixosModules.nix-flatpak
         inputs.sops-nix.nixosModules.sops
+        inputs.chaotic.nixosModules.default
         inputs.home-manager.nixosModules.home-manager
         {
           home-manager = {

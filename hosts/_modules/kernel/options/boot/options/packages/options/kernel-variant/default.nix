@@ -1,5 +1,10 @@
 { ... }: {
   imports = [
+    ./options/cachyos-gcc.nix
+    ./options/cachyos-hardened.nix
+    ./options/cachyos-kernel.nix
+    ./options/cachyos-lts.nix
+    ./options/cachyos-server.nix
     ./options/default-kernel.nix
     ./options/hardened-kernel.nix
     ./options/latest-kernel.nix

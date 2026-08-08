@@ -10,7 +10,9 @@
   custom.kernel = {
     boot = {
       packages = {
-        kernel-variant.default-kernel.enable = true;
+        kernel-variant = {
+          cachyos-lts-kernel.enable = true;
+        };
       };
 
       params = {
@@ -20,7 +22,13 @@
       sysctl.profiles.gaming-minotaur.enable = true;
     };
 
-    drivers.xpadneo.enable = true;
+    drivers = {
+      # system
+      nvidia_cachyos.enable = true;
+
+      # peripherals
+      xpadneo.enable = true;
+    };
 
     services.scx = {
       enable = true;

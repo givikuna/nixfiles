@@ -34,9 +34,8 @@
   powerManagement.cpuFreqGovernor = "performance";
 
   # nvidia driver stuff
-  # if copying my system I would change the stuff here
-  # this will not work on everyone's computers
   services.xserver.videoDrivers = [ "nvidia" ];
+
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = false;
@@ -44,7 +43,7 @@
 
     open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    # package = config.boot.kernelPackages.nvidiaPackages.stable;
 
     prime = {
       /*
