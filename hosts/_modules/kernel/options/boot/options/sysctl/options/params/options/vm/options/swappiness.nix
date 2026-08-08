@@ -3,12 +3,17 @@ let
   cfg = config.custom.kernel.boot.sysctl.params.swappiness;
 in
 {
-  options.custom.kernel.boot.sysctl.params.swappiness.enable =
-    lib.mkEnableOption "vm.swappiness tweak";
+  options.custom.kernel.boot.sysctl.params.swappiness = lib.mkOption {
+    type = lib.types.nullOr lib.types.int;
+    default = null;
+    description = "vm.swappiness value (null means do not set)";
+  };
 
-  config = lib.mkIf cfg.enable {
+  config = lib.mkIf (cfg != null) {
     boot.kernel.sysctl = {
-      "vm.swappiness" = 10;
+      "vm.swappiness" = cfg;
     };
   };
 }
+
+# 10
