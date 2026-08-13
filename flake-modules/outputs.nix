@@ -18,7 +18,7 @@ let
     nomad = { };
     pilgrim = { };
     colossus = { };
-    # zephyr = { username = "laryrh"; };
+    # zephyr = { username = "larryrh"; };
   };
 
   nixosConfigurations = builtins.mapAttrs (

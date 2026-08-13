@@ -6,9 +6,13 @@
   home.packages = with pkgs; [
     google-chrome
     chromium
-    brave
+    # brave
     librewolf
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     lynx
+  ];
+
+  services.flatpak.packages = [
+    "com.brave.Browser"
   ];
 }
