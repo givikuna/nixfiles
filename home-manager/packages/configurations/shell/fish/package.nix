@@ -44,6 +44,10 @@
       gitingest = "repomix";
       speedtest = "speedtest-cli";
 
+      # fuck larry
+      mulgs = "most-used-langs -u givikuna -R al-go-rithms";
+      mulgs-larry = "most-used-langs -u dagworth -R Chronica-Phantastikos";
+
       # power profiles
       set-balanced = "powerprofilesctl set balanced";
       set-performance = "powerprofilesctl set performance";

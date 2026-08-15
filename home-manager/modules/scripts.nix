@@ -12,6 +12,7 @@ let
     "edit-system.py"
     "rebuild-system.py"
     "ingcpy.sh"
+    "most-used-langs.py"
   ];
 
   mkScript =

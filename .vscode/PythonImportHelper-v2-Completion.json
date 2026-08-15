@@ -35,12 +35,57 @@
         "documentation": {}
     },
     {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "urllib.request",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "urllib.request",
+        "description": "urllib.request",
+        "detail": "urllib.request",
+        "documentation": {}
+    },
+    {
+        "label": "urllib.error",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "urllib.error",
+        "description": "urllib.error",
+        "detail": "urllib.error",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "os",
         "description": "os",
         "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
         "documentation": {}
     },
     {
@@ -68,6 +113,60 @@
         "description": "scripts.edit-system",
         "peekOfCode": "CONFIG_DIR = Path(\"/etc/nixos\")\ndef open_environment():\n    if not CONFIG_DIR.exists():\n        print(f\"error: Configuration directory '{CONFIG_DIR}' not found.\")\n        sys.exit(1)\n    if not shutil.which(\"code\"):\n        print(\"error: 'code' command not found.\")\n        print(\"make sure vscode or codium or code oss is installed and 'code' is enabled in your environment.\")\n        sys.exit(1)\n    print(f\"opening {CONFIG_DIR} in VS Code...\")",
         "detail": "scripts.edit-system",
+        "documentation": {}
+    },
+    {
+        "label": "api_request",
+        "kind": 2,
+        "importPath": "scripts.most-used-langs",
+        "description": "scripts.most-used-langs",
+        "peekOfCode": "def api_request(url):\n    \"\"\"Make a GitHub API request with proper headers and handle pagination.\"\"\"\n    headers = {\n        \"Accept\": \"application/vnd.github.v3+json\",\n        \"User-Agent\": \"Python-urllib/3.10\"\n    }\n    if TOKEN:\n        headers[\"Authorization\"] = f\"token {TOKEN}\"\n    req = urllib.request.Request(url, headers=headers)\n    try:",
+        "detail": "scripts.most-used-langs",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_repos",
+        "kind": 2,
+        "importPath": "scripts.most-used-langs",
+        "description": "scripts.most-used-langs",
+        "peekOfCode": "def get_all_repos(username):\n    \"\"\"Fetch all repositories for a user, handling pagination.\"\"\"\n    repos = []\n    page = 1\n    per_page = 100\n    while True:\n        url = f\"{GITHUB_API_BASE}/users/{username}/repos?per_page={per_page}&page={page}\"\n        data, headers = api_request(url)\n        if not data:\n            break",
+        "detail": "scripts.most-used-langs",
+        "documentation": {}
+    },
+    {
+        "label": "get_repo_languages",
+        "kind": 2,
+        "importPath": "scripts.most-used-langs",
+        "description": "scripts.most-used-langs",
+        "peekOfCode": "def get_repo_languages(username, repo_name):\n    \"\"\"Fetch language breakdown for a single repository.\"\"\"\n    url = f\"{GITHUB_API_BASE}/repos/{username}/{repo_name}/languages\"\n    data, _ = api_request(url)\n    return data\ndef main():\n    parser = argparse.ArgumentParser(\n        description=\"Analyze language usage across a GitHub user's repositories.\"\n    )\n    parser.add_argument(",
+        "detail": "scripts.most-used-langs",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "scripts.most-used-langs",
+        "description": "scripts.most-used-langs",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser(\n        description=\"Analyze language usage across a GitHub user's repositories.\"\n    )\n    parser.add_argument(\n        \"-u\", \"--username\",\n        help=\"GitHub username (if not provided, you will be prompted)\"\n    )\n    parser.add_argument(\n        \"-L\", \"--exclude-lang\",",
+        "detail": "scripts.most-used-langs",
+        "documentation": {}
+    },
+    {
+        "label": "GITHUB_API_BASE",
+        "kind": 5,
+        "importPath": "scripts.most-used-langs",
+        "description": "scripts.most-used-langs",
+        "peekOfCode": "GITHUB_API_BASE = \"https://api.github.com\"\nTOKEN = os.environ.get(\"GITHUB_TOKEN\")\ndef api_request(url):\n    \"\"\"Make a GitHub API request with proper headers and handle pagination.\"\"\"\n    headers = {\n        \"Accept\": \"application/vnd.github.v3+json\",\n        \"User-Agent\": \"Python-urllib/3.10\"\n    }\n    if TOKEN:\n        headers[\"Authorization\"] = f\"token {TOKEN}\"",
+        "detail": "scripts.most-used-langs",
+        "documentation": {}
+    },
+    {
+        "label": "TOKEN",
+        "kind": 5,
+        "importPath": "scripts.most-used-langs",
+        "description": "scripts.most-used-langs",
+        "peekOfCode": "TOKEN = os.environ.get(\"GITHUB_TOKEN\")\ndef api_request(url):\n    \"\"\"Make a GitHub API request with proper headers and handle pagination.\"\"\"\n    headers = {\n        \"Accept\": \"application/vnd.github.v3+json\",\n        \"User-Agent\": \"Python-urllib/3.10\"\n    }\n    if TOKEN:\n        headers[\"Authorization\"] = f\"token {TOKEN}\"\n    req = urllib.request.Request(url, headers=headers)",
+        "detail": "scripts.most-used-langs",
         "documentation": {}
     },
     {

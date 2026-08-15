@@ -56,6 +56,11 @@
     chaotic = {
       url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     };
+
+    agent-sandbox = {
+      url = "github:archie-judd/agent-sandbox.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs: import ./flake-modules/outputs.nix { inherit inputs; };

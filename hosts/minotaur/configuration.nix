@@ -17,6 +17,8 @@
     ../_modules/licenses/android_sdk.nix
 
     ../_modules/misc/boxes.nix
+
+    # ../_modules/ai-agents/default.nix
   ];
 
   networking.hostName = "minotaur";
@@ -66,6 +68,8 @@
   # avoids insufficient power being given
 
   services.power-profiles-daemon.enable = true;
+
+  # custom.ai.enable = true;
 
   # gamemoderun mangohud %command%
   # in steam

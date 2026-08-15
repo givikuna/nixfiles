@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "agent-sandbox": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1785672383,
+        "narHash": "sha256-fFw7W2LvGX82c3Em0f05n54gL4xxRA0Lx6W1EOt6XBE=",
+        "owner": "archie-judd",
+        "repo": "agent-sandbox.nix",
+        "rev": "601298adf27284004381b313a9dd46ea9ed9e06e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "archie-judd",
+        "repo": "agent-sandbox.nix",
+        "type": "github"
+      }
+    },
     "chaotic": {
       "inputs": {
         "flake-schemas": "flake-schemas",
@@ -387,6 +407,7 @@
     },
     "root": {
       "inputs": {
+        "agent-sandbox": "agent-sandbox",
         "chaotic": "chaotic",
         "flake-utils": "flake-utils",
         "gitboy": "gitboy",
