@@ -177,5 +177,14 @@
         "peekOfCode": "def rebuild():\n    print(\"executing NixOS Rebuild...\")\n    os.chdir(\"/etc/nixos\")\n    os.system(\"git add .\")\n    ret = os.system(f\"sudo nixos-rebuild switch --flake /etc/nixos#{socket.gethostname()}\")\n    if ret == 0:\n        os.system(\"gitboy\")\n        print(\"system rebuilt successfully!\")\n    else:\n        print(\"rebuild failed.\")",
         "detail": "scripts.rebuild-system",
         "documentation": {}
+    },
+    {
+        "label": "fstype",
+        "kind": 5,
+        "importPath": "tests.hosts.minotaur.scripts.test-storage-mounts",
+        "description": "tests.hosts.minotaur.scripts.test-storage-mounts",
+        "peekOfCode": "fstype = machine.succeed(\"findmnt -n -o FSTYPE /\").strip()\nassert fstype == \"ext4\", f\"Expected root to be ext4, got {fstype}\"\n# Check fstrim periodic service availability\nmachine.succeed(\"systemctl list-unit-files | grep fstrim.timer\")\n# Verify that udisks2 and gvfs services are active\nmachine.wait_for_unit(\"udisks2.service\")\nmachine.succeed(\"systemctl status udisks2.service\")",
+        "detail": "tests.hosts.minotaur.scripts.test-storage-mounts",
+        "documentation": {}
     }
 ]

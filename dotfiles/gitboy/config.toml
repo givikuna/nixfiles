@@ -14,6 +14,7 @@ repos = [
     "https://github.com/givikuna/physics-hw.git",
     "https://github.com/givikuna/ngupp.git",
     "https://github.com/givikuna/gh-api-cli.git",
+    "https://github.com/Loid-Project/loid.git",
 ]
 
 [folders."~/Testing/"]

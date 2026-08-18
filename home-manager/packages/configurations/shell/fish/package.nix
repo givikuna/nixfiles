@@ -22,6 +22,7 @@
       pushs = "push-system";
       rebp = "r && pushs";
       updp = "u && pushs";
+      rtest = "r && nix run .#tests";
 
       # move-please
       mvpls = "move-please";

@@ -61,6 +61,10 @@
       url = "github:archie-judd/agent-sandbox.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixtest = {
+      url = "gitlab:TECHNOFAB/nixtest?dir=lib";
+    };
   };
 
   outputs = inputs: import ./flake-modules/outputs.nix { inherit inputs; };

@@ -363,6 +363,23 @@
         "type": "github"
       }
     },
+    "nixtest": {
+      "locked": {
+        "dir": "lib",
+        "lastModified": 1779378277,
+        "narHash": "sha256-HIfcZI4rIPMBWoA28KYUJ4mF3v0xn6hWxS11mXtNlwI=",
+        "owner": "TECHNOFAB",
+        "repo": "nixtest",
+        "rev": "6c4c1bace647f485457cfc952a274e17739177ed",
+        "type": "gitlab"
+      },
+      "original": {
+        "dir": "lib",
+        "owner": "TECHNOFAB",
+        "repo": "nixtest",
+        "type": "gitlab"
+      }
+    },
     "nur": {
       "inputs": {
         "flake-parts": "flake-parts_2",
@@ -416,6 +433,7 @@
         "nix-flatpak": "nix-flatpak",
         "nixcord": "nixcord",
         "nixpkgs": "nixpkgs_3",
+        "nixtest": "nixtest",
         "nur": "nur",
         "rip": "rip",
         "sops-nix": "sops-nix",

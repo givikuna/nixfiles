@@ -1,26 +1,18 @@
 { username, ... }:
 {
   imports = [
-    ./_modules/system/bluetooth.nix
-    ./_modules/system/keyring.nix
-    ./_modules/system/pipewire.nix
     ./_modules/system/printing.nix
     ./_modules/system/sys-cleanup.nix
     ./_modules/system/shell-dec.nix
     ./_modules/system/boot.nix
 
     ./_modules/packaging/distrobox.nix
-    ./_modules/packaging/flatpak.nix
     ./_modules/packaging/unfree.nix
 
     ./_modules/sec/audit.nix
     ./_modules/sec/firewall.nix
 
     ./_modules/overlays/nur.nix
-
-    ./_modules/misc/fonts.nix
-
-    ./_modules/xdg/portal.nix
   ];
 
   # nix allowances

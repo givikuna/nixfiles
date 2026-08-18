@@ -1,15 +1,15 @@
 { inputs, ... }:
 let
-  # system = "x86_64-linux";
+  system = "x86_64-linux";
 
-  # pkgs = import inputs.nixpkgs {
-  #   inherit system;
-  #   config = {
-  #     allowUnfree = true;
-  #     android_sdk.accept_license = true;
-  #   };
-  #   overlays = [ inputs.nur.overlays.default ];
-  # };
+  pkgs = import inputs.nixpkgs {
+    inherit system;
+    config = {
+      allowUnfree = true;
+      android_sdk.accept_license = true;
+    };
+    overlays = [ inputs.nur.overlays.default ];
+  };
 
   mkHost = import ./functions/mkHost.nix { inherit inputs; };
 
@@ -18,6 +18,7 @@ let
     nomad = { };
     pilgrim = { };
     colossus = { };
+    orion = { };
     # zephyr = { username = "larryrh"; };
   };
 
@@ -29,9 +30,14 @@ let
   #   inherit pkgs hosts inputs;
   #   lib = inputs.nixpkgs.lib;
   # };
+
+  nixtestRunner = import ./tests/tests.nix {
+    inherit inputs pkgs nixosConfigurations;
+  };
 in
 {
   inherit nixosConfigurations;
 
   # checks.${system} = tests;
+  packages.${system}.tests = nixtestRunner;
 }
