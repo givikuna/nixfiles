@@ -26,7 +26,7 @@ GetOptions(
 
 pod2usage(1) if $help;
 
-$if_file //= $default_if;
+$if_file  //= $default_if;
 $of_dev   //= $default_of;
 $bs_size  //= $default_bs;
 

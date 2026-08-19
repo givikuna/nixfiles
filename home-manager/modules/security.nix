@@ -19,8 +19,10 @@
     nuclei
     nuclei-templates
 
-    # password profilers
-    # tba
+    # profilers
+
+    # search
+    sherlock
 
     # password crackers
     john

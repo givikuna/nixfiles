@@ -24,6 +24,7 @@
         wayland
         libxkbcommon
         libGL
+        rustc
       ];
 
       postInstall = ''

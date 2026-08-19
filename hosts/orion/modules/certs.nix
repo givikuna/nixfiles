@@ -1,13 +1,12 @@
 { ... }: {
   imports = [
-    ../../_modules/certs/default.nix
+    ./certs/default.nix
   ];
 
   custom.certs = {
     acme = {
-      coturn = {
-        realm.enable = true;
-      };
+      xmpp.enable = true;
+      coturn.realm.enable = true;
     };
   };
 }

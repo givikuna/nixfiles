@@ -8,11 +8,13 @@
     ../_modules/system/shell-dec.nix
 
     ./modules/certs.nix
+    ./modules/certs.nix
   ];
 
   fileSystems."/" = {
-    device = "nodev";
-    fsType = "tmpfs";
+    device = "/dev/sda1
+    ";
+    fsType = "ext4";
   };
 
   networking.hostName = "orion";

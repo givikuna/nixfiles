@@ -23,6 +23,9 @@ lib.mkIf (config.networking.hostName == "orion") {
         allowedTCPPorts = [
           3478
           5349
+          5222
+          5269
+          5280
         ];
       };
   };
