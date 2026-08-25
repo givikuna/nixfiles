@@ -16,6 +16,8 @@
     ./_modules/sec/audit.nix
     ./_modules/sec/firewall.nix
 
+    ./_modules/sec/tools/default.nix
+
     ./_modules/overlays/nur.nix
 
     ./_modules/misc/fonts.nix

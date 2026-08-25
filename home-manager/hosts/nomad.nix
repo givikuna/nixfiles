@@ -12,7 +12,7 @@
     # ../modules/apps/davinci.nix
     ../modules/apps/discord.nix
     ../modules/apps/file-mgmt.nix
-    ../modules/apps/gaming.nix
+    # ../modules/apps/gaming.nix
     ../modules/apps/mov.nix
     ../modules/apps/spotify.nix
     ../modules/apps/sys.nix
@@ -26,14 +26,7 @@
   ];
 
   home.packages = with pkgs; [
-    # personal
-    planify
-    skrooge
-    kmymoney
-    calibre
-    zotero
-
-    # capturing
+    # img/vid
     gimp
     imagemagick
     switcheroo
@@ -42,7 +35,6 @@
 
   services.flatpak.packages = [
     # personal
-    "tech.dongdongbh.mindwtr"
     "md.obsidian.Obsidian"
 
     # reader

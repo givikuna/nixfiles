@@ -11,7 +11,7 @@ in
     lib.mkEnableOption "gaming-minotaur sysctl profile";
 
   config = lib.mkIf cfg.enable {
-    custom.kernel.boot.sysctl.params.max_map_count = lib.mkDefault 2147483642;
-    custom.kernel.boot.sysctl.params.swappiness = lib.mkDefault 10;
+    custom.kernel.boot.sysctl.params.vm.max_map_count = lib.mkDefault 2147483642;
+    custom.kernel.boot.sysctl.params.vm.swappiness = lib.mkDefault 10;
   };
 }
