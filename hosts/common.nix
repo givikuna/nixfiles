@@ -16,7 +16,12 @@
     ./_modules/sec/audit.nix
     ./_modules/sec/firewall.nix
 
+<<<<<<< HEAD
     ./_modules/certs/common.nix
+||||||| d762e1b
+=======
+    ./_modules/sec/tools/default.nix
+>>>>>>> 0e889f83ccc0d283ab1a1c880f12f94486a8f565
 
     ./_modules/overlays/nur.nix
 

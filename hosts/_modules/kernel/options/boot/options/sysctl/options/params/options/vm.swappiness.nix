@@ -1,9 +1,9 @@
 { config, lib, ... }:
 let
-  cfg = config.custom.kernel.boot.sysctl.params.swappiness;
+  cfg = config.custom.kernel.boot.sysctl.params.vm.swappiness;
 in
 {
-  options.custom.kernel.boot.sysctl.params.swappiness = lib.mkOption {
+  options.custom.kernel.boot.sysctl.params.vm.swappiness = lib.mkOption {
     type = lib.types.nullOr lib.types.int;
     default = null;
     description = "vm.swappiness value (null means do not set)";

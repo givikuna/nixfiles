@@ -5,7 +5,10 @@
     nmap
     aircrack-ng
     metasploit
-    # mitmproxy
+    mitmproxy
+    wifite2
+    tshark
+    # wireshark
 
     # web
     burpsuite
@@ -33,5 +36,15 @@
 
     # sql
     sqlmap
+
+    # rev/exp
+    ghidra-bin
+    radare2
+    binwalk
+    gdb
+    gef
+
+    # wordlists
+    seclists
   ];
 }

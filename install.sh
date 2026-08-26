@@ -39,8 +39,24 @@ echo "formatting partitions..."
 mkfs.vfat -F32 "${PART_PREFIX}1"
 mkfs.ext4 -F -F "${PART_PREFIX}2"
 
-echo "mounting filesystems..."
-mount "${PART_PREFIX}2" /mnt
+echo ""
+
+if [[ "$USE_LUKS" == "y" || "$USE_LUKS" == "Y" ]]; then
+    echo "Setting up LUKS encryption. You will be prompted to create a password."
+    cryptsetup luksFormat "${PART_PREFIX}2"
+    echo "Please enter the password again to open the drive:"
+    cryptsetup luksOpen "${PART_PREFIX}2" cryptroot
+    echo "Formatting encrypted partition..."
+    mkfs.ext4 -F /dev/mapper/cryptroot
+    echo "Mounting filesystems..."
+    mount /dev/mapper/cryptroot /mnt
+else
+    echo "Formatting as plain ext4..."
+    mkfs.ext4 -F -F "${PART_PREFIX}2"
+    echo "Mounting filesystems..."
+    mount "${PART_PREFIX}2" /mnt
+fi
+
 mkdir -p /mnt/boot
 mount "${PART_PREFIX}1" /mnt/boot
 
@@ -55,6 +71,7 @@ echo "1) minotaur"
 echo "2) nomad"
 echo "3) pilgrim"
 echo "4) colossus"
+echo "5) hammond"
 read -p "Enter the number: " HOST_CHOICE
 
 if [ "$HOST_CHOICE" == "1" ]; then
@@ -63,6 +80,10 @@ elif [ "$HOST_CHOICE" == "2" ]; then
     HOSTNAME="nomad"
 elif [ "$HOST_CHOICE" == "3" ]; then
     HOSTNAME="pilgrim"
+elif [ "$HOST_CHOICE" == "4" ]; then
+    HOSTNAME="colossus"
+elif [ "$HOST_CHOICE" == "5" ]; then
+    HOSTNAME="hammond"
 else
     echo "invalid choice. cancelling installation.."
     exit 1
