@@ -23,6 +23,7 @@
       rebp = "r && pushs";
       updp = "u && pushs";
       rtest = "r && nix run .#tests";
+      rtutrt = "r && rtest && u && rtest && r && rtest";
 
       # move-please
       mvpls = "move-please";
