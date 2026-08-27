@@ -12,6 +12,10 @@
     ./_modules/sec/audit.nix
     ./_modules/sec/firewall.nix
 
+    ./_modules/certs/common.nix
+
+    ./_modules/secrets/decr.nix
+
     ./_modules/overlays/nur.nix
   ];
 

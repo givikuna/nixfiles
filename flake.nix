@@ -16,16 +16,16 @@
     # flake mgmt
     flake-utils.url = "github:numtide/flake-utils";
 
-    # secrets
-    sops-nix.url = "github:Mic92/sops-nix";
-    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
-
     # gitboy
     gitboy.url = "github:givikuna/gitboy";
     gitboy.inputs.nixpkgs.follows = "nixpkgs";
 
     # unit testing
     nixtest.url = "gitlab:TECHNOFAB/nixtest?dir=lib";
+
+    # secrets
+    agenix.url = "github:ryantm/agenix";
+    agenix.inputs.nixpkgs.follows = "nixpkgs";
 
     #
 
