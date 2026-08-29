@@ -5,6 +5,7 @@
     ./modules/session-variables.nix
 
     ../../_modules/kernel/default.nix
+    ../../_modules/daemons/default.nix
   ];
 
   custom.kernel = {
@@ -37,5 +38,11 @@
         bpfland.enable = true;
       };
     };
+  };
+
+  custom.daemons = {
+    razer.enable = true;
+
+    ananicy-cpp.enable = true;
   };
 }
