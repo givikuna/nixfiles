@@ -16,7 +16,6 @@
 
     yt-dlp
 
-    repomix
     cava
 
     sioyek
@@ -24,5 +23,9 @@
     caligula
 
     speedtest-cli
+
+    # git
+    git-graph
+    repomix
   ];
 }
