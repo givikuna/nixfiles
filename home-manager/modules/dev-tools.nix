@@ -15,6 +15,7 @@
     ./devtools/jdk.nix
     ./devtools/perl.nix
     ./devtools/imba.nix
+    ./devtools/elvish.nix
 
     ./devtools/spell-checker.nix
 

@@ -9,7 +9,7 @@ let
     "post-install.sh"
     "pull-system.sh"
     "update-system.sh"
-    "edit-system.py"
+    "edit-system.elv"
     "rebuild-system.py"
     "ingcpy.sh"
     "most-used-langs.py"
