@@ -1,4 +1,8 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  ...
+}:
 let
   imba-src = pkgs.fetchurl {
     url = "https://registry.npmjs.org/imba/-/imba-2.0.0-alpha.253.tgz";
