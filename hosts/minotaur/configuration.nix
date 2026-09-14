@@ -8,8 +8,6 @@
     ./modules/misc.nix
     ./modules/system.nix
 
-    ../_modules/desktops/hyprland.nix
-
     ../_modules/sec/tor.nix
     ../_modules/sec/firejail.nix
     ../_modules/sec/protonvpn.nix
@@ -22,6 +20,8 @@
   ];
 
   networking.hostName = "minotaur";
+
+  hardware.graphics.enable32Bit = true;
 
   fileSystems."/home/${username}/Storage" = {
     device = "/dev/disk/by-uuid/d3ac3f2e-209b-4269-9d07-7b544c2acb1f";

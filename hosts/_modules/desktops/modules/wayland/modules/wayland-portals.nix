@@ -10,7 +10,11 @@
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
     ];
-    config.common.default = "wlr";
+    config.common.default = [
+      "wlr"
+      "hyprland"
+      "gtk"
+    ];
     xdgOpenUsePortal = true;
   };
 }
