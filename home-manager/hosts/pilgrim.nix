@@ -38,6 +38,8 @@
     imagemagick
     switcheroo
     obs-studio
+
+    kdePackages.kate
   ];
 
   services.flatpak.packages = [

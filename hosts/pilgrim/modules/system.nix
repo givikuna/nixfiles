@@ -1,9 +1,6 @@
 { ... }:
 {
   imports = [
-    ./modules/gaming-optimization.nix
-    ./modules/session-variables.nix
-
     ../../_modules/kernel/default.nix
     ../../_modules/daemons/default.nix
   ];
@@ -19,17 +16,6 @@
       params = {
         split_lock_detect = "off";
       };
-
-      sysctl.profiles.gaming-minotaur.enable = true;
-    };
-
-    drivers = {
-      # system
-      nvidia_cachyos.enable = true;
-      nvidia_stable.enable = false; # cause fuck stability
-
-      # peripherals
-      xpadneo.enable = true;
     };
 
     services.scx = {

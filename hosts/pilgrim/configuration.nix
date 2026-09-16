@@ -2,10 +2,21 @@
 {
   imports = [
     ../common.nix
+    # ./hardware-configuration.nix
 
-    ../_modules/desktops/gnome.nix
+    ./modules/desktop.nix
+    ./modules/misc.nix
+    ./modules/system.nix
+
+    ../_modules/sec/tor.nix
+    ../_modules/sec/firejail.nix
+    ../_modules/sec/protonvpn.nix
+
+    ../_modules/licenses/android_sdk.nix
 
     ../_modules/misc/boxes.nix
+
+    # ../_modules/ai-agents/default.nix
   ];
 
   # users.users.${username} = {
@@ -22,4 +33,8 @@
   };
 
   networking.hostName = "pilgrim";
+
+  powerManagement.cpuFreqGovernor = "ondemand";
+  services.tlp.enable = true;
+  services.power-profiles-daemon.enable = true;
 }
