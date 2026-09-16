@@ -34,16 +34,18 @@ let
     outputHash = "sha256-h7CXp+wxDaUXGQn3BSGxduDktE4LybDGNCa2COCuMC4=";
   };
 
-  src-with-lock = pkgs.stdenv.mkDerivation {
-    name = "imba-src-with-lock";
-    src = imba-src;
+  src-with-lock =
+    with pkgs;
+    stdenv.mkDerivation {
+      name = "imba-src-with-lock";
+      src = imba-src;
 
-    installPhase = ''
-      mkdir -p $out
-      cp -r . $out
-      cp ${imba-lock} $out/package-lock.json
-    '';
-  };
+      installPhase = ''
+        mkdir -p $out
+        cp -r . $out
+        cp ${imba-lock} $out/package-lock.json
+      '';
+    };
 in
 {
   home.packages = [

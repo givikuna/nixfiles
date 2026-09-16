@@ -1,21 +1,27 @@
 { ... }: {
-  services.flatpak.packages = [
-    "com.discordapp.Discord"
-  ];
+  programs.discord = {
+    enable = true;
+  };
 
-  services.flatpak.overrides = {
-    "com.discordapp.Discord" = {
-      Context = {
-        sockets = [
-          "wayland"
-          "fallback-x11"
-        ];
-      };
+  /*
+    services.flatpak.packages = [
+      "com.discordapp.Discord"
+    ];
 
-      Environment = {
-        "ELECTRON_OZONE_PLATFORM_HINT" = "auto";
-        "NIXOS_OZONE_WL" = "1";
+    services.flatpak.overrides = {
+      "com.discordapp.Discord" = {
+        Context = {
+          sockets = [
+            "wayland"
+            "fallback-x11"
+          ];
+        };
+
+        Environment = {
+          "ELECTRON_OZONE_PLATFORM_HINT" = "auto";
+          "NIXOS_OZONE_WL" = "1";
+        };
       };
     };
-  };
+  */
 }
