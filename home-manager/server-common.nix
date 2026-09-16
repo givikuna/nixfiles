@@ -4,6 +4,7 @@
     ./modules/shell.nix
     ./modules/cli-tools.nix
     ./modules/scripts.nix
+    ./modules/guix.nix
   ];
 
   home.username = username;

@@ -12,6 +12,7 @@
     ./_modules/packaging/distrobox.nix
     ./_modules/packaging/flatpak.nix
     ./_modules/packaging/unfree.nix
+    ./_modules/guix/mod.nix
 
     ./_modules/sec/audit.nix
     ./_modules/sec/firewall.nix

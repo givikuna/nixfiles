@@ -8,7 +8,10 @@ let
       allowUnfree = true;
       android_sdk.accept_license = true;
     };
-    overlays = [ inputs.nur.overlays.default ];
+    overlays = [
+      inputs.nur.overlays.default
+      inputs.guixpkgs.overlays.default
+    ];
   };
 
   mkHost = import ./functions/mkHost.nix { inherit inputs; };

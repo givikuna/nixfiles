@@ -27,5 +27,7 @@
     # git
     git-graph
     repomix
+
+    guixPackages.hello
   ];
 }

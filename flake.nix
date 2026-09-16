@@ -51,6 +51,9 @@
     # chaotic nyx
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
+    # guix
+    guixpkgs.url = "github:fzakaria/guixpkgs";
+
     #
 
     #
@@ -65,7 +68,7 @@
     #                  PACKAGES
     # ============================================
 
-    # movie/tv/anime terminal viewer
+    # gonwatch
     gonwatch.url = "github:kbwhodat/gonwatch/main";
     gonwatch.inputs.nixpkgs.follows = "nixpkgs";
 
