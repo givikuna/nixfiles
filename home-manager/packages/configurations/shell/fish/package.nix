@@ -82,6 +82,15 @@
           end
         '';
       };
+
+      proj = {
+        body = ''
+          command proj $argv
+          if test $status -eq 0
+            exit
+          end
+        '';
+      };
     };
   };
 }
