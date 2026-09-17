@@ -67,8 +67,6 @@
   services.tlp.enable = false; # bad for battery life
   # avoids insufficient power being given
 
-  services.power-profiles-daemon.enable = true;
-
   # custom.ai.enable = true;
 
   # gamemoderun mangohud %command%
