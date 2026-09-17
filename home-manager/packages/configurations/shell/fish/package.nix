@@ -45,6 +45,7 @@
       # aliases
       gitingest = "repomix";
       speedtest = "speedtest-cli";
+      ssll = "switch-shell";
 
       # fuck larry
       mulgs = "most-used-langs -u givikuna -R al-go-rithms";
@@ -71,11 +72,12 @@
     functions = {
       switch-shell = {
         body = ''
-          set -l chosen (echo -e "nushell\nzsh\nbash\nfish" | fzf --height=10 --border --prompt="Switch environment to: ")
+          set -l chosen (echo -e "nushell\nzsh\nbash\nelvish\nfish" | fzf --height=10 --border --prompt="Switch environment to: ")
           switch "$chosen"
               case nushell; nu
               case zsh; zsh
               case bash; bash
+              case elvish; elvish
               case fish; fish
           end
         '';

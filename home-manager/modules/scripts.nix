@@ -10,6 +10,7 @@ let
     "pull-system.sh"
     "update-system.sh"
     "edit-system.elv"
+    "proj.elv"
     "rebuild-system.py"
     "ingcpy.sh"
     "most-used-langs.py"
