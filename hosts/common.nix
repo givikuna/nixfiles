@@ -19,13 +19,14 @@
 
     ./_modules/certs/common.nix
 
-    ./_modules/sec/tools/default.nix
-
     ./_modules/overlays/nur.nix
 
     ./_modules/misc/fonts.nix
 
     ./_modules/xdg/portal.nix
+
+    ./_modules/sec/tools/default.nix
+    ./_modules/tnix/mod.nix
   ];
 
   # nix allowances

@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   imports = [
-    ../../packages/configurations/applications/gonwatch/package.nix
+    # ../../packages/configurations/applications/gonwatch/package.nix
   ];
 
   home.packages = with pkgs; [

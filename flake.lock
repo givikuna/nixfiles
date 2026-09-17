@@ -208,6 +208,24 @@
         "type": "github"
       }
     },
+    "flake-utils_4": {
+      "inputs": {
+        "systems": "systems_5"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "gitboy": {
       "inputs": {
         "crane": "crane",
@@ -228,27 +246,6 @@
       "original": {
         "owner": "givikuna",
         "repo": "gitboy",
-        "type": "github"
-      }
-    },
-    "gonwatch": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1784994976,
-        "narHash": "sha256-S6JwVIMuoOd0osWoz55fX+dFVDG62bkWqFJLSQ5SFOI=",
-        "owner": "kbwhodat",
-        "repo": "gonwatch",
-        "rev": "3bf8e580f4f311f46606bc08dd9fad84f75f1816",
-        "type": "github"
-      },
-      "original": {
-        "owner": "kbwhodat",
-        "ref": "main",
-        "repo": "gonwatch",
         "type": "github"
       }
     },
@@ -584,7 +581,6 @@
         "chaotic": "chaotic",
         "flake-utils": "flake-utils",
         "gitboy": "gitboy",
-        "gonwatch": "gonwatch",
         "guixpkgs": "guixpkgs",
         "home-manager": "home-manager_3",
         "nix-flatpak": "nix-flatpak",
@@ -593,6 +589,7 @@
         "nixtest": "nixtest",
         "nur": "nur",
         "rip": "rip",
+        "tnix": "tnix",
         "zen-browser": "zen-browser"
       }
     },
@@ -674,6 +671,42 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_5": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "tnix": {
+      "inputs": {
+        "flake-utils": "flake-utils_4",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788156244,
+        "narHash": "sha256-sF+HeFnm3l0F0EVi8N6eGSR1sPPN/6zaUAPrA2VCjFE=",
+        "owner": "ubugeeei-prod",
+        "repo": "tnix",
+        "rev": "0086ba5847a13bf86e12f4a16fc32945906ee48c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ubugeeei-prod",
+        "repo": "tnix",
         "type": "github"
       }
     },

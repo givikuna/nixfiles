@@ -16,6 +16,10 @@
     # flake mgmt
     flake-utils.url = "github:numtide/flake-utils";
 
+    # typed nix
+    tnix.url = "github:ubugeeei-prod/tnix";
+    tnix.inputs.nixpkgs.follows = "nixpkgs";
+
     # gitboy
     gitboy.url = "github:givikuna/gitboy";
     gitboy.inputs.nixpkgs.follows = "nixpkgs";
@@ -67,10 +71,6 @@
     # ============================================
     #                  PACKAGES
     # ============================================
-
-    # gonwatch
-    gonwatch.url = "github:kbwhodat/gonwatch/main";
-    gonwatch.inputs.nixpkgs.follows = "nixpkgs";
 
     # ripgrep
     rip.url = "github:cesarferreira/rip";

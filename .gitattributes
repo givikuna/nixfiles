@@ -1,8 +1,12 @@
+*.tnix linguist-language=Nix
+
 *.conf linguist-language=INI
 *.kvconfig linguist-language=INI
 dolphinrc linguist-language=INI
 
 *.toml linguist-detectable=true
-*.json linguist-detectable=false
 *.md linguist-detectable=true
 *.xml linguist-detectable=true
+
+*.json linguist-detectable=false
+*.css linguist-detectable=false
