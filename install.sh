@@ -42,36 +42,37 @@ mkfs.ext4 -F -F "${PART_PREFIX}2"
 echo ""
 
 if [[ "$USE_LUKS" == "y" || "$USE_LUKS" == "Y" ]]; then
-    echo "Setting up LUKS encryption. You will be prompted to create a password."
+    echo "setting up LUKS encryption. you will be prompted to create a password."
     cryptsetup luksFormat "${PART_PREFIX}2"
-    echo "Please enter the password again to open the drive:"
+    echo "please enter the password again to open the drive:"
     cryptsetup luksOpen "${PART_PREFIX}2" cryptroot
-    echo "Formatting encrypted partition..."
+    echo "formatting encrypted partition..."
     mkfs.ext4 -F /dev/mapper/cryptroot
-    echo "Mounting filesystems..."
+    echo "mounting filesystems..."
     mount /dev/mapper/cryptroot /mnt
 else
-    echo "Formatting as plain ext4..."
+    echo "formatting as plain ext4..."
     mkfs.ext4 -F -F "${PART_PREFIX}2"
-    echo "Mounting filesystems..."
+    echo "mounting filesystems..."
     mount "${PART_PREFIX}2" /mnt
 fi
 
 mkdir -p /mnt/boot
 mount "${PART_PREFIX}1" /mnt/boot
 
-echo "fetching dotfiles..."
+echo "fetching nixfiles..."
 git clone https://github.com/givikuna/nixfiles.git /mnt/etc/nixos
 
 cd /mnt/etc/nixos
 
 echo ""
-echo "Who are you? (you must select one)"
+echo "who are you? (you must select one)"
 echo "1) minotaur"
 echo "2) nomad"
 echo "3) pilgrim"
 echo "4) colossus"
 echo "5) hammond"
+echo "6) orion"
 read -p "Enter the number: " HOST_CHOICE
 
 if [ "$HOST_CHOICE" == "1" ]; then
@@ -84,6 +85,8 @@ elif [ "$HOST_CHOICE" == "4" ]; then
     HOSTNAME="colossus"
 elif [ "$HOST_CHOICE" == "5" ]; then
     HOSTNAME="hammond"
+elif [ "$HOST_CHOICE" == "6" ]; then
+    HOSTNAME="orion"
 else
     echo "invalid choice. cancelling installation.."
     exit 1
