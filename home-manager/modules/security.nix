@@ -32,7 +32,7 @@
     hashcat
 
     # osint
-    bloodhound
+    # bloodhound # little guy got archived
 
     # sql
     sqlmap

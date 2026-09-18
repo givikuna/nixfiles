@@ -9,7 +9,7 @@
 
     ../modules/apps/basics.nix
     ../modules/apps/browsers.nix
-    ../modules/apps/davinci.nix
+    # ../modules/apps/davinci.nix
     ../modules/apps/discord.nix
     ../modules/apps/file-mgmt.nix
     ../modules/apps/gaming.nix
