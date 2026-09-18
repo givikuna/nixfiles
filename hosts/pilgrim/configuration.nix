@@ -2,7 +2,7 @@
 {
   imports = [
     ../common.nix
-    # ./hardware-configuration.nix
+    ./hardware-configuration.nix
 
     ./modules/desktop.nix
     ./modules/misc.nix
@@ -27,14 +27,16 @@
   #   ];
   # };
 
-  fileSystems."/" = {
-    device = "/dev/nvme0n1";
-    fsType = "ext4";
-  };
+  # fileSystems."/" = {
+  #   device = "/dev/nvme0n1";
+  #   fsType = "ext4";
+  # };
 
   networking.hostName = "pilgrim";
 
   powerManagement.cpuFreqGovernor = "ondemand";
   # services.tlp.enable = true;
   services.power-profiles-daemon.enable = true;
+
+  # sudo wipefs -a [location]
 }
