@@ -28,7 +28,7 @@
   # };
 
   fileSystems."/" = {
-    device = "/dev/sda1";
+    device = "/dev/nvme0n1";
     fsType = "ext4";
   };
 
