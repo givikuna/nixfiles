@@ -17,6 +17,7 @@ repos = [
     "https://github.com/Loid-Project/loid.git",
     "https://github.com/givikuna/mwaune.git",
     "https://github.com/givikuna/arkonavt.git",
+    "https://github.com/givikuna/ynternals.git",
 ]
 
 [folders."~/Testing/"]
