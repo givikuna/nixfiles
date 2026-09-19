@@ -28,6 +28,6 @@
     git-graph
     repomix
 
-    guixPackages.hello
+    # guixPackages.hello
   ];
 }

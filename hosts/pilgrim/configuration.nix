@@ -1,4 +1,4 @@
-{ ... }:
+{ username, ... }:
 {
   imports = [
     ../common.nix
@@ -19,13 +19,13 @@
     # ../_modules/ai-agents/default.nix
   ];
 
-  # users.users.${username} = {
-  #   isNormalUser = true;
-  #   extraGroups = [
-  #     "networkmanager"
-  #     "wheel"
-  #   ];
-  # };
+ users.users.${username} = {
+   isNormalUser = true;
+   extraGroups = [
+     "networkmanager"
+     "wheel"
+   ];
+ };
 
   # fileSystems."/" = {
   #   device = "/dev/nvme0n1";

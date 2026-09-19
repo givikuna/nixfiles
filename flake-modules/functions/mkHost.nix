@@ -13,6 +13,7 @@ inputs.nixpkgs.lib.nixosSystem {
     inputs.nix-flatpak.nixosModules.nix-flatpak
     inputs.chaotic.nixosModules.default
     inputs.agenix.nixosModules.default
+    # inputs.nixtants.nixosModules.default
 
     {
       nixpkgs.overlays = [

@@ -1,4 +1,4 @@
-require "monitors"
+-- require "monitors"
 
 local mainMod = "SUPER"
 

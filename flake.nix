@@ -31,6 +31,9 @@
     agenix.url = "github:ryantm/agenix";
     agenix.inputs.nixpkgs.follows = "nixpkgs";
 
+    # nixtants
+    inputs.nixtants.url = "github:givikuna/nixtants";
+
     #
 
     #

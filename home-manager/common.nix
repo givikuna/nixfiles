@@ -1,10 +1,15 @@
 { username, ... }:
 {
   imports = [
+    ./modules/folders.nix
+
     ./modules/shell.nix
     ./modules/cli-tools.nix
     ./modules/scripts.nix
     ./modules/guix.nix
+
+    ./modules/cursor.nix
+    ./modules/fonts.nix
 
     ./modules/dev-tools.nix
     ./modules/gamedev.nix

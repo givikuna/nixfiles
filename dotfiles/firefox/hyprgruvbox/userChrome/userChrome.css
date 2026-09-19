@@ -206,10 +206,27 @@ sidebar-main,
     background-color: #282828 !important;
 }
 
+#TabsToolbar {
+    visibility: collapse !important;
+}
+
+#sidebar-header {
+    display: none !important;
+}
+
 @-moz-document url("chrome://browser/content/places/bookmarksSidebar.xhtml"),
                url("chrome://browser/content/browser.xhtml")
 {
     #sidebar-box {
         background-color: #282828 !important;
+    }
+}
+
+@-moz-document url-prefix("http"), url-prefix("https") {
+    *,
+    *::before,
+    *::after {
+        font-family: "Roboto Mono", monospace !important;
+        font-weight: normal !important;
     }
 }
