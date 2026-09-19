@@ -32,7 +32,7 @@
     agenix.inputs.nixpkgs.follows = "nixpkgs";
 
     # nixtants
-    inputs.nixtants.url = "github:givikuna/nixtants";
+    nixtants.url = "github:givikuna/nixtants";
 
     #
 

@@ -4,6 +4,33 @@
   username ? "givik",
   system ? "x86_64-linux",
 }:
+let
+  nixtants =
+    let
+      m_mod =
+        let
+          lib = inputs.nixpkgs.lib;
+        in
+        (lib.evalModules {
+          modules = [
+            ../../nixtants
+
+            {
+              options.nixtants = lib.mkOption {
+                type = lib.types.mkOptionType {
+                  name = "nixtants";
+                  description = "free-form namespace";
+                  check = _: true;
+                  merge = _loc: defs: builtins.foldl' lib.recursiveUpdate { } (map (d: d.value) defs);
+                };
+                default = { };
+              };
+            }
+          ];
+        });
+    in
+    m_mod.config.nixtants;
+in
 inputs.nixpkgs.lib.nixosSystem {
   specialArgs = { inherit inputs username; };
   system = system;
@@ -13,7 +40,10 @@ inputs.nixpkgs.lib.nixosSystem {
     inputs.nix-flatpak.nixosModules.nix-flatpak
     inputs.chaotic.nixosModules.default
     inputs.agenix.nixosModules.default
-    # inputs.nixtants.nixosModules.default
+
+    # nixtants
+    inputs.nixtants.nixosModules.default
+    ../../nixtants
 
     {
       nixpkgs.overlays = [
@@ -41,6 +71,8 @@ inputs.nixpkgs.lib.nixosSystem {
         extraSpecialArgs = {
           inherit inputs username;
           host-name = hostname;
+
+          inherit nixtants;
         };
 
         sharedModules = [

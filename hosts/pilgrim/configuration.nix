@@ -1,4 +1,4 @@
-{ username, ... }:
+{ nixtants, username, ... }:
 {
   imports = [
     ../common.nix
@@ -19,20 +19,20 @@
     # ../_modules/ai-agents/default.nix
   ];
 
- users.users.${username} = {
-   isNormalUser = true;
-   extraGroups = [
-     "networkmanager"
-     "wheel"
-   ];
- };
+  users.users.${username} = {
+    isNormalUser = true;
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+  };
 
   # fileSystems."/" = {
   #   device = "/dev/nvme0n1";
   #   fsType = "ext4";
   # };
 
-  networking.hostName = "pilgrim";
+  networking.hostName = nixtants.hosts.pilgrim.name;
 
   powerManagement.cpuFreqGovernor = "ondemand";
   # services.tlp.enable = true;

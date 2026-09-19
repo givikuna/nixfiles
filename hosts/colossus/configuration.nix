@@ -1,4 +1,4 @@
-{ ... }:
+{ nixfiles, ... }:
 {
   imports = [
     ../common.nix
@@ -17,5 +17,5 @@
     fsType = "ext4";
   };
 
-  networking.hostName = "colossus";
+  networking.hostName = nixfiles.hosts.colossus.name;
 }

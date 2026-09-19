@@ -524,6 +524,21 @@
         "type": "github"
       }
     },
+    "nixtants": {
+      "locked": {
+        "lastModified": 1789846764,
+        "narHash": "sha256-MUZFZysNskayMeE5KhNgFrEBIlZjZeT1yxR8BNVYFDc=",
+        "owner": "givikuna",
+        "repo": "nixtants",
+        "rev": "8bed9cd9911ab385472c07247461455f69206f72",
+        "type": "github"
+      },
+      "original": {
+        "owner": "givikuna",
+        "repo": "nixtants",
+        "type": "github"
+      }
+    },
     "nixtest": {
       "locked": {
         "dir": "lib",
@@ -595,6 +610,7 @@
         "nix-flatpak": "nix-flatpak",
         "nixcord": "nixcord",
         "nixpkgs": "nixpkgs_5",
+        "nixtants": "nixtants",
         "nixtest": "nixtest",
         "nur": "nur",
         "rip": "rip",

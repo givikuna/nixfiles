@@ -1,7 +1,12 @@
-{ pkgs, username, ... }:
+{
+  nixtants,
+  pkgs,
+  username,
+  ...
+}:
 let
-  git-user = builtins.readFile ../../../../../data/users/${username}/git/gitUsername.txt;
-  git-email = builtins.readFile ../../../../../data/users/${username}/git/gitEmail.txt;
+  git-user = nixtants.users.${username}.github.username;
+  git-email = nixtants.users.${username}.github.email;
 in
 {
   programs.git = {

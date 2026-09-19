@@ -47,10 +47,10 @@ hl.config {
             tap_to_click = true,
         },
     },
-    cursor = {
-        no_hardware_cursors = true,
-        inactive_timeout = 0,
-    },
+    -- cursor = {
+    --     no_hardware_cursors = true,
+    --     inactive_timeout = 0,
+    -- },
     xwayland = {
         force_zero_scaling = true,
     },
