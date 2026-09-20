@@ -195,6 +195,7 @@
         "httpx",
         "hypr",
         "hyprctl",
+        "HYPRCURSOR",
         "hyprgruvbox",
         "hypridle",
         "hyprlock",

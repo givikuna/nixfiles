@@ -96,6 +96,21 @@ fi
 echo "detecting laptop hardware..."
 nixos-generate-config --root /mnt --dir /mnt/etc/nixos/hosts/$HOSTNAME
 
+echo ""
+echo "========================================="
+echo "enter symmetric ynternals pass:"
+read -rsp "paste or type the key here (or leave blank to skip):" YNTERNALS_KEY
+echo ""
+
+if [ -n "$YNTERNALS_KEY" ]; then
+    echo "$YNTERNALS_KEY" > /mnt/etc/nixos/symmetric.key
+    echo "key saved"
+else
+    echo "WARNING: no ynternals key has been provided."
+    echo "         ynternals will fail on first boot."
+fi
+
+
 git add .
 
 # sudo chmod +x scripts/*
@@ -110,3 +125,4 @@ nixos-enter --root /mnt -c 'passwd givik'
 nixos-enter --root /mnt -- chown -R givik:users /etc/nixos
 
 echo "all done! you can now run: sudo reboot"
+echo "once you reboot run:       post-install"

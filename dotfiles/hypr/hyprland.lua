@@ -1,4 +1,16 @@
--- require "monitors"
+local hostname = ""
+local handle = io.popen "hostname"
+if handle then
+    local res = handle:read "*a"
+    if res then
+        hostname = res:gsub("%s+", "")
+    end
+    handle:close()
+end
+
+if hostname == "minotaur" then
+    require "monitors"
+end
 
 local mainMod = "SUPER"
 
@@ -15,6 +27,12 @@ hl.env("QT_STYLE_OVERRIDE", "kvantum")
 
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
+
+hl.env("XCURSOR_SIZE", "15")
+hl.env("HYPRCURSOR_SIZE", "15")
+
+hl.env("XCURSOR_THEME", "Breeze")
+hl.env("HYPRCURSOR_THEME", "Breeze")
 
 hl.config {
     general = {
@@ -47,10 +65,10 @@ hl.config {
             tap_to_click = true,
         },
     },
-    -- cursor = {
-    --     no_hardware_cursors = true,
-    --     inactive_timeout = 0,
-    -- },
+    cursor = {
+        no_hardware_cursors = true,
+        inactive_timeout = 0,
+    },
     xwayland = {
         force_zero_scaling = true,
     },
