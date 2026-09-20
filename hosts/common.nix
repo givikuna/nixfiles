@@ -25,6 +25,8 @@
 
     ./_modules/xdg/portal.nix
 
+    ./_modules/secrets/ynternals.nix
+
     ./_modules/sec/tools/default.nix
     ./_modules/tnix/mod.nix
   ];

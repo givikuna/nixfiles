@@ -26,6 +26,10 @@ in
       merge.conflictstyle = "zdiff3";
 
       http.sslCAInfo = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
+
+      credential."https://github.com" = {
+        helper = "if() { echo username=${git-user}; echo password=$(cat /run/ynternals/gh_ghp); }; f";
+      };
     };
   };
 }

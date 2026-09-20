@@ -31,6 +31,9 @@
     agenix.url = "github:ryantm/agenix";
     agenix.inputs.nixpkgs.follows = "nixpkgs";
 
+    # symmetric secrets
+    ynternals.url = "github:givikuna/ynternals";
+
     # nixtants
     nixtants.url = "github:givikuna/nixtants";
 

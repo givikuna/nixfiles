@@ -12,7 +12,10 @@ inputs.nixpkgs.lib.nixosSystem {
     ../../hosts/${hostname}/configuration.nix
     inputs.nix-flatpak.nixosModules.nix-flatpak
     inputs.chaotic.nixosModules.default
+
+    # secrets
     inputs.agenix.nixosModules.default
+    inputs.ynternals.nixosModules.default
 
     # nixtants
     inputs.nixtants.nixosModules.default
