@@ -799,11 +799,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1789865611,
-        "narHash": "sha256-h82hwpW3QcOfzEJx/HliA46xCqySVMFtmt0rXxt5M6I=",
+        "lastModified": 1789866303,
+        "narHash": "sha256-paDqnrXSMeG7QQd/xsuCO1v6rM5S/73alQYp/Caeq+o=",
         "owner": "givikuna",
         "repo": "ynternals",
-        "rev": "353a12cb220ab1299af0b2c5eff27ea31f73b863",
+        "rev": "efb6c62437f15977574c77dce5a1b1dca6fe0517",
         "type": "github"
       },
       "original": {

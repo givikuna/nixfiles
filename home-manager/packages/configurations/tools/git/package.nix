@@ -29,7 +29,6 @@ in
 
       credential."https://github.com" = {
         helper = "${pkgs.writeShellScript "gh-credential-helper" ''
-          # Git passes 'get', 'store', or 'erase' as the first argument
           if [ "$1" = "get" ]; then
             echo "username=${git-user}"
             echo "password=$(cat /run/ynternals/gh_ghp)"
