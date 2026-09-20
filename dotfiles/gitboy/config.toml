@@ -1,15 +1,13 @@
 [folders."~/Projects"]
 repos = [
+    # programming
     "https://github.com/givikuna/WarframeCardGame.git",
     "https://github.com/rg134/rgtube.git",
     "https://codeberg.org/giviko/struktured.git",
     "https://github.com/givikuna/gitboy.git",
-    "https://github.com/givikuna/codensity-transformations-with-yoneda-lemma",
-    "https://github.com/givikuna/leetcode-solutions",
     "https://github.com/givikuna/keto-portfolio.git",
     "https://github.com/givikuna/nixtants.git",
     "https://github.com/givikuna/slay-the-grineer.git",
-    # "https://github.com/givikuna/raknoid.git",
     "https://github.com/givikuna/TsvariScript.git",
     "https://github.com/givikuna/physics-hw.git",
     "https://github.com/givikuna/ngupp.git",
@@ -18,6 +16,33 @@ repos = [
     "https://github.com/givikuna/mwaune.git",
     "https://github.com/givikuna/arkonavt.git",
     "https://github.com/givikuna/ynternals.git",
+    "https://github.com/givikuna/nixfiles.git",
+    "https://github.com/givikuna/fantasy.git",
+    "https://github.com/givikuna/givikuna.github.io.git",
+
+    # math
+    "https://github.com/givikuna/codensity-transformations-with-yoneda-lemma",
+
+    # toys
+    "https://github.com/givikuna/firefox-zorinos-landing-page.github.io.git",
+
+    # personal crap
+    "https://github.com/givikuna/leetcode-solutions",
+    "https://github.com/givikuna/BRAINFUCK.git",
+
+    # older archived projects that i still may want to look at on occasion
+    "https://github.com/givikuna/Ubuntu-setup.git",
+    "https://github.com/givikuna/Ubuntu-config.git",
+    "https://github.com/givikuna/StudentJS.git",
+    "https://github.com/givikuna/ScoutingCLASS.git",
+    "https://github.com/givikuna/qtLessons.git",
+    "https://github.com/givikuna/tsvariani.git",
+
+    # old school stuff
+    "https://github.com/givikuna/csp_stuff.git",
+    "https://github.com/givikuna/Physics-homework.git",
+    "https://github.com/givikuna/mecanumDrive.git",
+    "https://github.com/givikuna/GiviMakeARobotMove.git",
 ]
 
 [folders."~/Testing/"]

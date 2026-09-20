@@ -10,7 +10,10 @@
     '';
 
     shellAliases = {
-      # system shorthands
+      # sys
+      ldevs = "bat /proc/bus/input/devices";
+
+      # nix shorthands
       rnnr = "rebuild-system && reboot";
       rnnp = "rebuild-system && poweroff";
       r = "rebuild-system";
