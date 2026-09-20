@@ -27,14 +27,14 @@ in
 
       http.sslCAInfo = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
 
-      # credential."https://github.com" = {
-      #  helper = "${pkgs.writeShellScript "gh-credential-helper" ''
-      #    if [ "$1" = "get" ]; then
-      #      echo "username=${git-user}"
-      #      echo "password=$(cat /run/ynternals/gh_ghp)"
-      #    fi
-      #  ''}";
-      #};
+      credential."https://github.com" = {
+        helper = "${pkgs.writeShellScript "gh-credential-helper" ''
+          if [ "$1" = "get" ]; then
+            echo "username=${git-user}"
+            echo "password=$(cat /run/ynternals/gh_ghp)"
+          fi
+        ''}";
+      };
     };
   };
 }
