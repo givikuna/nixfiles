@@ -42,6 +42,13 @@
       ezasnew = "eza -snew";
       ezasnew1 = "ezasnew -1";
 
+      # fd shorthands
+      fd1 = "fd -d 1";
+      fd2 = "fd -d 2";
+      fd3 = "fd -d 3";
+      fd4 = "fd -d 4";
+      fd5 = "fd -d 5";
+
       # l
       l = "e";
 

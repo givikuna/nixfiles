@@ -17,6 +17,7 @@ in
     userEmail = git-email;
 
     settings = {
+
       core = {
         pager = "delta";
       };

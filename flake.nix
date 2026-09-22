@@ -27,7 +27,7 @@
     # unit testing
     nixtest.url = "gitlab:TECHNOFAB/nixtest?dir=lib";
 
-    # secrets
+    # asymmetric secrets
     agenix.url = "github:ryantm/agenix";
     agenix.inputs.nixpkgs.follows = "nixpkgs";
 

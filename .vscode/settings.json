@@ -539,6 +539,7 @@
         "xfpmyvw",
         "xhci",
         "Xjbn",
+        "xmonad",
         "xmpp",
         "xpadneo",
         "xsel",
@@ -577,5 +578,6 @@
     "perl.perlCmd": "perl",
     "perl.perlInc": [],
     "perl.languageServer.executable": "/run/current-system/sw/bin/perl/perl-language-server",
-    "perl.languageServer.args": ["--port=13603", "--stdio"]
+    "perl.languageServer.args": ["--port=13603", "--stdio"],
+    "stylua.targetReleaseVersion": "latest"
 }

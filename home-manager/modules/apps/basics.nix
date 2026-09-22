@@ -9,6 +9,6 @@
     mpv
     imv
     ffmpeg
-    libreoffice-fresh
+    libreoffice-stable
   ];
 }

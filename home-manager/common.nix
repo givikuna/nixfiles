@@ -8,6 +8,8 @@
     ./modules/scripts.nix
     ./modules/guix.nix
 
+    ./modules/gtk.nix
+
     ./modules/cursor.nix
     ./modules/fonts.nix
 
