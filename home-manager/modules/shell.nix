@@ -23,9 +23,7 @@
     libsecret
   ];
 
-  programs.fish.enable = true;
   programs.zsh.enable = true;
-  programs.nushell.enable = true;
 
   programs.nix-index.enable = true; # for comma
 }
