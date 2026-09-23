@@ -1,3 +1,17 @@
 clients:
-    - type: ollama
-      api_base: http://127.0.0.1:11434
+    - type: openai-compatible
+      api_base: http://127.0.0.1:11434/v1
+      extra:
+          proxy: "-"
+      models:
+          - name: llama3.1:latest
+            max_input_tokens: 131072
+            supports_function_calling: true
+          - name: qwen2.5-coder:latest
+            max_input_tokens: 32768
+            supports_function_calling: true
+          - name: llama3.2-vision:latest
+            max_input_tokens: 131072
+            supports_vision: true
+          - name: qwen2-math:latest
+            max_input_tokens: 4096

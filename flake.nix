@@ -115,6 +115,23 @@
     # ai sandboxing
     agent-sandbox.url = "github:archie-judd/agent-sandbox.nix";
     agent-sandbox.inputs.nixpkgs.follows = "nixpkgs";
+
+    #
+
+    #
+
+    #
+
+    #
+
+    #
+
+    # ============================================
+    #                  GAMING
+    # ============================================
+
+    # nix-gaming
+    nix-gaming.url = "github:fufexan/nix-gaming";
   };
 
   #

@@ -231,6 +231,24 @@ inputs.nixpkgs.lib.nixosSystem {
     #
 
     # ============================================
+    #                   GAMING
+    # ============================================
+
+    inputs.nix-gaming.nixosModules.platformOptimizations
+    inputs.nix-gaming.nixosModules.wine
+    inputs.nix-gaming.nixosModules.pipewireLowLatency
+
+    #
+
+    #
+
+    #
+
+    #
+
+    #
+
+    # ============================================
     #                MULTIVERSE
     # ============================================
 

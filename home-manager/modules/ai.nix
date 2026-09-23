@@ -41,14 +41,15 @@ let
 
           allowedHostPorts = [ 11434 ];
 
-          roDirs = brain-dirs ++ [
+          roDirs = brain-dirs;
+
+          rwDirs = [
             "${config.home.homeDirectory}/.config/aichat"
           ];
 
-          rwDirs = [ ];
-
           env = {
             AICHAT_CONFIG_DIR = "${config.home.homeDirectory}/.config/aichat";
+            AICHAT_LOG_LEVEL = "debug";
           };
         };
 
@@ -60,8 +61,8 @@ let
           "wikipedia.org" = "*";
         };
         brain-dirs = [
-          "$HOME/AIBrain/common"
-          "$HOME/AIBrain/Kahl-175"
+          "${config.home.homeDirectory}/AIBrain/common"
+          "${config.home.homeDirectory}/AIBrain/Kahl-175"
         ];
       };
 
@@ -74,8 +75,8 @@ let
           "raw.githubusercontent.com" = "*";
         };
         brain-dirs = [
-          "$HOME/AIBrain/common"
-          "$HOME/AIBrain/Chipper"
+          "${config.home.homeDirectory}/AIBrain/common"
+          "${config.home.homeDirectory}/AIBrain/Chipper"
         ];
       };
 
@@ -89,8 +90,8 @@ let
           "wikipedia.org" = "*";
         };
         brain-dirs = [
-          "$HOME/AIBrain/common"
-          "$HOME/AIBrain/OlvarD"
+          "${config.home.homeDirectory}/AIBrain/common"
+          "${config.home.homeDirectory}/AIBrain/OlvarD"
         ];
       };
 
@@ -106,8 +107,8 @@ let
           "raw.githubusercontent.com" = "*";
         };
         brain-dirs = [
-          "$HOME/AIBrain/common"
-          "$HOME/AIBrain/Horrek"
+          "${config.home.homeDirectory}/AIBrain/common"
+          "${config.home.homeDirectory}/AIBrain/Horrek"
         ];
       };
 
@@ -143,7 +144,7 @@ in
 
   xdg.configFile = {
     "aichat/config.yaml".source = ../../dotfiles/wyrten/aichat/config.yaml;
-    "aichat/roles.yaml".source = ../../dotfiles/wyrten/aichat/roles.yaml;
+    "aichat/roles".source = ../../dotfiles/wyrten/aichat/roles;
   };
 
   home.file."AIBrain".source = ../../dotfiles/wyrten/aibrain;

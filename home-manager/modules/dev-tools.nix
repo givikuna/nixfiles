@@ -14,8 +14,9 @@
     ./devtools/racket.nix
     ./devtools/jdk.nix
     ./devtools/perl.nix
-    # ./devtools/imba.nix
+    ./devtools/imba.nix
     ./devtools/elvish.nix
+    ./devtools/jj.nix
 
     ./devtools/spell-checker.nix
 
