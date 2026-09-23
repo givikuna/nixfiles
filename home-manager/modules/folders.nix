@@ -17,6 +17,7 @@
       XDG_PROJECTS_DIR = "${config.home.homeDirectory}/Projects";
       XDG_TESTING_DIR = "${config.home.homeDirectory}/Testing";
       XDG_MACHINES_DIR = "${config.home.homeDirectory}/Machines";
+      XDG_AI-QUARANTINE_DIR = "${config.home.homeDirectory}/ai-quarantine";
     };
   };
 }

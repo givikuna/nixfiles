@@ -4,6 +4,7 @@
     ../../packages/configurations/tools/zoxide/package.nix # cd
     ../../packages/configurations/tools/bat/package.nix # cat
     ../../packages/configurations/tools/broot/package.nix # tree
+    ../../packages/configurations/tools/anubis-fetch/package.nix # curl
 
     ./modules/top.nix # top
     ./modules/git.nix

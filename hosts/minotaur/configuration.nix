@@ -16,7 +16,7 @@
 
     ../_modules/misc/boxes.nix
 
-    # ../_modules/ai-agents/default.nix
+    ../_modules/ai/default.nix
   ];
 
   networking.hostName = "minotaur";

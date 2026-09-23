@@ -10,6 +10,8 @@
     ../packages/configurations/shell/yazi/package.nix
     ../packages/configurations/shell/gitboy/package.nix
 
+    ../packages/configurations/shell/nix-index/package.nix
+
     ../packages/configurations/tools/git/package.nix
   ];
 

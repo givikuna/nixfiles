@@ -16,6 +16,9 @@
     # flake mgmt
     flake-utils.url = "github:numtide/flake-utils";
 
+    # version pinning
+    multiverse.url = "github:fzakaria/nixpkgs-multiverse";
+
     # typed nix
     tnix.url = "github:ubugeeei-prod/tnix";
     tnix.inputs.nixpkgs.follows = "nixpkgs";
@@ -82,6 +85,9 @@
     rip.url = "github:cesarferreira/rip";
     rip.inputs.nixpkgs.follows = "nixpkgs";
 
+    # anubis-fetch
+    anubis-fetch.url = "github:fzakaria/anubis-fetch";
+
     # discord
     nixcord.url = "github:FlameFlag/nixcord";
 
@@ -103,6 +109,10 @@
     #                     AI
     # ============================================
 
+    # nixified ai
+    nixified-ai.url = "github:nixified-ai/flake";
+
+    # ai sandboxing
     agent-sandbox.url = "github:archie-judd/agent-sandbox.nix";
     agent-sandbox.inputs.nixpkgs.follows = "nixpkgs";
   };

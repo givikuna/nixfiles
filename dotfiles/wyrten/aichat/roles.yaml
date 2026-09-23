@@ -1,0 +1,11 @@
+- name: Kahl-175
+  model: ollama:llama3.1
+
+- name: Chipper
+  model: ollama:qwen2.5-coder
+
+- name: OlvarD
+  model: ollama:llama3.2-vision
+
+- name: Horrek
+  model: ollama:qwen2-math
