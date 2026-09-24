@@ -6,7 +6,7 @@ let
     "push-system.sh"
     "move-please.sh"
     "ntest.rkt"
-    "post-install.sh"
+    "post-install.nu"
     "pull-system.sh"
     "update-system.sh"
     "edit-system.elv"
