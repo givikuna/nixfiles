@@ -96,6 +96,15 @@ hl.monitor {
     scale = ui_scale,
 }
 
+hl.window_rule {
+    name = "kitty-force-tile",
+    match = {
+        class = "^(kitty)$",
+    },
+    tile = true,
+    suppress_event = "maximize fullscreen",
+}
+
 -- hl.window_rule {
 --     name = "flameshot-overlay",
 --
@@ -151,7 +160,14 @@ hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd "kitty")
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd "firefox")
 
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen("maximized", "toggle"))
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen {
+    mode = "maximized",
+    action = "toggle",
+})
+hl.bind(mainMod .. " + V", hl.dsp.window.float {
+    action = "toggle"
+})
+
 hl.bind(mainMod .. " + ALT + K", hl.dsp.exec_cmd "hyprctl dispatch pin")
 
 hl.bind(
