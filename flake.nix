@@ -136,5 +136,10 @@
 
   #
 
-  outputs = inputs: import ./flake-modules/outputs.nix { inherit inputs; };
+  outputs =
+    { self, ... }@args:
+    let
+      inputs = removeAttrs args [ "self" ];
+    in
+    import ./flake-modules/outputs.nix { inherit inputs self; };
 }

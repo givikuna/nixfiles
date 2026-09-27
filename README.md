@@ -24,12 +24,8 @@ Then run this script and response any prompts it gives you:
 nix-shell -p git parted --run "bash <(curl -sL https://raw.githubusercontent.com/givikuna/nixfiles/main/install.sh)"
 ```
 
-You're forced to use **givik** as your username.
-You can fork this repo or something and change that if you really want to.
-
 After you reboot your system will boot into a fully functioning system.
 
-If you want documentation I will eventually be including a docs folder with all the necessary information on how to use this setup in markdown files.
-And an app to host it after running some command locally so you can read it and understand it or whatever.
-
 Until then toodaloo.
+
+For slightly more detailed instructions see `QUICKSTART.md` at root

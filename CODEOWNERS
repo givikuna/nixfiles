@@ -1,0 +1,14 @@
+# Code owners for the config:
+
+# Global owner
+
+- @givikuna
+
+# Hosts
+
+colossus: @givikuna
+minotaur: @givikuna
+nomad: @givikuna
+orion: @givikuna
+pilgrim: @givikuna
+hammond: @givikuna

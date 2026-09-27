@@ -1,0 +1,27 @@
+User-agent: *
+Disallow: /modules/
+Disallow: /hosts/
+Disallow: /scripts/
+Disallow: /secrets/
+Disallow: /tests/
+
+# Allow only public-facing docs
+Allow: /README.md
+Allow: /LICENSE
+Allow: /docs/design.md
+
+# AI-specific user agents
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Claude-User
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /

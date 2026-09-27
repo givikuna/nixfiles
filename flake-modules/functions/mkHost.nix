@@ -3,9 +3,10 @@
   hostname,
   username ? "givik",
   system ? "x86_64-linux",
+  version ? "unknown",
 }:
 inputs.nixpkgs.lib.nixosSystem {
-  specialArgs = { inherit inputs username; };
+  specialArgs = { inherit inputs username version; };
   system = system;
 
   modules = [
@@ -15,6 +16,12 @@ inputs.nixpkgs.lib.nixosSystem {
 
     # configuration.nix per host
     ../../hosts/${hostname}/configuration.nix
+
+    {
+      system.nixos.label = "seraphim-${version}";
+
+      environment.etc."seraphim-version".text = version;
+    }
 
     #
 

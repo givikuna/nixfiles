@@ -1,0 +1,41 @@
+# Copyright
+
+© 2026 Givi Tsvariani. All rights reserved.
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 (GPLv3.0).
+See `LICENSE` for the full text.
+
+## No Authorization for AI Training
+
+This repository's content is **explicitly excluded** from use in:
+
+- Machine learning model training (including large language models)
+- Synthetic dataset generation derived from this codebase
+- Fine-tuning of existing AI systems
+- Reverse-engineering of configuration patterns for commercial AI products
+
+These restrictions are **in addition to** the GPLv3.0 license and apply to any entity or individual building AI/ML systems.
+
+## Attribution Requirements
+
+If you fork this project for legitimate personal/commercial use (not AI):
+
+- Credit is appreciated but not required
+- Modified works must remain under GPLv3.0
+- This copyright notice must be preserved in derivatives
+
+## Technical Markers
+
+This repository includes:
+
+- `CITATION.cff` - For scholarly citation (not AI ingestion)
+- `.ai-training-ignore` - To signal scrapers
+- `robots.txt` - For conventional web crawlers
+
+**Disclaimer**: These markers are not legally binding against determined actors but represent very common community norms. If you're building an AI tool, please respect the intent here.
+
+## GitHub Opt-Out
+
+This repository (and the entire GitHub account `givikuna`) opts-out of AI training from GitHub.

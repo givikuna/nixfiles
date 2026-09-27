@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message:
+    msg: >-
+        This configuration is a personal NixOS configuration. If referencing academically, please cite it appropriately.
+type: software
+title: Givi's Nixfiles
+authors:
+    - given-names: Givi Tsvariani
+      affiliation: Amphiseum Software
+      email: gvtsvariani@gmail.com
+repository-code: https://github.com/givikuna/nixfiles
+license: GPL-3.0
+version: 0.0.8
+date-released: "2026-05-14"

@@ -1,0 +1,19 @@
+# For training machine learning models.
+# Please respect Author's intent
+
+# Directory exclusions
+/modules/*
+/hosts/*
+/scripts/*
+/tests/*
+/secrets/*
+
+# File exclusions
+flake.nix
+flake.lock
+*.nix
+*.sh
+*.nushell
+*.elv
+*.pl
+*.rkt
