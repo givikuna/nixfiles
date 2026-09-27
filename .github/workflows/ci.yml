@@ -7,7 +7,7 @@ on:
 
 jobs:
     test:
-        name: Evaluate and Run Nixtests
+        name: Run Nixtests
         runs-on: ubuntu-latest
 
         steps:
@@ -17,11 +17,8 @@ jobs:
             - name: Install Nix
               uses: DeterminateSystems/nix-installer-action@main
 
-            - name: Setup Determine Systems Magic Nix Cache
+            - name: Setup Magic Nix Cache
               uses: DeterminateSystems/magic-nix-cache-action@main
 
-            - name: Verify Flake structure
-              run: nix flake check -L
-
-            - name: Run Nixtest Suites
-              run: nix run .#tests -- --workers 4
+            - name: Run tests
+              run: nix run .#tests

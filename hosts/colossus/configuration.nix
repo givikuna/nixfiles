@@ -1,4 +1,4 @@
-{ nixfiles, ... }:
+{ nixtants, ... }:
 {
   imports = [
     ../common.nix
@@ -17,5 +17,5 @@
     fsType = "ext4";
   };
 
-  networking.hostName = nixfiles.hosts.colossus.name;
+  networking.hostName = nixtants.hosts.colossus.name;
 }
