@@ -19,7 +19,7 @@ repos = [
     "https://github.com/givikuna/nixfiles.git",
     "https://github.com/givikuna/fantasy.git",
     "https://github.com/givikuna/givikuna.github.io.git",
-    "https://github.com/givikuna/givikuna.github.io.git",
+    "https://github.com/givikuna/project_acrithis.git",
 
     # math
     "https://github.com/givikuna/codensity-transformations-with-yoneda-lemma",
