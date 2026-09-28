@@ -38,7 +38,7 @@ let
     let
       lib = inputs.nixpkgs.lib;
     in
-    lib.strings.trim (builtins.readFile ../VERSION);
+    lib.strings.trim (builtins.readFile ../.version);
 
   full-version = "${repo-version}+${self.shortRev or self.dirtyShortRev or "dirty"}";
 
