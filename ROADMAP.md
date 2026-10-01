@@ -26,7 +26,7 @@ This is a document that changes a lot.
 -   [ ] Install nh: [NH on GitHub from Nix Community](https://github.com/nix-community/nh)
 -   [ ] Integrate nixdoc: [nixdoc on GitHub](https://github.com/nix-community/nixdoc)
 -   [ ] Self host Noogle: [Noogle on GitHub](https://github.com/nix-community/noogle)
--   [ ] Complete and use [nixboxd](https://github.com/givikuna/nixboxd/blob/master/modules/nixboxd.nix)
+-   [ ] Complete and use [nixboxd](https://github.com/givikuna/nixboxd)
 -   [ ] Document and QoL [gitboy](https://github.com/givikuna/gitboy)
 -   [ ] Document and QoL [ynternals](https://github.com/givikuna/ynternals)
 -   [ ] Document and QoL [nixtants](https://github.com/givikuna/nixtants)
