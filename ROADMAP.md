@@ -23,9 +23,17 @@ This is a document that changes a lot.
 - [ ] Integrate Statix: [Statix by Molybdenum Software on GitHub](https://github.com/molybdenumsoftware/statix)
 - [ ] Install Nix-Melt: [Nix-Melt by Nix Community on GitHub](https://github.com/nix-community/nix-melt)
 - [ ] Install Optnix: [Their Website](https://optnix.snare.dev/)
-- [x] Install nh: [NH on GitHub from Nix Community](https://github.com/nix-community/nh)
+- [ ] Install nh: [NH on GitHub from Nix Community](https://github.com/nix-community/nh)
 - [ ] Integrate nixdoc: [nixdoc on GitHub](https://github.com/nix-community/nixdoc)
 - [ ] Self host Noogle: [Noogle on GitHub](https://github.com/nix-community/noogle)
+- [ ] Complete and use [nixboxd](https://github.com/givikuna/nixboxd)
+- [ ] Document and QoL [gitboy](https://github.com/givikuna/gitboy)
+- [ ] Document and QoL [ynternals](https://github.com/givikuna/ynternals)
+- [ ] Document and QoL [nixtants](https://github.com/givikuna/nixtants)
+- [ ] Integrate [korora](https://github.com/adisbladis/korora) and [adios](https://github.com/adisbladis/adios)
+- [ ] Check [haumea](https://github.com/nix-community/haumea) and maybe integrate
+- [ ] Consider [lix](https://lix.systems/)
+- [ ] See [NuschtOS Search](https://github.com/NuschtOS/search)
 
 ## v2.x
 
@@ -34,12 +42,12 @@ This is a document that changes a lot.
 - [ ] Complete `gitboy`
 - [ ] Figure out why setup is difficult with `guix` and `imba` derivations
 - [ ] Proper `Elvish` and `ZSH` configs
-- [ ] Make a `nindex` script for nix-index.
 
 ## v3.x
 
 - [ ] Extract `wyrten` into its own library
 - [ ] Set up a proper CI/CD Pipeline for all computers to stay synced
+- [ ]
 - [ ] Transform `orion` into a proper server
 - [ ] Self-hosted `Forgejo` instance
 - [ ] Self-hosted `Nebula` lightbulb and system (or maybe with yggdrasil, this still needs to be figured out)
