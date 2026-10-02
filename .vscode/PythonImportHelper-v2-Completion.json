@@ -72,6 +72,15 @@
         "documentation": {}
     },
     {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
         "label": "api_request",
         "kind": 2,
         "importPath": "scripts.most-used-langs",
@@ -126,11 +135,20 @@
         "documentation": {}
     },
     {
+        "label": "print_msg",
+        "kind": 2,
+        "importPath": "scripts.rebuild-system",
+        "description": "scripts.rebuild-system",
+        "peekOfCode": "def print_msg(msg, color_code=\"34\"):\n    print(f\"\\n\\033[1;{color_code}m✦ {msg}\\033[0m\\n\")\ndef rebuild():\n    flake_dir = \"/etc/nixos\"\n    hostname = socket.gethostname()\n    print_msg(\"staging\", \"33\")\n    try:\n        os.chdir(flake_dir)\n    except FileNotFoundError:\n        print_msg(f\"could not find flake directory: {flake_dir}\", \"31\")",
+        "detail": "scripts.rebuild-system",
+        "documentation": {}
+    },
+    {
         "label": "rebuild",
         "kind": 2,
         "importPath": "scripts.rebuild-system",
         "description": "scripts.rebuild-system",
-        "peekOfCode": "def rebuild():\n    print(\"executing NixOS Rebuild...\")\n    os.chdir(\"/etc/nixos\")\n    os.system(\"git add .\")\n    ret = os.system(f\"sudo nixos-rebuild switch --flake /etc/nixos#{socket.gethostname()}\")\n    if ret == 0:\n        os.system(\"gitboy\")\n        print(\"system rebuilt successfully!\")\n    else:\n        print(\"rebuild failed.\")",
+        "peekOfCode": "def rebuild():\n    flake_dir = \"/etc/nixos\"\n    hostname = socket.gethostname()\n    print_msg(\"staging\", \"33\")\n    try:\n        os.chdir(flake_dir)\n    except FileNotFoundError:\n        print_msg(f\"could not find flake directory: {flake_dir}\", \"31\")\n        sys.exit(1)\n    subprocess.run([\"git\", \"add\", \".\"], check=True)",
         "detail": "scripts.rebuild-system",
         "documentation": {}
     },

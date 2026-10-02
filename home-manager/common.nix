@@ -16,6 +16,8 @@
     ./modules/dev-tools.nix
     ./modules/gamedev.nix
     ./modules/security.nix
+
+    ./modules/multiverse.nix
   ];
 
   home.username = username;

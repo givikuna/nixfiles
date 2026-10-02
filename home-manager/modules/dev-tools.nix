@@ -15,7 +15,6 @@
     ./devtools/jdk.nix
     ./devtools/perl.nix
     ./devtools/imba.nix
-    ./devtools/elvish.nix
     ./devtools/jj.nix
 
     ./devtools/spell-checker.nix
@@ -27,6 +26,7 @@
     ./devtools/direnv.nix
     ./devtools/nix.nix
     ./devtools/shell.nix
+    ./devtools/nickel.nix
   ];
 
   home.packages = with pkgs; [

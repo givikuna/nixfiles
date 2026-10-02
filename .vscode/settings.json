@@ -325,6 +325,7 @@
         "networktest",
         "nftables",
         "ngbg",
+        "nindex",
         "nixboxd",
         "nixcord",
         "nixcraft",

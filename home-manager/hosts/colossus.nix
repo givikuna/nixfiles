@@ -11,10 +11,7 @@
   home.packages = with pkgs; [
     # personal
     planify
-    skrooge
-    kmymoney
     calibre
-    zotero
 
     # capturing
     gimp

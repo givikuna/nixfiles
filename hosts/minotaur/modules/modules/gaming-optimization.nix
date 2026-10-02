@@ -1,6 +1,6 @@
 { ... }: {
   imports = [
-    ../../../_modules/gaming/apps/retroarch.nix
+    # ../../../_modules/gaming/apps/retroarch.nix
     ../../../_modules/gaming/apps/steam-config.nix
 
     ../../../_modules/gaming/system/hardware/optimization/opengl-graphics.nix

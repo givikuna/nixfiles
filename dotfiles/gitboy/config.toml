@@ -1,31 +1,46 @@
 [folders."~/Projects"]
 repos = [
-    # programming
-    "https://github.com/givikuna/WarframeCardGame.git",
-    "https://github.com/rg134/rgtube.git",
-    "https://codeberg.org/giviko/struktured.git",
-    "https://github.com/givikuna/gitboy.git",
-    "https://github.com/givikuna/keto-portfolio.git",
+    # nix
     "https://github.com/givikuna/nixtants.git",
-    "https://github.com/givikuna/slay-the-grineer.git",
-    "https://github.com/givikuna/TsvariScript.git",
-    "https://github.com/givikuna/physics-hw.git",
-    "https://github.com/givikuna/ngupp.git",
-    "https://github.com/givikuna/gh-api-cli.git",
-    "https://github.com/Loid-Project/loid.git",
-    "https://github.com/givikuna/mwaune.git",
-    "https://github.com/givikuna/arkonavt.git",
     "https://github.com/givikuna/ynternals.git",
     "https://github.com/givikuna/nixfiles.git",
-    "https://github.com/givikuna/fantasy.git",
-    "https://github.com/givikuna/givikuna.github.io.git",
-    "https://github.com/givikuna/project_acrithis.git",
+    "https://github.com/givikuna/gitboy.git",
+
+    # programming languages
+    "https://github.com/Loid-Project/loid.git",
+    "https://github.com/givikuna/TsvariScript.git",
+    "https://github.com/givikuna/nixp.git",
 
     # math
     "https://github.com/givikuna/codensity-transformations-with-yoneda-lemma",
 
-    # toys
+    # ai
+    "https://github.com/givikuna/project_acrithis.git",
+
+    # ricing
     "https://github.com/givikuna/firefox-zorinos-landing-page.github.io.git",
+
+    # physics
+    "https://github.com/givikuna/physics-hw.git",
+
+    # web dev
+    "https://github.com/givikuna/givikuna.github.io.git",
+    "https://github.com/givikuna/keto-portfolio.git",
+
+    # gamedev
+    "https://github.com/givikuna/slay-the-grineer.git",
+    "https://github.com/givikuna/WarframeCardGame.git",
+
+    # lib dev
+    "https://codeberg.org/giviko/struktured.git",
+
+    # misc
+    "https://github.com/givikuna/fantasy.git",
+    "https://github.com/givikuna/arkonavt.git",
+    "https://github.com/givikuna/mwaune.git",
+    "https://github.com/givikuna/ngupp.git",
+    "https://github.com/givikuna/gh-api-cli.git",
+    "https://github.com/rg134/rgtube.git",
 
     # personal crap
     "https://github.com/givikuna/leetcode-solutions",

@@ -23,7 +23,7 @@ This is a document that changes a lot.
 - [ ] Integrate Statix: [Statix by Molybdenum Software on GitHub](https://github.com/molybdenumsoftware/statix)
 - [ ] Install Nix-Melt: [Nix-Melt by Nix Community on GitHub](https://github.com/nix-community/nix-melt)
 - [ ] Install Optnix: [Their Website](https://optnix.snare.dev/)
-- [ ] Install nh: [NH on GitHub from Nix Community](https://github.com/nix-community/nh)
+- [x] Install nh: [NH on GitHub from Nix Community](https://github.com/nix-community/nh)
 - [ ] Integrate nixdoc: [nixdoc on GitHub](https://github.com/nix-community/nixdoc)
 - [ ] Self host Noogle: [Noogle on GitHub](https://github.com/nix-community/noogle)
 
@@ -34,6 +34,7 @@ This is a document that changes a lot.
 - [ ] Complete `gitboy`
 - [ ] Figure out why setup is difficult with `guix` and `imba` derivations
 - [ ] Proper `Elvish` and `ZSH` configs
+- [ ] Make a `nindex` script for nix-index.
 
 ## v3.x
 

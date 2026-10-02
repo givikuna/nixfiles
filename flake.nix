@@ -16,6 +16,9 @@
     # flake mgmt
     flake-utils.url = "github:numtide/flake-utils";
 
+    # determinate nix
+    # determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
+
     # version pinning
     multiverse.url = "github:fzakaria/nixpkgs-multiverse";
 
@@ -108,9 +111,6 @@
     # ============================================
     #                     AI
     # ============================================
-
-    # nixified ai
-    nixified-ai.url = "github:nixified-ai/flake";
 
     # ai sandboxing
     agent-sandbox.url = "github:archie-judd/agent-sandbox.nix";
