@@ -25,6 +25,9 @@
     --lwt-sidebar-text-color: var(--gb-fg-dim) !important;
     --sidebar-background-color: var(--gb-bg2) !important;
     --sidebar-text-color: var(--gb-fg-dim) !important;
+
+    --lwt-frame: var(--gb-bg0) !important;
+    --lwt-accent-color: var(--gb-bg0) !important;
 }
 
 * {
@@ -169,6 +172,12 @@
 #nav-bar::after {
     display: none !important;
     border: none !important;
+    box-shadow: none !important;
+}
+#nav-bar,
+#PersonalToolbar {
+    background-color: var(--gb-bg0) !important;
+    background-image: none !important;
     box-shadow: none !important;
 }
 
