@@ -86,6 +86,8 @@
         "sidebar.verticalTabs" = true;
         "sidebar.position_start" = false;
         "sidebar.visibility" = "hide-sidebar";
+
+        "browser.nova.enabled" = false;
       };
 
       search = {
