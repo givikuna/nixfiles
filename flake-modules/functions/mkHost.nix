@@ -148,34 +148,6 @@ inputs.nixpkgs.lib.nixosSystem {
     #
 
     # ============================================
-    #                      AI
-    # ============================================
-
-    {
-      disabledModules = [ "services/misc/comfyui.nix" ];
-    }
-
-    # cuda cache for ollama
-    {
-      nix.settings = {
-        substituters = [ "https://cuda-maintainers.cachix.org" ];
-        trusted-public-keys = [
-          "cuda-maintainers.cachix.org-1:0f67Xm9Z6sS9dgy6q8O7r6Vms8+V+T8O07N/8892g3I="
-        ];
-      };
-    }
-
-    #
-
-    #
-
-    #
-
-    #
-
-    #
-
-    # ============================================
     #                  GUIX
     # ============================================
 
