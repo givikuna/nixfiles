@@ -19,11 +19,11 @@ This is a document that changes a lot.
 
 ## v1.x - Nix Toolings 🟡
 
-- [ ] Setup GitHub Actions, maybe use `nix-github-actions` from [GitHub](https://github.com/nix-community/nix-github-actions)
+- [x] Setup GitHub Actions, maybe use `nix-github-actions` from [GitHub](https://github.com/nix-community/nix-github-actions)
 - [ ] Integrate Statix: [Statix by Molybdenum Software on GitHub](https://github.com/molybdenumsoftware/statix)
 - [ ] Install Nix-Melt: [Nix-Melt by Nix Community on GitHub](https://github.com/nix-community/nix-melt)
 - [ ] Install Optnix: [Their Website](https://optnix.snare.dev/)
-- [ ] Install nh: [NH on GitHub from Nix Community](https://github.com/nix-community/nh)
+- [x] Install nh: [NH on GitHub from Nix Community](https://github.com/nix-community/nh)
 - [ ] Integrate nixdoc: [nixdoc on GitHub](https://github.com/nix-community/nixdoc)
 - [ ] Self host Noogle: [Noogle on GitHub](https://github.com/nix-community/noogle)
 - [ ] Complete and use [nixboxd](https://github.com/givikuna/nixboxd)
@@ -32,7 +32,6 @@ This is a document that changes a lot.
 - [ ] Document and QoL [nixtants](https://github.com/givikuna/nixtants)
 - [ ] Integrate [korora](https://github.com/adisbladis/korora) and [adios](https://github.com/adisbladis/adios)
 - [ ] Check [haumea](https://github.com/nix-community/haumea) and maybe integrate
-- [ ] Consider [lix](https://lix.systems/)
 - [ ] See [NuschtOS Search](https://github.com/NuschtOS/search)
 
 ## v2.x

@@ -6,6 +6,8 @@ git add .
 
 nix flake update
 
+nh os switch /etc/nixos -H $(hostname) --ask
+
 sudo nixos-rebuild switch --flake /etc/nixos#$(hostname)
 
 # imperative unfortunatamente

@@ -70,5 +70,10 @@ repos = [
 
 [folders."~/Documents/Books/"]
 repos = [
-    "https://github.com/GSimas/Asimov.git"
+    "https://github.com/GSimas/Asimov.git",
+]
+
+[folders."~/Builders/"]
+repos = [
+    "https://github.com/helix-editor/helix.git",
 ]
