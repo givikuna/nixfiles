@@ -1,18 +1,40 @@
-{ ... }:
+{ nixtants, username, ... }:
 {
   imports = [
     ../common.nix
+    ./hardware-configuration.nix
 
-    # ./hardware-configuration.nix
-    ../_modules/system/sys-cleanup.nix
-    ../_modules/system/shell-dec.nix
+    ./modules/desktop.nix
+    ./modules/misc.nix
+    ./modules/system.nix
+
+    ../_modules/sec/tor.nix
+    ../_modules/sec/firejail.nix
+    ../_modules/sec/protonvpn.nix
+
+    ../_modules/misc/boxes.nix
+
+    # ../_modules/ai-agents/default.nix
   ];
 
+  users.users.${username} = {
+    isNormalUser = true;
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+  };
+
   fileSystems."/" = {
-    device = "/dev/sda1
-    ";
+    device = "/dev/nvme0n1";
     fsType = "ext4";
   };
 
-  networking.hostName = "orion";
+  networking.hostName = nixtants.hosts.orion.name;
+
+  powerManagement.cpuFreqGovernor = "ondemand";
+  # services.tlp.enable = true;
+  services.power-profiles-daemon.enable = true;
+
+  # sudo wipefs -a [location]
 }

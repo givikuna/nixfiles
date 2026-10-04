@@ -10,7 +10,7 @@ let
     };
     overlays = [
       inputs.nur.overlays.default
-      inputs.guixpkgs.overlays.default
+      # inputs.guixpkgs.overlays.default
     ];
   };
 

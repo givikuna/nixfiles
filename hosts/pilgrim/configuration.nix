@@ -6,6 +6,7 @@
 
     ./modules/desktop.nix
     ./modules/misc.nix
+    ./modules/hardware.nix
     ./modules/system.nix
 
     ../_modules/sec/tor.nix

@@ -80,7 +80,7 @@
         "browser.tabs.groups.enabled" = true;
 
         "general.useragent.override" =
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0";
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/157.0";
 
         "sidebar.revamp" = true;
         "sidebar.verticalTabs" = true;
@@ -88,6 +88,10 @@
         "sidebar.visibility" = "hide-sidebar";
 
         "browser.nova.enabled" = false;
+
+        "privacy.resistFingerprinting.exemptedDomains" = [
+          "accounts.google.com"
+        ];
       };
 
       search = {

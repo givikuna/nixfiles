@@ -68,7 +68,7 @@
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     # guix
-    guixpkgs.url = "github:fzakaria/guixpkgs";
+    # guixpkgs.url = "github:fzakaria/guixpkgs";
 
     #
 
