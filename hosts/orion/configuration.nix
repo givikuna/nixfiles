@@ -25,10 +25,10 @@
     ];
   };
 
-  fileSystems."/" = {
-    device = "/dev/nvme0n1";
-    fsType = "ext4";
-  };
+  # fileSystems."/" = {
+  #   device = "/dev/nvme0n1";
+  #   fsType = "ext4";
+  # };
 
   networking.hostName = nixtants.hosts.orion.name;
 
