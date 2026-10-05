@@ -28,7 +28,7 @@
     ./_modules/secrets/ynternals.nix
 
     ./_modules/sec/tools/default.nix
-    ./_modules/tnix/mod.nix
+    # ./_modules/tnix/mod.nix
 
     ./_modules/settings/calm-rebuild.nix
   ];
