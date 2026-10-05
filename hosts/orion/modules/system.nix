@@ -9,12 +9,8 @@
     boot = {
       packages = {
         kernel-variant = {
-          cachyos-lts-kernel.enable = true;
+          default-kernel.enable = true;
         };
-      };
-
-      params = {
-        split_lock_detect = "off";
       };
     };
 
@@ -27,10 +23,10 @@
   };
 
   custom.daemons = {
-    razer.enable = true;
+    # razer.enable = true;
 
-    ananicy-cpp.enable = true;
+    # ananicy-cpp.enable = true;
 
-    power-profiles.enable = true;
+    # power-profiles.enable = true;
   };
 }
