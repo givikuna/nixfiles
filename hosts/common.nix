@@ -12,7 +12,7 @@
     ./_modules/packaging/distrobox.nix
     ./_modules/packaging/flatpak.nix
     ./_modules/packaging/unfree.nix
-    # ./_modules/guix/mod.nix
+    ./_modules/guix/mod.nix
 
     ./_modules/sec/audit.nix
     ./_modules/sec/firewall.nix
@@ -28,7 +28,7 @@
     ./_modules/secrets/ynternals.nix
 
     ./_modules/sec/tools/default.nix
-    # ./_modules/tnix/mod.nix
+    ./_modules/tnix/mod.nix
 
     ./_modules/settings/calm-rebuild.nix
   ];

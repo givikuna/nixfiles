@@ -151,18 +151,18 @@ inputs.nixpkgs.lib.nixosSystem {
     #                  GUIX
     # ============================================
 
-    # {
-    #   nixpkgs.overlays = [
-    #     inputs.guixpkgs.overlays.default
-    #   ];
-    #
-    #   nix.settings = {
-    #     extra-substituters = [ "https://guixpkgs.cachix.org" ];
-    #     extra-trusted-public-keys = [
-    #       "guixpkgs.cachix.org-1:rM4xwCs5NUy+FcCKkiWP/CmRaSVxxDPaKWZvM1bRopg="
-    #     ];
-    #   };
-    # }
+    {
+      nixpkgs.overlays = [
+        inputs.guixpkgs.overlays.default
+      ];
+
+      nix.settings = {
+        extra-substituters = [ "https://guixpkgs.cachix.org" ];
+        extra-trusted-public-keys = [
+          "guixpkgs.cachix.org-1:rM4xwCs5NUy+FcCKkiWP/CmRaSVxxDPaKWZvM1bRopg="
+        ];
+      };
+    }
 
     #
 

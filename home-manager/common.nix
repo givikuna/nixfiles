@@ -6,7 +6,7 @@
     ./modules/shell.nix
     ./modules/cli-tools.nix
     ./modules/scripts.nix
-    # ./modules/guix.nix
+    ./modules/guix.nix
 
     ./modules/gtk.nix
 
