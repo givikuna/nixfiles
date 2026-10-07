@@ -22,10 +22,6 @@
     # version pinning
     multiverse.url = "github:fzakaria/nixpkgs-multiverse";
 
-    # typed nix
-    # tynix.url = "github:ubugeeei-prod/tynix";
-    # tynix.inputs.nixpkgs.follows = "nixpkgs";
-
     # gitboy
     gitboy.url = "github:givikuna/gitboy";
     gitboy.inputs.nixpkgs.follows = "nixpkgs";
@@ -42,9 +38,6 @@
 
     # nixtants
     nixtants.url = "github:givikuna/nixtants";
-
-    # optnix
-    # optnix.url = "sourcehut:~watersucks/optnix";
 
     #
 
