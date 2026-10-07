@@ -243,5 +243,23 @@ inputs.nixpkgs.lib.nixosSystem {
           homeManagerModules.default
         ];
     }
+
+    # ============================================
+    #               OPTNIX
+    # ============================================
+
+    # inputs.optnix.packages.${system}.optnix
+
+    # inputs.optnix.nixosModules
+    # inputs.optnix.homeModules
+
+    # {
+    #   nix.settings = {
+    #     substituters = [ "https://watersucks.cachix.org" ];
+    #     trusted-public-keys = [
+    #       "watersucks.cachix.org-1:6gadPC5R8iLWQ3EUtfu3GFrVY7X6I4Fwz/ihW25Jbv8="
+    #     ];
+    #   };
+    # }
   ];
 }

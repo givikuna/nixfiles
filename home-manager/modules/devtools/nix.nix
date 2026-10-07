@@ -3,5 +3,9 @@
     nixd
 
     nixfmt
+
+    statix
+
+    nix-melt
   ];
 }

@@ -14,8 +14,9 @@
     ../packages/configurations/shell/gitboy/package.nix
     ../packages/configurations/shell/nushell/package.nix
 
-    ../packages/configurations/shell/nix-index/package.nix
     ../packages/configurations/shell/nh/package.nix
+    ../packages/configurations/shell/nix-index/package.nix
+    # ../packages/configurations/shell/optnix/package.nix
 
     ../packages/configurations/tools/git/package.nix
   ];

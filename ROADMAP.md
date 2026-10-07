@@ -14,18 +14,17 @@ This is a document that changes a lot.
 - [x] Basic setup
 - [x] Integrate `minotaur`
 - [x] Integrate `pilgrim`
-- [ ] Integrate `orion`
+- [x] Integrate `orion`
 - [ ] Integrate `colossus`
 
 ## v1.x - Nix Toolings 🟡
 
 - [x] Setup GitHub Actions, maybe use `nix-github-actions` from [GitHub](https://github.com/nix-community/nix-github-actions)
-- [ ] Integrate Statix: [Statix by Molybdenum Software on GitHub](https://github.com/molybdenumsoftware/statix)
-- [ ] Install Nix-Melt: [Nix-Melt by Nix Community on GitHub](https://github.com/nix-community/nix-melt)
-- [ ] Install Optnix: [Their Website](https://optnix.snare.dev/)
+- [x] Integrate Statix: [Statix by Molybdenum Software on GitHub](https://github.com/molybdenumsoftware/statix)
+- [x] Install Nix-Melt: [Nix-Melt by Nix Community on GitHub](https://github.com/nix-community/nix-melt)
+- [x] Install Optnix: [Their Website](https://optnix.snare.dev/)
 - [x] Install nh: [NH on GitHub from Nix Community](https://github.com/nix-community/nh)
 - [ ] Integrate nixdoc: [nixdoc on GitHub](https://github.com/nix-community/nixdoc)
-- [ ] Self host Noogle: [Noogle on GitHub](https://github.com/nix-community/noogle)
 - [ ] Complete and use [nixboxd](https://github.com/givikuna/nixboxd)
 - [ ] Document and QoL [gitboy](https://github.com/givikuna/gitboy)
 - [ ] Document and QoL [ynternals](https://github.com/givikuna/ynternals)
