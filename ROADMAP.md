@@ -25,33 +25,32 @@ This is a document that changes a lot.
 - [x] Install Optnix: [Their Website](https://optnix.snare.dev/)
 - [x] Install nh: [NH on GitHub from Nix Community](https://github.com/nix-community/nh)
 - [ ] Integrate nixdoc: [nixdoc on GitHub](https://github.com/nix-community/nixdoc)
-- [ ] Complete and use [nixboxd](https://github.com/givikuna/nixboxd)
-- [ ] Document and QoL [gitboy](https://github.com/givikuna/gitboy)
-- [ ] Document and QoL [ynternals](https://github.com/givikuna/ynternals)
 - [ ] Consider [steam-config-nix](https://different-name.github.io/steam-config-nix/docs/) for declarative steam configuration
-- [ ] Document and QoL [nixtants](https://github.com/givikuna/nixtants)
 - [ ] Integrate [korora](https://github.com/adisbladis/korora) and [adios](https://github.com/adisbladis/adios)
 - [ ] Check [haumea](https://github.com/nix-community/haumea) and maybe integrate
 - [ ] See [NuschtOS Search](https://github.com/NuschtOS/search)
 - [ ] See [Omnibin](https://github.com/fzakaria/omnibin)
 - [ ] Check out [Clan's](https://clan.lol/) stuff
+- [ ] Find a foss TTS sol'n and integrate it
 
 ## v2.x
 
 - [ ] Get `wyrten` to work correctly
-- [ ] Complete `nixtants`
-- [ ] Complete `gitboy`
 - [ ] Figure out why setup is difficult with `guix` and `imba` derivations
 - [ ] Proper `Elvish` and `ZSH` configs
+- [ ] Document and QoL [nixtants](https://github.com/givikuna/nixtants)
+- [ ] Complete and use [nixboxd](https://github.com/givikuna/nixboxd)
+- [ ] Document and QoL [gitboy](https://github.com/givikuna/gitboy)
+- [ ] Document and QoL [ynternals](https://github.com/givikuna/ynternals)
+- [ ] Write README.md files for every major module/folder & document as much of the codebase as possible.
 
 ## v3.x
 
 - [ ] Extract `wyrten` into its own library
 - [ ] Set up a proper CI/CD Pipeline for all computers to stay synced
-- [ ]
 - [ ] Transform `orion` into a proper server
 - [ ] Self-hosted `Forgejo` instance
-- [ ] Self-hosted `Nebula` lightbulb and system (or maybe with yggdrasil, this still needs to be figured out)
+- [ ] Create a private network of the seraphim network (might require a custom tool)
 - [ ] Integrate `hammond`
 - [ ] Give `colossus` a full `xfce` system
 - [ ] Complete `gnomecat` for `pilgrim`
