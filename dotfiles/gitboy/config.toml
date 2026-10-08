@@ -14,6 +14,9 @@ repos = [
     "https://github.com/givikuna/TsvariScript.git",
     "https://github.com/givikuna/nixp.git",
 
+    # school
+    "https://github.com/givikuna/ru-cs214.git",
+
     # math
     "https://github.com/givikuna/codensity-transformations-with-yoneda-lemma",
 
