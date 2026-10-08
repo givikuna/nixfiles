@@ -28,6 +28,7 @@ This is a document that changes a lot.
 - [ ] Complete and use [nixboxd](https://github.com/givikuna/nixboxd)
 - [ ] Document and QoL [gitboy](https://github.com/givikuna/gitboy)
 - [ ] Document and QoL [ynternals](https://github.com/givikuna/ynternals)
+- [ ] Consider [steam-config-nix](https://different-name.github.io/steam-config-nix/docs/) for declarative steam configuration
 - [ ] Document and QoL [nixtants](https://github.com/givikuna/nixtants)
 - [ ] Integrate [korora](https://github.com/adisbladis/korora) and [adios](https://github.com/adisbladis/adios)
 - [ ] Check [haumea](https://github.com/nix-community/haumea) and maybe integrate
