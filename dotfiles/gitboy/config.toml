@@ -5,6 +5,7 @@ repos = [
     "https://github.com/givikuna/ynternals.git",
     "https://github.com/givikuna/nixfiles.git",
     "https://github.com/givikuna/gitboy.git",
+    "https://github.com/givikuna/nix-mkScript.git",
 
     # amphi
     "https://github.com/Amphiseum/website.git",
