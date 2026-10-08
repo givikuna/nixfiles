@@ -33,6 +33,8 @@ This is a document that changes a lot.
 - [ ] Integrate [korora](https://github.com/adisbladis/korora) and [adios](https://github.com/adisbladis/adios)
 - [ ] Check [haumea](https://github.com/nix-community/haumea) and maybe integrate
 - [ ] See [NuschtOS Search](https://github.com/NuschtOS/search)
+- [ ] See [Omnibin](https://github.com/fzakaria/omnibin)
+- [ ] Check out [Clan's](https://clan.lol/) stuff
 
 ## v2.x
 
