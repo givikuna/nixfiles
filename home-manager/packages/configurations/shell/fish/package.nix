@@ -58,6 +58,7 @@
       gitingest = "repomix";
       speedtest = "speedtest-cli";
       ssll = "switch-shell";
+      neofetch = "fastfetch";
 
       # fuck larry
       mulgs = "most-used-langs -u givikuna -R al-go-rithms";

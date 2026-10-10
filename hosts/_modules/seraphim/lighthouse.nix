@@ -16,7 +16,7 @@
       nixtants.hosts.${hostname}.seraphim-ip
     ];
 
-    ca = "/run/ynternals/nebula-${hostname}-ca-crt";
+    ca = "/run/ynternals/nebula-ca-crt";
     cert = "/run/ynternals/nebula-${hostname}-orion-crt";
     key = "/run/ynternals/nebula-${hostname}-orion-key";
 

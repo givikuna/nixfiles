@@ -1,4 +1,8 @@
-{ nixtants, username, ... }:
+{
+  nixtants,
+  username,
+  ...
+}:
 {
   imports = [
     ../server-common.nix

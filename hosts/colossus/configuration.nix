@@ -1,4 +1,7 @@
-{ nixtants, ... }:
+{
+  nixtants,
+  ...
+}:
 {
   imports = [
     ../common.nix
