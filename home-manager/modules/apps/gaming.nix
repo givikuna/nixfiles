@@ -4,6 +4,8 @@
 }:
 {
   imports = [
+    ./modules/sls-steam.nix
+
     ../../packages/configurations/applications/prismlauncher/package.nix
   ];
 

@@ -135,7 +135,15 @@
 
     # nix-gaming
     nix-gaming.url = "github:fufexan/nix-gaming";
+
+    # sls-steam
+    sls-steam.url = "github:AceSLS/SLSsteam";
+    sls-steam.inputs.nixpkgs.follows = "nixpkgs";
   };
+
+  #
+
+  #
 
   #
 

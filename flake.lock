@@ -830,6 +830,7 @@
         "nixtest": "nixtest",
         "nur": "nur",
         "rip": "rip",
+        "sls-steam": "sls-steam",
         "ynternals": "ynternals",
         "zen-browser": "zen-browser"
       }
@@ -852,6 +853,26 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "sls-steam": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791298603,
+        "narHash": "sha256-Og+/lwENZahECWQqyQxY945gzoPk/wABz2b/FZyKjuM=",
+        "owner": "AceSLS",
+        "repo": "SLSsteam",
+        "rev": "049bbdd34ff56e68ebc1af818d97349839a4fd14",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AceSLS",
+        "repo": "SLSsteam",
         "type": "github"
       }
     },

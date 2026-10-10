@@ -1,5 +1,9 @@
-{ pkgs, ... }: {
-  home.packages = with pkgs; [
+{
+  pkgs,
+  ...
+}:
+{
+  home.packages = [
     # gnome.nautilus
     # gnome.gnome-tweaks
 

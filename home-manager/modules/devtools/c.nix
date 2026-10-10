@@ -1,4 +1,8 @@
-{ pkgs, ... }: {
+{
+  pkgs,
+  ...
+}:
+{
   home.packages = with pkgs; [
     (pkgs.lib.hiPrio gcc)
 
