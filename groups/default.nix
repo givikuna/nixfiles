@@ -8,7 +8,7 @@
   ];
   imbaers = [
     "minotaur"
-    "pilgrim"
+    # "pilgrim"
   ];
   guixers = [
     "minotaur"

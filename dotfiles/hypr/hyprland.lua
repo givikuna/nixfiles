@@ -8,8 +8,15 @@ if handle then
     handle:close()
 end
 
-if hostname == "minotaur" then
-    require "monitors"
+if hostname == "minotaur" or hostname == "pilgrim" then
+    for _, m in ipairs(require "monitors") do
+        hl.monitor {
+            output   = m.name,
+            mode     = m.resolution,
+            position = m.position,
+            scale    = m.scale,
+        }
+    end
 end
 
 local mainMod = "SUPER"
@@ -73,21 +80,12 @@ hl.config {
     },
 }
 
-local hostname = ""
-
-local handle = io.popen "hostname"
-if handle then
-    local res = handle:read "*a"
-    if res then
-        hostname = res:gsub("%s+", "")
-    end
-    handle:close()
-end
-
-local ui_scale = 1
-if hostname == "minotaur" then
-    ui_scale = 1.33
-end
+-- local ui_scale = 1
+-- if hostname == "minotaur" then
+--     ui_scale = 1.33
+-- else if hostname == "pilgrim" then
+--     ui_scale = 1.25
+-- end
 
 hl.monitor {
     output = "",
