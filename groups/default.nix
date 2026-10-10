@@ -51,4 +51,7 @@
   grubbers = [
     "hammond"
   ];
+  gpu-screen-recorderers = [
+    "minotaur"
+  ];
 }

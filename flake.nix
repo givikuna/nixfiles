@@ -98,6 +98,9 @@
     zen-browser.url = "github:youwen5/zen-browser-flake";
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
 
+    # davinci
+    davinci.url = "git+https://git.voidarc.co.uk/voidarc/nixos.davinci";
+
     #
 
     #

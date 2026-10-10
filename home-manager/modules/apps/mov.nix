@@ -1,4 +1,8 @@
-{ pkgs, ... }: {
+{
+  pkgs,
+  ...
+}:
+{
   imports = [
     # ../../packages/configurations/applications/gonwatch/package.nix
   ];

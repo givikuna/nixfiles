@@ -1,4 +1,8 @@
-{ pkgs, ... }: {
+{
+  pkgs,
+  ...
+}:
+{
   imports = [
     ../../packages/configurations/applications/prismlauncher/package.nix
   ];

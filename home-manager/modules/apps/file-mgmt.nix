@@ -1,4 +1,8 @@
-{ pkgs, ... }: {
+{
+  pkgs,
+  ...
+}:
+{
   imports = [
     ../../packages/configurations/applications/dolphin/package.nix
   ];

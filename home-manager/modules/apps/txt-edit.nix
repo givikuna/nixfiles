@@ -1,4 +1,8 @@
-{ pkgs, ... }: {
+{
+  pkgs,
+  ...
+}:
+{
   imports = [
     ../../packages/configurations/applications/helix/package.nix
     ../../packages/configurations/applications/micro/package.nix

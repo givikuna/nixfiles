@@ -33,6 +33,8 @@
     ./_modules/sec/tools/default.nix
 
     ./_modules/settings/calm-rebuild.nix
+
+    ./_modules/screen-record/default.nix
   ]
   ++ lib.optionals groups.waydroiders [
     ./_modules/virt/waydroid.nix
