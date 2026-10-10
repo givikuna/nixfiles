@@ -1,11 +1,15 @@
 {
-  pkgs,
+  config,
   ...
 }:
 {
+  imports = [
+    ../_meta/multiverse/ollama.nix
+  ];
+
   services.ollama = {
     enable = true;
-    package = with pkgs; ollama-cuda;
+    package = config.multiverse.pinned.ollama-cuda;
 
     loadModels = [
       "llama3.1"
@@ -15,7 +19,7 @@
     ];
   };
 
-  environment.systemPackages = with pkgs; [
-    ollama
+  environment.systemPackages = [
+    config.multiverse.pinned.ollama
   ];
 }
