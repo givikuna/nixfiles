@@ -29,6 +29,16 @@
     ];
   };
 
+  fileSystems."/mnt/orion-storage" = {
+    device = "10.100.0.2:/home/givik/Storage";
+    fsType = "nfs";
+    options = [
+      "x-systemd.automount"
+      "noauto"
+      "x-systemd.idle-timeout=600"
+    ];
+  };
+
   # forces high-performance energy state
   powerManagement.cpuFreqGovernor = "performance";
 

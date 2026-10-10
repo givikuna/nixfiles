@@ -1,4 +1,9 @@
-{ username, ... }:
+{
+  lib,
+  groups,
+  username,
+  ...
+}:
 {
   imports = [
     ./_modules/system/printing.nix
@@ -16,6 +21,12 @@
     ./_modules/overlays/nur.nix
 
     ./_modules/secrets/ynternals.nix
+  ]
+  ++ lib.optionals groups.seraphimers [
+    ./_modules/seraphim/client.nix
+  ]
+  ++ lib.optionals groups.seraphim-lighthouses [
+    ./_modules/seraphim/lighthouse.nix
   ];
 
   # nix allowances

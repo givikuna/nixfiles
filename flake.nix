@@ -39,6 +39,10 @@
     # nixtants
     nixtants.url = "github:givikuna/nixtants";
 
+    # disko
+    disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
+
     #
 
     #

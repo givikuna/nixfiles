@@ -19,7 +19,12 @@ let
 in
 inputs.nixpkgs.lib.nixosSystem {
   specialArgs = {
-    inherit inputs username version;
+    inherit
+      inputs
+      username
+      version
+      hostname
+      ;
     groups = host-grps;
   };
   system = system;
@@ -61,7 +66,7 @@ inputs.nixpkgs.lib.nixosSystem {
         backupFileExtension = "backup";
 
         extraSpecialArgs = {
-          inherit inputs username;
+          inherit inputs username hostname;
           host-name = hostname;
           groups = host-grps;
         };

@@ -5,7 +5,7 @@
     ./hardware-configuration.nix
 
     ./modules/system.nix
-    ./modules/nebula.nix
+    # ./modules/nebula.nix
     ./modules/services.nix
   ];
 

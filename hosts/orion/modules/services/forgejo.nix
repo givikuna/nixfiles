@@ -1,8 +1,16 @@
-{ ... }: {
+{
+  # config,
+  ...
+}:
+{
   services.forgejo = {
     enable = true;
     database.type = "postgres";
     lfs.enable = true;
+
+    secrets = {
+      # mailer.PASSWD = config.ynternals.secrets.forgejo_mail_pass;
+    };
 
     settings = {
       server = {

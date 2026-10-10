@@ -48,6 +48,9 @@
   ]
   ++ lib.optionals groups.proton-vpners [
     ./_modules/sec/protonvpn.nix
+  ]
+  ++ lib.optionals groups.seraphimers [
+    ./_modules/seraphim/client.nix
   ];
 
   # nix allowances

@@ -1,5 +1,7 @@
 {
-  wyrteners = [ "minotaur" ];
+  wyrteners = [
+    "minotaur"
+  ];
   waydroiders = [
     "minotaur"
     "pilgrim"
@@ -30,5 +32,23 @@
   ];
   davinciers = [
     "minotaur"
+  ];
+  seraphimers = [
+    "minotaur"
+    "pilgrim"
+    "orion"
+  ];
+  seraphim-lighthouses = [
+    "hammond"
+  ];
+  systemd-booters = [
+    "minotaur"
+    "pilgrim"
+    "orion"
+    "nomad"
+    "colossus"
+  ];
+  grubbers = [
+    "hammond"
   ];
 }
