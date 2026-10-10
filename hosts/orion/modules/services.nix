@@ -1,0 +1,5 @@
+{ ... }: {
+  imports = [
+    ./services/forgejo.nix
+  ];
+}

@@ -1,18 +1,11 @@
 { nixtants, username, ... }:
 {
   imports = [
-    ../common.nix
+    ../server-common.nix
     ./hardware-configuration.nix
 
-    ./modules/desktop.nix
-    ./modules/misc.nix
-    ./modules/hardware.nix
     ./modules/system.nix
-
-    ../_modules/sec/tor.nix
-    ../_modules/sec/firejail.nix
-
-    ../_modules/licenses/android_sdk.nix
+    ./modules/nebula.nix
   ];
 
   users.users.${username} = {
@@ -28,7 +21,7 @@
   #   fsType = "ext4";
   # };
 
-  networking.hostName = nixtants.hosts.pilgrim.name;
+  networking.hostName = nixtants.hosts.orion.name;
 
   powerManagement.cpuFreqGovernor = "ondemand";
   # services.tlp.enable = true;

@@ -5,8 +5,23 @@
   system ? "x86_64-linux",
   version ? "unknown",
 }:
+let
+  host-grps =
+    let
+      lib = inputs.nixpkgs.lib;
+      group-defs = import ../../groups/default.nix;
+    in
+    let
+      grp-attrs = builtins.attrNames group-defs;
+      grp-fn = group: builtins.elem hostname group-defs.${group};
+    in
+    lib.genAttrs grp-attrs grp-fn;
+in
 inputs.nixpkgs.lib.nixosSystem {
-  specialArgs = { inherit inputs username version; };
+  specialArgs = {
+    inherit inputs username version;
+    groups = host-grps;
+  };
   system = system;
 
   modules = [
@@ -48,6 +63,7 @@ inputs.nixpkgs.lib.nixosSystem {
         extraSpecialArgs = {
           inherit inputs username;
           host-name = hostname;
+          groups = host-grps;
         };
 
         users.${username} = import ../../home-manager/hosts/${hostname}.nix;

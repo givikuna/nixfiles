@@ -1,4 +1,9 @@
-{ username, ... }:
+{
+  lib,
+  groups,
+  username,
+  ...
+}:
 {
   imports = [
     ./modules/folders.nix
@@ -6,7 +11,6 @@
     ./modules/shell.nix
     ./modules/cli-tools.nix
     ./modules/scripts.nix
-    ./modules/guix.nix
 
     ./modules/gtk.nix
 
@@ -18,6 +22,12 @@
     ./modules/security.nix
 
     ./modules/multiverse.nix
+  ]
+  ++ lib.optionals groups.guixers [
+    ./modules/guix.nix
+  ]
+  ++ lib.optionals groups.wyrteners [
+    ./modules/wyrten.nix
   ];
 
   home.username = username;

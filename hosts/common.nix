@@ -1,4 +1,9 @@
-{ username, ... }:
+{
+  username,
+  groups,
+  lib,
+  ...
+}:
 {
   imports = [
     ./_modules/system/bluetooth.nix
@@ -10,9 +15,7 @@
     ./_modules/system/boot.nix
 
     ./_modules/packaging/distrobox.nix
-    ./_modules/packaging/flatpak.nix
     ./_modules/packaging/unfree.nix
-    ./_modules/guix/mod.nix
 
     ./_modules/sec/audit.nix
     ./_modules/sec/firewall.nix
@@ -28,9 +31,23 @@
     ./_modules/secrets/ynternals.nix
 
     ./_modules/sec/tools/default.nix
-    # ./_modules/tnix/mod.nix
 
     ./_modules/settings/calm-rebuild.nix
+  ]
+  ++ lib.optionals groups.waydroiders [
+    ./_modules/virt/waydroid.nix
+  ]
+  ++ lib.optionals groups.guixers [
+    ./_modules/guix/mod.nix
+  ]
+  ++ lib.optionals groups.flatpakkers [
+    ./_modules/packaging/flatpak.nix
+  ]
+  ++ lib.optionals groups.boxers [
+    ./_modules/misc/boxes.nix
+  ]
+  ++ lib.optionals groups.proton-vpners [
+    ./_modules/sec/protonvpn.nix
   ];
 
   # nix allowances
@@ -44,7 +61,6 @@
 
   # users & groups
   security.polkit.enable = true;
-
   users.users."${username}" = {
     isNormalUser = true;
     extraGroups = [
@@ -61,7 +77,7 @@
   environment.sessionVariables = {
     XDG_DATA_DIRS = [
       "/run/current-system/sw/share"
-      "/home/givik/.nix-profile/share"
+      "/home/${username}/.nix-profile/share"
     ];
   };
 

@@ -4,7 +4,6 @@
     ../common.nix
 
     ../modules/desktop/hyprgruvbox/desktop.nix
-    # ../modules/ai.nix
 
     ./apps/minotaur.nix
   ];

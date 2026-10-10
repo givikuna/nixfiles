@@ -10,11 +10,8 @@
 
     ../_modules/sec/tor.nix
     ../_modules/sec/firejail.nix
-    ../_modules/sec/protonvpn.nix
 
     ../_modules/licenses/android_sdk.nix
-
-    ../_modules/misc/boxes.nix
 
     ../_modules/ai/default.nix
   ];

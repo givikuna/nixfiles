@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  lib,
+  groups,
+  ...
+}:
 #let
 # livescript = import ../packages/derivations/tools/livescript/derivation.nix { inherit pkgs lib; };
 #in
@@ -14,7 +19,6 @@
     ./devtools/racket.nix
     ./devtools/jdk.nix
     ./devtools/perl.nix
-    ./devtools/imba.nix
     ./devtools/jj.nix
 
     ./devtools/spell-checker.nix
@@ -27,6 +31,9 @@
     ./devtools/nix.nix
     ./devtools/shell.nix
     ./devtools/nickel.nix
+  ]
+  ++ lib.optionals groups.imbaers [
+    ./devtools/imba.nix
   ];
 
   home.packages = with pkgs; [

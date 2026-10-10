@@ -103,6 +103,16 @@
           end
         '';
       };
+
+      seraphim = {
+        body = ''
+          if test "$argv[1]" = "ssh"
+            command ssh $argv[2..-1]
+          else
+            echo "Seraphim Network Command Not Found"
+          end
+        '';
+      };
     };
   };
 }

@@ -6,7 +6,6 @@
     ./_modules/system/shell-dec.nix
     ./_modules/system/boot.nix
 
-    ./_modules/packaging/distrobox.nix
     ./_modules/packaging/unfree.nix
 
     ./_modules/sec/audit.nix
@@ -14,9 +13,9 @@
 
     ./_modules/certs/common.nix
 
-    ./_modules/secrets/decr.nix
-
     ./_modules/overlays/nur.nix
+
+    ./_modules/secrets/ynternals.nix
   ];
 
   # nix allowances
@@ -47,7 +46,7 @@
   environment.sessionVariables = {
     XDG_DATA_DIRS = [
       "/run/current-system/sw/share"
-      "/home/givik/.nix-profile/share"
+      "/home/${username}/.nix-profile/share"
     ];
   };
 

@@ -1,20 +1,12 @@
 { nixtants, username, ... }:
 {
   imports = [
-    ../common.nix
+    ../server-common.nix
     ./hardware-configuration.nix
 
-    ./modules/desktop.nix
-    ./modules/misc.nix
     ./modules/system.nix
-
-    ../_modules/sec/tor.nix
-    ../_modules/sec/firejail.nix
-    ../_modules/sec/protonvpn.nix
-
-    ../_modules/misc/boxes.nix
-
-    # ../_modules/ai-agents/default.nix
+    ./modules/nebula.nix
+    ./modules/services.nix
   ];
 
   users.users.${username} = {
