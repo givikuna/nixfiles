@@ -15,8 +15,6 @@
     ../_modules/sec/firejail.nix
 
     ../_modules/licenses/android_sdk.nix
-
-    ../_modules/ai/default.nix
   ];
 
   networking.hostName = "minotaur";

@@ -53,6 +53,9 @@
   ]
   ++ lib.optionals groups.seraphimers [
     ./_modules/seraphim/client.nix
+  ]
+  ++ lib.optionals groups.wyrteners [
+    ./_modules/ai/default.nix
   ];
 
   # nix allowances
