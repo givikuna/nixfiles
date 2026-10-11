@@ -16,7 +16,8 @@
   home.packages = with pkgs; [
     inputs.rip.packages.${pkgs.stdenv.hostPlatform.system}.default # rm
 
-    ripgrep # grep
+    ripgrep # grep # rg
+    ripsecrets
 
     fd # find
     fzf
@@ -31,5 +32,21 @@
     hyperfine # time
     ouch # zip
     bandwhich
+    qsv
+
+    grex
+
+    gping # ping
+
+    pueue
+    watchexec
+
+    tldr
+
+    # this thing causes the whole system to crash somehow??
+    # not worth it
+    # tealdeer
+
+    hexyl
   ];
 }

@@ -34,9 +34,9 @@
     "minotaur"
   ];
   seraphimers = [
-    "minotaur"
-    "pilgrim"
-    "orion"
+    # "minotaur"
+    # "pilgrim"
+    # "orion"
   ];
   seraphim-lighthouses = [
     "hammond"
