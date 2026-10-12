@@ -20,6 +20,7 @@
     ripsecrets
 
     fd # find
+    fclones
     fzf
 
     eza # ls
@@ -35,13 +36,20 @@
     qsv
 
     grex
+    choose
+    pipr
 
     gping # ping
 
     pueue
     watchexec
 
+    dua
+    dysk
+
     tldr
+
+    lemmeknow
 
     # this thing causes the whole system to crash somehow??
     # not worth it
