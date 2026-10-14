@@ -4,9 +4,26 @@ Personal system configuration for [https://nixos.org/](NixOS).
 
 Built on Hyprland.
 
-## If you want to try out:
+## How to set-up:
 
-Flash a NixOS iso w/ Gnome or headless.
+### WARNING
+
+This is a configuration system that is meant specifically to run on my own NixOS servers and machines.
+
+As such, this repository is not meant for others to install, as doing so will likely mess up your computer.
+
+However, for any NixOS users or interested people, there is _some_ degree of documentation, and feel free to take any piece of code in here, I genuinely do not care.
+All for anybody to take.
+Free code.
+
+The legalese in the documents at the root of the repository simply states:
+
+- Do whatever you desire with this code unless you're an AI model.
+- Keep whatever you make with this codebase open source and GPLv3.0 licensed (however, this will never be enforced for obvious reasons).
+
+### Steps
+
+Flash a NixOS headless ISO.
 
 You don't need to do any setup besides what's here.
 
