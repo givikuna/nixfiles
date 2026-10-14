@@ -43,6 +43,13 @@
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
 
+    # formatting
+    alejandra.url = "github:kamadorueda/alejandra/4.0.0";
+    alejandra.inputs.nixpkgs.follows = "nixpkgs";
+
+    # script maker
+    mk-script.url = "github:givikuna/nix-mkScript";
+
     #
 
     #

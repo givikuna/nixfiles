@@ -1,8 +1,18 @@
 {
   pkgs,
+  inputs,
   ...
 }:
 let
+  mkScript = inputs.mk-script.lib.mkScript pkgs {
+    executeFromRoot = false;
+    src = ../../scripts;
+
+    customInterpreters = {
+      # "rkt" = "${with pkgs; racket}/bin/racket";
+    };
+  };
+
   scripts = [
     "cconvert.rkt"
     "dd-k.pl"
@@ -18,15 +28,21 @@ let
     "ingcpy.sh"
     "most-used-langs.py"
   ];
-
-  mkScript =
-    file:
-    let
-      parts = builtins.match "(.*)\\.([^.]*)$" file;
-      name = builtins.elemAt parts 0;
-    in
-    pkgs.writeScriptBin name (builtins.readFile "${../../scripts}/${file}");
 in
 {
-  home.packages = map mkScript scripts;
+  home.packages =
+    let
+      mker = (
+        file:
+        let
+          name =
+            let
+              parts = builtins.match "(.*)\\.([^.]*)$" file;
+            in
+            builtins.elemAt parts 0;
+        in
+        mkScript name file
+      );
+    in
+    map mker scripts;
 }

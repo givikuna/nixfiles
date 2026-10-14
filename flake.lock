@@ -40,6 +40,29 @@
         "type": "github"
       }
     },
+    "alejandra": {
+      "inputs": {
+        "fenix": "fenix",
+        "flakeCompat": "flakeCompat",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1744324181,
+        "narHash": "sha256-Oi1n2ncF4/AWeY6X55o2FddIRICokbciqFYK64XorYk=",
+        "owner": "kamadorueda",
+        "repo": "alejandra",
+        "rev": "3e2a85506627062313e131bf8a85315f3387c8e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kamadorueda",
+        "ref": "4.0.0",
+        "repo": "alejandra",
+        "type": "github"
+      }
+    },
     "anubis-fetch": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -132,6 +155,28 @@
       "original": {
         "owner": "nix-community",
         "repo": "disko",
+        "type": "github"
+      }
+    },
+    "fenix": {
+      "inputs": {
+        "nixpkgs": [
+          "alejandra",
+          "nixpkgs"
+        ],
+        "rust-analyzer-src": "rust-analyzer-src"
+      },
+      "locked": {
+        "lastModified": 1730615655,
+        "narHash": "sha256-2HBR3zLn57LXKNRtxBb+O+uDqHM4n0pz51rPayMl4cg=",
+        "owner": "nix-community",
+        "repo": "fenix",
+        "rev": "efeb50e2535b17ffd4a135e6e3e5fd60a525180c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "fenix",
         "type": "github"
       }
     },
@@ -273,6 +318,22 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flakeCompat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1696426674,
+        "narHash": "sha256-kvjfFW7WAETZlt09AgDn1MrtKzP7t90Vf7vypd3OL1U=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "0f9255e01c2351cc7d116c072cb317785dd33b33",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
         "type": "github"
       }
     },
@@ -441,6 +502,21 @@
         "owner": "nix-community",
         "ref": "release-26.05",
         "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "mk-script": {
+      "locked": {
+        "lastModified": 1791945913,
+        "narHash": "sha256-pItCgq4jo8VZXfOGmekUOzHu/kA7QewXOfrj0tXSlek=",
+        "owner": "givikuna",
+        "repo": "nix-mkScript",
+        "rev": "c7093e3e5bfcef5c3ec7f3e9662a54f87733bcfd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "givikuna",
+        "repo": "nix-mkScript",
         "type": "github"
       }
     },
@@ -775,11 +851,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791942216,
-        "narHash": "sha256-t0gTcIS4YmInfs+U/0B9qhp8txDyje2KNPPlioOands=",
+        "lastModified": 1791945637,
+        "narHash": "sha256-WSLDt0NImxsHlIAW8fr5VRwSdNAkaoYx55086ONvo0A=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "fd97fb6e5503edcd70526f5f9106eda820dd6d1d",
+        "rev": "4eeb410bcf9b72814685c12dd0e3a7a13942ca74",
         "type": "github"
       },
       "original": {
@@ -813,6 +889,7 @@
       "inputs": {
         "agenix": "agenix",
         "agent-sandbox": "agent-sandbox",
+        "alejandra": "alejandra",
         "anubis-fetch": "anubis-fetch",
         "chaotic": "chaotic",
         "davinci": "davinci",
@@ -821,6 +898,7 @@
         "gitboy": "gitboy",
         "guixpkgs": "guixpkgs",
         "home-manager": "home-manager_2",
+        "mk-script": "mk-script",
         "multiverse": "multiverse",
         "nix-flatpak": "nix-flatpak",
         "nix-gaming": "nix-gaming",
@@ -833,6 +911,23 @@
         "sls-steam": "sls-steam",
         "ynternals": "ynternals",
         "zen-browser": "zen-browser"
+      }
+    },
+    "rust-analyzer-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1730555913,
+        "narHash": "sha256-KNHZUlqsEibg3YtfUyOFQSofP8hp1HKoY+laoesBxRM=",
+        "owner": "rust-lang",
+        "repo": "rust-analyzer",
+        "rev": "f17a5bbfd0969ba2e63a74505a80e55ecb174ed9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rust-lang",
+        "ref": "nightly",
+        "repo": "rust-analyzer",
+        "type": "github"
       }
     },
     "rust-overlay": {

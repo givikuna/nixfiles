@@ -1,0 +1,6 @@
+{ ... }:
+{
+  imports = [
+    ./mod/fmt.nix
+  ];
+}

@@ -28,6 +28,8 @@
 
     ./_modules/xdg/portal.nix
 
+    ./_modules/nix/default.nix
+
     ./_modules/secrets/ynternals.nix
 
     ./_modules/sec/tools/default.nix
