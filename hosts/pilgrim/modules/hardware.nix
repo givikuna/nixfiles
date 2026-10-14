@@ -1,7 +1,7 @@
 { ... }: {
   boot.blacklistedKernelModules = [
     "wacom"
-    "hid_multitouch"
+    # "hid_multitouch"
   ];
 
   services.udev.extraRules = ''

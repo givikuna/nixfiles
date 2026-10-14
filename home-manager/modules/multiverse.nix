@@ -3,7 +3,7 @@
     enable = true;
 
     pins = {
-      # ollama = "0.40.0";
+      typescript-language-server = "5.3.0";
     };
   };
 }

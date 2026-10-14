@@ -1,18 +1,30 @@
 {
   pkgs,
+  config,
   ...
 }:
+let
+  multiverse = with config.multiverse; pinned;
+in
 {
-  home.packages = with pkgs; [
-    nodejs_22
+  home.packages =
+    with pkgs;
+    [
+      nodejs_22
 
-    typescript
-    bun
+      typescript
+      bun
 
-    typescript-language-server
+      prettierd
 
-    prettierd
-
-    vscode-langservers-extracted
-  ];
+      vscode-langservers-extracted
+    ]
+    ++ (
+      let
+        multiverse-pkgs = with multiverse; [
+          typescript-language-server
+        ];
+      in
+      multiverse-pkgs
+    );
 }
