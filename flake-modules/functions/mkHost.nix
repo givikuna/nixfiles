@@ -283,5 +283,21 @@ inputs.nixpkgs.lib.nixosSystem {
     #     ];
     #   };
     # }
+
+    #
+
+    #
+
+    #
+
+    #
+
+    #
+
+    # ============================================
+    #                  YSYLDUR
+    # ============================================
+
+    inputs.ysyldur.nixosModules.default # chaotic is already being imported
   ];
 }

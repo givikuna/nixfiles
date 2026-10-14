@@ -4,17 +4,16 @@
     ./modules/gaming-optimization.nix
     ./modules/session-variables.nix
 
-    ../../_modules/kernel/default.nix
+    # ../../_modules/kernel/default.nix
     ../../_modules/daemons/default.nix
   ];
 
-  custom.kernel = {
+  # forces nix-gaming's value for this to be dropped
+  # boot.kernel.sysctl."kernel.split_lock_mitigate" = lib.mkForce 0;
+
+  ysyldur = {
     boot = {
-      packages = {
-        kernel-variant = {
-          cachyos-lts-kernel.enable = true;
-        };
-      };
+      packages.variant = "cachyos-lts";
 
       params = {
         split_lock_detect = "off";
@@ -24,21 +23,54 @@
     };
 
     drivers = {
-      # system
       nvidia_cachyos.enable = true;
-      nvidia_stable.enable = false; # cause fuck stability
+      nvidia_stable.enable = false;
 
-      # peripherals
       xpadneo.enable = true;
     };
 
     services.scx = {
       enable = true;
+
       scheduler = {
         bpfland.enable = true;
       };
     };
   };
+
+  /*
+    custom.kernel = {
+      boot = {
+        packages = {
+          kernel-variant = {
+            cachyos-lts-kernel.enable = true;
+          };
+        };
+
+        params = {
+          split_lock_detect = "off";
+        };
+
+        sysctl.profiles.gaming-minotaur.enable = true;
+      };
+
+      drivers = {
+        # system
+        nvidia_cachyos.enable = true;
+        nvidia_stable.enable = false; # cause fuck stability
+
+        # peripherals
+        xpadneo.enable = true;
+      };
+
+      services.scx = {
+        enable = true;
+        scheduler = {
+          bpfland.enable = true;
+        };
+      };
+    };
+  */
 
   custom.daemons = {
     razer.enable = true;

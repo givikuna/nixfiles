@@ -14,7 +14,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # flake mgmt
-    flake-utils.url = "github:numtide/flake-utils";
+    # flake-utils.url = "github:numtide/flake-utils";
 
     # determinate nix
     # determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
@@ -50,6 +50,13 @@
     # script maker
     mk-script.url = "github:givikuna/nix-mkScript";
 
+    # chaotic nyx
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+
+    # kernel mgmt
+    ysyldur.url = "github:givikuna/ysyldur";
+    ysyldur.inputs.chaotic.follows = "chaotic";
+
     #
 
     #
@@ -70,9 +77,6 @@
     # nix user repository
     nur.url = "github:nix-community/NUR";
     nur.inputs.nixpkgs.follows = "nixpkgs";
-
-    # chaotic nyx
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     # guix
     guixpkgs.url = "github:fzakaria/guixpkgs";
