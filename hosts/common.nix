@@ -10,9 +10,11 @@
     ./_modules/system/keyring.nix
     ./_modules/system/pipewire.nix
     ./_modules/system/printing.nix
-    ./_modules/system/sys-cleanup.nix
+    # ./_modules/system/sys-cleanup.nix
     ./_modules/system/shell-dec.nix
     ./_modules/system/boot.nix
+
+    ./_modules/gc/mod.nix
 
     ./_modules/packaging/distrobox.nix
     ./_modules/packaging/unfree.nix

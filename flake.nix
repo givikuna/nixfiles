@@ -57,6 +57,10 @@
     ysyldur.url = "github:givikuna/ysyldur";
     ysyldur.inputs.chaotic.follows = "chaotic";
 
+    # gleam->nix
+    glistix.url = "github:Glistix/glistix";
+    glistix.inputs.nixpkgs.follows = "nixpkgs";
+
     #
 
     #

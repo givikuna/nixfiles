@@ -299,5 +299,25 @@ inputs.nixpkgs.lib.nixosSystem {
     # ============================================
 
     inputs.ysyldur.nixosModules.default # chaotic is already being imported
+
+    #
+
+    #
+
+    #
+
+    #
+
+    #
+
+    # ============================================
+    #                  GLISTIX
+    # ============================================
+
+    {
+      nixpkgs.overlays = [
+        inputs.glistix.overlays.default
+      ];
+    }
   ];
 }

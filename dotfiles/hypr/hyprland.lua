@@ -35,6 +35,8 @@ hl.env("QT_STYLE_OVERRIDE", "kvantum")
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
 
+hl.env("TMPDIR", "/tmp")
+
 -- hl.env("XCURSOR_SIZE", "15")
 -- hl.env("HYPRCURSOR_SIZE", "15")
 -- hl.env("XCURSOR_THEME", "Breeze")

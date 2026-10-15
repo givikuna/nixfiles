@@ -1,5 +1,10 @@
 { ... }:
 {
+
+  imports = [
+    ./mod/angrr.nix
+  ];
+
   # clean up system weekly
   nix.optimise.automatic = true;
   nix.gc = {

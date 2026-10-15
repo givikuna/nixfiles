@@ -3,31 +3,33 @@
   groups,
   username,
   ...
-}: {
-  imports =
-    [
-      ./_modules/system/printing.nix
-      ./_modules/system/sys-cleanup.nix
-      ./_modules/system/shell-dec.nix
-      ./_modules/system/boot.nix
+}:
+{
+  imports = [
+    ./_modules/system/printing.nix
+    # ./_modules/system/sys-cleanup.nix
+    ./_modules/system/shell-dec.nix
+    ./_modules/system/boot.nix
 
-      ./_modules/packaging/unfree.nix
+    ./_modules/gc/mod.nix
 
-      ./_modules/sec/audit.nix
-      ./_modules/sec/firewall.nix
+    ./_modules/packaging/unfree.nix
 
-      ./_modules/certs/common.nix
+    ./_modules/sec/audit.nix
+    ./_modules/sec/firewall.nix
 
-      ./_modules/overlays/nur.nix
+    ./_modules/certs/common.nix
 
-      ./_modules/secrets/ynternals.nix
-    ]
-    ++ lib.optionals groups.seraphimers [
-      ./_modules/seraphim/client.nix
-    ]
-    ++ lib.optionals groups.seraphim-lighthouses [
-      ./_modules/seraphim/lighthouse.nix
-    ];
+    ./_modules/overlays/nur.nix
+
+    ./_modules/secrets/ynternals.nix
+  ]
+  ++ lib.optionals groups.seraphimers [
+    ./_modules/seraphim/client.nix
+  ]
+  ++ lib.optionals groups.seraphim-lighthouses [
+    ./_modules/seraphim/lighthouse.nix
+  ];
 
   # nix allowances
   nix.settings.experimental-features = [
