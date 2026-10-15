@@ -82,6 +82,10 @@ This is a document that changes a lot.
     - [ ] [gptman](https://github.com/rust-disk-partition-management/gptman)
     - [x] [himalaya](https://github.com/pimalaya/himalaya)
     - [x] [gping](https://github.com/orf/gping)
+- [ ] Set up [vulnix](https://github.com/nix-community/vulnix) or [nixploit](https://github.com/manic-systems/nixploit)
+- [ ] Use [angrr](https://github.com/linyinfeng/angrr), [tack](https://github.com/manic-systems/tack) and [cade](https://github.com/manic-systems/cade) for better workspace mgmt
+- [ ] Check out [evix](https://github.com/manic-systems/evix)
+- [ ] Use [dix](https://github.com/manic-systems/dix) for the rebuild script
 
 ## v3.x
 
@@ -102,8 +106,10 @@ This is a document that changes a lot.
     - [ ] Consider [NixVirt](https://github.com/AshleyYakeley/NixVirt)
     - [ ] Maybe [micro-vm](https://github.com/microvm-nix/microvm.nix)
 - [ ] Check out [NixPak](https://github.com/nixpak/nixpak) for sandboxing
+- [ ] Use Manic-Systems' [nixos-core](https://github.com/manic-systems/nixos-core)
 - [ ] Get a proper deployment system
     - [ ] Maybe [deploy-rs](github.com/serokell/deploy-rs)
+    - [ ] For CI maybe [circus](https://github.com/manic-systems/circus)
     - [ ] Maybe set up a custom system
     - [ ] Needs a TUI at some point
     - [ ] Maybe [colmena](https://github.com/nix-community/colmena)
