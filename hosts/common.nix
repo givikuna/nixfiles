@@ -39,6 +39,8 @@
     ./_modules/settings/calm-rebuild.nix
 
     ./_modules/screen-record/default.nix
+
+    # ./_modules/glistix/mod.nix
   ]
   ++ lib.optionals groups.waydroiders [
     ./_modules/virt/waydroid.nix

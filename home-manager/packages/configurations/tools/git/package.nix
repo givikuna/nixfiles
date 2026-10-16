@@ -13,8 +13,15 @@ in
     enable = true;
     package = pkgs.gitFull;
 
-    userName = git-user;
-    userEmail = git-email;
+    settings = {
+      user = {
+        name = git-user;
+        email = git-email;
+      };
+    };
+
+    # userName = git-user;
+    # userEmail = git-email;
 
     settings = {
 

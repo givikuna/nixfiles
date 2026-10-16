@@ -314,10 +314,10 @@ inputs.nixpkgs.lib.nixosSystem {
     #                  GLISTIX
     # ============================================
 
-    {
-      nixpkgs.overlays = [
-        inputs.glistix.overlays.default
-      ];
-    }
+    # {
+    #   nixpkgs.overlays = [
+    #     inputs.glistix.overlays.default
+    #   ];
+    # }
   ];
 }
