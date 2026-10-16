@@ -62,6 +62,9 @@
   ]
   ++ lib.optionals groups.wyrteners [
     ./_modules/ai/default.nix
+  ]
+  ++ lib.optionals groups.rewinders [
+    ./_modules/rewindvm/mod.nix
   ];
 
   # nix allowances

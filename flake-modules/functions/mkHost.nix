@@ -298,9 +298,9 @@ inputs.nixpkgs.lib.nixosSystem {
     #                  YSYLDUR
     # ============================================
 
-    inputs.ysyldur.nixosModules.default # chaotic is already being imported
+    # chaotic is already being imported
 
-    #
+    inputs.ysyldur.nixosModules.default
 
     #
 
@@ -319,5 +319,32 @@ inputs.nixpkgs.lib.nixosSystem {
     #     inputs.glistix.overlays.default
     #   ];
     # }
+
+    #
+
+    #
+
+    #
+
+    #
+
+    #
+
+    # ============================================
+    #                  TOPOLOGY
+    # ============================================
+
+    inputs.nix-topology.nixosModules.default
+    {
+      nixpkgs.overlays = [
+        inputs.nix-topology.overlays.default
+      ];
+    }
+
+    # ============================================
+    #                  REWIND
+    # ============================================
+
+    inputs.rewind.nixosModules.default
   ];
 }

@@ -116,6 +116,12 @@
     # davinci
     davinci.url = "git+https://git.voidarc.co.uk/voidarc/nixos.davinci";
 
+    # nix-topology
+    nix-topology.url = "github:oddlama/nix-topology";
+
+    # rewindvm
+    rewind.url = "github:fzakaria/rewindvm";
+
     #
 
     #

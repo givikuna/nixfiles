@@ -22,11 +22,13 @@ let
     "post-install.nu"
     "pull-system.sh"
     "update-system.sh"
+    "nixos-config.tui.elv"
     "edit-system.elv"
     "proj.elv"
     "rebuild-system.py"
     "ingcpy.sh"
     "most-used-langs.py"
+    "nix-fingerprint.elv"
   ];
 in
 {

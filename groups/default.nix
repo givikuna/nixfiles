@@ -54,4 +54,8 @@
   gpu-screen-recorderers = [
     "minotaur"
   ];
+  rewinders = [
+    "minotaur"
+    "pilgrim"
+  ];
 }

@@ -59,6 +59,7 @@
       speedtest = "speedtest-cli";
       ssll = "switch-shell";
       neofetch = "fastfetch";
+      please = "sudo";
 
       # fuck larry
       mulgs = "most-used-langs -u givikuna -R al-go-rithms";
