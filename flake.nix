@@ -110,8 +110,8 @@
     nixcord.url = "github:FlameFlag/nixcord";
 
     # zen browser
-    zen-browser.url = "github:youwen5/zen-browser-flake";
-    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
+    # zen-browser.url = "github:youwen5/zen-browser-flake";
+    # zen-browser.inputs.nixpkgs.follows = "nixpkgs";
 
     # davinci
     davinci.url = "git+https://git.voidarc.co.uk/voidarc/nixos.davinci";
@@ -121,6 +121,9 @@
 
     # rewindvm
     rewind.url = "github:fzakaria/rewindvm";
+
+    # gh-api-cli
+    gh-api-cli.url = "github:givikuna/gh-api-cli";
 
     #
 
