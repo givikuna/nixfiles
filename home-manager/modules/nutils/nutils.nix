@@ -6,6 +6,9 @@
     ../../packages/configurations/tools/broot/package.nix # tree
     ../../packages/configurations/tools/anubis-fetch/package.nix # curl
 
+    # fuck
+    ../../packages/configurations/shell/pay-respects/package.nix
+
     ./modules/top.nix # top
     ./modules/git.nix
     ./modules/json.nix

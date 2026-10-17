@@ -97,6 +97,7 @@ This is a document that changes a lot.
     - [ ] Maybe a virtualization system with [proxmox-nixos](https://github.com/SaumonNet/proxmox-nixos)
 - [ ] Self-hosted `Forgejo` instance
 - [ ] Create a private network of the seraphim network (might require a custom tool or nebula or something similar)
+    - [ ] Consider using [ogygia](https://github.com/JakeHillion/ogygia-nix)
 - [ ] Integrate `hammond`
 - [ ] Give `colossus` a full `xfce` system
 - [ ] Complete `gnomecat` for `pilgrim`

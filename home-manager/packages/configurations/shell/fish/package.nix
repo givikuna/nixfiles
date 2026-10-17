@@ -60,6 +60,7 @@
       ssll = "switch-shell";
       neofetch = "fastfetch";
       please = "sudo";
+      fuck = "f";
 
       # fuck larry
       mulgs = "most-used-langs -u givikuna -R al-go-rithms";
@@ -71,6 +72,7 @@
       set-power-saver = "powerprofilesctl set power-saver";
       get-power-profile = "powerprofilesctl get";
 
+      # git
       ggraph = "git-graph -d -S -s d -f \"%h %an %ae %s %n\" -w -m simple";
       ggraphh = "git-graph -d -S -s d -f \"%H %an %ae %s %n\" -w -m simple";
     };
