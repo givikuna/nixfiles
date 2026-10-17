@@ -34,7 +34,7 @@
     agenix.inputs.nixpkgs.follows = "nixpkgs";
 
     # symmetric secrets
-    ynternals.url = "github:givikuna/ynternals";
+    ynternals.url = "git+https://codeberg.org/giviko/ynternals";
 
     # nixtants
     nixtants.url = "github:givikuna/nixtants";
@@ -54,7 +54,7 @@
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     # kernel mgmt
-    ysyldur.url = "github:givikuna/ysyldur";
+    ysyldur.url = "git+https://codeberg.org/giviko/ysyldur";
     ysyldur.inputs.chaotic.follows = "chaotic";
 
     # gleam->nix

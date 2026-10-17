@@ -652,11 +652,11 @@
         "treefmt-nix": "treefmt-nix_3"
       },
       "locked": {
-        "lastModified": 1792190031,
-        "narHash": "sha256-W0f88eyLt7G4g0RzBy7hagLu1+JiPMAH//IJqcx9cck=",
+        "lastModified": 1792199114,
+        "narHash": "sha256-A5nYKj95EkIjGBbnVnnubVa21seBH/e89SUV0aNFLYw=",
         "owner": "FlameFlag",
         "repo": "nixcord",
-        "rev": "9735e78791c53cac34cd9d641924835b83e4ec31",
+        "rev": "b8b71963c2e7ede8106fca249e3eef0fed96c69d",
         "type": "github"
       },
       "original": {
@@ -980,11 +980,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792197588,
-        "narHash": "sha256-7awBNBBWaZTRVVn+8EHzXz8y/PAQHaKZIkBEE4vK0yo=",
+        "lastModified": 1792206666,
+        "narHash": "sha256-977kxE3Q/a5JHALpAJAHw4atadDWy7nxttIIpaBcBTs=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "775f061d7a61c7e0d47d086753daecefd988790e",
+        "rev": "f9a1884122d903b57d542c2ba1c502839612f7b1",
         "type": "github"
       },
       "original": {
@@ -1235,17 +1235,17 @@
         "nixpkgs": "nixpkgs_11"
       },
       "locked": {
-        "lastModified": 1792197829,
-        "narHash": "sha256-opSrHZP5ksAH98wMgBl+pQ6fFHgVqUhXSHpTbNMyVwE=",
-        "owner": "givikuna",
-        "repo": "ynternals",
-        "rev": "4bcad7ecc1535f0c7a50215ef88a432f1f959902",
-        "type": "github"
+        "lastModified": 1792200605,
+        "narHash": "sha256-mbJwMXffwUK7Zi5QyOREz4kQNdRLw50Em1IUU5G2O9A=",
+        "ref": "refs/heads/main",
+        "rev": "2ce11381c0960b26282680268662201a0c400696",
+        "revCount": 26,
+        "type": "git",
+        "url": "https://codeberg.org/giviko/ynternals"
       },
       "original": {
-        "owner": "givikuna",
-        "repo": "ynternals",
-        "type": "github"
+        "type": "git",
+        "url": "https://codeberg.org/giviko/ynternals"
       }
     },
     "ysyldur": {
@@ -1257,17 +1257,17 @@
         "nixtest": "nixtest_2"
       },
       "locked": {
-        "lastModified": 1791964104,
+        "lastModified": 1792206827,
         "narHash": "sha256-pNqPoqmfZ73x9du1p4mdvn+gQ6SMeYNeVWxiA4G4W5Y=",
-        "owner": "givikuna",
-        "repo": "ysyldur",
-        "rev": "bf077b52b847f187986975c137a4247a19c71f4f",
-        "type": "github"
+        "ref": "refs/heads/main",
+        "rev": "935a69de7e3743be78b4b50fbda8d82d7955819a",
+        "revCount": 20,
+        "type": "git",
+        "url": "https://codeberg.org/giviko/ysyldur"
       },
       "original": {
-        "owner": "givikuna",
-        "repo": "ysyldur",
-        "type": "github"
+        "type": "git",
+        "url": "https://codeberg.org/giviko/ysyldur"
       }
     },
     "zen-browser": {

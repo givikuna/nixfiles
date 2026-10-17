@@ -72,6 +72,7 @@
       get-power-profile = "powerprofilesctl get";
 
       # git
+      git-remote-add = "git remote set-url --add --push origin ";
       ggraph = "git-graph -d -S -s d -f \"%h %an %ae %s %n\" -w -m simple";
       ggraphh = "git-graph -d -S -s d -f \"%H %an %ae %s %n\" -w -m simple";
     };

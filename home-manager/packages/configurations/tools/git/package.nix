@@ -7,6 +7,7 @@
 let
   git-user = nixtants.users.${username}.github.username;
   git-email = nixtants.users.${username}.github.email;
+  cb-user = nixtants.users.${username}.codeberg.username;
 in
 {
   programs.git = {
@@ -18,12 +19,6 @@ in
         name = git-user;
         email = git-email;
       };
-    };
-
-    # userName = git-user;
-    # userEmail = git-email;
-
-    settings = {
 
       core = {
         pager = "delta";
@@ -40,6 +35,15 @@ in
           if [ "$1" = "get" ]; then
             echo "username=${git-user}"
             echo "password=$(cat /run/ynternals/gh_ghp)"
+          fi
+        ''}";
+      };
+
+      credential."https://codeberg.org" = {
+        helper = "${pkgs.writeShellScript "cb-credential-helper" ''
+          if [ "$1" = "get" ]; then
+            echo "username=${cb-user}"
+            echo "password=$(cat /run/ynternals/cb_pass)"
           fi
         ''}";
       };
