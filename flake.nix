@@ -61,6 +61,9 @@
     # glistix.url = "github:Glistix/glistix";
     # glistix.inputs.nixpkgs.follows = "nixpkgs";
 
+    # evix
+    evix.url = "github:manic-systems/evix";
+
     #
 
     #

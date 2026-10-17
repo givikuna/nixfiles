@@ -7,12 +7,11 @@
 {
   home.packages =
     (with pkgs; [
-      gnumake
-      cmake
-
-      ninja
+      cmake-language-server
     ])
     ++ (with (if groups.ekapkgers then ekapkgs else pkgs); [
-      cmake-language-server
+      gnumake
+      cmake
+      ninja
     ]);
 }

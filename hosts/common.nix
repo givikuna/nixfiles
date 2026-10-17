@@ -65,6 +65,9 @@
   ]
   ++ lib.optionals groups.rewinders [
     ./_modules/rewindvm/mod.nix
+  ]
+  ++ lib.optionals groups.evixers [
+    ./_modules/evix/mod.nix
   ];
 
   # nix allowances
