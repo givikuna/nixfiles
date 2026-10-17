@@ -29,6 +29,7 @@ let
     "ingcpy.sh"
     "most-used-langs.py"
     "nix-fingerprint.elv"
+    "git-remote-add.rkt"
   ];
 in
 {

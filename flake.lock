@@ -925,17 +925,17 @@
     },
     "nixtants": {
       "locked": {
-        "lastModified": 1789857717,
+        "lastModified": 1792211099,
         "narHash": "sha256-sTAZ/YCP9VqVZvWC+2Sh01L309kIwVzkPMPIEWCdqrQ=",
-        "owner": "givikuna",
-        "repo": "nixtants",
-        "rev": "032647e4315364a08d17ce607f991c1dd04047a2",
-        "type": "github"
+        "ref": "refs/heads/main",
+        "rev": "41eed5acac910e95a334e681f1ce5c011ba13568",
+        "revCount": 5,
+        "type": "git",
+        "url": "https://codeberg.org/giviko/nixtants"
       },
       "original": {
-        "owner": "givikuna",
-        "repo": "nixtants",
-        "type": "github"
+        "type": "git",
+        "url": "https://codeberg.org/giviko/nixtants"
       }
     },
     "nixtest": {
@@ -980,11 +980,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792206666,
-        "narHash": "sha256-977kxE3Q/a5JHALpAJAHw4atadDWy7nxttIIpaBcBTs=",
+        "lastModified": 1792209965,
+        "narHash": "sha256-sh0Mtt+9iuVzPTdcO93n5slpkTNy9yyU4Chi2a1SNd4=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "f9a1884122d903b57d542c2ba1c502839612f7b1",
+        "rev": "b2f2ae153d7b1ace051cfa4b64045e25a840f8ac",
         "type": "github"
       },
       "original": {

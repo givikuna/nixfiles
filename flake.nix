@@ -37,7 +37,7 @@
     ynternals.url = "git+https://codeberg.org/giviko/ynternals";
 
     # nixtants
-    nixtants.url = "github:givikuna/nixtants";
+    nixtants.url = "git+https://codeberg.org/giviko/nixtants";
 
     # disko
     disko.url = "github:nix-community/disko";
