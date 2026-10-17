@@ -64,6 +64,9 @@
     # evix
     evix.url = "github:manic-systems/evix";
 
+    # ogygia
+    ogygia.url = "github:JakeHillion/ogygia-nix";
+
     #
 
     #
