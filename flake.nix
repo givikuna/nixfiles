@@ -85,6 +85,9 @@
     # guix
     guixpkgs.url = "github:fzakaria/guixpkgs";
 
+    # ekala-project corepkgs
+    ekapkgs.url = "github:ekala-project/corepkgs";
+
     #
 
     #

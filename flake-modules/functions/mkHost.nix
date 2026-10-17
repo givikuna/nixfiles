@@ -4,6 +4,7 @@
   username ? "givik",
   system ? "x86_64-linux",
   version ? "unknown",
+  ekapkgs,
 }:
 let
   host-grps =
@@ -24,6 +25,7 @@ inputs.nixpkgs.lib.nixosSystem {
       username
       version
       hostname
+      ekapkgs
       ;
     groups = host-grps;
   };
@@ -70,6 +72,7 @@ inputs.nixpkgs.lib.nixosSystem {
           inherit inputs username hostname;
           host-name = hostname;
           groups = host-grps;
+          ekapkgs = ekapkgs;
         };
 
         users.${username} = import ../../home-manager/hosts/${hostname}.nix;

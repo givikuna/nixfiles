@@ -58,4 +58,7 @@
     "minotaur"
     "pilgrim"
   ];
+  ekapkgers = [
+    "minotaur"
+  ];
 }

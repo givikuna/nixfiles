@@ -14,6 +14,8 @@ let
     ];
   };
 
+  ekapkgs = inputs.ekapkgs.legacyPackages.${system};
+
   nixosConfigurations =
     let
       mkHost = import ./functions/mkHost.nix { inherit inputs; };
@@ -27,7 +29,16 @@ let
         # zephyr = { username = "larryrh"; };
       };
     in
-    builtins.mapAttrs (hostname: args: mkHost ({ inherit hostname; } // args)) hosts;
+    builtins.mapAttrs (
+      hostname: args:
+      mkHost (
+        {
+          inherit hostname;
+          ekapkgs = ekapkgs;
+        }
+        // args
+      )
+    ) hosts;
 
   # tests = import ../tests/default.nix {
   #   inherit pkgs hosts inputs;
