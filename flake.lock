@@ -1235,11 +1235,11 @@
         "nixpkgs": "nixpkgs_11"
       },
       "locked": {
-        "lastModified": 1792197640,
-        "narHash": "sha256-XDW1I5cGfCgyhKJ2p/a3sRZhsPf50KUnUmeAVKs9CgI=",
+        "lastModified": 1792197829,
+        "narHash": "sha256-opSrHZP5ksAH98wMgBl+pQ6fFHgVqUhXSHpTbNMyVwE=",
         "owner": "givikuna",
         "repo": "ynternals",
-        "rev": "d9e2907b21bf21fd8dd85bbb55ccdc8b2fe26fa6",
+        "rev": "4bcad7ecc1535f0c7a50215ef88a432f1f959902",
         "type": "github"
       },
       "original": {
