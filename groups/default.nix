@@ -73,7 +73,7 @@
   ];
 
   ekapkgers = [
-    "minotaur"
+    # "minotaur"
   ];
 
   evixers = [
