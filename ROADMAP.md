@@ -86,6 +86,7 @@ This is a document that changes a lot.
 - [ ] Use [angrr](https://github.com/linyinfeng/angrr), [tack](https://github.com/manic-systems/tack) and [cade](https://github.com/manic-systems/cade) for better workspace mgmt
 - [ ] Check out [evix](https://github.com/manic-systems/evix)
 - [ ] Use [dix](https://github.com/manic-systems/dix) for the rebuild script
+- [ ] Check out [durdraw](https://durdraw.org/), [pastel](https://github.com/sharkdp/pastel), and [astroterm](https://github.com/da-luce/astroterm)
 
 ## v3.x
 
