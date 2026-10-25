@@ -115,6 +115,7 @@ This is a document that changes a lot.
     - [ ] Maybe set up a custom system
     - [ ] Needs a TUI at some point
     - [ ] Maybe [colmena](https://github.com/nix-community/colmena)
+- [ ] Make the `nh-r` script for invoking an `nh` rebuild
 
 ## v4.x
 

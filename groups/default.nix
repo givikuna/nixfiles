@@ -9,7 +9,7 @@
   ];
 
   imbaers = [
-    "minotaur"
+    # "minotaur"
     # "pilgrim"
   ];
 

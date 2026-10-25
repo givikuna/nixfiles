@@ -24,15 +24,15 @@ def rebuild():
 
     print_msg(f"starting rebuild for {hostname}", "36")
 
-    # nh_cmd = ["nh", "os", "switch", flake_dir, "-H", hostname, "--ask"]
-    os.system(f"sudo nixos-rebuild switch --flake /etc/nixos#{socket.gethostname()}")
-
     try:
         # subprocess.run(nh_cmd, check=True)
 
         # print_msg("running gitboy", "33")
-        subprocess.run(["gitboy"], check=False)
 
+        # nh_cmd = ["nh", "os", "switch", flake_dir, "-H", hostname, "--ask"]
+        subprocess.run(["sudo", "nixos-rebuild", "switch", "--flake", f"/etc/nixos#{hostname}"], check=True)
+
+        subprocess.run(["gitboy"], check=False)
         print_msg("system rebuilt successfully!", "32")
 
     except subprocess.CalledProcessError:
