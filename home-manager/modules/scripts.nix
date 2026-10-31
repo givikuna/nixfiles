@@ -30,6 +30,7 @@ let
     "most-used-langs.py"
     "nix-fingerprint.elv"
     "git-remote-add.rkt"
+    "gh-num-id.sh"
   ];
 in
 {
