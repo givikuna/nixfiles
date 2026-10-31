@@ -23,6 +23,7 @@
       XDG_MACHINES_DIR = "${config.home.homeDirectory}/Machines";
       XDG_BUILDERS_DIR = "${config.home.homeDirectory}/Builders";
       XDG_AI-QUARANTINE_DIR = "${config.home.homeDirectory}/ai-quarantine";
+      XDG_CONTRIB = "${config.home.homeDirectory}/Contrib";
     };
   };
 }

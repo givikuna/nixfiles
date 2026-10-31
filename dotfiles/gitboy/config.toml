@@ -69,6 +69,11 @@ repos = [
     "https://github.com/givikuna/GiviMakeARobotMove.git",
 ]
 
+[folders."~/Contrib"]
+repos = [
+    "https://github.com/givikuna/nixpkgs.git",
+]
+
 [folders."~/Testing/"]
 repos = [
     "https://github.com/givikuna/TEST-auth0_with_expressjs",
