@@ -4,9 +4,11 @@
 # Directory exclusions
 /modules/*
 /hosts/*
+/home-manager/*
 /scripts/*
 /tests/*
 /secrets/*
+/flake-modules/*
 
 # File exclusions
 flake.nix

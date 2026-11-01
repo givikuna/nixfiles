@@ -75,6 +75,9 @@
   ]
   ++ lib.optionals groups.dockerers [
     ./_modules/docker/mod.nix
+  ]
+  ++ lib.optionals groups.glistixers [
+    ./_modules/glistix/mod.nix
   ];
 
   # nix allowances

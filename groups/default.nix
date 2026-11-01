@@ -99,4 +99,8 @@
     "pilgrim"
     "minotaur"
   ];
+
+  glistixers = [
+    #
+  ];
 }

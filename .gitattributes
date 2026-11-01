@@ -1,4 +1,6 @@
 *.tnix linguist-language=Nix
+*.tynix linguist-language=Nix
+*.nixp linguist-language=Nix
 
 *.conf linguist-language=INI
 *.kvconfig linguist-language=INI
