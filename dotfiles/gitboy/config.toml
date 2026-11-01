@@ -23,7 +23,10 @@ repos = [
     "https://github.com/givikuna/codensity-transformations-with-yoneda-lemma",
 
     # ai
-    "https://github.com/givikuna/project_acrithis.git",
+    "https://github.com/givikuna/acrithis.git",
+
+    # robotics
+    "https://github.com/STAR-Robotics-Team/starrt-luna-software.git",
 
     # ricing
     "https://github.com/givikuna/firefox-zorinos-landing-page.github.io.git",

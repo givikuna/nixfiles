@@ -28,6 +28,9 @@
   ]
   ++ lib.optionals groups.wyrteners [
     ./modules/wyrten.nix
+  ]
+  ++ lib.optionals groups.hyprgruvboxers [
+    ./modules/desktop/hyprgruvbox/desktop.nix
   ];
 
   home.username = username;

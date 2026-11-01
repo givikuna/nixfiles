@@ -69,7 +69,6 @@
 
   rewinders = [
     "minotaur"
-    "pilgrim"
   ];
 
   ekapkgers = [
@@ -79,5 +78,25 @@
   evixers = [
     "minotaur"
     "pilgrim"
+  ];
+
+  grammers = [
+    "minotaur"
+  ];
+
+  hyprgruvboxers = [
+    "minotaur"
+    "pilgrim"
+    "orion"
+    "colossus"
+  ];
+
+  gnomecatters = [
+    #
+  ];
+
+  dockerers = [
+    "pilgrim"
+    "minotaur"
   ];
 }

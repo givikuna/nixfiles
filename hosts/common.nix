@@ -68,6 +68,13 @@
   ]
   ++ lib.optionals groups.evixers [
     ./_modules/evix/mod.nix
+  ]
+  ++ lib.optionals groups.hyprgruvboxers [
+    ./_modules/desktops/hyprland.nix
+    ./_modules/session_variables/desktop/hyprgruvbox/vars.nix
+  ]
+  ++ lib.optionals groups.dockerers [
+    ./_modules/docker/mod.nix
   ];
 
   # nix allowances
