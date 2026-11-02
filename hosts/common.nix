@@ -78,6 +78,9 @@
   ]
   ++ lib.optionals groups.glistixers [
     ./_modules/glistix/mod.nix
+  ]
+  ++ lib.optionals groups.plasmacatters [
+    ./_modules/desktops/plasma.nix
   ];
 
   # nix allowances

@@ -90,6 +90,26 @@ inputs.nixpkgs.lib.nixosSystem {
     #
 
     # ============================================
+    #               PLASMA MANAGER
+    # ============================================
+
+    {
+      home-manager.sharedModules = [
+        inputs.plasma-manager.homeModules.plasma-manager
+      ];
+    }
+
+    #
+
+    #
+
+    #
+
+    #
+
+    #
+
+    # ============================================
     #                  FLATPAKS
     # ============================================
 

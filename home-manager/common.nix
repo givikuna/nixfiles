@@ -31,6 +31,9 @@
   ]
   ++ lib.optionals groups.hyprgruvboxers [
     ./modules/desktop/hyprgruvbox/desktop.nix
+  ]
+  ++ lib.optionals groups.plasmacatters [
+    ./modules/desktop/plasmacat/desktop.nix
   ];
 
   home.username = username;

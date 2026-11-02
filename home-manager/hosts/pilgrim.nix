@@ -3,7 +3,7 @@
   imports = [
     ../common.nix
 
-    ../modules/desktop/hyprgruvbox/desktop.nix
+    # ../modules/desktop/hyprgruvbox/desktop.nix
 
     ./apps/pilgrim.nix
   ];

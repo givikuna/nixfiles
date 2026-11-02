@@ -92,7 +92,11 @@
   ];
 
   gnomecatters = [
-    #
+    # "pilgrim"
+  ];
+
+  plasmacatters = [
+    # "pilgrims"
   ];
 
   dockerers = [
