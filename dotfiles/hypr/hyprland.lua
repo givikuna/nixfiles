@@ -1,3 +1,6 @@
+hl.exec_cmd "systemctl --user import-environment QT_STYLE_OVERRIDE GTK_THEME XDG_CURRENT_DESKTOP DISPLAY WAYLAND_DISPLAY HYPRLAND_INSTANCE_SIGNATURE"
+hl.exec_cmd "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP HYPRLAND_INSTANCE_SIGNATURE"
+
 local hostname = ""
 local handle = io.popen "hostname"
 if handle then
