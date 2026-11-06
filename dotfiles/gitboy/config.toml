@@ -8,9 +8,6 @@ repos = [
     "https://github.com/givikuna/nix-mkScript.git",
     "https://github.com/givikuna/ysyldur.git",
 
-    # amphi
-    "https://github.com/Amphiseum/website.git",
-
     # programming languages
     "https://github.com/Loid-Project/loid.git",
     "https://github.com/givikuna/TsvariScript.git",
@@ -70,6 +67,11 @@ repos = [
     "https://github.com/givikuna/Physics-homework.git",
     "https://github.com/givikuna/mecanumDrive.git",
     "https://github.com/givikuna/GiviMakeARobotMove.git",
+]
+
+[folders."~/Projects/Amphiseum"]
+repos = [
+    "https://github.com/Amphiseum/website.git",
 ]
 
 [folders."~/Contrib"]

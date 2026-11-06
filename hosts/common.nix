@@ -81,6 +81,9 @@
   ]
   ++ lib.optionals groups.plasmacatters [
     ./_modules/desktops/plasma.nix
+  ]
+  ++ lib.optionals groups.ryokuers [
+    ./_modules/desktops/ryoku.nix
   ];
 
   # nix allowances

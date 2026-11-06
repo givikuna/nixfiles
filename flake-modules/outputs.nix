@@ -21,12 +21,21 @@ let
       mkHost = import ./functions/mkHost.nix { inherit inputs; };
 
       hosts = {
-        minotaur = { };
-        nomad = { };
-        pilgrim = { };
-        colossus = { };
-        orion = { };
-        # zephyr = { username = "larryrh"; };
+        minotaur = {
+          type = "desktop";
+        };
+        nomad = {
+          type = "desktop";
+        };
+        pilgrim = {
+          type = "desktop";
+        };
+        colossus = {
+          type = "desktop";
+        };
+        orion = {
+          type = "server";
+        };
       };
     in
     builtins.mapAttrs (

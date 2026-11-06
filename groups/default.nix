@@ -99,12 +99,29 @@
     # "pilgrims"
   ];
 
+  ryokuers = [
+    # "minotaur"
+  ];
+
   dockerers = [
     "pilgrim"
     "minotaur"
   ];
 
   glistixers = [
+    #
+  ];
+
+  multiversers = [
+    "minotaur"
+    "pilgrim"
+  ];
+
+  nix-gamers = [
+    "minotaur"
+  ];
+
+  determinaters = [
     #
   ];
 }

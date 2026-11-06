@@ -85,6 +85,8 @@
     plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.inputs.home-manager.follows = "home-manager";
 
+    ryoku.url = "github:Ryoku-dev/Ryoku-on-NixOS";
+
     #
 
     #
