@@ -1,5 +1,5 @@
 {
-  pkgs,
+  # pkgs,
   ...
 }:
 {
@@ -7,7 +7,7 @@
     # ../../packages/configurations/applications/gonwatch/package.nix
   ];
 
-  home.packages = with pkgs; [
-    ani-cli
+  home.packages =  [
+    # ani-cli
   ];
 }

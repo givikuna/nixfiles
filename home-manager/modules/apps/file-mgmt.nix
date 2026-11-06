@@ -1,5 +1,5 @@
 {
-  pkgs,
+  # pkgs,
   ...
 }:
 {
@@ -7,7 +7,7 @@
     ../../packages/configurations/applications/dolphin/package.nix
   ];
 
-  home.packages = with pkgs; [
-    thunar
+  home.packages = [
+    # thunar
   ];
 }

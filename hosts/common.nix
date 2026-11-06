@@ -41,6 +41,9 @@
     ./_modules/screen-record/default.nix
 
     # ./_modules/glistix/mod.nix
+
+    # CAREFUL HERE
+    ./_hotfix
   ]
   ++ lib.optionals groups.waydroiders [
     ./_modules/virt/waydroid.nix

@@ -8,7 +8,7 @@
 
   home.packages = with pkgs; [
     # personal
-    planify
+    # planify
     calibre
 
     # capturing
@@ -17,7 +17,7 @@
     switcheroo
     obs-studio
 
-    kdePackages.kate
+    # kdePackages.kate
   ];
 
   services.flatpak.packages = [

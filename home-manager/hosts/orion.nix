@@ -17,7 +17,7 @@
     switcheroo
     obs-studio
 
-    kdePackages.kate
+    # kdePackages.kate
   ];
 
   services.flatpak.packages = [

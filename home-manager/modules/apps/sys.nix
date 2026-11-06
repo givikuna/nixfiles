@@ -4,13 +4,13 @@
 }:
 {
   home.packages = with pkgs; [
-    easyeffects
+    # easyeffects
     nwg-displays
     pwvucontrol
     pavucontrol
   ];
 
   services.flatpak.packages = [
-    "com.github.tchx84.Flatseal"
+    # "com.github.tchx84.Flatseal"
   ];
 }
