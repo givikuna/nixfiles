@@ -1174,11 +1174,11 @@
         "treefmt-nix": "treefmt-nix_4"
       },
       "locked": {
-        "lastModified": 1793951297,
-        "narHash": "sha256-BmyTcx5pXxBGycADKOy7a0ODT9t6wwpSApgi6QZxNk8=",
+        "lastModified": 1793953269,
+        "narHash": "sha256-X7HnfD1vEkJKb84GVPF70ULQsJemUtqNviaTqL18P5U=",
         "owner": "FlameFlag",
         "repo": "nixcord",
-        "rev": "4d4df86fc150a0b4d1d20b76f9eacbd83ee1920b",
+        "rev": "62881223d7daf1e330cb75ca9e2488679cc033a3",
         "type": "github"
       },
       "original": {
@@ -1726,11 +1726,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793951417,
-        "narHash": "sha256-Vuz4GpnsGVWaTdj+KfJiEMGOgZLiGptl7FGJ0e5aclM=",
+        "lastModified": 1793962762,
+        "narHash": "sha256-WLGzB84pEggRf9nYtIGnDUvL/lf84ancyfPnOg7HleY=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "99dbc3053ba5d17ba2f86f63463a662e73c43e84",
+        "rev": "25590aa3236f732659e266de238ddc37e799fe3d",
         "type": "github"
       },
       "original": {
@@ -2009,11 +2009,11 @@
         "skwdWall": "skwdWall_2"
       },
       "locked": {
-        "lastModified": 1793793625,
-        "narHash": "sha256-bhH70t6e4kqa/loGdBZwOnij/qdE8SEjvhALn6K8PXY=",
+        "lastModified": 1793962196,
+        "narHash": "sha256-ZzEnbgJ2eVDEXsbnP54rp7ASXh7dtYqiecTfEjMVRZw=",
         "owner": "Ryoku-dev",
         "repo": "Ryoku-on-NixOS",
-        "rev": "d6030cc39fca8a42de33f4a91eb1e2423c8309f5",
+        "rev": "a3af5be52ff6e322ff9c48aed153ed7e6080d394",
         "type": "github"
       },
       "original": {
@@ -2184,11 +2184,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792959440,
-        "narHash": "sha256-tCqeshGKYtT6rxKloO+W6X0BG1/V/6Wdm/53EW9DDas=",
+        "lastModified": 1793963070,
+        "narHash": "sha256-kjIYUivUuOuw6ISfmkJ9T3n/WWW+74zxXG2yIKYUq3Y=",
         "owner": "AceSLS",
         "repo": "SLSsteam",
-        "rev": "7f59509e51bfdb9f385300bdc85269f84618bf99",
+        "rev": "c61443a826a3cf58b76da97c62b33bc5db9800b1",
         "type": "github"
       },
       "original": {
@@ -2480,11 +2480,11 @@
         "nixpkgs": "nixpkgs_22"
       },
       "locked": {
-        "lastModified": 1793952483,
-        "narHash": "sha256-SC8tlfWch89ET3G1i1waw6eQlsVH1s/JxA2Aanr1Vmc=",
+        "lastModified": 1793963956,
+        "narHash": "sha256-OlE2L1kHPCjg/ocjpHbfoCLxZroN/k4jzr44d2mGtdA=",
         "ref": "refs/heads/main",
-        "rev": "a3f8ebc744670217ee64b1a99ca933312c8681d2",
-        "revCount": 29,
+        "rev": "d7d50ae215400aaf4bd1f4f0e4cc522aff443b06",
+        "revCount": 41,
         "type": "git",
         "url": "https://codeberg.org/giviko/ynternals"
       },
