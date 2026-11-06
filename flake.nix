@@ -154,6 +154,9 @@
     # gh-api-cli
     gh-api-cli.url = "github:givikuna/gh-api-cli";
 
+    # resumeworks
+    resumeworks.url = "github:givikuna/resumeworks";
+
     #
 
     #

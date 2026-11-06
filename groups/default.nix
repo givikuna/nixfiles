@@ -124,4 +124,9 @@
   determinaters = [
     #
   ];
+
+  resume-workers = [
+    "minotaur"
+    "pilgrim"
+  ];
 }

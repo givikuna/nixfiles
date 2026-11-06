@@ -1,0 +1,10 @@
+{
+  # lib,
+  # groups,
+  # inputs,
+  ...
+}:
+{
+  imports = [
+  ];
+}

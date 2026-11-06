@@ -34,6 +34,9 @@
   ]
   ++ lib.optionals groups.plasmacatters [
     ./modules/desktop/plasmacat/desktop.nix
+  ]
+  ++ lib.optionals groups."resume-workers" [
+    ./packages/configurations/applications/resumeworks/package.nix
   ];
 
   home.username = username;

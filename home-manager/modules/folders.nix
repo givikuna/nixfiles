@@ -22,6 +22,8 @@
       XDG_PROJECTS_AMPHISEUM_DIR = "${config.home.homeDirectory}/Projects/Amphiseum";
       XDG_PROJECTS_CROWLEY_DIR = "${config.home.homeDirectory}/Projects/DocCrowley";
 
+      XDG_WORK_DIR = "${config.home.homeDirectory}/Work";
+
       XDG_TESTING_DIR = "${config.home.homeDirectory}/Testing";
       XDG_MACHINES_DIR = "${config.home.homeDirectory}/Machines";
       XDG_BUILDERS_DIR = "${config.home.homeDirectory}/Builders";

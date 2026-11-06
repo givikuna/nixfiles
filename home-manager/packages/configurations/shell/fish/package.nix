@@ -62,6 +62,9 @@
       please = "sudo";
       fuck = "f";
 
+      # repomix
+      rmingest = "rm repomix-output.xml";
+
       # fuck larry
       mulgs = "most-used-langs -u givikuna -R al-go-rithms";
       mulgs-larry = "most-used-langs -u dagworth -R Chronica-Phantastikos";
