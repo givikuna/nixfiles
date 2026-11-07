@@ -38,7 +38,7 @@
   ];
 
   davinciers = [
-    "minotaur"
+    # "minotaur"
   ];
 
   seraphimers = [
