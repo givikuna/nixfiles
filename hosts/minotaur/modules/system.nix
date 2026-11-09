@@ -13,7 +13,7 @@
 
   ysyldur = {
     boot = {
-      packages.variant = "zen";
+      packages.variant = "cachyos";
 
       params = {
         split_lock_detect = "off";
@@ -23,8 +23,8 @@
     };
 
     drivers = {
-      # nvidia_cachyos.enable = true;
-      nvidia_stable.enable = true;
+      nvidia_cachyos.enable = true;
+      # nvidia_stable.enable = true;
 
       xpadneo.enable = true;
     };
