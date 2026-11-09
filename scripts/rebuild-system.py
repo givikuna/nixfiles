@@ -8,7 +8,7 @@ import subprocess
 def print_msg(msg, color_code="34"):
     print(f"\n\033[1;{color_code}m✦ {msg}\033[0m\n")
 
-def rebuild():
+def rebuild(use_nh=False):
     flake_dir = "/etc/nixos"
     hostname = socket.gethostname()
 
@@ -22,15 +22,17 @@ def rebuild():
 
     subprocess.run(["git", "add", "."], check=True)
 
-    print_msg(f"starting rebuild for {hostname}", "36")
+    if use_nh:
+        rebuild_cmd = ["nh", "os", "switch", flake_dir, "-H", hostname, "--ask"]
+        tool = "nh"
+    else:
+        rebuild_cmd = ["sudo", "nixos-rebuild", "switch", "--flake", f"{flake_dir}#{hostname}"]
+        tool = "nixos-rebuild"
+
+    print_msg(f"starting rebuild for {hostname} using {tool}", "36")
 
     try:
-        # subprocess.run(nh_cmd, check=True)
-
-        # print_msg("running gitboy", "33")
-
-        # nh_cmd = ["nh", "os", "switch", flake_dir, "-H", hostname, "--ask"]
-        subprocess.run(["sudo", "nixos-rebuild", "switch", "--flake", f"/etc/nixos#{hostname}"], check=True)
+        subprocess.run(rebuild_cmd, check=True)
 
         subprocess.run(["gitboy"], check=False)
         print_msg("system rebuilt successfully!", "32")
@@ -43,5 +45,26 @@ def rebuild():
         print_msg("rebuild cancelled.", "33")
         sys.exit(130)
 
+
+def main():
+    args = sys.argv[1:]
+    use_nh = False
+
+    for arg in args:
+        if arg in ("-nh", "--nh"):
+            use_nh = True
+        elif arg in ("-h", "--help"):
+            print("usage: rebuild-system [-nh|--nh]")
+            print()
+            print("  (no args)   use nixos-rebuild switch")
+            print("  -nh, --nh   use nh os switch")
+            return
+        else:
+            print_msg(f"unknown argument: {arg}", "31")
+            sys.exit(2)
+
+    rebuild(use_nh=use_nh)
+
+
 if __name__ == "__main__":
-    rebuild()
+    main()
