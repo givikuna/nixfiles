@@ -794,11 +794,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1794290599,
-        "narHash": "sha256-QuY7OgiVWm6ViLDFuxJblIeKS7kl2tNGSzQO2MDz3d8=",
+        "lastModified": 1794292048,
+        "narHash": "sha256-WeM47dWinN7XiyBSE3+pPMal4D9lcDFrPiRfLi6+xls=",
         "owner": "givikuna",
         "repo": "gvpkgs",
-        "rev": "a097ccc7a7a46e05ddab9320b1286871cb62badc",
+        "rev": "ece5dfb4f136c1aeed7545012c774140e5caa24f",
         "type": "github"
       },
       "original": {
