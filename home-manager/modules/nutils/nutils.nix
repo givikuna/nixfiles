@@ -37,7 +37,7 @@
     hyperfine # time
     ouch # zip
     bandwhich
-    qsv
+    # qsv
 
     grex
     choose

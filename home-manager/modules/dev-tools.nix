@@ -32,7 +32,7 @@
     ./devtools/direnv.nix
     ./devtools/nix.nix
     ./devtools/shell.nix
-    ./devtools/nickel.nix
+    # ./devtools/nickel.nix
   ]
   ++ lib.optionals groups.imbaers [
     ./devtools/imba.nix

@@ -8,7 +8,7 @@
     nmap
     aircrack-ng
     metasploit
-    mitmproxy
+    # mitmproxy
     wifite2
     tshark
     # wireshark

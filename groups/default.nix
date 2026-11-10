@@ -1,6 +1,6 @@
 {
   wyrteners = [
-    "minotaur"
+    # "minotaur"
   ];
 
   waydroiders = [
@@ -68,7 +68,7 @@
   ];
 
   rewinders = [
-    "minotaur"
+    # "minotaur"
   ];
 
   ekapkgers = [
@@ -76,8 +76,8 @@
   ];
 
   evixers = [
-    "minotaur"
-    "pilgrim"
+    # "minotaur"
+    # "pilgrim"
   ];
 
   grammers = [
