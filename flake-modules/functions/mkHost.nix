@@ -6,6 +6,7 @@
   system ? "x86_64-linux",
   version ? "unknown",
   ekapkgs,
+  gvpkgs,
 }:
 let
   host-grps =
@@ -68,6 +69,7 @@ inputs.nixpkgs.lib.nixosSystem {
           host-name = hostname;
           groups = host-grps;
           ekapkgs = ekapkgs;
+          gvpkgs = gvpkgs;
         };
 
         users.${username} = import ../../home-manager/hosts/${hostname}.nix;

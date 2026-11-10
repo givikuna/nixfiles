@@ -14,6 +14,7 @@
     ./devtools/c.nix
     ./devtools/javascript.nix
     ./devtools/lua.nix
+    ./devtools/moonscript.nix
     ./devtools/make.nix
     ./devtools/python.nix
     ./devtools/racket.nix

@@ -114,6 +114,9 @@
     # ekala-project corepkgs
     ekapkgs.url = "github:ekala-project/corepkgs";
 
+    # gvpkgs
+    gvpkgs.url = "github:givikuna/gvpkgs";
+
     #
 
     #

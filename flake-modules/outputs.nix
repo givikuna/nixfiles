@@ -15,6 +15,7 @@ let
   };
 
   ekapkgs = inputs.ekapkgs.legacyPackages.${system};
+  gvpkgs = inputs.gvpkgs.packages.${system};
 
   nixosConfigurations =
     let
@@ -44,6 +45,7 @@ let
         {
           inherit hostname;
           ekapkgs = ekapkgs;
+          gvpkgs = gvpkgs;
         }
         // args
       )
