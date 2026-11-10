@@ -8,6 +8,7 @@ repos = [
     "https://github.com/givikuna/nix-mkScript.git",
     "https://github.com/givikuna/ysyldur.git",
     "https://github.com/givikuna/yndrium.git",
+    "https://github.com/givikuna/gvpkgs.git",
 
     # programming languages
     "https://github.com/Loid-Project/loid.git",

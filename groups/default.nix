@@ -119,6 +119,7 @@
 
   nix-gamers = [
     "minotaur"
+    "pilgrim"
   ];
 
   determinaters = [
