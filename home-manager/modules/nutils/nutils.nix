@@ -9,11 +9,12 @@
     # fuck
     ../../packages/configurations/shell/pay-respects/package.nix
 
-    ./modules/top.nix # top
+    ./modules/top.nix
     ./modules/git.nix
     ./modules/json.nix
     ./modules/log.nix
     ./modules/html.nix
+    ./modules/fetch.nix
   ];
 
   home.packages = with pkgs; [
