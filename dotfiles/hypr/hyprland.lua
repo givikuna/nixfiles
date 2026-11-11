@@ -40,12 +40,18 @@ hl.env("LIBVA_DRIVER_NAME", "nvidia")
 
 hl.env("TMPDIR", "/tmp")
 
+-- hl.env("AQ_NO_ATOMIC", "1")
+-- hl.env("WLR_DRM_NO_ATOMIC", "1")
+
 -- hl.env("XCURSOR_SIZE", "15")
 -- hl.env("HYPRCURSOR_SIZE", "15")
 -- hl.env("XCURSOR_THEME", "Breeze")
 -- hl.env("HYPRCURSOR_THEME", "Breeze")
 
 hl.config {
+    -- render = {
+    --     explicit_sync = 0,
+    -- },
     general = {
         gaps_in = 1,
         gaps_out = 2,

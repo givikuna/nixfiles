@@ -13,7 +13,7 @@
 
   ysyldur = {
     boot = {
-      packages.variant = "cachyos";
+      packages.variant = "default";
 
       params = {
         split_lock_detect = "off";
@@ -23,8 +23,8 @@
     };
 
     drivers = {
-      nvidia_cachyos.enable = true;
-      # nvidia_stable.enable = true;
+      # nvidia_cachyos.enable = true;
+      nvidia_stable.enable = true;
 
       xpadneo.enable = true;
     };
@@ -37,6 +37,12 @@
       };
     };
   };
+
+  boot.kernelParams = [
+    "audit=0"
+    "nvidia.NVreg_EnableGpuFirmware=0"
+    "video=DP-4:d"
+  ];
 
   /*
     custom.kernel = {
@@ -73,7 +79,7 @@
   */
 
   custom.daemons = {
-    razer.enable = true;
+    razer.enable = false;
 
     ananicy-cpp.enable = true;
 
