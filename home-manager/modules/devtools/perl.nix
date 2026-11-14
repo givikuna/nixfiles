@@ -3,10 +3,16 @@
   ...
 }:
 {
-  home.packages = with pkgs; [
-    perl
-    perlPackages.PerlLanguageServer
-    perlPackages.PerlTidy
-    perlPackages.PerlCritic
-  ];
+  home.packages =
+    with pkgs;
+    (
+      [
+        perl
+      ]
+      ++ (with perlPackages; [
+        PerlLanguageServer
+        PerlTidy
+        PerlCritic
+      ])
+    );
 }

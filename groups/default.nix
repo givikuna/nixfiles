@@ -130,4 +130,8 @@
     "minotaur"
     "pilgrim"
   ];
+
+  torrers = [
+    "minotaur"
+  ];
 }

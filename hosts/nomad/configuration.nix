@@ -6,7 +6,6 @@
 
     # ../_modules/desktops/hyprland.nix
 
-    ../_modules/sec/tor.nix
     ../_modules/sec/firejail.nix
     ../_modules/sec/protonvpn.nix
 

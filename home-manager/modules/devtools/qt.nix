@@ -3,9 +3,14 @@
   ...
 }:
 {
-  home.packages = with pkgs; [
-    qt6.qttools
-    qt6.qtbase
-    qt6.qtdeclarative
-  ];
+  home.packages =
+    with pkgs;
+    (
+      [ ]
+      ++ (with qt6; [
+        qttools
+        qtbase
+        qtdeclarative
+      ])
+    );
 }

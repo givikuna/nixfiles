@@ -3,11 +3,19 @@
   ...
 }:
 {
-  home.packages = with pkgs; [
-    android-studio
-    android-tools
-    androidenv.androidPkgs.androidsdk
-    androidenv.androidPkgs.emulator
-    androidenv.androidPkgs.ndk-bundle
-  ];
+  home.packages =
+    (with pkgs; [
+      android-studio
+      android-tools
+    ])
+    ++ (
+      with pkgs;
+      with androidenv;
+      with androidPkgs;
+      [
+        androidsdk
+        emulator
+        ndk-bundle
+      ]
+    );
 }

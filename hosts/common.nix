@@ -87,6 +87,9 @@
   ]
   ++ lib.optionals groups.ryokuers [
     ./_modules/desktops/ryoku.nix
+  ]
+  ++ lib.optionals groups.torrers [
+    ./_modules/sec/tor.nix
   ];
 
   # nix allowances

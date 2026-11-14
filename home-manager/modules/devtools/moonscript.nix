@@ -1,5 +1,7 @@
 { gvpkgs, ... }: {
-  home.packages = with gvpkgs; [
-    moonscript
-  ];
+  home.packages =
+    [ ]
+    ++ (with gvpkgs; [
+      moonscript
+    ]);
 }

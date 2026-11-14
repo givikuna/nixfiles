@@ -1,5 +1,7 @@
 { gvpkgs, ... }: {
-  home.packages = with gvpkgs; [
-    fregec
-  ];
+  home.packages =
+    [ ]
+    ++ (with gvpkgs; [
+      fregec
+    ]);
 }

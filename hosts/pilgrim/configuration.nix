@@ -9,7 +9,6 @@
     ./modules/hardware.nix
     ./modules/system.nix
 
-    ../_modules/sec/tor.nix
     ../_modules/sec/firejail.nix
 
     ../_modules/licenses/android_sdk.nix
