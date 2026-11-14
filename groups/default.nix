@@ -21,8 +21,8 @@
   flatpakkers = [
     "minotaur"
     "pilgrim"
-    "nomad"
     "colossus"
+    "nomad"
   ];
 
   boxers = [
@@ -115,6 +115,10 @@
   multiversers = [
     "minotaur"
     "pilgrim"
+    "orion"
+    "hammond"
+    "nomad"
+    "colossus"
   ];
 
   nix-gamers = [

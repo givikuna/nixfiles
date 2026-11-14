@@ -9,22 +9,6 @@
     #
 
     # ============================================
-    #                  FLATPAKS
-    # ============================================
-
-    # flatpaks
-    inputs.nix-flatpak.nixosModules.nix-flatpak
-
-    # home manager
-    {
-      home-manager.sharedModules = [
-        inputs.nix-flatpak.homeManagerModules.nix-flatpak
-      ];
-    }
-
-    #
-
-    # ============================================
     #               PLASMA MANAGER
     # ============================================
 
@@ -53,5 +37,22 @@
     # ============================================
 
     inputs.ryoku.nixosModules.default
+  ]
+  ++ lib.optionals groups.flatpakkers [
+    #
+
+    # ============================================
+    #                  FLATPAKS
+    # ============================================
+
+    # flatpaks
+    inputs.nix-flatpak.nixosModules.nix-flatpak
+
+    # home manager
+    {
+      home-manager.sharedModules = [
+        inputs.nix-flatpak.homeManagerModules.nix-flatpak
+      ];
+    }
   ];
 }

@@ -1,5 +1,9 @@
-{ ... }:
 {
+  lib,
+  groups,
+  ...
+}:
+lib.mkIf groups.flatpakkers {
   services.flatpak.packages = [
     {
       flatpakref = "https://flatpak.chronicler.pro/chronicler.flatpakref";

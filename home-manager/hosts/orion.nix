@@ -1,14 +1,17 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  ...
+}:
 {
   imports = [
     ../common.nix
 
-    ./apps/minotaur.nix
+    ./apps/orion.nix
   ];
 
   home.packages = with pkgs; [
     # personal
-    planify
+    # planify
     calibre
 
     # capturing
@@ -20,12 +23,4 @@
     # kdePackages.kate
   ];
 
-  services.flatpak.packages = [
-    # personal
-    "tech.dongdongbh.mindwtr"
-    "md.obsidian.Obsidian"
-
-    # reader
-    "com.github.johnfactotum.Foliate"
-  ];
 }

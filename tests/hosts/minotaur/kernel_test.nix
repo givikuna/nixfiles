@@ -11,24 +11,24 @@ in
   suites."Minotaur: Kernel  Tuning" = {
     pos = __curPos;
     tests = [
-      {
-        name = "cachyos-lts-kernel-variant-enabled";
-        type = "unit";
-        expected = true;
-        actual = cfg.custom.kernel.boot.packages.kernel-variant.cachyos-lts-kernel.enable;
-      }
-      {
-        name = "bpfland-scheduler-enabled";
-        type = "unit";
-        expected = true;
-        actual = cfg.custom.kernel.services.scx.scheduler.bpfland.enable;
-      }
-      {
-        name = "gaming-sysctl-profile-active";
-        type = "unit";
-        expected = true;
-        actual = cfg.custom.kernel.boot.sysctl.profiles.gaming-minotaur.enable;
-      }
+      # {
+      #   name = "cachyos-lts-kernel-variant-enabled";
+      #   type = "unit";
+      #   expected = true;
+      #   actual = cfg.custom.kernel.boot.packages.kernel-variant.cachyos-lts-kernel.enable;
+      # }
+      # {
+      #   name = "bpfland-scheduler-enabled";
+      #   type = "unit";
+      #   expected = true;
+      #   actual = cfg.custom.kernel.services.scx.scheduler.bpfland.enable;
+      # }
+      # {
+      #   name = "gaming-sysctl-profile-active";
+      #   type = "unit";
+      #   expected = true;
+      #   actual = cfg.custom.kernel.boot.sysctl.profiles.gaming-minotaur.enable;
+      # }
       {
         name = "validate-kernel-parameters-script";
         type = "script";

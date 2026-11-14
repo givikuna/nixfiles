@@ -1,21 +1,24 @@
-{ ... }: {
+{ ... }:
+{
   imports = [
     ../../_modules/kernel/default.nix
+    ../../_modules/daemons/default.nix
   ];
 
-  custom.kernel = {
+  ysyldur = {
     boot = {
-      packages = {
-        kernel-variant = {
-          cachyos-hardened-kernel.enable = true;
-        };
-      };
+      packages.variant = "default";
 
-      sysctl.profiles.gaming-minotaur.enable = true;
+      params = {
+        split_lock_detect = "off";
+      };
     };
+
+    drivers = { };
 
     services.scx = {
       enable = true;
+
       scheduler = {
         bpfland.enable = true;
       };

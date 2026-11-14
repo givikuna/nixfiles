@@ -8,11 +8,11 @@
     jack.enable = true;
     wireplumber.enable = true;
 
-    lowLatency = {
-      enable = true;
-
-      quantum = 64;
-      rate = 48000;
-    };
+    # lowLatency = {
+    #   enable = true;
+    #
+    #   quantum = 64;
+    #   rate = 48000;
+    # };
   };
 }

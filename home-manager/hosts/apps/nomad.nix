@@ -1,4 +1,4 @@
-{ ... }: {
+{ lib, groups, ... }: {
   imports = [
     ../../modules/apps/basics.nix
     ../../modules/apps/browsers.nix
@@ -11,7 +11,9 @@
     ../../modules/apps/tor-browser.nix
     ../../modules/apps/torrent.nix
     ../../modules/apps/txt-edit.nix
-    ../../packages/configurations/applications/chronicler/package.nix
     ../../packages/configurations/applications/thunderbird/package.nix
+  ]
+  ++ lib.optionals groups.flatpakkers [
+    ../../packages/configurations/applications/chronicler/package.nix
   ];
 }

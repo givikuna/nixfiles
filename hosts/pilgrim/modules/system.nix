@@ -5,21 +5,20 @@
     ../../_modules/daemons/default.nix
   ];
 
-  custom.kernel = {
+  ysyldur = {
     boot = {
-      packages = {
-        kernel-variant = {
-          cachyos-lts-kernel.enable = true;
-        };
-      };
+      packages.variant = "default";
 
       params = {
         split_lock_detect = "off";
       };
     };
 
+    drivers = { };
+
     services.scx = {
       enable = true;
+
       scheduler = {
         bpfland.enable = true;
       };

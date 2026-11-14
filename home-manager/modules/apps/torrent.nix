@@ -1,13 +1,22 @@
 {
   pkgs,
+  groups,
+  lib,
   ...
 }:
 {
-  home.packages = with pkgs; [
-    qbittorrent
-  ];
-
-  services.flatpak.packages = [
-    "de.haeckerfelix.Fragments"
+  config = lib.mkMerge [
+    {
+      home.packages = with pkgs; [
+        qbittorrent
+      ];
+    }
+    (lib.mkIf groups.flatpakkers {
+      # services.flatpak.packages =
+      #   [ ]
+      #   ++ (lib.optionals groups.flatpakkers [
+      #     "de.haeckerfelix.Fragments"
+      #   ]);
+    })
   ];
 }

@@ -20,8 +20,6 @@
     ./modules/dev-tools.nix
     ./modules/gamedev.nix
     ./modules/security.nix
-
-    ./modules/multiverse.nix
   ]
   ++ lib.optionals groups.guixers [
     ./modules/guix.nix
@@ -37,6 +35,9 @@
   ]
   ++ lib.optionals groups."resume-workers" [
     ./packages/configurations/applications/resumeworks/package.nix
+  ]
+  ++ lib.optionals groups.multiversers [
+    ./modules/multiverse.nix
   ];
 
   home.username = username;

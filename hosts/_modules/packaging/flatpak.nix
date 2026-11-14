@@ -1,8 +1,12 @@
-{ ... }:
 {
+  lib,
+  groups,
+  ...
+}:
+lib.mkIf groups.flatpakkers {
   services.flatpak = {
     enable = true;
-    uninstallUnmanaged = false;
+    uninstallUnmanaged = true;
 
     remotes = [
       {

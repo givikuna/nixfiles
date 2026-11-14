@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  groups,
+  lib,
+  ...
+}:
 {
   imports = [
     ../common.nix
@@ -6,19 +11,32 @@
     ./apps/nomad.nix
   ];
 
-  home.packages = with pkgs; [
-    # img/vid
-    gimp
-    imagemagick
-    switcheroo
-    obs-studio
-  ];
+  config = lib.mkMerge [
+    {
+      home.packages = with pkgs; [
+        # personal
+        # planify
+        calibre
 
-  services.flatpak.packages = [
-    # personal
-    "md.obsidian.Obsidian"
+        # capturing
+        gimp
+        imagemagick
+        switcheroo
+        obs-studio
 
-    # reader
-    "com.github.johnfactotum.Foliate"
+        # kdePackages.kate
+      ];
+    }
+
+    (lib.mkIf groups.flatpakkers {
+      services.flatpak.packages = [
+        # personal
+        "tech.dongdongbh.mindwtr"
+        "md.obsidian.Obsidian"
+
+        # reader
+        "com.github.johnfactotum.Foliate"
+      ];
+    })
   ];
 }
