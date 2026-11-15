@@ -79,6 +79,7 @@ repos = [
 [folders."~/Contrib"]
 repos = [
     "https://github.com/givikuna/nixpkgs.git",
+    "https://github.com/givikuna/devenv.git",
 ]
 
 [folders."~/Work"]
