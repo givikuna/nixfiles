@@ -23,6 +23,7 @@ repos = [
 
     # ai
     "https://github.com/givikuna/acrithis.git",
+    "https://github.com/givikuna/aigest",
 
     # robotics
     "https://github.com/STAR-Robotics-Team/starrt-luna-software.git",
