@@ -13,14 +13,14 @@
 
     ./devtools/c.nix
     ./devtools/javascript.nix
-    ./devtools/lua.nix
+    # ./devtools/lua.nix
     ./devtools/moonscript.nix
     ./devtools/frege.nix
     ./devtools/make.nix
     ./devtools/python.nix
     ./devtools/racket.nix
     ./devtools/jdk.nix
-    ./devtools/perl.nix
+    # ./devtools/perl.nix
     ./devtools/jj.nix
 
     ./devtools/spell-checker.nix
