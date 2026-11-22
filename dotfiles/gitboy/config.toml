@@ -18,6 +18,9 @@ repos = [
     # school
     "https://github.com/givikuna/ru-cs214.git",
 
+    # shell
+    "https://github.com/givikuna/zptr.git",
+
     # math
     "https://github.com/givikuna/codensity-transformations-with-yoneda-lemma",
 

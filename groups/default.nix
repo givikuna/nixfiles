@@ -136,6 +136,6 @@
   ];
 
   torrers = [
-    "minotaur"
+    # "minotaur"
   ];
 }
