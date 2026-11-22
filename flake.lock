@@ -2555,17 +2555,17 @@
         "nixpkgs": "nixpkgs_23"
       },
       "locked": {
-        "lastModified": 1794094109,
-        "narHash": "sha256-0o3/kM1z0QDBTShDV155koSR6gqIXdFeiym2/BUVlTM=",
-        "ref": "refs/heads/main",
-        "rev": "d2d5bed5db08a80ab5a5562f9a348c50c106d01c",
-        "revCount": 44,
-        "type": "git",
-        "url": "https://codeberg.org/giviko/ynternals"
+        "lastModified": 1795391281,
+        "narHash": "sha256-HdNEIqwAcpauVLQTFNrYvlqEPSVxzM68WoY/D8EqcfA=",
+        "owner": "givikuna",
+        "repo": "ynternals",
+        "rev": "6881227c49f0be9a22b45cc3bbf1d7f4eb1df843",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "https://codeberg.org/giviko/ynternals"
+        "owner": "givikuna",
+        "repo": "ynternals",
+        "type": "github"
       }
     },
     "ysyldur": {

@@ -34,7 +34,8 @@
     agenix.inputs.nixpkgs.follows = "nixpkgs";
 
     # symmetric secrets
-    ynternals.url = "git+https://codeberg.org/giviko/ynternals";
+    # ynternals.url = "git+https://codeberg.org/giviko/ynternals";
+    ynternals.url = "github:givikuna/ynternals";
 
     # nixtants
     nixtants.url = "git+https://codeberg.org/giviko/nixtants";
