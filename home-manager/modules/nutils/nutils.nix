@@ -9,6 +9,9 @@
     # fuck
     ../../packages/configurations/shell/pay-respects/package.nix
 
+    # zptr
+    ../../packages/configurations/tools/zptr/package.nix
+
     ./modules/top.nix
     ./modules/git.nix
     ./modules/json.nix

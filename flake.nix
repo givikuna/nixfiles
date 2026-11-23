@@ -161,6 +161,9 @@
     # resumeworks
     resumeworks.url = "github:givikuna/resumeworks";
 
+    # zptr
+    zptr.url = "github:givikuna/zptr";
+
     #
 
     #
