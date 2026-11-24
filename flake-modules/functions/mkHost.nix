@@ -21,16 +21,21 @@ let
     lib.genAttrs grp-attrs grp-fn;
 in
 inputs.nixpkgs.lib.nixosSystem {
-  specialArgs = {
-    inherit
-      inputs
-      username
-      version
-      hostname
-      ekapkgs
-      ;
-    groups = host-grps;
-  };
+  specialArgs =
+    let
+      aigest = inputs.aigest;
+    in
+    {
+      inherit
+        inputs
+        username
+        version
+        hostname
+        ekapkgs
+        aigest
+        ;
+      groups = host-grps;
+    };
   system = system;
 
   modules = [

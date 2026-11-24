@@ -164,6 +164,10 @@
     # zptr
     zptr.url = "github:givikuna/zptr";
 
+    # aigest
+    aigest.url = "github:givikuna/aigest";
+    aigest.inputs.nixpkgs.follows = "nixpkgs";
+
     #
 
     #

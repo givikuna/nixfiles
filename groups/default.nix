@@ -138,4 +138,9 @@
   torrers = [
     # "minotaur"
   ];
+
+  aigesters = [
+    "minotaur"
+    "pilgrim"
+  ];
 }

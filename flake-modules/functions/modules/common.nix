@@ -172,5 +172,18 @@
         ];
       };
     }
+  ]
+  ++ lib.optionals groups.aigesters [
+    #
+
+    # ============================================
+    #                  GUIX
+    # ============================================
+
+    {
+      nixpkgs.overlays = [
+        inputs.aigest.overlays.default
+      ];
+    }
   ];
 }

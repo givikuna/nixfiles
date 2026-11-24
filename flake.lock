@@ -56,6 +56,26 @@
         "type": "github"
       }
     },
+    "aigest": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1795404535,
+        "narHash": "sha256-R5bHsfteaZ7Opbm3GYmQiSpmdjxNPlBE9Z9nalpP7hM=",
+        "owner": "givikuna",
+        "repo": "aigest",
+        "rev": "972d3e18a57cf32de47f940a5f1b7d3e1b9094a6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "givikuna",
+        "repo": "aigest",
+        "type": "github"
+      }
+    },
     "alejandra": {
       "inputs": {
         "fenix": "fenix",
@@ -1233,11 +1253,11 @@
         "treefmt-nix": "treefmt-nix_4"
       },
       "locked": {
-        "lastModified": 1795371348,
-        "narHash": "sha256-E+inxHVJB5qOh8SLhlgDlhYN+etdPe2mvpxwe3Po2kQ=",
+        "lastModified": 1795392066,
+        "narHash": "sha256-Vf/oXkQ+CJNQLdul03QVgjzAW356oJYlyRMSFrVrrKA=",
         "owner": "FlameFlag",
         "repo": "nixcord",
-        "rev": "a32e58f47eb4c569bdbad0b1fe2a7b8fb66599eb",
+        "rev": "7bb374b0b1f1978c1f957700dd3542e07c8ba566",
         "type": "github"
       },
       "original": {
@@ -1817,11 +1837,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795389001,
-        "narHash": "sha256-397DIn6aMWx1UZ1ox4qso3xJBZuRWSxOy1UViTfur3A=",
+        "lastModified": 1795403841,
+        "narHash": "sha256-FDyXa4UcD2qVSclPSAfyh2zx6S86YJklNW/Ruxj2o1w=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "4be943992b0747b6be81bbd326c51b03ea773320",
+        "rev": "09d1ff27286e60e123b896e8bf7222c2f699800a",
         "type": "github"
       },
       "original": {
@@ -1998,6 +2018,7 @@
       "inputs": {
         "agenix": "agenix",
         "agent-sandbox": "agent-sandbox",
+        "aigest": "aigest",
         "alejandra": "alejandra",
         "anubis-fetch": "anubis-fetch",
         "chaotic": "chaotic",

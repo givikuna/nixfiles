@@ -62,8 +62,9 @@
       please = "sudo";
       fuck = "f";
 
-      # repomix
+      # git ai
       rmingest = "rm repomix-output.xml";
+      rmaigest = "rm aigest-output.xml";
 
       # fuck larry
       mulgs = "most-used-langs -u givikuna -R al-go-rithms";
