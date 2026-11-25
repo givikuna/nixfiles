@@ -75,6 +75,11 @@
     # "minotaur"
   ];
 
+  gvpkgers = [
+    "minotaur"
+    "pilgrim"
+  ];
+
   evixers = [
     # "minotaur"
     # "pilgrim"

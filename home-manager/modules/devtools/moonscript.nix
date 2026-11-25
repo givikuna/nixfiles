@@ -1,7 +1,16 @@
-{ gvpkgs, ... }: {
+{
+  gvpkgs,
+  lib,
+  groups,
+  ...
+}:
+{
   home.packages =
     [ ]
-    ++ (with gvpkgs; [
-      moonscript
-    ]);
+    ++ lib.optionals groups.gvpkgers (
+      with gvpkgs;
+      [
+        moonscript
+      ]
+    );
 }

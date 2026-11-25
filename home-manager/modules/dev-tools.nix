@@ -14,8 +14,6 @@
     ./devtools/c.nix
     ./devtools/javascript.nix
     # ./devtools/lua.nix
-    ./devtools/moonscript.nix
-    ./devtools/frege.nix
     ./devtools/make.nix
     ./devtools/python.nix
     ./devtools/racket.nix
@@ -37,11 +35,15 @@
   ]
   ++ lib.optionals groups.imbaers [
     ./devtools/imba.nix
+  ]
+  ++ lib.optionals groups.gvpkgers [
+    ./devtools/moonscript.nix
+    ./devtools/frege.nix
+    ./devtools/ballerina.nix
+    ./devtools/livescript.nix
   ];
 
   home.packages = with pkgs; [
-    # livescript
-
     eask-cli
   ];
 }

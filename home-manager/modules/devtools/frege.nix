@@ -1,7 +1,16 @@
-{ gvpkgs, ... }: {
+{
+  gvpkgs,
+  lib,
+  groups,
+  ...
+}:
+{
   home.packages =
     [ ]
-    ++ (with gvpkgs; [
-      fregec
-    ]);
+    ++ lib.optionals groups.gvpkgers (
+      with gvpkgs;
+      [
+        fregec
+      ]
+    );
 }
