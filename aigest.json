@@ -1,1 +1,18 @@
-{}
+{
+    "ext": {
+        "svg": {
+            "ignore": true
+        }
+    },
+    "dir": {
+        ".vscode": {
+            "ignore": true
+        },
+        "icons": {
+            "ignore": true
+        },
+        "wallpapers": {
+            "ignore": true
+        }
+    }
+}

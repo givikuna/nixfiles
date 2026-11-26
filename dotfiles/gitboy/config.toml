@@ -15,6 +15,9 @@ repos = [
     "https://github.com/givikuna/TsvariScript.git",
     "https://github.com/givikuna/nixp.git",
 
+    # git
+    "https://github.com/givikuna/yqaris.git",
+
     # school
     "https://github.com/givikuna/ru-cs214.git",
 
