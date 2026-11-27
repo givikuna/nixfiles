@@ -23,6 +23,7 @@
       XDG_PROJECTS_CROWLEY_DIR = "${config.home.homeDirectory}/Projects/DocCrowley";
 
       XDG_WORK_DIR = "${config.home.homeDirectory}/Work";
+      XDG_EDU_DIR = "${config.home.homeDirectory}/Edu";
 
       XDG_TESTING_DIR = "${config.home.homeDirectory}/Testing";
       XDG_MACHINES_DIR = "${config.home.homeDirectory}/Machines";

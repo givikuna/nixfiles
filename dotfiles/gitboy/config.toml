@@ -111,3 +111,8 @@ repos = [
 repos = [
     "https://github.com/helix-editor/helix.git",
 ]
+
+[folders."~/Edu"]
+repos = [
+    "https://github.com/givikuna/tdd-idris.git"
+]
