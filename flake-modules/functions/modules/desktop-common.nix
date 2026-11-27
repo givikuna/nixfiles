@@ -18,17 +18,17 @@
       ];
     }
   ]
-  ++ lib.optionals groups.lenovo-legioners [
-    {
-      home-manager.extraSpecialArgs =
-        let
-          l5p-keyboard-rgb = inputs.l5p-keyboard-rgb;
-        in
-        {
-          inherit l5p-keyboard-rgb;
-        };
-    }
-  ]
+  # ++ lib.optionals groups.lenovo-legioners [
+  #   {
+  #     home-manager.extraSpecialArgs =
+  #       let
+  #         l5p-keyboard-rgb = inputs.l5p-keyboard-rgb;
+  #       in
+  #       {
+  #         inherit l5p-keyboard-rgb;
+  #       };
+  #   }
+  # ]
   ++ lib.optionals groups.neocosmiccers [
     #
 

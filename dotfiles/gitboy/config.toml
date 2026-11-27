@@ -114,5 +114,6 @@ repos = [
 
 [folders."~/Edu"]
 repos = [
-    "https://github.com/givikuna/tdd-idris.git"
+    "https://github.com/givikuna/tdd-idris.git",
+    "https://codeberg.org/giviko/kokatests"
 ]

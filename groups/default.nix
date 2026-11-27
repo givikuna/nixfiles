@@ -154,6 +154,6 @@
   ];
 
   lenovo-legioners = [
-    "minotaur"
+    # "minotaur"
   ];
 }

@@ -6,29 +6,6 @@
     #                     SYSTEM
     # ============================================
 
-    # nixpkgs themselves
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
-    # hm
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
-    # flake mgmt
-    # flake-utils.url = "github:numtide/flake-utils";
-
-    # determinate nix
-    # determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
-
-    # version pinning
-    multiverse.url = "github:fzakaria/nixpkgs-multiverse";
-
-    # gitboy
-    gitboy.url = "github:givikuna/gitboy";
-    gitboy.inputs.nixpkgs.follows = "nixpkgs";
-
-    # unit testing
-    nixtest.url = "gitlab:TECHNOFAB/nixtest?dir=lib";
-
     # asymmetric secrets
     agenix.url = "github:ryantm/agenix";
     agenix.inputs.nixpkgs.follows = "nixpkgs";
@@ -37,20 +14,6 @@
     # ynternals.url = "git+https://codeberg.org/giviko/ynternals";
     ynternals.url = "github:givikuna/ynternals";
 
-    # nixtants
-    nixtants.url = "git+https://codeberg.org/giviko/nixtants";
-
-    # disko
-    disko.url = "github:nix-community/disko";
-    disko.inputs.nixpkgs.follows = "nixpkgs";
-
-    # formatting
-    alejandra.url = "github:kamadorueda/alejandra/4.0.0";
-    alejandra.inputs.nixpkgs.follows = "nixpkgs";
-
-    # script maker
-    mk-script.url = "github:givikuna/nix-mkScript";
-
     # chaotic nyx
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
@@ -58,15 +21,55 @@
     ysyldur.url = "git+https://codeberg.org/giviko/ysyldur";
     ysyldur.inputs.chaotic.follows = "chaotic";
 
-    # gleam->nix
-    # glistix.url = "github:Glistix/glistix";
-    # glistix.inputs.nixpkgs.follows = "nixpkgs";
-
     # evix
     evix.url = "github:manic-systems/evix";
 
     # ogygia
     ogygia.url = "github:JakeHillion/ogygia-nix";
+
+    # flake mgmt
+    # flake-utils.url = "github:numtide/flake-utils";
+
+    # determinate nix
+    # determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
+
+    #
+
+    #
+
+    #
+
+    #
+
+    #
+
+    # ============================================
+    #                CONFIG MGMT
+    # ============================================
+
+    # script maker
+    mk-script.url = "github:givikuna/nix-mkScript";
+
+    # version pinning
+    multiverse.url = "github:fzakaria/nixpkgs-multiverse";
+
+    # gitboy
+    gitboy.url = "github:givikuna/gitboy";
+    gitboy.inputs.nixpkgs.follows = "nixpkgs";
+
+    # nixtants
+    nixtants.url = "git+https://codeberg.org/giviko/nixtants";
+
+    # disko
+    disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
+
+    # hm
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    # unit testing
+    nixtest.url = "gitlab:TECHNOFAB/nixtest?dir=lib";
 
     #
 
@@ -106,12 +109,14 @@
     #                  REPOSITORIES
     # ============================================
 
+    # nixpkgs themselves
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     # flatpaks
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
-    # nix user repository
-    nur.url = "github:nix-community/NUR";
-    nur.inputs.nixpkgs.follows = "nixpkgs";
+    # gvpkgs
+    gvpkgs.url = "github:givikuna/gvpkgs";
 
     # guix
     guixpkgs.url = "github:fzakaria/guixpkgs";
@@ -119,8 +124,9 @@
     # ekala-project corepkgs
     ekapkgs.url = "github:ekala-project/corepkgs";
 
-    # gvpkgs
-    gvpkgs.url = "github:givikuna/gvpkgs";
+    # nix user repository
+    nur.url = "github:nix-community/NUR";
+    nur.inputs.nixpkgs.follows = "nixpkgs";
 
     #
 
@@ -136,8 +142,8 @@
     #                   HARDWARE
     # ============================================
 
-    l5p-keyboard-rgb.url = "github:4JX/L5P-Keyboard-RGB";
-    l5p-keyboard-rgb.inputs.nixpkgs.follows = "nixpkgs";
+    # l5p-keyboard-rgb.url = "github:4JX/L5P-Keyboard-RGB";
+    # l5p-keyboard-rgb.inputs.nixpkgs.follows = "nixpkgs";
 
     #
 
@@ -188,6 +194,14 @@
     # aigest
     aigest.url = "github:givikuna/aigest";
     aigest.inputs.nixpkgs.follows = "nixpkgs";
+
+    # formatting
+    alejandra.url = "github:kamadorueda/alejandra/4.0.0";
+    alejandra.inputs.nixpkgs.follows = "nixpkgs";
+
+    # gleam->nix
+    # glistix.url = "github:Glistix/glistix";
+    # glistix.inputs.nixpkgs.follows = "nixpkgs";
 
     #
 
