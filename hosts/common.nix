@@ -90,6 +90,9 @@
   ]
   ++ lib.optionals groups.torrers [
     ./_modules/sec/tor.nix
+  ]
+  ++ lib.optionals groups.neocosmiccers [
+    ./_modules/desktops/cosmic.nix
   ];
 
   # nix allowances

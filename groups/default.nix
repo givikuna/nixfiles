@@ -104,6 +104,10 @@
     # "pilgrims"
   ];
 
+  neocosmiccers = [
+    # "minotaur"
+  ];
+
   ryokuers = [
     # "minotaur"
   ];
@@ -147,5 +151,9 @@
   aigesters = [
     "minotaur"
     "pilgrim"
+  ];
+
+  lenovo-legioners = [
+    "minotaur"
   ];
 }

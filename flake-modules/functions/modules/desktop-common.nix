@@ -18,6 +18,30 @@
       ];
     }
   ]
+  ++ lib.optionals groups.lenovo-legioners [
+    {
+      home-manager.extraSpecialArgs =
+        let
+          l5p-keyboard-rgb = inputs.l5p-keyboard-rgb;
+        in
+        {
+          inherit l5p-keyboard-rgb;
+        };
+    }
+  ]
+  ++ lib.optionals groups.neocosmiccers [
+    #
+
+    # ============================================
+    #               COSMIC MANAGER
+    # ============================================
+
+    {
+      home-manager.sharedModules = [
+        inputs.cosmic-manager.homeManagerModules.cosmic-manager
+      ];
+    }
+  ]
   ++ lib.optionals groups.nix-gamers [
     #
 

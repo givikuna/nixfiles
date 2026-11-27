@@ -81,7 +81,7 @@
   custom.daemons = {
     razer.enable = false;
 
-    ananicy-cpp.enable = true;
+    # ananicy-cpp.enable = true;
 
     power-profiles.enable = true;
   };

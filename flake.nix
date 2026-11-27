@@ -88,6 +88,10 @@
 
     ryoku.url = "github:Ryoku-dev/Ryoku-on-NixOS";
 
+    cosmic-manager.url = "github:HeitorAugustoLN/cosmic-manager";
+    cosmic-manager.inputs.nixpkgs.follows = "nixpkgs";
+    cosmic-manager.inputs.home-manager.follows = "home-manager";
+
     #
 
     #
@@ -117,6 +121,23 @@
 
     # gvpkgs
     gvpkgs.url = "github:givikuna/gvpkgs";
+
+    #
+
+    #
+
+    #
+
+    #
+
+    #
+
+    # ============================================
+    #                   HARDWARE
+    # ============================================
+
+    l5p-keyboard-rgb.url = "github:4JX/L5P-Keyboard-RGB";
+    l5p-keyboard-rgb.inputs.nixpkgs.follows = "nixpkgs";
 
     #
 

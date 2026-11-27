@@ -20,6 +20,8 @@
     ./modules/dev-tools.nix
     ./modules/gamedev.nix
     ./modules/security.nix
+
+    ./modules/hardware.nix
   ]
   ++ lib.optionals groups.guixers [
     ./modules/guix.nix
@@ -38,6 +40,9 @@
   ]
   ++ lib.optionals groups.multiversers [
     ./modules/multiverse.nix
+  ]
+  ++ lib.optionals groups.neocosmiccers [
+    ./modules/desktop/neocosmic/desktop.nix
   ];
 
   home.username = username;
